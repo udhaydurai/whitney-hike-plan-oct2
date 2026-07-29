@@ -156,6 +156,22 @@ collision on `prows` made the training-phases section render Garmin export optio
 and a hardcoded `d["hikes"][7]` made every row of the stopped-time table read 0h 00m
 while the headline said 54.6%. Recompute per row; never index a hike by position.
 
+## Dates — the container is UTC, the athlete is not
+
+**Never call `date.today()`.** Import `build/clock.py` and use `clock.today()`,
+`clock.iso()` or `clock.pretty()`.
+
+The container runs on UTC. The nightly check-in fires at 9 pm Pacific, which is 04:00 UTC
+the *next* day, so the very first nightly run filed Tuesday evening's food under
+Wednesday. That is not a one-off: every single night falls in the window where the
+container date and the local date disagree. A training log whose dates sit a day off the
+calendar it is compared against is worse than no log.
+
+`nightly.py` now defaults to the local date and refuses any date in the future, naming
+UTC drift as the likely cause. Days-to-summit is computed from `clock.today()` rather
+than from `meta.lastUpdated` — using the latter froze the countdown whenever nobody
+edited the file.
+
 ## Python in this container
 
 Python 3.11. Two things bite repeatedly when generating HTML from f-strings:

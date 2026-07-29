@@ -22,6 +22,7 @@ it has signal. Without the version the phone would serve the first build forever
 """
 
 import hashlib
+import sys
 import pathlib
 import re
 import shutil
@@ -189,11 +190,11 @@ def main():
         raise SystemExit(f"missing {DASH} — run build/dashboard.py first")
 
     html = DASH.read_text(encoding="utf-8")
-    built = dt.date.today().strftime("%b %-d, %Y") if hasattr(dt.date.today(), "strftime") else ""
-    try:
-        built = dt.date.today().strftime("%b %-d, %Y")
-    except ValueError:               # platforms without %-d
-        built = dt.date.today().strftime("%b %d, %Y").replace(" 0", " ")
+    # local date, not the container's UTC — the banner claims when this was built and
+    # would otherwise read a day ahead for anything built after 5 pm Pacific
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    import clock
+    built = clock.pretty()
 
     # version the cache by content, not by clock: an identical rebuild must not
     # force every phone to re-download the shell

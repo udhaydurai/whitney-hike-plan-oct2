@@ -15,6 +15,7 @@ Design rules, after the first version turned into a transcript:
 import datetime as dt
 import html
 import json
+import sys
 import pathlib
 import statistics as st
 
@@ -98,7 +99,13 @@ RK = D["ruckSessions"]
 TRN = [h for h in HK if h.get("effortType", "training") == "training"]
 FAM = [h for h in HK if h.get("effortType") == "family"]
 KG, LB = PH["bodyweightKg"], PH["bodyweightLb"]
-today = dt.date.fromisoformat(M["lastUpdated"])
+# days-to-summit is computed from the actual local date, not from meta.lastUpdated.
+# lastUpdated is data provenance — when the log was last edited — and using it as "today"
+# meant the countdown froze whenever nobody touched the file. See build/clock.py for why
+# this must be Pacific rather than the container's UTC.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import clock
+today = clock.today()
 summit = dt.date.fromisoformat(M["summitDate"])
 DAYS = (summit - today).days
 WP = M["whitneyProfile"]

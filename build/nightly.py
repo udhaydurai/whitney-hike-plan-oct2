@@ -39,6 +39,9 @@ import pathlib
 import sys
 import datetime as dt
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import clock
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LOG = ROOT / "data" / "training-log.json"
 DAILY = ROOT / "data" / "daily"
@@ -76,13 +79,27 @@ def main():
     except json.JSONDecodeError as e:
         fail(f"patch is not valid JSON — {e}")
 
-    date = patch.get("date")
-    if not date:
-        fail("patch has no date")
+    # ── the date, in the athlete's timezone
+    #
+    # The container runs UTC and the nightly job fires at 9 pm Pacific, which is already
+    # tomorrow in UTC. The first night's check-in was filed a day ahead because of exactly
+    # that. Default to the local date, and refuse anything ahead of it — a check-in
+    # describing food already eaten can be for today or earlier, never for the future.
+    local = clock.today()
+    date = patch.get("date") or local.isoformat()
     try:
-        dt.date.fromisoformat(date)
+        d0 = dt.date.fromisoformat(date)
     except ValueError:
         fail(f"date {date!r} is not YYYY-MM-DD")
+
+    if d0 > local:
+        fail(f"{date} is in the future — local date is {local.isoformat()} "
+             f"({clock.now():%H:%M %Z}).\n"
+             f"         If this came from date.today() in the container, that is UTC and "
+             f"runs ahead after 5 pm Pacific. Use build/clock.py.")
+    if (local - d0).days > 3:
+        fail(f"{date} is {(local - d0).days} days ago (local date {local.isoformat()}). "
+             f"Pass it explicitly again if that is really intended.")
 
     log = json.loads(LOG.read_text(encoding="utf-8"))
 

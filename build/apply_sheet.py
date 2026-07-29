@@ -22,7 +22,9 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LOG = ROOT / "data" / "training-log.json"
 d = json.loads(LOG.read_text(encoding="utf-8"))
-TODAY = "2026-07-29"
+import sys; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import clock
+TODAY = clock.iso()   # local date; the container is UTC and runs a day ahead at night
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. issues: every one gets a status, and the four Udhay closed are closed

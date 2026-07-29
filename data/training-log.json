@@ -1766,7 +1766,7 @@
       "since": "2026-07-28",
       "action": "3 readings in 304 days. Enable Pulse Ox on the Fenix now (Health & Wellness > Pulse Ox > All Day or During Sleep) so nine weeks of sea-level baseline exist before Cottonwood. Free, and it is the one sensor that speaks directly to how altitude is being tolerated.",
       "status": "closed",
-      "closed": "2026-07-29",
+      "closed": "2026-07-28",
       "resolution": "Pulse Ox enabled during sleep on the Fenix on Jul 28. A baseline will build on its own from here — no action left."
     },
     {
@@ -1887,7 +1887,7 @@
       "since": "2026-05-20",
       "action": "Single occurrence, likely uneven strap load. Mention to a doctor if it recurs or spreads.",
       "status": "closed",
-      "closed": "2026-07-29",
+      "closed": "2026-07-28",
       "resolution": "One week only, at a load he was not conditioned for and probably with the pack poorly set up. Did not recur."
     },
     {
@@ -1902,7 +1902,7 @@
       "since": "2026-07-19",
       "action": "Switched to %HRR. Still calibrate altimeter at known elevation and enable multi-band GPS.",
       "status": "closed",
-      "closed": "2026-07-29",
+      "closed": "2026-07-28",
       "resolution": "Not needed. Satellite selection is on auto and ±50 ft of barometric drift is acceptable for this purpose. Zones were read directly from Garmin's own configuration rather than assumed."
     },
     {
@@ -1920,7 +1920,7 @@
     {
       "issue": "Tent decision lands five days before the only night it can be tested",
       "severity": "medium",
-      "since": "2026-07-29",
+      "since": "2026-07-28",
       "status": "open",
       "action": "Big Agnes Copper Spur UL1 is owned; the MSR Access 2 is the partner's suggestion for a shared tent, to be settled at the Labor Day sale on Sep 7. Week 7 on Sep 12 is the only scheduled night out before the summit, so a tent bought on Sep 7 gets exactly one rehearsal — pitching, condensation, and whether two people and two packs actually fit. If the decision slips past Sep 12, go to Whitney with the tent already known to work rather than the one bought on offer."
     }
