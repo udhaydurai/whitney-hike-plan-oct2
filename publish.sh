@@ -10,6 +10,29 @@ cd "$(dirname "$0")"
 
 MSG="${1:-dashboard rebuild}"
 
+# Two writers touch data/training-log.json: the nightly scheduled task and whatever
+# session is running now. Without this, the second one to finish gets its push rejected
+# and the tempting fix is --force, which silently deletes the other's work. Rebase
+# first, and fail loudly on a real conflict rather than choosing a winner.
+if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+  FETCH="https://x-access-token:${GITHUB_TOKEN}@github.com/udhaydurai/whitney-hike-plan-oct2.git"
+else
+  FETCH="origin"
+fi
+echo "── checking for changes pushed by another session"
+if git fetch -q "$FETCH" main 2>/dev/null; then
+  if ! git merge-base --is-ancestor FETCH_HEAD HEAD 2>/dev/null; then
+    echo "   remote has commits this checkout does not — rebasing onto them"
+    if ! git -c user.email=udhaydurai@users.noreply.github.com \
+           -c user.name="Udhay Durai" rebase FETCH_HEAD; then
+      git rebase --abort 2>/dev/null || true
+      echo "   STOP: the rebase conflicts. Both sides edited the same records."
+      echo "   Resolve by hand — do not force-push, it would delete the other side's work."
+      exit 1
+    fi
+  fi
+fi
+
 echo "── rebuilding data from the Garmin digest"
 python3 build/rebuild_data.py
 

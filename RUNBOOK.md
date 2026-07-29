@@ -103,7 +103,8 @@ only serve the branch root or `/docs` — an arbitrary folder name is not an opt
 `build/site.py` writes there and Pages is configured as **main branch, /docs**. Do not
 rename it back.
 
-`./publish.sh "message"` runs rebuild → dashboard → site → verify → commit → push, and
+`./publish.sh "message"` fetches and rebases onto the remote first, because the nightly
+scheduled task writes the same file — never force-push past it. Then it runs rebuild → dashboard → site → verify → commit → push, and
 exits without committing if nothing changed. It will not publish a site that fails
 verification.
 
