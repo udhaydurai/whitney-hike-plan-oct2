@@ -387,6 +387,109 @@ def s_week():
 </section>"""
 
 
+def s_weeks():
+    """
+    The nine-week plan as agreed in the shared sheet.
+
+    The sheet outranks anything earlier in the log, on the same principle the Garmin
+    export outranks the PDF: it is the record two people actually agreed to. Where it
+    disagrees with what was here before, the disagreement is printed rather than
+    quietly resolved — two of them change which permit to reserve.
+    """
+    P = D["nineWeekPlan"]
+    rows = ""
+    for w in P["weeks"]:
+        big = (w["distanceMi"] or 0) >= 18
+        route = f' via {e(w["route"])}' if w["route"] else ""
+        dist = f'{w["distanceMi"]:g} mi' if w["distanceMi"] else "—"
+        asc = f'{w["ascentFt"]:,} ft' if w["ascentFt"] else "—"
+        smt = f'{w["summitFt"]:,} ft' if w["summitFt"] else "—"
+        # hours are estimated from this athlete's own median moving speed, not from a book
+        hrs = (f'{w["distanceMi"] / 1.55:.0f}–{w["distanceMi"] / 1.25:.0f} h'
+               if w["distanceMi"] else "—")
+        notes = " · ".join(x for x in (w.get("partnerNote"), w.get("ownNote"),
+                                       w.get("permit")) if x)
+        rows += (f'<tr{" style=background:#fff8e6" if big else ""}>'
+                 f'<td class="nw"><b>{e(sd(w["date"]))}</b><div class="sub2">wk {w["week"]}</div></td>'
+                 f'<td><b>{e(w["peak"])}</b>{route}'
+                 f'{f"<div class=sub>{e(notes)}</div>" if notes else ""}</td>'
+                 f'<td class="num nw">{dist}</td><td class="num nw">{asc}</td>'
+                 f'<td class="num nw">{smt}</td><td class="num nw">{hrs}</td></tr>')
+
+    conf = "".join(
+        f'<div class="issue" style="border-left-color:{C["bad"]}">'
+        f'<div class="ih"><span class="sev" style="background:{C["bad2"]};color:{C["bad"]}">'
+        f'Conflict</span><b>{e(c["what"])}</b></div>'
+        f'<div class="sub"><b>Sheet:</b> {e(c["sheet"])}<br>'
+        f'<b>Previously here:</b> {e(c["log"])}<br>{e(c["matters"])}</div></div>'
+        for c in P["conflicts"])
+
+    reads = "".join(f'<li><b>{e(r["point"])}.</b> {e(r["detail"])}</li>'
+                    for r in P["readsOnThePlan"])
+
+    tot_mi = sum(w["distanceMi"] or 0 for w in P["weeks"])
+    tot_ft = sum(w["ascentFt"] or 0 for w in P["weeks"])
+    biggest = max(P["weeks"], key=lambda w: w["distanceMi"] or 0)
+
+    return f"""<section id="weeks">
+  <h2>Nine weeks to the summit<span class="n">{tot_mi:g} mi · {tot_ft:,} ft · from the shared plan sheet</span></h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Weekend</th><th>Target</th>
+   <th class="num">Distance</th><th class="num">Ascent</th><th class="num">Summit</th>
+   <th class="num">Est. time</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <div class="sub" style="margin-top:8px">Estimated time uses the recorded moving-speed
+   range of 1.25–1.55 mph on climbing terrain, so it is this athlete's pace rather than a
+   guidebook's. Highlighted rows are 18 mi or more — the biggest is
+   {e(sd(biggest["date"]))} at {biggest["distanceMi"]:g} mi and {biggest["ascentFt"]:,} ft.</div>
+  <h3 style="margin:22px 0 8px">Unresolved against what was here before</h3>
+  {conf}
+  <h3 style="margin:22px 0 8px">What the plan says about readiness</h3>
+  <ul class="ul">{reads}</ul>
+</section>"""
+
+
+def s_summit():
+    """The itinerary and the landmark table, so fuelling can be pinned to places."""
+    I = D["summitItinerary"]
+    days = "".join(
+        f'<div class="step" style="border-left-color:{C["gold"]}">'
+        f'<div class="swin"><span style="color:{C["gold"]};font-weight:700">{e(x["day"])}</span> '
+        f'{e(sd(x["date"]))}</div>'
+        f'<ul class="ul" style="margin:6px 0 0">'
+        + "".join(f"<li>{e(s)}</li>" for s in x["steps"]) + "</ul></div>"
+        for x in I["days"])
+
+    L = I["landmarks"]
+    # gain per mile is what tells you which segment will hurt, and it is not uniform
+    lrows = ""
+    for n, (name, ft, mi) in enumerate(L):
+        if n == 0:
+            grad = "—"
+        else:
+            pm, pf = L[n - 1][2], L[n - 1][1]
+            dmi, dft = mi - pm, ft - pf
+            gpm = dft / dmi if dmi else 0
+            col = C["bad"] if gpm >= 900 else C["warn"] if gpm >= 650 else C["ink3"]
+            grad = (f'<span style="color:{col};font-weight:650">{gpm:+,.0f}</span>'
+                    if dft else "—")
+        camp = ' style="background:#eef6f3"' if "Camp" in name or name == "Summit" else ""
+        lrows += (f'<tr{camp}><td>{e(name)}</td><td class="num nw">{ft:,}</td>'
+                  f'<td class="num nw">{mi:g}</td><td class="num nw">{grad}</td></tr>')
+
+    return f"""<section id="summit">
+  <h2>Summit itinerary<span class="n">Sep 30 – Oct 2 · from the shared plan sheet</span></h2>
+  {days}
+  <div class="callout"><b>The hard day is Day 3, not Day 2.</b> {e(I["note"])}</div>
+  <h3 style="margin:22px 0 8px">Landmarks from Whitney Portal</h3>
+  <div class="scroll"><table class="t"><thead><tr><th>Landmark</th>
+   <th class="num">Elevation</th><th class="num">Cum. mi</th>
+   <th class="num">ft/mi</th></tr></thead><tbody>{lrows}</tbody></table></div>
+  <div class="sub" style="margin-top:8px">{e(I["landmarkNote"])} The ft/mi column is
+   computed from the elevations, so the steep segments show themselves: the switchbacks
+   above Trail Camp and the pull to Trail Crest are where the gradient spikes, and they
+   arrive at hour four and five of the summit day — the hours the tank is already empty.</div>
+</section>"""
+
+
 def s_plan():
     KIND = {"hike": (C["primary"], "Hike"), "rest": (C["ink3"], "Rest"),
             "week": (C["accent"], "Weekday"), "admin": (C["bad"], "Admin"),
@@ -681,8 +784,15 @@ def s_issues():
     SEV = {"high": (C["bad"], C["bad2"], "High"), "medium": (C["warn"], C["warn2"], "Medium"),
            "watch": (C["violet"], "#cfc6e6", "Watch"), "info": (C["ink3"], C["line"], "Info")}
     order = {"high": 0, "medium": 1, "watch": 2, "info": 3}
+    # An issue is open or it is closed. Nothing that has been resolved or corrected
+    # appears in the open list, because a corrected fact left in the open list keeps
+    # asserting the thing that was corrected.
+    ALL = D["openIssues"]
+    iss = sorted((i for i in ALL if i.get("status") != "closed"),
+                 key=lambda i: order.get(i["severity"], 9))
+    done = [i for i in ALL if i.get("status") == "closed"]
+
     rows = ""
-    iss = sorted(D["openIssues"], key=lambda i: order.get(i["severity"], 9))
     for i in iss:
         col, bg, lab = SEV.get(i["severity"], SEV["info"])
         since = f' · since {sd(i["since"])}' if i.get("since") else ""
@@ -691,9 +801,21 @@ def s_issues():
                  f'<b>{e(i["issue"])}</b></div>'
                  f'<div class="sub">{e(i["action"])}{since}</div></div>')
     hi = sum(1 for i in iss if i["severity"] == "high")
+
+    crows = "".join(
+        f'<tr><td class="nw">{e(sd(c["closed"])) if c.get("closed") else "—"}</td>'
+        f'<td><b>{e(c["issue"])}</b><div class="sub">{e(c.get("resolution",""))}</div></td></tr>'
+        for c in sorted(done, key=lambda c: c.get("closed") or ""))
+    closed_block = ("" if not done else f"""
+  <h3 style="margin:22px 0 8px;font-size:14.5px;color:{C['ink3']}">
+    Closed<span class="n">{len(done)} · kept for the record, not for attention</span></h3>
+  <div class="scroll"><table class="t"><thead><tr><th class="nw">Closed</th>
+  <th>Issue and how it closed</th></tr></thead>
+  <tbody>{crows}</tbody></table></div>""")
+
     return f"""<section id="issues">
-  <h2>Open issues<span class="n">{len(iss)} tracked · {hi} high</span></h2>
-  {rows}
+  <h2>Open issues<span class="n">{len(iss)} open · {hi} high · {len(done)} closed</span></h2>
+  {rows}{closed_block}
 </section>"""
 
 
@@ -940,6 +1062,7 @@ footer{{color:{C['ink3']};font-size:12px;text-align:center;padding:24px 12px 0;l
 """
 
 NAV = [("status", "Status"), ("levers", "What matters"), ("week", "This week"),
+       ("weeks", "Nine weeks"), ("summit", "Summit day"),
        ("plan", "Plan to Oct 2"), ("energy", "Energy budget"), ("fuel", "Fuel & fluid"),
        ("altitude", "Altitude"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
        ("log", "Training log"), ("reference", "Reference"), ("appendix", "Appendix")]
@@ -966,6 +1089,8 @@ doc = f"""<!doctype html>
 {s_status()}
 {s_levers()}
 {s_week()}
+{s_weeks()}
+{s_summit()}
 {s_plan()}
 {s_energy()}
 {s_fuel()}
@@ -985,7 +1110,7 @@ doc = f"""<!doctype html>
 
 OUT.write_text(doc, encoding="utf-8")
 print(f"wrote {OUT}  ({len(doc):,} bytes)")
-print(f"  {len(HK)} hikes · {len(RK)} rucks · {len(D['openIssues'])} issues · {DAYS} days out")
+print(f"  {len(HK)} hikes · {len(RK)} rucks · {sum(1 for i in D['openIssues'] if i.get('status')!='closed')} open issues · {DAYS} days out")
 print(f"  computed: RMR {RMR} ({RMR_RANGE[0]}-{RMR_RANGE[1]}) · burn med {BURN_MED} "
       f"({BURN_LO}-{BURN_HI}) · tank {TANK_H:.2f} h · sweat {SW_MEAN} ({SW_LO}-{SW_HI}, n={SW_N})")
 print(f"  stopped bands: {[(b['band'],b['n'],b['mean']) for b in BANDS]}")

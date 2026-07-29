@@ -1402,30 +1402,84 @@
   "plannedHikes": [
     {
       "date": "2026-08-01",
-      "dateApprox": true,
-      "name": "San Jacinto Peak via Devils Slide Trail",
-      "status": "stated by user — 'this week'",
-      "estDistanceMi": "15-16",
+      "name": "San Bernardino Peak via Main Trail (Forsee Creek)",
+      "estDistanceMi": 16,
       "estAscentFt": 4700,
-      "trailheadFt": 6500,
-      "summitFt": 10834,
-      "purpose": "Fueling and hydration rehearsal #1 on a known summit via a longer, more gradual route"
+      "summitFt": 10691,
+      "status": "from the shared plan sheet",
+      "purpose": ""
     },
     {
       "date": "2026-08-08",
-      "name": "No hike planned",
-      "status": "stated by user",
-      "purpose": "Recovery week"
+      "name": "San Gorgonio via Vivian Creek",
+      "estDistanceMi": 19,
+      "estAscentFt": 5400,
+      "summitFt": 11503,
+      "status": "from the shared plan sheet",
+      "purpose": "day hike plan"
     },
     {
       "date": "2026-08-15",
-      "name": "San Gorgonio via Vivian Creek Trail",
-      "status": "stated by user",
-      "estDistanceMi": "17-18",
-      "estAscentFt": 5400,
-      "trailheadFt": 6080,
+      "name": "San Jacinto via Deer Springs loop",
+      "estDistanceMi": 18,
+      "estAscentFt": 5298,
+      "summitFt": 10834,
+      "status": "from the shared plan sheet",
+      "purpose": "20 lb of water"
+    },
+    {
+      "date": "2026-08-22",
+      "name": "San Gorgonio via South Fork",
+      "estDistanceMi": 16,
+      "estAscentFt": 4700,
       "summitFt": 11503,
-      "purpose": "Biggest single day of the whole plan and the closest available analogue to Whitney Day 1 + Day 2 combined"
+      "status": "from the shared plan sheet",
+      "purpose": "day hike plan"
+    },
+    {
+      "date": "2026-08-29",
+      "name": "San Gorgonio via Vivian Creek",
+      "estDistanceMi": 19,
+      "estAscentFt": 5400,
+      "summitFt": 11503,
+      "status": "from the shared plan sheet",
+      "purpose": "day hike, or camp at the halfway camp"
+    },
+    {
+      "date": "2026-09-05",
+      "name": "San Jacinto (heavy pack) via Marion Mountain",
+      "estDistanceMi": 12,
+      "estAscentFt": 4600,
+      "summitFt": 10834,
+      "status": "from the shared plan sheet",
+      "purpose": "skipping this one — hiking Half Dome instead"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "San Gorgonio (heavy pack) via Vivian Creek",
+      "estDistanceMi": 25,
+      "estAscentFt": 7500,
+      "summitFt": 11503,
+      "status": "from the shared plan sheet",
+      "purpose": "double summit — down to High Creek, then up again"
+    },
+    {
+      "date": "2026-09-19",
+      "name": "Local pack carry via Potato Chip Rock",
+      "estDistanceMi": 5.5,
+      "estAscentFt": 2100,
+      "summitFt": null,
+      "status": "from the shared plan sheet",
+      "purpose": ""
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Pure taper / rest",
+      "estDistanceMi": null,
+      "estAscentFt": null,
+      "summitFt": null,
+      "status": "from the shared plan sheet",
+      "purpose": ""
     }
   ],
   "hydrationAnalysis": {
@@ -1659,10 +1713,46 @@
       "note": "Owned, SPF 30. Confirmed Jul 28. Body and face sunscreen is a separate item and has not been confirmed either way."
     },
     {
-      "item": "Spare correct-strength reading glasses",
+      "item": "Osprey Exos Pro 55 pack",
+      "status": "owned",
+      "priority": "done",
+      "note": "From the plan sheet. The pack the log never had. Whitney Day 1 is roughly 30 lb in this, against a 12 lb training maximum so far."
+    },
+    {
+      "item": "MSR Access 2 tent",
+      "status": "owned",
+      "priority": "done",
+      "note": "From the plan sheet. Conflicts with the Big Agnes Copper Spur UL1 already in this list — needs confirming which one goes up the mountain."
+    },
+    {
+      "item": "Sawyer Squeeze filter",
+      "status": "owned",
+      "priority": "done",
+      "note": "From the plan sheet. Conflicts with the GRAYL UltraPress already in this list."
+    },
+    {
+      "item": "Therm-a-Rest NeoAir XLite NXT pad",
+      "status": "owned",
+      "priority": "done",
+      "note": "From the plan sheet."
+    },
+    {
+      "item": "Magma 30 sleeping bag",
+      "status": "owned",
+      "priority": "done",
+      "note": "From the plan sheet. A 30 °F bag at 12,000 ft in early October is the right ballpark but has no margin — Trail Camp can drop into the 20s."
+    },
+    {
+      "item": "Stove",
       "status": "NEEDED",
-      "priority": "medium",
-      "note": "Once the optometrist sets the right power, carry two pairs. You will be reading a watch and map in the dark on summit morning."
+      "priority": "high",
+      "note": "Blank in the plan sheet."
+    },
+    {
+      "item": "Bear canister",
+      "status": "arranged",
+      "priority": "done",
+      "note": "Blank in the plan sheet, but the Day 1 itinerary collects canisters at the ranger station, so this is rental rather than a gap."
     }
   ],
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
@@ -1671,130 +1761,158 @@
       "issue": "Pulse oximetry is off — no SpO2 baseline before an altitude objective",
       "severity": "high",
       "since": "2026-07-28",
-      "action": "3 readings in 304 days. Enable Pulse Ox on the Fenix now (Health & Wellness > Pulse Ox > All Day or During Sleep) so nine weeks of sea-level baseline exist before Cottonwood. Free, and it is the one sensor that speaks directly to how altitude is being tolerated."
+      "action": "3 readings in 304 days. Enable Pulse Ox on the Fenix now (Health & Wellness > Pulse Ox > All Day or During Sleep) so nine weeks of sea-level baseline exist before Cottonwood. Free, and it is the one sensor that speaks directly to how altitude is being tolerated.",
+      "status": "closed",
+      "closed": "2026-07-29",
+      "resolution": "Pulse Ox enabled during sleep on the Fenix on Jul 28. A baseline will build on its own from here — no action left."
     },
     {
       "issue": "Sleep drops to about 3 hours after every long effort",
       "severity": "watch",
       "since": "2026-07-28",
-      "action": "Across the six longest days the night-of average is 3.4 h against 6.8 the night before. Whitney has summit day depending on sleep at 12,000 ft immediately after a 3,700 ft climb. Finishing Day 1 early, fuelling properly and taking no caffeine after midday are the levers."
+      "action": "Across the six longest days the night-of average is 3.4 h against 6.8 the night before. Whitney has summit day depending on sleep at 12,000 ft immediately after a 3,700 ft climb. Finishing Day 1 early, fuelling properly and taking no caffeine after midday are the levers.",
+      "status": "open"
     },
     {
       "issue": "Diamox tolerance not yet tested",
       "severity": "high",
       "since": "2026-07-28",
-      "action": "Prescription and 20 days of supply confirmed, so a trial costs nothing from the trip stock. Do it this week at home or before a short local walk rather than on Devils Slide — acetazolamide is a diuretic and you already run 1.5-5.5L fluid deficits with far too little sodium. Log the timing of the urination effect and taste-test your actual electrolyte drinks while on it."
+      "action": "Prescription and 20 days of supply confirmed, so a trial costs nothing from the trip stock. Do it this week at home or before a short local walk rather than on Devils Slide — acetazolamide is a diuretic and you already run 1.5-5.5L fluid deficits with far too little sodium. Log the timing of the urination effect and taste-test your actual electrolyte drinks while on it.",
+      "status": "open"
     },
     {
       "issue": "Diamox start date may not cover the Cottonwood night",
       "severity": "medium",
       "since": "2026-07-28",
-      "action": "Plan says start Sep 30, but you sleep at ~10,000 ft on Sep 29. Ask the prescriber whether to start a day or two earlier."
+      "action": "Plan says start Sep 30, but you sleep at ~10,000 ft on Sep 29. Ask the prescriber whether to start a day or two earlier.",
+      "status": "open"
     },
     {
       "issue": "Devils Slide permit faxed, awaiting confirmation",
       "severity": "medium",
       "since": "2026-07-28",
-      "action": "Follow up with the San Jacinto Ranger District (909) 382-2921, open Thu-Mon. Marion Mountain is the fallback and was not quota-flagged the way Devils Slide is — but it still needs its own wilderness permit. Adventure Pass ($5/day) required for Humber Park parking."
+      "action": "Follow up with the San Jacinto Ranger District (909) 382-2921, open Thu-Mon. Marion Mountain is the fallback and was not quota-flagged the way Devils Slide is — but it still needs its own wilderness permit. Adventure Pass ($5/day) required for Humber Park parking.",
+      "status": "open"
     },
     {
       "issue": "Never carried more than a 12 lb pack — Whitney Day 1 needs roughly 30 lb",
       "severity": "high",
       "since": "2026-07-28",
-      "action": "Progressive loading: 18 lb on Aug 1, 22-25 lb on Aug 15, 28 lb late Aug, full weight in September. At 161 lb that is 7.5% rising to 18.6% of bodyweight — inside normal backpacking range, but it changes HR, pace and knee load on the 6,200 ft descent."
+      "action": "Progressive loading: 18 lb on Aug 1, 22-25 lb on Aug 15, 28 lb late Aug, full weight in September. At 161 lb that is 7.5% rising to 18.6% of bodyweight — inside normal backpacking range, but it changes HR, pace and knee load on the 6,200 ft descent.",
+      "status": "open"
     },
     {
-      "issue": "Sleep-altitude ladder has a 3,400 ft step left",
+      "issue": "Sleeping height still steps up 3,400 ft on the night before the summit",
       "severity": "medium",
       "since": "2026-07-28",
-      "action": "CORRECTED: two nights at 8,600 ft in Mammoth are now on the board, so this is a progression (8,600 to 10,000 at Cottonwood to 12,000 at Trail Camp), not a cold jump. An optional extra night near 10,000 ft in August would smooth it further but is no longer urgent."
+      "action": "Highest slept is 8,600 ft, two nights in Mammoth Lakes. Trail Camp is 12,000 ft, a 3,400 ft step. Two things now close most of it: the Cottonwood Camp night on Sep 29, and the High Creek Camp permit in Week 7 of the plan on Sep 12, which sits around 9,000-9,600 ft. Taking the Week 7 overnight rather than making it a day hike is what turns this from an open risk into a rehearsed one.",
+      "status": "open"
     },
     {
-      "issue": "Never hiked two consecutive days — Whitney Day 2 happens on tired legs and poor sleep",
+      "issue": "No big day followed by another big day",
       "severity": "high",
       "since": "2026-07-28",
-      "action": "One back-to-back weekend in September: big Saturday, 8-10 mi Sunday."
+      "action": "Back-to-back days are not the gap — the data has eight consecutive-day pairs, including Jul 25–26. What is untested is a long day followed by another long day: Jul 25–26 was 2.8 h then 5.7 h, where Whitney is roughly 6.6 h with a full pack then a 4 am start for 14,505 ft. Week 7 of the plan (Sep 12, permit at High Creek Camp) is the one scheduled chance to rehearse it, because camping mid-route forces a second day on tired legs.",
+      "status": "open"
     },
     {
       "issue": "Two clear mild episodes at 10,500-11,000 ft, plus one that resolved",
       "severity": "watch",
       "since": "2026-07-26",
-      "action": "REVISED DOWN from three: San Jacinto clumsiness at 10,500 ft (Jul 18) and unacclimatised gondola dizziness at 11,053 ft (Jul 25) are altitude-relevant. Gem Lakes discomfort (Jul 26) was mild, acclimatised and resolved. The Jul 24 Whitney Portal headache moves out of this column entirely — it is eyestrain, not altitude. Still worth raising with your doctor alongside the Diamox plan."
+      "action": "REVISED DOWN from three: San Jacinto clumsiness at 10,500 ft (Jul 18) and unacclimatised gondola dizziness at 11,053 ft (Jul 25) are altitude-relevant. Gem Lakes discomfort (Jul 26) was mild, acclimatised and resolved. The Jul 24 Whitney Portal headache moves out of this column entirely — it is eyestrain, not altitude. Still worth raising with your doctor alongside the Diamox plan.",
+      "status": "open"
     },
     {
       "issue": "Diamox is a diuretic and you already run a fluid and sodium deficit",
       "severity": "watch",
       "since": "2026-07-28",
-      "action": "Raise this interaction explicitly with the prescribing doctor, and do the trial run in August — not on Sep 30 — so side effects are known before summit week."
+      "action": "Raise this interaction explicitly with the prescribing doctor, and do the trial run in August — not on Sep 30 — so side effects are known before summit week.",
+      "status": "open"
     },
     {
       "issue": "Blurry vision — 1.25 readers likely under-corrected",
       "severity": "medium",
       "since": "2026-07-24",
-      "action": "Optometrist visit being arranged, which is the right answer. Three things worth telling them: you are going to 14,505 ft in October, you will need to read a watch and map in the dark on summit morning, and whether the blur is only close-up or at distance too. Ask about proper high-UV sunglasses while you are there — UV at 14,000 ft is far stronger than at sea level and granite and snow reflect it back at you. Carry a SPARE pair of correct-strength readers — losing your only pair at Trail Camp with a map and a stove to manage is a real problem."
+      "action": "Optometrist visit being arranged, which is the right answer. Three things worth telling them: you are going to 14,505 ft in October, you will need to read a watch and map in the dark on summit morning, and whether the blur is only close-up or at distance too. Ask about proper high-UV sunglasses while you are there — UV at 14,000 ft is far stronger than at sea level and granite and snow reflect it back at you. Carry a SPARE pair of correct-strength readers — losing your only pair at Trail Camp with a map and a stove to manage is a real problem.",
+      "status": "open"
     },
     {
       "issue": "Poles left at home on both Mammoth hikes",
       "severity": "medium",
       "since": "2026-07-26",
-      "action": "Low cost on flat family hikes, but the Jun 20 A/B proved poles are worth ~10 bpm. Make them automatic."
+      "action": "Low cost on flat family hikes, but the Jun 20 A/B proved poles are worth ~10 bpm. Make them automatic.",
+      "status": "open"
     },
     {
       "issue": "Own fluid intake unrecorded on both Mammoth hikes — you were the family's water carrier",
       "severity": "medium",
       "since": "2026-07-26",
-      "action": "Carry and log your own bottle separately from the shared supply. Sweat loss was 2,677 ml and 5,115 ml on those two days."
+      "action": "Carry and log your own bottle separately from the shared supply. Sweat loss was 2,677 ml and 5,115 ml on those two days.",
+      "status": "open"
     },
     {
       "issue": "Total sodium far too low on long efforts",
       "severity": "high",
       "since": "2026-07-18",
-      "action": "Raise to 700-1000 mg/hr; test on next hike"
+      "action": "Raise to 700-1000 mg/hr; test on next hike",
+      "status": "open"
     },
     {
       "issue": "Calorie intake ~50% of burn on long days",
       "severity": "high",
       "since": "2026-06-13",
-      "action": "250-300 cal/hr front-loaded"
+      "action": "250-300 cal/hr front-loaded",
+      "status": "open"
     },
     {
       "issue": "Coordination loss (clumsiness) at ~10,500 ft",
       "severity": "watch",
       "since": "2026-07-18",
-      "action": "Likely fuel-driven, but ataxia is a descend-now sign. Brief your hiking partner to watch for it. Retest on a well-fueled second San Jacinto."
+      "action": "Likely fuel-driven, but ataxia is a descend-now sign. Brief your hiking partner to watch for it. Retest on a well-fueled second San Jacinto.",
+      "status": "open"
     },
     {
       "issue": "Gut distress after long hikes (bloating, gas)",
       "severity": "medium",
       "since": "2026-07-11",
-      "action": "No coffee on hike mornings, swap trail mix for dates/rice. Mention to doctor given reflux history if it recurs every long hike."
+      "action": "No coffee on hike mornings, swap trail mix for dates/rice. Mention to doctor given reflux history if it recurs every long hike.",
+      "status": "open"
     },
     {
       "issue": "Left shoulder blade pressure during exertion",
       "severity": "watch",
       "since": "2026-05-20",
-      "action": "Single occurrence, likely uneven strap load. Mention to a doctor if it recurs or spreads."
+      "action": "Single occurrence, likely uneven strap load. Mention to a doctor if it recurs or spreads.",
+      "status": "closed",
+      "closed": "2026-07-29",
+      "resolution": "One week only, at a load he was not conditioned for and probably with the pack poorly set up. Did not recur."
     },
     {
       "issue": "VO2 max 37 vs October target 41-42",
       "severity": "medium",
-      "action": "Zone 2 volume + one weekly interval session. Prefer incline treadmill 10-15% or uphill hiking intervals over running, given back/hip flexor history."
+      "action": "Zone 2 volume + one weekly interval session. Prefer incline treadmill 10-15% or uphill hiking intervals over running, given back/hip flexor history.",
+      "status": "open"
     },
     {
       "issue": "Watch altimeter and zones need recalibration",
       "severity": "medium",
       "since": "2026-07-19",
-      "action": "Switched to %HRR. Still calibrate altimeter at known elevation and enable multi-band GPS."
+      "action": "Switched to %HRR. Still calibrate altimeter at known elevation and enable multi-band GPS.",
+      "status": "closed",
+      "closed": "2026-07-29",
+      "resolution": "Not needed. Satellite selection is on auto and ±50 ft of barometric drift is acceptable for this purpose. Zones were read directly from Garmin's own configuration rather than assumed."
     },
     {
       "issue": "El Cajon Mountain closed all August",
       "severity": "info",
-      "action": "Reopens September. Baldy and a second San Jacinto carry August altitude work."
+      "action": "Reopens September. Baldy and a second San Jacinto carry August altitude work.",
+      "status": "open"
     },
     {
       "issue": "Cottonwood Camp reservation for Sep 29",
       "severity": "high",
-      "action": "Book on Recreation.gov"
+      "action": "Book on Recreation.gov",
+      "status": "open"
     }
   ],
   "trailOptions": [
@@ -1891,7 +2009,7 @@
       "phase": 4,
       "kind": "admin",
       "title": "Permit follow-up and Diamox tolerance test",
-      "detail": "Devils Slide permit is faxed — follow up with the ranger station (Thu-Mon) to confirm, with Marion Mountain as the fallback. Buy an Adventure Pass for Humber Park. Reserve the free San Gorgonio permit at permits.sgwa.org for Aug 15. Buy the hydration vest. Book Cottonwood Camp for Sep 29.",
+      "detail": "Confirm which mountain Saturday actually is — the shared plan sheet says San Bernardino Peak via Forsee Creek, while the faxed Devils Slide permit belongs to the San Jacinto version. San Bernardino Peak needs its own San Gorgonio Wilderness permit from permits.sgwa.org, so this is not a decision that can wait. Reserve the Aug 15 permit too, once the San Jacinto versus Gorgonio question in the sheet is settled. Book Cottonwood Camp for Sep 29.",
       "targets": "Take the first Diamox dose at home or before a short local walk, NOT on the big hike — you want to meet the tingling, the taste changes and the extra urination somewhere with a bathroom and no 16 miles attached.",
       "priority": "high"
     },
@@ -1899,8 +2017,8 @@
       "window": "Aug 1 or 2",
       "phase": 4,
       "kind": "hike",
-      "title": "San Jacinto Peak via Devils Slide (or Marion Mountain)",
-      "detail": "15-16 mi, ~4,700 ft, summit 10,834 ft. Longer and more gradual than Marion Mountain, so it rewards sustained Zone 2 rather than grinding. If the permit does not land, Marion Mountain at 13.24 mi and 4,590 ft is a known quantity and a fine substitute.",
+      "title": "San Bernardino Peak via Forsee Creek",
+      "detail": "16 mi, 4,700 ft, summit 10,691 ft — from the shared plan sheet. Longer than anything recorded so far: San Jacinto was 13.24 mi and 4,590 ft and ran 11:04, so expect 11–13 hours. The earlier plan here was San Jacinto via Devils Slide; if the faxed permit lands and that is the route instead, every target below still applies unchanged, because they are set against hours on the clock rather than against a route.",
       "packLb": 18,
       "targets": "Fueling rehearsal #1. 250-300 cal/hr on the 45-min Fenix buzzer. 600-800 ml/hr. 700-1,000 mg sodium per litre. Poles from the car park. Log YOUR intake, not the family's. If you do take Diamox on this hike, treat the fluid and sodium targets as floors rather than goals — add roughly another 500 ml/hr of capacity and know your filter points.",
       "priority": "high"
@@ -1923,8 +2041,8 @@
       "window": "Aug 15",
       "phase": 4,
       "kind": "hike",
-      "title": "San Gorgonio via Vivian Creek",
-      "detail": "17-18 mi, ~5,400 ft, summit 11,503 ft — the highest point in Southern California and a new personal altitude record on foot. Biggest single day of the entire plan and the closest analogue to Whitney's combined Day 1 and Day 2.",
+      "title": "San Jacinto via Deer Springs loop, or San Gorgonio via Vivian Creek",
+      "detail": "The sheet says San Jacinto via Deer Springs loop, 18 mi and 5,298 ft, while its own notes column says plan for Gorgonio, 19 mi and 5,400 ft. Either is the biggest day yet and either is a new altitude record on foot. Gorgonio needs a free advance permit from permits.sgwa.org; Deer Springs needs a San Jacinto wilderness permit. Pick one this week.",
       "packLb": "22-25",
       "targets": "Fueling rehearsal #2, this time on a day long enough that failure shows. Expect 10-12 hours. Free permit required in advance from permits.sgwa.org.",
       "priority": "high"
@@ -1957,8 +2075,8 @@
       "window": "Sep 12 - Sep 13",
       "phase": 5,
       "kind": "hike",
-      "title": "Back-to-back weekend — the Whitney simulation",
-      "detail": "Saturday: San Jacinto via Marion Mountain, full pack, known route. Sunday: 8-10 mi local on deliberately tired legs and short sleep. This is the single most transferable session left, because Whitney Day 2 is not a fresh day.",
+      "title": "Week 7 — the keystone weekend",
+      "detail": "San Gorgonio via Vivian Creek, 25 mi and 7,500 ft, with the overnight permit at High Creek Camp and a double summit. This is the only session in the plan that tests all three untested things at once: a full pack, sleeping high at roughly 9,000–9,600 ft, and a big day on legs that already did a big day. Take the overnight rather than converting it to a day hike — the camp is the point.",
       "packLb": "full",
       "priority": "high"
     },
@@ -3197,5 +3315,275 @@
       "problem": "Pulse oximetry has produced 3 readings in 304 days of health data — effectively off. For an altitude objective this is the most useful sensor on the watch and it is not running.",
       "action": "Enable it in the Fenix under Health & Wellness, Pulse Ox, set to All Day or at least During Sleep. Doing it now builds a sea-level baseline over the next nine weeks, so the readings at Cottonwood and Trail Camp mean something instead of being the first ever taken. Baseline from the three existing readings is 94-96%."
     }
+  },
+  "nineWeekPlan": {
+    "source": "Shared Google Sheet, read Jul 29 2026. This is the agreed plan and it supersedes anything earlier in this log.",
+    "weeks": [
+      {
+        "week": 1,
+        "date": "2026-08-01",
+        "peak": "San Bernardino Peak",
+        "route": "Main Trail (Forsee Creek)",
+        "summitFt": 10691,
+        "ascentFt": 4700,
+        "distanceMi": 16,
+        "permit": null,
+        "partnerNote": null,
+        "ownNote": null
+      },
+      {
+        "week": 2,
+        "date": "2026-08-08",
+        "peak": "San Gorgonio",
+        "route": "Vivian Creek",
+        "summitFt": 11503,
+        "ascentFt": 5400,
+        "distanceMi": 19,
+        "permit": "day-hike permit obtained",
+        "partnerNote": "day hike plan",
+        "ownNote": "not available"
+      },
+      {
+        "week": 3,
+        "date": "2026-08-15",
+        "peak": "San Jacinto",
+        "route": "Deer Springs loop",
+        "summitFt": 10834,
+        "ascentFt": 5298,
+        "distanceMi": 18,
+        "permit": null,
+        "partnerNote": "20 lb of water",
+        "ownNote": "plan for Gorgonio"
+      },
+      {
+        "week": 4,
+        "date": "2026-08-22",
+        "peak": "San Gorgonio",
+        "route": "South Fork",
+        "summitFt": 11503,
+        "ascentFt": 4700,
+        "distanceMi": 16,
+        "permit": "day-hike permit",
+        "partnerNote": "day hike plan",
+        "ownNote": null
+      },
+      {
+        "week": 5,
+        "date": "2026-08-29",
+        "peak": "San Gorgonio",
+        "route": "Vivian Creek",
+        "summitFt": 11503,
+        "ascentFt": 5400,
+        "distanceMi": 19,
+        "permit": null,
+        "partnerNote": "day hike, or camp at the halfway camp",
+        "ownNote": null
+      },
+      {
+        "week": 6,
+        "date": "2026-09-05",
+        "peak": "San Jacinto (heavy pack)",
+        "route": "Marion Mountain",
+        "summitFt": 10834,
+        "ascentFt": 4600,
+        "distanceMi": 12,
+        "permit": null,
+        "partnerNote": "skipping this one — hiking Half Dome instead",
+        "ownNote": null
+      },
+      {
+        "week": 7,
+        "date": "2026-09-12",
+        "peak": "San Gorgonio (heavy pack)",
+        "route": "Vivian Creek",
+        "summitFt": 11503,
+        "ascentFt": 7500,
+        "distanceMi": 25,
+        "permit": "overnight permit at High Creek Camp",
+        "partnerNote": "double summit — down to High Creek, then up again",
+        "ownNote": null
+      },
+      {
+        "week": 8,
+        "date": "2026-09-19",
+        "peak": "Local pack carry",
+        "route": "Potato Chip Rock",
+        "summitFt": null,
+        "ascentFt": 2100,
+        "distanceMi": 5.5,
+        "permit": null,
+        "partnerNote": null,
+        "ownNote": null
+      },
+      {
+        "week": 9,
+        "date": "2026-09-26",
+        "peak": "Pure taper / rest",
+        "route": null,
+        "summitFt": null,
+        "ascentFt": null,
+        "distanceMi": null,
+        "permit": null,
+        "partnerNote": null,
+        "ownNote": null
+      }
+    ],
+    "conflicts": [
+      {
+        "what": "Saturday Aug 1",
+        "sheet": "San Bernardino Peak via Forsee Creek — 16 mi, 4,700 ft, summit 10,691 ft",
+        "log": "San Jacinto Peak via Devils Slide — permit faxed to the ranger station",
+        "matters": "Different mountain, and the Devils Slide permit follow-up is only relevant to the version in the log. Everything already written for Saturday — the fuelling schedule, the Diamox trial, the stopped-time prediction — still applies, because it is pinned to hours on the clock rather than to a route."
+      },
+      {
+        "what": "Saturday Aug 15",
+        "sheet": "San Jacinto via Deer Springs loop — 18 mi, 5,298 ft",
+        "log": "San Gorgonio via Vivian Creek — the free permit was to be reserved at permits.sgwa.org",
+        "matters": "The sheet's own notes column carries the same disagreement: the target says San Jacinto while the note says plan for Gorgonio. Unresolved, and it changes which permit to reserve."
+      }
+    ],
+    "readsOnThePlan": [
+      {
+        "point": "The plan is bigger than what the log had",
+        "detail": "Six of the nine weeks are 16-25 mi. The largest effort recorded so far is San Jacinto at 13.24 mi and 4,590 ft, which ran 11:04. Aug 1 is 16 mi and 4,700 ft — a step up, not a repeat."
+      },
+      {
+        "point": "Week 7 is the whole plan's keystone",
+        "detail": "25 mi and 7,500 ft with an overnight at High Creek Camp, double summit. That single week tests the three things nothing else does: sleeping high, carrying a full pack, and a big day on legs that already did a big day. If any week has to survive a schedule cut, it is this one."
+      },
+      {
+        "point": "There is no recovery week between Weeks 3 and 7",
+        "detail": "Aug 15, 22, 29, Sep 5 and Sep 12 are consecutive weekends of 18, 16, 19, 12 and 25 mi. Week 9 is the only taper. Worth watching resting heart rate and sleep across that block rather than assuming it absorbs cleanly."
+      },
+      {
+        "point": "Every week now exceeds the tank",
+        "detail": "At the median burn of 331 kcal/hr, roughly 1,800 kcal of usable glycogen runs out at about 5.2 h. A 16-19 mi day is 9-12 h. Every one of these weeks is a fuelling test whether it is planned as one or not."
+      }
+    ]
+  },
+  "summitItinerary": {
+    "source": "Shared Google Sheet, sheet 3. Times are the plan's own estimates.",
+    "days": [
+      {
+        "day": "Day 1",
+        "date": "2026-09-30",
+        "steps": [
+          "Depart San Diego around 8 am, 300 mi and about 6 h to Lone Pine",
+          "Lunch at Rubio's in Adelanto on the way, around 11 am",
+          "Eastern Sierra Interagency Information Center around 2 pm for the permit and the bear canisters",
+          "Check in at Whitney Portal campsite #10 from 2 pm",
+          "Dinner in Lone Pine"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "date": "2026-10-01",
+        "steps": [
+          "Breakfast in Lone Pine",
+          "Start hiking 8 am — 6 mi and 3,640 ft to Trail Camp, about 6.6 h",
+          "In camp by 2 pm. Drink heavily and take it easy"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "date": "2026-10-02",
+        "steps": [
+          "On trail by 4 am with a day pack",
+          "Up 5 mi and 2,497 ft, about 3.3 h — summit around 8 am",
+          "Half an hour on top",
+          "Down to Trail Camp by about 11 am",
+          "Break camp, then 6 mi and 3,640 ft of descent to Whitney Portal, about 6.6 h"
+        ]
+      }
+    ],
+    "note": "Day 3 as written is a 4 am start, the summit, and then the full descent to the Portal — around 13 h on the move after a night at 12,000 ft. That is the single hardest day in the plan and it is the one the training block has to build toward.",
+    "landmarks": [
+      [
+        "Whitney Portal",
+        8360,
+        0.0
+      ],
+      [
+        "Stream crossing",
+        8800,
+        0.5
+      ],
+      [
+        "N Fork Lone Pine Creek",
+        8810,
+        0.8
+      ],
+      [
+        "Lone Pine Lake",
+        9960,
+        2.8
+      ],
+      [
+        "Bighorn Park (16 sb)",
+        10340,
+        3.5
+      ],
+      [
+        "Outpost Camp",
+        10360,
+        3.8
+      ],
+      [
+        "Mirror Lake (14 sb)",
+        10640,
+        4.3
+      ],
+      [
+        "Whitebark stump (18 sb)",
+        11000,
+        4.8
+      ],
+      [
+        "Trailside Meadow",
+        11395,
+        5.3
+      ],
+      [
+        "Camping turnout (18 sb)",
+        11890,
+        6.0
+      ],
+      [
+        "Trail Camp",
+        12039,
+        6.3
+      ],
+      [
+        "Switchback cables",
+        12820,
+        7.7
+      ],
+      [
+        "Trail Crest (96 sb)",
+        13777,
+        8.5
+      ],
+      [
+        "John Muir Trail junction",
+        13480,
+        9.0
+      ],
+      [
+        "Mt. Muir",
+        13550,
+        9.3
+      ],
+      [
+        "Keeler Needle",
+        14000,
+        10.5
+      ],
+      [
+        "Summit",
+        14496,
+        11.0
+      ]
+    ],
+    "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
   }
 }
