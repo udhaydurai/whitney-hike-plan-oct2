@@ -83,7 +83,7 @@ for i in d["openIssues"]:
 # 2. the nine-week plan, straight from the sheet
 # ─────────────────────────────────────────────────────────────────────────────
 d["nineWeekPlan"] = {
-    "source": ("Shared Google Sheet, read Jul 29 2026. This is the agreed plan and it "
+    "source": ("Shared Google Sheet, read Jul 28 2026. This is the agreed plan and it "
                "supersedes anything earlier in this log."),
     "weeks": [
         {"week": 1, "date": "2026-08-01", "peak": "San Bernardino Peak",
