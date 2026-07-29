@@ -18,7 +18,8 @@
       "summitElevationFt": 14505,
       "roundTripMi": 22
     },
-    "sourceRule": "Garmin export is authoritative for every objective metric. The conversation supplies fuelling, symptoms, gear, conditions and interpretation only."
+    "sourceRule": "Garmin export is authoritative for every objective metric. The conversation supplies fuelling, symptoms, gear, conditions and interpretation only.",
+    "lastNightlyCheckIn": "2026-07-29"
   },
   "physiology": {
     "bodyweightLb": 161,
@@ -3585,5 +3586,12 @@
       ]
     ],
     "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
-  }
+  },
+  "dailyLog": [
+    {
+      "meals": "Breakfast: 4 squares Kings Hawaiian bread, 200 mL tea with milk, no sugar. Lunch: rice, dhal and cabbage, good portion, plus 150 g yogurt. No snack. Dinner: 5 dosa with chutney.",
+      "supplements": "No supplements today, just beet powder.",
+      "date": "2026-07-29"
+    }
+  ]
 }
