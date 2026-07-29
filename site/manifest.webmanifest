@@ -1,0 +1,17 @@
+{
+ "name": "Mt. Whitney Training",
+ "short_name": "Whitney",
+ "description": "Training, fuelling and altitude readiness for October 2, 2026.",
+ "start_url": "./index.html",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#f6f8fa",
+ "theme_color": "#122436",
+ "icons": [
+  {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+  {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+  {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+  {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+ ]
+}

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Whitney Fuel Logger</title>
+<style>
+:root{
+ --ink:#101720; --ink2:#3d4a5c; --ink3:#6b7a8f; --line:#dfe5ec; --bg:#f6f8fa;
+ --card:#fff; --primary:#1f7a68; --primary2:#8fd4c4; --accent:#2b6cb0;
+ --warn:#b46a12; --bad:#a8352c; --gold:#8a6d1f;
+ color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ -webkit-text-size-adjust:100%;padding-bottom:96px}
+header{background:linear-gradient(135deg,#122436,#1f4d5e 58%,var(--primary));color:#fff;
+ padding:16px 16px 18px;position:sticky;top:0;z-index:20}
+header h1{margin:0;font-size:18px;letter-spacing:-.2px}
+header p{margin:3px 0 0;font-size:12.5px;opacity:.85}
+.wrap{max-width:620px;margin:0 auto;padding:0 12px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 15px;margin:12px 0}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);
+ margin:0 0 10px;font-weight:700}
+label{display:block;font-size:12px;color:var(--ink3);font-weight:650;margin:9px 0 3px}
+input,select,textarea{width:100%;color:var(--ink);
+ font-family:inherit;font-size:15px;line-height:1.4;
+ background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:10px 11px}
+input:focus,select,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:84px;resize:vertical}
+.row{display:flex;gap:9px}.row>*{flex:1;min-width:0}
+
+/* live meters */
+.meters{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:4px}
+.meter{background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+.mlab{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink3);font-weight:700}
+.mval{font-size:23px;font-weight:750;letter-spacing:-.5px;line-height:1.15;margin:2px 0 1px}
+.msub{font-size:11px;color:var(--ink3)}
+.bar{height:7px;background:#e6ebf1;border-radius:5px;overflow:hidden;margin-top:6px}
+.bar>span{display:block;height:100%;border-radius:5px;transition:width .25s,background .25s}
+
+/* quick add */
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.q{border:1.5px solid var(--line);background:#fff;border-radius:11px;padding:9px 7px;
+ text-align:center;cursor:pointer;font-size:12.5px;font-weight:650;color:var(--ink);
+ line-height:1.25;user-select:none}
+.q:active{transform:scale(.96)}
+.q b{display:block;font-size:13px}
+.q i{display:block;font-style:normal;font-size:10.5px;color:var(--ink3);font-weight:500;margin-top:2px}
+.q.gel{border-color:var(--bad);color:var(--bad)}
+.q.gelp{border-color:var(--violet,#5b4b8a);color:#5b4b8a}
+.q.water{border-color:var(--accent);color:var(--accent)}
+.q.salt{border-color:var(--warn);color:var(--warn)}
+
+/* tally list */
+ul.tally{list-style:none;padding:0;margin:10px 0 0}
+ul.tally li{display:flex;align-items:center;gap:9px;padding:7px 0;
+ border-bottom:1px solid var(--line);font-size:14px}
+ul.tally li:last-child{border:0}
+ul.tally .t{flex:1;min-width:0}
+ul.tally .t i{font-style:normal;font-size:11.5px;color:var(--ink3);display:block}
+ul.tally .hr{font-variant-numeric:tabular-nums;font-size:12px;color:var(--ink3);
+ background:var(--bg);border-radius:6px;padding:2px 7px;white-space:nowrap}
+.del{border:0;background:none;color:var(--bad);font-size:19px;line-height:1;
+ padding:2px 5px;cursor:pointer}
+.empty{color:var(--ink3);font-size:13px;text-align:center;padding:14px 6px;
+ border:1.5px dashed var(--line);border-radius:10px}
+
+/* buttons */
+button.act{width:100%;border:0;border-radius:11px;padding:13px;font-size:15px;
+ font-weight:700;cursor:pointer;background:var(--primary);color:#fff;margin-top:10px}
+button.act.alt{background:var(--accent)}
+button.act.ghost{background:#fff;color:var(--ink2);border:1.5px solid var(--line)}
+.mic{border:1.5px solid var(--accent);background:#fff;color:var(--accent);
+ border-radius:10px;padding:9px 13px;font-size:13.5px;font-weight:700;cursor:pointer;
+ margin-top:7px;width:100%}
+.mic.on{background:var(--bad);border-color:var(--bad);color:#fff}
+.hint{font-size:12px;color:var(--ink3);margin-top:6px;line-height:1.45}
+pre.out{background:#0f1720;color:#d7e3ee;border-radius:11px;padding:12px;
+ font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+ white-space:pre-wrap;word-break:break-word;max-height:270px;overflow:auto;margin:0}
+.warn{background:#fff8ec;border:1px solid #f0cf9a;border-radius:10px;padding:11px 13px;
+ font-size:12.5px;color:var(--ink2);margin-top:10px}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-top:9px}
+.imgs figure{margin:0;position:relative}
+.imgs img{width:100%;height:84px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
+.imgs figcaption{font-size:10px;color:var(--ink3);margin-top:3px;word-break:break-all;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+footer{text-align:center;font-size:11.5px;color:var(--ink3);padding:18px 14px 0;line-height:1.6}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);
+ border-top:1px solid var(--line);padding:9px 12px;z-index:30;
+ backdrop-filter:saturate(150%) blur(8px)}
+.sticky .inner{max-width:620px;margin:0 auto;display:flex;gap:9px;align-items:center}
+.sticky .pill{flex:1;font-size:12.5px;font-variant-numeric:tabular-nums}
+.sticky b{font-size:15px}
+.sticky button{border:0;border-radius:10px;padding:11px 15px;font-weight:700;
+ background:var(--primary);color:#fff;font-size:14px;cursor:pointer}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#122436">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Whitney">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head><body>
+
+<header>
+  <h1>Whitney Fuel Logger</h1>
+  <p>Step 1 — log intake and water on the trail. Nothing is saved anywhere; copy the block at the
+  bottom before you close this page.</p>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>The hike</h2>
+  <div class="row">
+    <div><label for="date">Date</label><input type="date" id="date"></div>
+    <div><label for="etype">Effort</label>
+      <select id="etype"><option value="training">Training</option>
+      <option value="family">Family outing</option></select></div>
+  </div>
+  <label for="route">Route</label>
+  <input id="route" placeholder="San Jacinto via Devils Slide" list="routes">
+  <datalist id="routes">
+    <option>San Jacinto via Devils Slide</option>
+    <option>San Jacinto via Marion Mountain</option>
+    <option>San Gorgonio via Vivian Creek</option>
+    <option>Blue Sky Reserve to Potato Chip Rock</option>
+    <option>El Cajon Mountain</option>
+    <option>North + South Fortuna + Kwaaymii</option>
+  </datalist>
+  <div class="row">
+    <div><label for="hrs">Hours elapsed so far</label>
+      <input type="number" id="hrs" step="0.25" min="0" placeholder="e.g. 6.5"></div>
+    <div><label for="pack">Pack lb</label>
+      <input type="number" id="pack" step="1" min="0" placeholder="18"></div>
+  </div>
+  <div class="row">
+    <div><label for="wpre">Weight before (lb)</label>
+      <input type="number" id="wpre" step="0.1" placeholder="161"></div>
+    <div><label for="wpost">Weight after (lb)</label>
+      <input type="number" id="wpost" step="0.1" placeholder="after, before drinking"></div>
+  </div>
+  <div class="hint">Pre/post weight is the one measurement that turns Garmin's estimated sweat
+  loss into a real number. Roughly 1 lb lost = 450 ml of net deficit.</div>
+</section>
+
+<section>
+  <h2>Live totals</h2>
+  <div class="meters">
+    <div class="meter"><div class="mlab">Calories / hour</div>
+      <div class="mval" id="mCal">—</div>
+      <div class="msub" id="mCalSub">floor 206 · target 275</div>
+      <div class="bar"><span id="bCal" style="width:0%"></span></div></div>
+    <div class="meter"><div class="mlab">Carbs / hour</div>
+      <div class="mval" id="mCarb">—</div>
+      <div class="msub">target 60–90 g</div>
+      <div class="bar"><span id="bCarb" style="width:0%"></span></div></div>
+    <div class="meter"><div class="mlab">Water / hour</div>
+      <div class="mval" id="mWat">—</div>
+      <div class="msub">target 600–800 ml</div>
+      <div class="bar"><span id="bWat" style="width:0%"></span></div></div>
+    <div class="meter"><div class="mlab">Sodium total</div>
+      <div class="mval" id="mNa">—</div>
+      <div class="msub" id="mNaSub">700–1000 mg per litre</div>
+      <div class="bar"><span id="bNa" style="width:0%"></span></div></div>
+  </div>
+  <div class="hint" id="tankLine">Enter hours elapsed to see the tank estimate.</div>
+</section>
+
+<section>
+  <h2>Tap to log — food &amp; gels</h2>
+  <div class="qgrid" id="qFood"></div>
+</section>
+
+<section>
+  <h2>Tap to log — water &amp; salt</h2>
+  <div class="qgrid" id="qDrink"></div>
+</section>
+
+<section>
+  <h2>Logged so far <span id="cnt" style="color:var(--ink3);font-weight:500"></span></h2>
+  <div id="tallyWrap"><div class="empty">Nothing logged yet.</div></div>
+  <button class="act ghost" id="undo">Undo last entry</button>
+</section>
+
+<section>
+  <h2>Voice notes</h2>
+  <textarea id="notes" placeholder="How it felt, where you stopped, any reflux or bloating, weather…"></textarea>
+  <button class="mic" id="mic">🎤 Start dictation</button>
+  <div class="hint" id="micHint">If the button does nothing, use the microphone key on your phone's
+  keyboard instead — it works everywhere and inserts straight into the box.</div>
+</section>
+
+<section>
+  <h2>Screenshots</h2>
+  <input type="file" id="shots" accept="image/*" multiple>
+  <div class="imgs" id="shotPrev"></div>
+  <div class="hint">These previews are local to this page only — the page cannot send them anywhere.
+  Attach the same images in the chat, and the filenames listed here tell me which is which.</div>
+</section>
+
+<section>
+  <h2>Paste this back to me</h2>
+  <pre class="out" id="out">—</pre>
+  <button class="act" id="copy">Copy to clipboard</button>
+  <button class="act alt" id="dl">Download as .txt</button>
+  <div class="warn"><b>No autosave.</b> This page keeps everything in memory only — refreshing or
+  closing loses it. Copy the block above whenever you stop for a break.</div>
+</section>
+
+<footer>
+  Whitney Fuel Logger · Step 1 of 3<br>
+  Targets are from your own data: 1,800 cal tank, 300–356 cal/hr burn, ~822 ml/hr sweat rate.
+</footer>
+</div>
+
+<div class="sticky"><div class="inner">
+  <div class="pill"><b id="sCal">0</b> cal · <b id="sWat">0.0</b> L · <span id="sGel">0</span> gels</div>
+  <button id="jump">Copy log</button>
+</div></div>
+
+<script>
+"use strict";
+// ---- targets derived from the training log
+const T = { calFloor:206, calTarget:275, carbLo:60, carbHi:90,
+            watLo:600, watHi:800, naPerL:850, tankCal:1800, burnCalHr:330, sweatMlHr:822 };
+
+// ---- item library: [label, kcal, carb g, sodium mg, ml, isGel]
+const FOOD = [
+  ["Gel · caffeine 35mg",100,25,125,0,true],
+  ["Gel · caffeine-free",100,25,125,0,true],
+  ["Banana",105,27,1,0,false],
+  ["Dates ×2",132,36,0,0,false],
+  ["Energy bar",230,30,180,0,false],
+  ["Orange",62,15,0,0,false],
+  ["Rice / poha pack",250,50,300,0,false],
+  ["PB sandwich",350,45,400,0,false],
+  ["Pretzels 50g",190,40,600,0,false],
+  ["Trail mix 40g",190,20,120,0,false],
+];
+const DRINK = [
+  ["Water 250 ml",0,0,0,250,false],
+  ["Water 500 ml",0,0,0,500,false],
+  ["Bladder 2.5 L done",0,0,0,2500,false],
+  ["Bottle 1 L done",0,0,0,1000,false],
+  ["Salt tab",0,0,215,0,false],
+  ["Liquid IV sachet",45,11,500,0,false],
+  ["Electrolyte 500 ml",30,8,400,500,false],
+  ["Beet juice 450 ml",150,36,170,450,false],
+];
+
+let log = [];
+
+const $ = id => document.getElementById(id);
+const num = id => { const v = parseFloat($(id).value); return isFinite(v) ? v : 0; };
+
+function chip(arr, host, cls){
+  arr.forEach((it,i)=>{
+    const [lab,kc,cb,na,ml,gel] = it;
+    const d = document.createElement("div");
+    let k = "q";
+    if (gel) k += lab.includes("free") ? " gelp" : " gel";
+    else if (ml>0) k += " water";
+    else if (na>0 && kc===0) k += " salt";
+    d.className = k;
+    const bits = [];
+    if (kc) bits.push(kc+" cal");
+    if (ml) bits.push((ml/1000).toFixed(ml%1000?2:1).replace(/\.0$/,"")+" L");
+    if (na) bits.push(na+" mg Na");
+    d.innerHTML = "<b>"+lab+"</b><i>"+(bits.join(" · ")||"—")+"</i>";
+    d.onclick = ()=>add(it);
+    host.appendChild(d);
+  });
+}
+
+function add(it){
+  log.push({ lab:it[0], kc:it[1], cb:it[2], na:it[3], ml:it[4], gel:it[5],
+             atHr: num("hrs") || null });
+  render();
+}
+
+function totals(){
+  return log.reduce((a,e)=>({
+    kc:a.kc+e.kc, cb:a.cb+e.cb, na:a.na+e.na, ml:a.ml+e.ml,
+    gel:a.gel+(e.gel?1:0),
+    gelCaf:a.gelCaf+(e.gel && !e.lab.includes("free") ? 1 : 0)
+  }), {kc:0,cb:0,na:0,ml:0,gel:0,gelCaf:0});
+}
+
+function setBar(el, frac, col){
+  el.style.width = Math.max(0, Math.min(100, frac*100)).toFixed(0)+"%";
+  el.style.background = col;
+}
+const RED="#a8352c", AMB="#b46a12", GRN="#1f7a68";
+
+function render(){
+  const t = totals(), h = num("hrs");
+  // tally list
+  const wrap = $("tallyWrap");
+  if (!log.length) wrap.innerHTML = '<div class="empty">Nothing logged yet.</div>';
+  else {
+    const ul = document.createElement("ul"); ul.className = "tally";
+    log.forEach((e,i)=>{
+      const li = document.createElement("li");
+      const bits=[]; if(e.kc)bits.push(e.kc+" cal"); if(e.cb)bits.push(e.cb+"g");
+      if(e.na)bits.push(e.na+"mg"); if(e.ml)bits.push(e.ml+"ml");
+      li.innerHTML = '<div class="t">'+e.lab+'<i>'+bits.join(" · ")+'</i></div>'+
+        (e.atHr!=null?'<span class="hr">h'+e.atHr+'</span>':'');
+      const b = document.createElement("button");
+      b.className="del"; b.textContent="×"; b.setAttribute("aria-label","remove");
+      b.onclick=()=>{ log.splice(i,1); render(); };
+      li.appendChild(b); ul.appendChild(li);
+    });
+    wrap.innerHTML=""; wrap.appendChild(ul);
+  }
+  $("cnt").textContent = log.length ? "· "+log.length+" items" : "";
+
+  // meters
+  if (h>0){
+    const cph=t.kc/h, bph=t.cb/h, wph=t.ml/h;
+    $("mCal").textContent = Math.round(cph);
+    $("mCal").style.color = cph>=T.calTarget?GRN : cph>=T.calFloor?AMB : RED;
+    $("mCalSub").textContent = "floor "+T.calFloor+" · target "+T.calTarget+
+      " · "+Math.round(t.kc)+" cal in";
+    setBar($("bCal"), cph/T.calTarget, cph>=T.calTarget?GRN:cph>=T.calFloor?AMB:RED);
+
+    $("mCarb").textContent = Math.round(bph)+" g";
+    $("mCarb").style.color = bph>=T.carbLo?GRN:bph>=T.carbLo*0.7?AMB:RED;
+    setBar($("bCarb"), bph/T.carbHi, bph>=T.carbLo?GRN:bph>=T.carbLo*0.7?AMB:RED);
+
+    $("mWat").textContent = Math.round(wph);
+    $("mWat").style.color = wph>=T.watLo?GRN:wph>=T.watLo*0.7?AMB:RED;
+    setBar($("bWat"), wph/T.watHi, wph>=T.watLo?GRN:wph>=T.watLo*0.7?AMB:RED);
+
+    // tank line
+    const net = T.burnCalHr - cph;
+    const empty = net>0 ? T.tankCal/net : Infinity;
+    const sweat = T.sweatMlHr*h/1000, defl = sweat - t.ml/1000;
+    $("tankLine").innerHTML =
+      (net>0 ? "At this intake your tank empties around <b>hour "+empty.toFixed(1)+
+               "</b>. You are "+h+" h in."
+             : "At this intake you are <b>net positive</b> — the tank is not draining.") +
+      "<br>Estimated sweat loss so far <b>"+sweat.toFixed(1)+" L</b>, taken in "+
+      (t.ml/1000).toFixed(2)+" L → deficit <b style='color:"+
+      (defl>2?RED:defl>0.8?AMB:GRN)+"'>"+(defl>0?"−":"+")+Math.abs(defl).toFixed(2)+" L</b>.";
+  } else {
+    ["mCal","mCarb","mWat"].forEach(k=>$(k).textContent="—");
+    $("tankLine").textContent = "Enter hours elapsed to see the tank estimate.";
+  }
+
+  // sodium: judged per litre drunk
+  const L = t.ml/1000;
+  $("mNa").textContent = t.na ? t.na+" mg" : "—";
+  if (L>0.2){
+    const perL = t.na/L;
+    $("mNaSub").textContent = Math.round(perL)+" mg per litre · target 700–1000";
+    $("mNa").style.color = perL>=700?GRN:perL>=450?AMB:RED;
+    setBar($("bNa"), perL/1000, perL>=700?GRN:perL>=450?AMB:RED);
+  } else {
+    $("mNaSub").textContent = "700–1000 mg per litre";
+    setBar($("bNa"), 0, GRN);
+  }
+
+  // sticky bar
+  $("sCal").textContent = t.kc;
+  $("sWat").textContent = (t.ml/1000).toFixed(1);
+  $("sGel").textContent = t.gel;
+
+  buildOut(t, h);
+}
+
+function buildOut(t, h){
+  if (!log.length && !$("route").value){ $("out").textContent = "—"; return; }
+  const L = t.ml/1000;
+  const wpre=num("wpre"), wpost=num("wpost");
+  const lines = [];
+  lines.push("WHITNEY LOG ENTRY");
+  lines.push("date: "+($("date").value||"?"));
+  lines.push("route: "+($("route").value||"?"));
+  lines.push("effortType: "+$("etype").value);
+  if (h) lines.push("hoursElapsed: "+h);
+  if (num("pack")) lines.push("packLb: "+num("pack"));
+  if (wpre) lines.push("weightBeforeLb: "+wpre);
+  if (wpost) lines.push("weightAfterLb: "+wpost);
+  if (wpre && wpost){
+    const d=wpre-wpost;
+    lines.push("weightChangeLb: "+(d>=0?"-":"+")+Math.abs(d).toFixed(1)+
+               "  (~"+(Math.abs(d)*0.45).toFixed(2)+" L net "+(d>=0?"deficit":"gain")+")");
+  }
+  lines.push("");
+  lines.push("INTAKE TOTALS");
+  lines.push("calories: "+t.kc+(h?"  ("+Math.round(t.kc/h)+" cal/hr)":""));
+  lines.push("carbsG: "+t.cb+(h?"  ("+Math.round(t.cb/h)+" g/hr)":""));
+  lines.push("waterL: "+L.toFixed(2)+(h?"  ("+Math.round(t.ml/h)+" ml/hr)":""));
+  lines.push("sodiumMg: "+t.na+(L>0.2?"  ("+Math.round(t.na/L)+" mg/L)":""));
+  lines.push("gels: "+t.gel+"  (caffeinated "+t.gelCaf+", caffeine-free "+(t.gel-t.gelCaf)+")");
+  if (log.length){
+    lines.push("");
+    lines.push("ITEMS IN ORDER");
+    log.forEach(e=>lines.push("  "+(e.atHr!=null?"h"+e.atHr+"  ":"")+e.lab));
+  }
+  const shots = Array.from($("shots").files||[]).map(f=>f.name);
+  if (shots.length){ lines.push(""); lines.push("SCREENSHOTS: "+shots.join(", ")); }
+  const n = $("notes").value.trim();
+  if (n){ lines.push(""); lines.push("NOTES"); lines.push(n); }
+  $("out").textContent = lines.join("\n");
+}
+
+// ---- wire up
+chip(FOOD, $("qFood"));
+chip(DRINK, $("qDrink"));
+$("date").value = new Date().toISOString().slice(0,10);
+["hrs","pack","wpre","wpost","route","etype","notes"].forEach(id=>{
+  $(id).addEventListener("input", render);
+  $(id).addEventListener("change", render);
+});
+$("undo").onclick = ()=>{ log.pop(); render(); };
+
+$("shots").onchange = e=>{
+  const host = $("shotPrev"); host.innerHTML="";
+  Array.from(e.target.files).forEach(f=>{
+    const fig=document.createElement("figure");
+    const img=document.createElement("img");
+    img.src=URL.createObjectURL(f); img.alt=f.name;
+    img.onload=()=>URL.revokeObjectURL(img.src);
+    const cap=document.createElement("figcaption"); cap.textContent=f.name;
+    fig.appendChild(img); fig.appendChild(cap); host.appendChild(fig);
+  });
+  render();
+};
+
+// dictation — progressive enhancement, degrades to keyboard mic
+(function(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const btn = $("mic");
+  if (!SR){
+    btn.textContent = "🎤 Dictation not available in this browser";
+    btn.disabled = true; btn.style.opacity = ".55";
+    return;
+  }
+  let rec=null, on=false;
+  btn.onclick = ()=>{
+    if (on){ rec && rec.stop(); return; }
+    try{
+      rec = new SR();
+      rec.continuous = true; rec.interimResults = true; rec.lang = "en-US";
+      let base = $("notes").value;
+      rec.onstart = ()=>{ on=true; btn.classList.add("on"); btn.textContent="⏹ Stop dictation"; };
+      rec.onresult = ev=>{
+        let s="";
+        for (let i=ev.resultIndex;i<ev.results.length;i++) s += ev.results[i][0].transcript;
+        $("notes").value = (base ? base+" " : "") + s;
+        render();
+      };
+      rec.onerror = ev=>{
+        $("micHint").innerHTML = "<b>Dictation error ("+ev.error+
+          ").</b> Use the microphone key on your phone keyboard instead — that always works.";
+      };
+      rec.onend = ()=>{ on=false; btn.classList.remove("on"); btn.textContent="🎤 Start dictation"; };
+      rec.start();
+    }catch(err){
+      $("micHint").textContent = "Dictation could not start. Use your keyboard's microphone key.";
+    }
+  };
+})();
+
+function copyOut(){
+  const txt = $("out").textContent;
+  if (!txt || txt==="—") return;
+  const done = ()=>{ const b=$("copy"); const o=b.textContent;
+    b.textContent="Copied ✓"; setTimeout(()=>b.textContent=o,1400); };
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done, fallback);
+  } else fallback();
+  function fallback(){
+    const ta=document.createElement("textarea"); ta.value=txt;
+    ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); done(); }catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+$("copy").onclick = copyOut;
+$("jump").onclick = ()=>{ copyOut();
+  $("out").scrollIntoView({behavior:"smooth",block:"center"}); };
+$("dl").onclick = ()=>{
+  const blob = new Blob([$("out").textContent], {type:"text/plain"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download = "whitney-log-"+($("date").value||"entry")+".txt";
+  a.click(); URL.revokeObjectURL(a.href);
+};
+
+render();
+</script>
+</body></html>

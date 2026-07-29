@@ -1,0 +1,18 @@
+# Raw Garmin bulk export — large, and full of account and health records that have
+# no business in a repo. tools/*_digest.py turn these into the small derived files
+# that the build actually reads, and those are what get committed.
+garmin/ex/
+garmin/health/
+garmin/hist/
+garmin/*.zip
+garmin/*.fit
+
+# build scratch
+verify-mobile.png
+__pycache__/
+*.pyc
+
+# never
+.env
+*token*
+*.pem

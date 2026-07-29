@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""
+Parse the Garmin wellness exports into one small digest.
+
+Reads sleepData, healthStatusData, heartRateZones, bioMetrics and fitnessAge files
+from a folder and writes wellness.json. Sleep and daily health are what the activity
+export does not carry, and SpO2 in particular is the one baseline that speaks directly
+to altitude tolerance.
+"""
+
+import glob
+import json
+import os
+import pathlib
+import statistics as st
+import sys
+
+SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "garmin/health")
+OUT = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else "garmin/wellness.json")
+
+
+def load(pat):
+    out = []
+    for f in sorted(glob.glob(str(SRC / pat))):
+        try:
+            out.append((os.path.basename(f), json.load(open(f, encoding="utf-8"))))
+        except Exception as ex:
+            print(f"  ! {f}: {ex}")
+    return out
+
+
+# ─── zone configuration: this is Garmin's own setting, so it settles any dispute
+zones = None
+for _, d in load("*heartRateZones*"):
+    for z in d:
+        if z.get("trainingMethod") == "HR_RESERVE" and z.get("sport") == "DEFAULT":
+            f = [z["zone1Floor"], z["zone2Floor"], z["zone3Floor"],
+                 z["zone4Floor"], z["zone5Floor"]]
+            mx = z["maxHeartRateUsed"]
+            zones = {
+                "method": "HR_RESERVE (%HRR)",
+                "restingHR": z["restingHeartRateUsed"],
+                "maxHR": mx,
+                "lthrUsed": z["lactateThresholdHeartRateUsed"],
+                "bands": {f"Z{i+1}": [f[i], (f[i + 1] - 1) if i < 4 else mx]
+                          for i in range(5)},
+                "source": "Garmin heartRateZones.json — the watch's actual configuration.",
+            }
+
+# ─── bio profile
+bio = {}
+for _, d in load("*userBioMetricProfileData*"):
+    if d:
+        r = d[0]
+        bio.update(heightCm=round(r["height"], 1),
+                   weightKg=round(r["weight"] / 1000, 1),
+                   weightLb=round(r["weight"] / 1000 * 2.20462, 1),
+                   vo2Max=r.get("vo2Max"),
+                   lactateThresholdHR=r.get("lactateThresholdHeartRate"))
+for _, d in load("*bioMetrics_latest*"):
+    if d:
+        bio["ftpCycling"] = d[0].get("functionalThresholdPower")
+
+# ─── fitness age
+fitage = {}
+for _, d in load("*fitnessAgeData*"):
+    if d:
+        r = d[0]
+        fitage = {k: (round(v, 1) if isinstance(v, float) else v)
+                  for k, v in r.items()
+                  if k in ("asOfDateGmt", "chronologicalAge", "bmi", "rhr",
+                           "currentBioAge", "healthyAllBioAge", "biometricVo2Max",
+                           "vo2MaxForHealthyActive")}
+
+# ─── daily health status: HRV, resting HR, SpO2, respiration, skin temp
+daily = {}
+for _, d in load("*healthStatusData*"):
+    for row in d:
+        day = row.get("calendarDate")
+        if not day:
+            continue
+        rec = daily.setdefault(day, {})
+        for m in row.get("metrics", []):
+            v = m.get("value")
+            if v in (None, 0.0) and m.get("type") != "SKIN_TEMP_C":
+                continue
+            rec[m["type"]] = v
+            if m.get("status") not in (None, "UNKNOWN"):
+                rec[m["type"] + "_status"] = m["status"]
+
+# ─── sleep
+sleep = {}
+for _, d in load("*sleepData*"):
+    for row in d:
+        day = row.get("calendarDate")
+        if not day or len(row) <= 1:
+            continue
+        deep = row.get("deepSleepSeconds") or 0
+        light = row.get("lightSleepSeconds") or 0
+        rem = row.get("remSleepSeconds") or 0
+        awake = row.get("awakeSleepSeconds") or 0
+        total = deep + light + rem
+        sc = row.get("sleepScores") or {}
+        sleep[day] = {
+            "totalHrs": round(total / 3600, 2),
+            "deepMin": round(deep / 60),
+            "lightMin": round(light / 60),
+            "remMin": round(rem / 60),
+            "awakeMin": round(awake / 60),
+            "score": sc.get("overallScore"),
+            "recoveryScore": sc.get("recoveryScore"),
+            "deepScore": sc.get("deepScore"),
+            "feedback": sc.get("feedback"),
+            "avgStress": row.get("avgSleepStress"),
+            "respirationAvg": row.get("averageRespiration"),
+            "restlessMoments": row.get("restlessMomentCount"),
+        }
+
+# ─── summaries
+def series(key, src):
+    return sorted((d, v[key]) for d, v in src.items() if v.get(key) is not None)
+
+
+def stats(vals):
+    if not vals:
+        return None
+    return {"n": len(vals), "mean": round(st.mean(vals), 1),
+            "median": round(st.median(vals), 1),
+            "lo": round(min(vals), 1), "hi": round(max(vals), 1)}
+
+
+spo2 = series("SPO2", daily)
+hrv = series("HRV", daily)
+rhr = series("HR", daily)
+resp = series("RESPIRATION", daily)
+sc = series("score", sleep)
+dur = series("totalHrs", sleep)
+deep = series("deepMin", sleep)
+recov = series("recoveryScore", sleep)
+
+res = {
+    "zones": zones,
+    "bioProfile": bio,
+    "fitnessAge": fitage,
+    "coverage": {
+        "sleepNights": len(sleep),
+        "sleepFrom": min(sleep) if sleep else None,
+        "sleepTo": max(sleep) if sleep else None,
+        "healthDays": len(daily),
+        "healthFrom": min(daily) if daily else None,
+        "healthTo": max(daily) if daily else None,
+    },
+    "spo2": stats([v for _, v in spo2]),
+    "hrv": stats([v for _, v in hrv]),
+    "restingHR": stats([v for _, v in rhr]),
+    "respiration": stats([v for _, v in resp]),
+    "sleepScore": stats([v for _, v in sc]),
+    "sleepHours": stats([v for _, v in dur]),
+    "deepSleepMin": stats([v for _, v in deep]),
+    "recoveryScore": stats([v for _, v in recov]),
+    "spo2Series": [{"date": d, "v": v} for d, v in spo2],
+    "hrvSeries": [{"date": d, "v": v} for d, v in hrv],
+    "sleepByDate": sleep,
+    "dailyByDate": daily,
+}
+OUT.write_text(json.dumps(res, indent=1), encoding="utf-8")
+
+print(f"wrote {OUT} ({OUT.stat().st_size/1024:.0f} KB)")
+print(f"\nzones (Garmin's own config): maxHR {zones['maxHR']}, resting {zones['restingHR']}")
+for z, b in zones["bands"].items():
+    print(f"   {z}  {b[0]}–{b[1]} bpm")
+print(f"\nbio: {bio}")
+print(f"fitness age: {fitage}")
+print(f"\ncoverage: {res['coverage']['sleepNights']} sleep nights "
+      f"{res['coverage']['sleepFrom']} → {res['coverage']['sleepTo']}; "
+      f"{res['coverage']['healthDays']} health days "
+      f"{res['coverage']['healthFrom']} → {res['coverage']['healthTo']}")
+for k in ("spo2", "hrv", "restingHR", "respiration", "sleepScore", "sleepHours", "deepSleepMin", "recoveryScore"):
+    print(f"  {k:14s} {res[k]}")

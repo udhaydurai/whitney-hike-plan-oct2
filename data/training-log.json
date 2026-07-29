@@ -1,0 +1,3213 @@
+{
+  "meta": {
+    "athlete": "Udhay Durai",
+    "goal": "Mt. Whitney summit via Main Trail",
+    "summitDate": "2026-10-02",
+    "acclimatizationNight": "2026-09-29",
+    "acclimatizationSite": "Cottonwood Camp",
+    "permitHolder": "Siva (overnight permit)",
+    "watch": "Garmin Fenix 8",
+    "logCoversFrom": "2026-04-25",
+    "logCoversTo": "2026-07-26",
+    "lastUpdated": "2026-07-28",
+    "whitneyProfile": {
+      "day1AscentFt": 3700,
+      "day2AscentFt": 2500,
+      "totalDescentFt": 6200,
+      "trailCampElevationFt": 12000,
+      "summitElevationFt": 14505,
+      "roundTripMi": 22
+    },
+    "sourceRule": "Garmin export is authoritative for every objective metric. The conversation supplies fuelling, symptoms, gear, conditions and interpretation only."
+  },
+  "physiology": {
+    "bodyweightLb": 161,
+    "bodyweightKg": 73.0,
+    "heightIn": 67,
+    "heightCm": 170.2,
+    "anthroNote": "Stated Jul 28 2026. Used only to turn per-kg nutrition ranges into absolute grams and to express pack weight as a share of bodyweight.",
+    "restingHR": 65,
+    "estimatedMaxHR": 179,
+    "maxHRnote": "179 is the figure Garmin's own zone configuration uses, read from the export rather than assumed. Still device-estimated rather than lab-tested.",
+    "zoneMethod": {
+      "current": "%HRR (switched from %max HR after Jul 19 review)",
+      "priorMethod": "%max HR — produced misleadingly high Zone 4 percentages"
+    },
+    "zonesPercentMaxHR_OLD": {
+      "Z1": [
+        90,
+        106
+      ],
+      "Z2": [
+        107,
+        124
+      ],
+      "Z3": [
+        125,
+        142
+      ],
+      "Z4": [
+        143,
+        160
+      ],
+      "Z5": [
+        161,
+        178
+      ]
+    },
+    "zonesPercentHRR_CORRECT": {
+      "Z1": [
+        122,
+        132
+      ],
+      "Z2": [
+        133,
+        144
+      ],
+      "Z3": [
+        145,
+        155
+      ],
+      "Z4": [
+        156,
+        167
+      ],
+      "Z5": [
+        168,
+        179
+      ]
+    },
+    "lthrShown": 174,
+    "lthrNote": "174 = 97% of estimated max — implausible. Ignore; %HRR does not use it.",
+    "vo2max": [
+      {
+        "date": "2024-12-01",
+        "value": 38
+      },
+      {
+        "date": "2025-01-01",
+        "value": 38
+      },
+      {
+        "date": "2025-02-01",
+        "value": 39
+      },
+      {
+        "date": "2025-03-01",
+        "value": 40
+      },
+      {
+        "date": "2025-04-01",
+        "value": 41
+      },
+      {
+        "date": "2025-05-01",
+        "value": 41
+      },
+      {
+        "date": "2025-06-01",
+        "value": 43
+      },
+      {
+        "date": "2025-07-01",
+        "value": 43
+      },
+      {
+        "date": "2025-08-01",
+        "value": 43
+      },
+      {
+        "date": "2025-09-01",
+        "value": 43
+      },
+      {
+        "date": "2025-10-01",
+        "value": 45
+      },
+      {
+        "date": "2025-11-01",
+        "value": 42
+      },
+      {
+        "date": "2026-02-01",
+        "value": 39
+      },
+      {
+        "date": "2026-05-01",
+        "value": 35
+      },
+      {
+        "date": "2026-06-01",
+        "value": 37
+      },
+      {
+        "date": "2026-07-01",
+        "value": 37
+      }
+    ],
+    "vo2maxTargets": {
+      "july": 39,
+      "october": "41-42"
+    },
+    "enduranceScore": {
+      "value": 4534,
+      "tier": "Recreational",
+      "targetTier": "Trained (5000+)"
+    },
+    "vo2maxSeries": {
+      "source": "65 readings in the Garmin activity export, Dec 2024 – Jul 2026.",
+      "monthly": [
+        {
+          "month": "2024-12",
+          "value": 38
+        },
+        {
+          "month": "2025-01",
+          "value": 38
+        },
+        {
+          "month": "2025-02",
+          "value": 39
+        },
+        {
+          "month": "2025-03",
+          "value": 40
+        },
+        {
+          "month": "2025-04",
+          "value": 41
+        },
+        {
+          "month": "2025-05",
+          "value": 41
+        },
+        {
+          "month": "2025-06",
+          "value": 43
+        },
+        {
+          "month": "2025-07",
+          "value": 43
+        },
+        {
+          "month": "2025-08",
+          "value": 43
+        },
+        {
+          "month": "2025-09",
+          "value": 43
+        },
+        {
+          "month": "2025-10",
+          "value": 45
+        },
+        {
+          "month": "2025-11",
+          "value": 42
+        },
+        {
+          "month": "2026-02",
+          "value": 39
+        },
+        {
+          "month": "2026-05",
+          "value": 35
+        },
+        {
+          "month": "2026-06",
+          "value": 37
+        },
+        {
+          "month": "2026-07",
+          "value": 37
+        }
+      ],
+      "peak": {
+        "month": "2025-10",
+        "value": 45
+      },
+      "current": {
+        "month": "2026-07",
+        "value": 37
+      },
+      "trough": {
+        "month": "2026-05",
+        "value": 35
+      },
+      "reading": "Peaked at 45 in 2025-10, fell to 35 by 2026-05, and has recovered to 37. The October target of 41-42 is therefore a RETURN to a level already held for months in 2025, not new territory — and it sat 3 points above that target at the peak.",
+      "gapNote": "Readings thin out between Nov 2025 and Apr 2026, which lines up with a gap in recorded activity over the winter. The decline and the gap are the same story."
+    },
+    "zoneSource": "Garmin heartRateZones.json — the watch's actual configuration.",
+    "lthr": {
+      "usedForZones": 174,
+      "bioMetricsValue": 178.0,
+      "note": "The zone file uses 174 while the biometrics file reports 178. Both are device estimates; the zone bands derive from %HRR, so neither drives them."
+    },
+    "bioProfile": {
+      "heightCm": 170.2,
+      "weightKg": 73.0,
+      "weightLb": 161.0,
+      "vo2Max": 37.0,
+      "lactateThresholdHR": 178.0,
+      "ftpCycling": 194
+    }
+  },
+  "ruckSessions": [
+    {
+      "id": "R1",
+      "date": "2026-05-04",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.22,
+      "ascentFt": 79,
+      "descentFt": 75,
+      "minElevFt": 577,
+      "maxElevFt": 598,
+      "totalTime": "0:42:01",
+      "movingTime": "0:41:57",
+      "stoppedPct": 0,
+      "avgPace": "18:55",
+      "movingPace": "18:53",
+      "avgSpeedMph": 3.17,
+      "movingSpeedMph": 3.18,
+      "avgHR": 112,
+      "maxHR": 124,
+      "totalCal": 216,
+      "aerobicEffect": 1.8,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 14,
+      "steps": 4718,
+      "bodyBattery": -2,
+      "restingCal": 56,
+      "sweatLossMl": 394,
+      "hrZoneSec": {
+        "z0": 17,
+        "z1": 147,
+        "z2": 2356,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Recovered from the Garmin export — not in the original log.",
+      "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
+      "effortType": "training"
+    },
+    {
+      "id": "R2",
+      "date": "2026-05-05",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.23,
+      "ascentFt": 72,
+      "descentFt": 75,
+      "minElevFt": 576,
+      "maxElevFt": 598,
+      "totalTime": "0:42:24",
+      "movingTime": "0:42:16",
+      "stoppedPct": 0,
+      "avgPace": "19:00",
+      "movingPace": "18:57",
+      "avgSpeedMph": 3.16,
+      "movingSpeedMph": 3.17,
+      "avgHR": 114,
+      "maxHR": 131,
+      "totalCal": 217,
+      "aerobicEffect": 2.2,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 17,
+      "steps": 4786,
+      "bodyBattery": 0,
+      "restingCal": 57,
+      "sweatLossMl": 420,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 135,
+        "z2": 2313,
+        "z3": 96,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Recovered from the Garmin export — not in the original log.",
+      "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
+      "effortType": "training"
+    },
+    {
+      "id": "R3",
+      "date": "2026-05-06",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.27,
+      "ascentFt": 82,
+      "descentFt": 82,
+      "minElevFt": 581,
+      "maxElevFt": 602,
+      "totalTime": "0:42:54",
+      "movingTime": "0:42:54",
+      "stoppedPct": 0,
+      "avgPace": "18:53",
+      "movingPace": "18:53",
+      "avgSpeedMph": 3.17,
+      "movingSpeedMph": 3.17,
+      "avgHR": 113,
+      "maxHR": 122,
+      "totalCal": 231,
+      "aerobicEffect": 2.3,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 20,
+      "steps": 4872,
+      "bodyBattery": 0,
+      "restingCal": 57,
+      "sweatLossMl": 425,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 97,
+        "z2": 2477,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Recovered from the Garmin export — not in the original log.",
+      "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
+      "effortType": "training"
+    },
+    {
+      "id": "R4",
+      "date": "2026-05-07",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.25,
+      "ascentFt": 69,
+      "descentFt": 75,
+      "minElevFt": 582,
+      "maxElevFt": 603,
+      "totalTime": "0:41:07",
+      "movingTime": "0:40:58",
+      "stoppedPct": 0,
+      "avgPace": "18:16",
+      "movingPace": "18:12",
+      "avgSpeedMph": 3.28,
+      "movingSpeedMph": 3.3,
+      "avgHR": 113,
+      "maxHR": 123,
+      "totalCal": 231,
+      "aerobicEffect": 2.4,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 22,
+      "steps": 4742,
+      "bodyBattery": -6,
+      "restingCal": 55,
+      "sweatLossMl": 409,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 324,
+        "z2": 2143,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Recovered from the Garmin export — not in the original log.",
+      "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
+      "effortType": "training"
+    },
+    {
+      "id": "R5",
+      "date": "2026-05-19",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.26,
+      "ascentFt": 79,
+      "descentFt": 89,
+      "minElevFt": 574,
+      "maxElevFt": 598,
+      "totalTime": "0:44:17",
+      "movingTime": "0:44:17",
+      "stoppedPct": 0,
+      "avgPace": "19:35",
+      "movingPace": "19:35",
+      "avgSpeedMph": 3.06,
+      "movingSpeedMph": 3.06,
+      "avgHR": 112,
+      "maxHR": 123,
+      "totalCal": 230,
+      "aerobicEffect": 2.2,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 19,
+      "steps": 4910,
+      "bodyBattery": -5,
+      "restingCal": 59,
+      "sweatLossMl": 514,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 230,
+        "z2": 2428,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "First rucking check-in. Conservative start.",
+      "coachNote": "Zone 2 endurance territory; pace on the slow side vs 15-18 min/mi target.",
+      "effortType": "training"
+    },
+    {
+      "id": "R6",
+      "date": "2026-05-20",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.26,
+      "ascentFt": 82,
+      "descentFt": 82,
+      "minElevFt": 581,
+      "maxElevFt": 607,
+      "totalTime": "0:41:14",
+      "movingTime": "0:41:14",
+      "stoppedPct": 0,
+      "avgPace": "18:14",
+      "movingPace": "18:14",
+      "avgSpeedMph": 3.29,
+      "movingSpeedMph": 3.29,
+      "avgHR": 110,
+      "maxHR": 131,
+      "totalCal": 230,
+      "aerobicEffect": 2.4,
+      "anaerobicEffect": 0.3,
+      "exerciseLoad": 24,
+      "steps": 4806,
+      "bodyBattery": -7,
+      "restingCal": 55,
+      "sweatLossMl": 506,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 742,
+        "z2": 1686,
+        "z3": 40,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Sprinted to beat closing park gate. Felt pressure near left shoulder blade.",
+      "coachNote": "Hit the 18:13 target same day; 7:40 best pace is the gate sprint, not real. Shoulder pressure flagged for a doctor if it recurs.",
+      "flag": "symptom",
+      "effortType": "training"
+    },
+    {
+      "id": "R7",
+      "date": "2026-05-21",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.15,
+      "ascentFt": 115,
+      "descentFt": 118,
+      "minElevFt": 582,
+      "maxElevFt": 605,
+      "totalTime": "0:55:24",
+      "movingTime": "0:55:17",
+      "stoppedPct": 0,
+      "avgPace": "17:35",
+      "movingPace": "17:33",
+      "avgSpeedMph": 3.41,
+      "movingSpeedMph": 3.42,
+      "avgHR": 115,
+      "maxHR": 124,
+      "totalCal": 323,
+      "aerobicEffect": 2.8,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 32,
+      "steps": 6576,
+      "bodyBattery": -4,
+      "restingCal": 74,
+      "sweatLossMl": 561,
+      "hrZoneSec": {
+        "z0": 18,
+        "z1": 247,
+        "z2": 3059,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Recovery time jumped 12h to 20h.",
+      "coachNote": "Blew past 18:00 target and covered the 5K. Respect the 20h recovery.",
+      "recoveryHours": 20,
+      "effortType": "training"
+    },
+    {
+      "id": "R8",
+      "date": "2026-05-26",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.2,
+      "ascentFt": 115,
+      "descentFt": 108,
+      "minElevFt": 581,
+      "maxElevFt": 607,
+      "totalTime": "0:54:29",
+      "movingTime": "0:54:21",
+      "stoppedPct": 0,
+      "avgPace": "17:01",
+      "movingPace": "16:59",
+      "avgSpeedMph": 3.52,
+      "movingSpeedMph": 3.53,
+      "avgHR": 106,
+      "maxHR": 133,
+      "totalCal": 327,
+      "aerobicEffect": 2.8,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 33,
+      "steps": 6556,
+      "bodyBattery": -12,
+      "restingCal": 73,
+      "sweatLossMl": 459,
+      "hrZoneSec": {
+        "z0": 230,
+        "z1": 1775,
+        "z2": 1112,
+        "z3": 152,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "",
+      "coachNote": "Faster at LOWER heart rate (106) — textbook cardiovascular adaptation. Outgrew the 18:00 target.",
+      "flag": "breakthrough",
+      "effortType": "training"
+    },
+    {
+      "id": "R9",
+      "date": "2026-05-27",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.24,
+      "ascentFt": 131,
+      "descentFt": 128,
+      "minElevFt": 576,
+      "maxElevFt": 604,
+      "totalTime": "0:55:16",
+      "movingTime": "0:55:07",
+      "stoppedPct": 0,
+      "avgPace": "17:03",
+      "movingPace": "17:00",
+      "avgSpeedMph": 3.52,
+      "movingSpeedMph": 3.53,
+      "avgHR": 120,
+      "maxHR": 130,
+      "totalCal": 336,
+      "aerobicEffect": 2.9,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 36,
+      "steps": 6646,
+      "bodyBattery": -9,
+      "restingCal": 74,
+      "sweatLossMl": 562,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 74,
+        "z2": 2873,
+        "z3": 370,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Hip flexor stiffness. Felt off.",
+      "coachNote": "Same pace as R4 but HR +14 bpm — recovery debt, not lost fitness. 2 full days off rucking.",
+      "flag": "fatigue",
+      "effortType": "training"
+    },
+    {
+      "id": "R10",
+      "date": "2026-06-02",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.32,
+      "ascentFt": 115,
+      "descentFt": 112,
+      "minElevFt": 578,
+      "maxElevFt": 600,
+      "totalTime": "0:55:31",
+      "movingTime": "0:55:29",
+      "stoppedPct": 0,
+      "avgPace": "16:43",
+      "movingPace": "16:42",
+      "avgSpeedMph": 3.59,
+      "movingSpeedMph": 3.59,
+      "avgHR": 117,
+      "maxHR": 133,
+      "totalCal": 346,
+      "aerobicEffect": 2.7,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 38,
+      "steps": 6794,
+      "bodyBattery": -9,
+      "restingCal": 74,
+      "sweatLossMl": 641,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 75,
+        "z2": 3037,
+        "z3": 219,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Second day on beetroot juice.",
+      "coachNote": "Best pace ever, first sub-17. HR back to 117 after the fatigue spike. Too early to credit beet.",
+      "flag": "breakthrough",
+      "effortType": "training"
+    },
+    {
+      "id": "R11",
+      "date": "2026-06-03",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.2,
+      "ascentFt": 184,
+      "descentFt": 203,
+      "minElevFt": 615,
+      "maxElevFt": 678,
+      "totalTime": "0:55:16",
+      "movingTime": "0:55:07",
+      "stoppedPct": 0,
+      "avgPace": "17:16",
+      "movingPace": "17:13",
+      "avgSpeedMph": 3.47,
+      "movingSpeedMph": 3.48,
+      "avgHR": 122,
+      "maxHR": 136,
+      "totalCal": 339,
+      "aerobicEffect": 2.8,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 39,
+      "steps": 6620,
+      "bodyBattery": -9,
+      "restingCal": 74,
+      "sweatLossMl": 598,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 78,
+        "z2": 2305,
+        "z3": 932,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "notes": "Rolling hills route.",
+      "coachNote": "34 sec slower but with elevation added — equivalent or better than the flat best. HR tracked terrain and recovered on descents: the Whitney switchback pattern.",
+      "effortType": "training"
+    }
+  ],
+  "hikes": [
+    {
+      "id": "H1",
+      "date": "2026-04-25",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.14,
+      "ascentFt": 2336,
+      "descentFt": 2326,
+      "minElevFt": 660,
+      "maxElevFt": 2722,
+      "totalTime": "4:48:26",
+      "movingTime": "4:07:43",
+      "stoppedPct": 14,
+      "avgPace": "28:26",
+      "movingPace": "24:25",
+      "avgSpeedMph": 2.11,
+      "movingSpeedMph": 2.46,
+      "avgHR": 128,
+      "maxHR": 166,
+      "totalCal": 1567,
+      "aerobicEffect": 4.1,
+      "anaerobicEffect": 0.2,
+      "exerciseLoad": 113,
+      "steps": 19900,
+      "bodyBattery": 0,
+      "restingCal": 387,
+      "sweatLossMl": 3134,
+      "hrZoneSec": {
+        "z0": 42,
+        "z1": 881,
+        "z2": 5325,
+        "z3": 8526,
+        "z4": 2389,
+        "z5": 142,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve area (Poway)",
+      "label": "Recovered from the Garmin export",
+      "effortType": "training",
+      "poles": false,
+      "notes": "Not in the original PDF log — recovered from the Garmin bulk export.",
+      "coachNote": "Fills a real gap: the log implied training started May 20, but these three Blue Sky hikes in late April and May came first. Stopped time 14-19%, exactly the 3-5 hour band."
+    },
+    {
+      "id": "H2",
+      "date": "2026-05-09",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.13,
+      "ascentFt": 2349,
+      "descentFt": 2339,
+      "minElevFt": 652,
+      "maxElevFt": 2711,
+      "totalTime": "4:43:16",
+      "movingTime": "4:00:51",
+      "stoppedPct": 15,
+      "avgPace": "27:57",
+      "movingPace": "23:46",
+      "avgSpeedMph": 2.15,
+      "movingSpeedMph": 2.52,
+      "avgHR": 133,
+      "maxHR": 163,
+      "totalCal": 1456,
+      "aerobicEffect": 4.4,
+      "anaerobicEffect": 1.5,
+      "exerciseLoad": 115,
+      "steps": 19958,
+      "bodyBattery": -20,
+      "restingCal": 380,
+      "sweatLossMl": 3734,
+      "hrZoneSec": {
+        "z0": 1,
+        "z1": 1053,
+        "z2": 2594,
+        "z3": 9765,
+        "z4": 3546,
+        "z5": 37,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve area (Poway)",
+      "label": "Recovered from the Garmin export",
+      "effortType": "training",
+      "poles": false,
+      "notes": "Not in the original PDF log — recovered from the Garmin bulk export.",
+      "coachNote": "Fills a real gap: the log implied training started May 20, but these three Blue Sky hikes in late April and May came first. Stopped time 14-19%, exactly the 3-5 hour band."
+    },
+    {
+      "id": "H3",
+      "date": "2026-05-17",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.13,
+      "ascentFt": 2418,
+      "descentFt": 2398,
+      "minElevFt": 654,
+      "maxElevFt": 2737,
+      "totalTime": "4:37:15",
+      "movingTime": "3:45:29",
+      "stoppedPct": 19,
+      "avgPace": "27:22",
+      "movingPace": "22:15",
+      "avgSpeedMph": 2.19,
+      "movingSpeedMph": 2.7,
+      "avgHR": 123,
+      "maxHR": 160,
+      "totalCal": 1427,
+      "aerobicEffect": 4.5,
+      "anaerobicEffect": 2.0,
+      "exerciseLoad": 122,
+      "steps": 20338,
+      "bodyBattery": -41,
+      "restingCal": 370,
+      "sweatLossMl": 2861,
+      "hrZoneSec": {
+        "z0": 1628,
+        "z1": 880,
+        "z2": 4617,
+        "z3": 6777,
+        "z4": 2708,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve area (Poway)",
+      "label": "Recovered from the Garmin export",
+      "effortType": "training",
+      "poles": false,
+      "notes": "Not in the original PDF log — recovered from the Garmin bulk export.",
+      "coachNote": "Fills a real gap: the log implied training started May 20, but these three Blue Sky hikes in late April and May came first. Stopped time 14-19%, exactly the 3-5 hour band."
+    },
+    {
+      "id": "H4",
+      "date": "2026-05-23",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.07,
+      "ascentFt": 2431,
+      "descentFt": 2411,
+      "minElevFt": 653,
+      "maxElevFt": 2726,
+      "totalTime": "4:35:10",
+      "movingTime": "3:58:41",
+      "stoppedPct": 13,
+      "avgPace": "27:19",
+      "movingPace": "23:42",
+      "avgSpeedMph": 2.2,
+      "movingSpeedMph": 2.53,
+      "avgHR": 127,
+      "maxHR": 157,
+      "totalCal": 1358,
+      "aerobicEffect": 3.9,
+      "anaerobicEffect": 0.1,
+      "exerciseLoad": 82,
+      "steps": 20126,
+      "bodyBattery": -29,
+      "restingCal": 368,
+      "sweatLossMl": 3248,
+      "hrZoneSec": {
+        "z0": 165,
+        "z1": 622,
+        "z2": 5312,
+        "z3": 9047,
+        "z4": 1364,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve area",
+      "label": "Prior-week baseline",
+      "effortType": "training",
+      "poles": false,
+      "notes": "Baseline hike, uploaded for comparison.",
+      "coachNote": "The reference point everything after is measured against."
+    },
+    {
+      "id": "H5",
+      "date": "2026-05-30",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.44,
+      "ascentFt": 3261,
+      "descentFt": 3235,
+      "minElevFt": 989,
+      "maxElevFt": 2879,
+      "totalTime": "5:32:53",
+      "movingTime": "4:21:28",
+      "stoppedPct": 21,
+      "avgPace": "31:53",
+      "movingPace": "25:02",
+      "avgSpeedMph": 1.88,
+      "movingSpeedMph": 2.4,
+      "avgHR": 131,
+      "maxHR": 172,
+      "totalCal": 1691,
+      "aerobicEffect": 4.7,
+      "anaerobicEffect": 2.2,
+      "exerciseLoad": 137,
+      "steps": 19410,
+      "bodyBattery": -4,
+      "restingCal": 445,
+      "sweatLossMl": 4214,
+      "hrZoneSec": {
+        "z0": 113,
+        "z1": 777,
+        "z2": 5137,
+        "z3": 9348,
+        "z4": 4430,
+        "z5": 169,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve area",
+      "label": "Step up in ascent",
+      "effortType": "training",
+      "poles": false,
+      "notes": "71 min stopped time. Max HR 172 was a Zone 5 spike at the very end closing the gate.",
+      "coachNote": "+830 ft vs prior week, exercise load nearly doubled (82 to 137). Near Whitney Day 1 ascent scale. Started practicing the rest step.",
+      "flag": "milestone"
+    },
+    {
+      "id": "H6",
+      "date": "2026-06-06",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 13.14,
+      "ascentFt": 3635,
+      "descentFt": 3173,
+      "minElevFt": 655,
+      "maxElevFt": 2858,
+      "totalTime": "6:54:20",
+      "movingTime": "5:25:45",
+      "stoppedPct": 21,
+      "avgPace": "31:31",
+      "movingPace": "24:47",
+      "avgSpeedMph": 1.9,
+      "movingSpeedMph": 2.42,
+      "avgHR": 131,
+      "maxHR": 168,
+      "totalCal": 2036,
+      "aerobicEffect": 4.3,
+      "anaerobicEffect": 2.0,
+      "exerciseLoad": 136,
+      "steps": 24030,
+      "bodyBattery": -14,
+      "restingCal": 553,
+      "sweatLossMl": 5463,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 1063,
+        "z2": 6181,
+        "z3": 12970,
+        "z4": 4589,
+        "z5": 56,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve, long loop",
+      "label": "Longest moving time",
+      "effortType": "training",
+      "poles": false,
+      "notes": "Added miles, elevation and time in one go. Double-peak profile.",
+      "coachNote": "3,635 ft is essentially Whitney Day 1 ascent (3,700 ft), 4 months out. Max HR came DOWN to 168 on harder work — better pacing.",
+      "flag": "milestone"
+    },
+    {
+      "id": "H7",
+      "date": "2026-06-13",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.95,
+      "ascentFt": 2402,
+      "descentFt": 2395,
+      "minElevFt": 652,
+      "maxElevFt": 2711,
+      "totalTime": "4:58:29",
+      "movingTime": "4:25:21",
+      "stoppedPct": 11,
+      "avgPace": "27:15",
+      "movingPace": "24:13",
+      "avgSpeedMph": 2.2,
+      "movingSpeedMph": 2.48,
+      "avgHR": 135,
+      "maxHR": 168,
+      "totalCal": 1561,
+      "aerobicEffect": 4.3,
+      "anaerobicEffect": 0.9,
+      "exerciseLoad": 129,
+      "steps": 27942,
+      "bodyBattery": -36,
+      "restingCal": 399,
+      "sweatLossMl": 4502,
+      "hrZoneSec": {
+        "z0": 3,
+        "z1": 978,
+        "z2": 2441,
+        "z3": 9046,
+        "z4": 4906,
+        "z5": 535,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve to Potato Chip Rock",
+      "label": "Hot day, first pack hike",
+      "effortType": "training",
+      "poles": false,
+      "packLb": 12,
+      "fuel": {
+        "waterL": 1.5,
+        "saltTabs": 6,
+        "sodiumMg": 1900,
+        "caloriesIn": 400,
+        "items": "Kings Hawaiian bread + milk tea in the morning, 1 protein bar mid-point, skipped one snack"
+      },
+      "notes": "Temperature elevated. Route includes +0.77 mi detour because the parking gate was closed.",
+      "coachNote": "Best data yet — Garmin upgraded to Tempo (High Aerobic), anaerobic dropped to 0.9 (rest step working). But 3L fluid deficit and only ~400 cal in vs 1,559 burned. Fluid deficit alone is worth 10-15 bpm.",
+      "flag": "fueling-problem"
+    },
+    {
+      "id": "H8",
+      "date": "2026-06-20",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.19,
+      "ascentFt": 2438,
+      "descentFt": 2431,
+      "minElevFt": 654,
+      "maxElevFt": 2728,
+      "totalTime": "5:01:24",
+      "movingTime": "4:11:52",
+      "stoppedPct": 16,
+      "avgPace": "29:34",
+      "movingPace": "24:43",
+      "avgSpeedMph": 2.03,
+      "movingSpeedMph": 2.43,
+      "avgHR": 125,
+      "maxHR": 156,
+      "totalCal": 1470,
+      "aerobicEffect": 3.5,
+      "anaerobicEffect": 1.1,
+      "exerciseLoad": 80,
+      "steps": 18378,
+      "bodyBattery": -19,
+      "restingCal": 403,
+      "sweatLossMl": 3439,
+      "hrZoneSec": {
+        "z0": 413,
+        "z1": 1457,
+        "z2": 5890,
+        "z3": 8752,
+        "z4": 1572,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve to Potato Chip Rock",
+      "label": "Poles debut — same route A/B",
+      "effortType": "training",
+      "poles": true,
+      "packLb": 12,
+      "boots": "High Cut 550 (debut)",
+      "partners": [
+        "Vinod"
+      ],
+      "fuel": {
+        "beetJuiceMl": 150,
+        "items": "Beet juice 150ml in the morning"
+      },
+      "notes": "First hike with poles. Cooler temperature. Same trailhead as H4.",
+      "coachNote": "Cleanest A/B in the whole log: same route, avg HR 136 to 126, max 168 to 156, steps 27,942 to 18,378. Poles carry 20-25% of climb load and lengthen stride (2,550 steps/mi without vs 1,804 with). Never hike without poles again.",
+      "flag": "breakthrough"
+    },
+    {
+      "id": "H9",
+      "date": "2026-06-27",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.16,
+      "ascentFt": 2392,
+      "descentFt": 2388,
+      "minElevFt": 655,
+      "maxElevFt": 2717,
+      "totalTime": "4:34:49",
+      "movingTime": "3:56:00",
+      "stoppedPct": 14,
+      "avgPace": "27:02",
+      "movingPace": "23:13",
+      "avgSpeedMph": 2.22,
+      "movingSpeedMph": 2.58,
+      "avgHR": 129,
+      "maxHR": 163,
+      "totalCal": 1477,
+      "aerobicEffect": 4.6,
+      "anaerobicEffect": 1.5,
+      "exerciseLoad": 120,
+      "steps": 17722,
+      "bodyBattery": -40,
+      "restingCal": 366,
+      "sweatLossMl": 3153,
+      "hrZoneSec": {
+        "z0": 31,
+        "z1": 999,
+        "z2": 5113,
+        "z3": 7714,
+        "z4": 2605,
+        "z5": 27,
+        "z6": 0
+      },
+      "route": "Blue Sky Reserve to Potato Chip Rock",
+      "label": "Best moving pace",
+      "effortType": "training",
+      "poles": true,
+      "packLb": 12,
+      "boots": "High Cut 550",
+      "partners": [
+        "Vinod"
+      ],
+      "fuel": {
+        "waterL": 2.0,
+        "saltTabs": 4,
+        "sodiumMg": 1270,
+        "items": "Protein bar, banana, trail mix. No beet juice."
+      },
+      "notes": "Normal temperature. Vinod set a harder pace so rest stops were short. Poor sleep the night before.",
+      "coachNote": "Best moving pace yet (23:13). Aerobic effect 4.6 is the highest so far — chase that number, not the Base/Tempo label (logging pack weight makes Garmin discount pack-elevated HR). Fluid deficit halved but still ~1.15L short. Body Battery -40 means 40% of reserve spent.",
+      "flag": "breakthrough"
+    },
+    {
+      "id": "H10",
+      "date": "2026-07-11",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 10.04,
+      "ascentFt": 2621,
+      "descentFt": 2618,
+      "minElevFt": 275,
+      "maxElevFt": 1264,
+      "totalTime": "5:06:44",
+      "movingTime": "3:52:51",
+      "stoppedPct": 24,
+      "avgPace": "30:33",
+      "movingPace": "23:11",
+      "avgSpeedMph": 1.96,
+      "movingSpeedMph": 2.59,
+      "avgHR": 131,
+      "maxHR": 169,
+      "totalCal": 1691,
+      "aerobicEffect": 5.0,
+      "anaerobicEffect": 2.3,
+      "exerciseLoad": 179,
+      "steps": 17790,
+      "bodyBattery": -49,
+      "restingCal": 409,
+      "sweatLossMl": 3877,
+      "hrZoneSec": {
+        "z0": 644,
+        "z1": 457,
+        "z2": 3749,
+        "z3": 9401,
+        "z4": 3731,
+        "z5": 417,
+        "z6": 0
+      },
+      "route": "North + South Fortuna + Kwaaymii, Santee",
+      "label": "Three peaks, biggest load pre-summit",
+      "effortType": "training",
+      "poles": true,
+      "packLb": 12,
+      "boots": "High Cut 550",
+      "fuel": {
+        "waterL": 2.35,
+        "waterCarriedL": 4.0,
+        "saltTabs": 4,
+        "liquidIV": 2,
+        "items": "1 mocha at 5am, bar + trail mix"
+      },
+      "notes": "New trail. Hot on the third peak descent. Stomach bloated, gas afterward. No weights that week.",
+      "coachNote": "Aerobic Effect hit 5.0 (max on the scale), exercise load 179 — double the prior week. 96h recovery is accurate. Bloating explained by mocha on an empty stomach, heat redirecting blood from the gut, and trail mix fermenting. Skip coffee on hike mornings.",
+      "flag": "milestone"
+    },
+    {
+      "id": "H11",
+      "date": "2026-07-18",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 13.24,
+      "ascentFt": 4590,
+      "descentFt": 4583,
+      "minElevFt": 6329,
+      "maxElevFt": 10817,
+      "totalTime": "11:04:30",
+      "movingTime": "4:58:51",
+      "stoppedPct": 55,
+      "avgPace": "50:11",
+      "movingPace": "22:34",
+      "avgSpeedMph": 1.2,
+      "movingSpeedMph": 2.66,
+      "avgHR": 146,
+      "maxHR": 171,
+      "totalCal": 3946,
+      "aerobicEffect": 5.0,
+      "anaerobicEffect": 3.6,
+      "exerciseLoad": 557,
+      "steps": 19734,
+      "bodyBattery": -4,
+      "restingCal": 884,
+      "sweatLossMl": 9541,
+      "hrZoneSec": {
+        "z0": 0,
+        "z1": 4,
+        "z2": 1021,
+        "z3": 13298,
+        "z4": 23159,
+        "z5": 2388,
+        "z6": 0
+      },
+      "route": "Marion Mountain Trail to San Jacinto Peak",
+      "label": "SAN JACINTO SUMMIT — 10,817 ft",
+      "effortType": "training",
+      "poles": true,
+      "boots": "High Cut 550",
+      "partners": [],
+      "fuel": {
+        "waterL": 4.0,
+        "caloriesIn": 1900,
+        "caloriesInApprox": true,
+        "items": "4L water, banana, 2 bars, 3 trail mix, 6 oranges, 4 gu gels"
+      },
+      "notes": "Drove 4:40am, started hiking 6:55am. Summited with no altitude symptoms. Descent was brutally depleting — 'like a vegetable'. Slight clumsiness at ~10,500 ft on the summit boulders. No headache or nausea. Phil's BBQ ribs the night before.",
+      "coachNote": "The diagnostic result the entire plan was built around — summited at 10,817 ft with no altitude symptoms, where a prior attempt turned back at 13k. The 'vegetable' descent was a ~2,000 cal deficit plus ~5.5L fluid deficit, not a fitness ceiling. Fueling nearly broke you; the engine is there. The 90 F reading on the map matters: heat is the reason the sweat loss was so extreme, and Idyllwild in early August will not be cooler.",
+      "flag": "summit",
+      "sleep": {
+        "hours": 5.5,
+        "score": 39,
+        "note": "Night after the summit. High load suppresses deep sleep; deficits fragment it."
+      },
+      "weather": {
+        "garminOverlayF": 90,
+        "note": "Garmin's weather overlay on the activity map reads 90 F. Ambiguous whether that is the start temperature or the peak during the 11-hour window — you began at 6:52 am, so most likely the peak. Either way it reframes the day: your single highest sweat loss (9,541 ml) happened on your hottest recorded hike."
+      }
+    },
+    {
+      "id": "H12",
+      "date": "2026-07-25",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 5.24,
+      "ascentFt": 784,
+      "descentFt": 764,
+      "minElevFt": 7277,
+      "maxElevFt": 7752,
+      "totalTime": "2:48:53",
+      "movingTime": "1:40:46",
+      "stoppedPct": 40,
+      "avgPace": "32:13",
+      "movingPace": "19:13",
+      "avgSpeedMph": 1.86,
+      "movingSpeedMph": 3.12,
+      "avgHR": 126,
+      "maxHR": 170,
+      "totalCal": 921,
+      "aerobicEffect": 3.4,
+      "anaerobicEffect": 0.8,
+      "exerciseLoad": 86,
+      "steps": 9962,
+      "bodyBattery": -10,
+      "restingCal": 224,
+      "sweatLossMl": 2677,
+      "hrZoneSec": {
+        "z0": 3525,
+        "z1": 4150,
+        "z2": 1905,
+        "z3": 386,
+        "z4": 160,
+        "z5": 7,
+        "z6": 0
+      },
+      "route": "Devils Postpile to Rainbow Falls, Mammoth Lakes",
+      "label": "Mammoth trip day 1 — flat, altitude familiarisation",
+      "effortType": "family",
+      "poles": false,
+      "partners": [
+        "son",
+        "wife"
+      ],
+      "fuel": {
+        "waterL": null,
+        "waterCarriedL": 3.0,
+        "waterSharedWith": 3,
+        "caloriesIn": 0,
+        "items": "No snacks at all. Water only."
+      },
+      "notes": "Shuttle queue from 8:30, rode at 9:30. Flat trail, family pace. Carried 3L of water for three people and ate nothing the whole hike. Max speed 25.6 mph and best pace 2:21/mi mean a vehicle segment got recorded — the 170 max HR is almost certainly an optical-sensor artifact from that, not a real effort.",
+      "coachNote": "Easy day by design and that is fine — Body Battery only -10. The problem is the habit: zero calories across 2h49m and 920 burned, and you were the family's water carrier so your own intake was the smallest share. Zone distribution is excellent (40% Z1, 18% Z2) and this is the first hike recorded on the corrected %HRR zones.",
+      "flag": "fueling-problem"
+    },
+    {
+      "id": "H13",
+      "date": "2026-07-26",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 8.58,
+      "ascentFt": 1342,
+      "descentFt": 1322,
+      "minElevFt": 10161,
+      "maxElevFt": 10934,
+      "totalTime": "5:44:24",
+      "movingTime": "3:42:30",
+      "stoppedPct": 35,
+      "avgPace": "40:08",
+      "movingPace": "25:55",
+      "avgSpeedMph": 1.49,
+      "movingSpeedMph": 2.31,
+      "avgHR": 133,
+      "maxHR": 157,
+      "totalCal": 1822,
+      "aerobicEffect": 3.9,
+      "anaerobicEffect": 0.9,
+      "exerciseLoad": 145,
+      "steps": 20928,
+      "bodyBattery": -9,
+      "restingCal": 458,
+      "sweatLossMl": 5115,
+      "hrZoneSec": {
+        "z0": 1345,
+        "z1": 9009,
+        "z2": 7917,
+        "z3": 2346,
+        "z4": 47,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Mosquito Flat to Gem Lakes, Little Lakes Valley",
+      "label": "Highest sustained altitude on foot — 10,934 ft",
+      "effortType": "family",
+      "poles": false,
+      "partners": [
+        "son",
+        "wife"
+      ],
+      "fuel": {
+        "waterL": null,
+        "waterCarriedL": 4.5,
+        "waterSharedWith": 3,
+        "items": "Carried 4-5L for three people. Personal intake not recorded."
+      },
+      "notes": "Left the hotel at 7am, on trail by 8am, finished 2:20pm. Hiked without poles. Slight discomfort at the start attributed to the thinner air. Had to stop at every small rise; took many short breaks to keep heart rate down. Peaked at 140 bpm. Son (gym-trained) sat around 120, wife around 117 — she stopped for rest more often despite no hiking background.",
+      "coachNote": "The whole hike sat above 10,000 ft — your longest sustained exposure at that altitude, and pacing discipline was outstanding: 43% Zone 1, 38% Zone 2, only 47 seconds above threshold. Two flags. Sweat loss 5,115 ml for only 1,342 ft of climbing is the dry-thin-air tax at altitude, and you were again splitting water three ways. And needing to stop at every rise at 10-11k is the third time altitude has cost you something.",
+      "flag": "milestone"
+    }
+  ],
+  "altitudeExposure": [
+    {
+      "date": "2026-07-24",
+      "place": "Whitney Portal (drive-up, showing family)",
+      "elevationFt": 8360,
+      "onFoot": false,
+      "symptoms": "Slight headache while reading a phone screen in a moving car.",
+      "reclassified": true,
+      "reclassifyNote": "RECLASSIFIED as most likely NOT altitude. Clarified Jul 28 as blurry vision — presbyopia that has probably outgrown the 1.25 over-the-counter readers. Under-corrected reading glasses plus the vestibular-visual mismatch of reading a screen in a moving vehicle is a textbook eyestrain headache, and 8,360 ft is low for altitude illness. Optometrist appointment being arranged.",
+      "note": "Travel day, Mammoth reached ~3pm. No real activity."
+    },
+    {
+      "date": "2026-07-25",
+      "place": "Mammoth Mountain summit via gondola",
+      "elevationFt": 11053,
+      "watchReadingFt": 11080,
+      "onFoot": false,
+      "symptoms": "Slight dizziness at the top; moving around took noticeable effort.",
+      "note": "Mechanical ascent with zero acclimatisation time — the most provocative altitude exposure of the trip precisely because it was so fast."
+    },
+    {
+      "date": "2026-07-26",
+      "place": "Little Lakes Valley (on foot, see H10)",
+      "elevationFt": 10934,
+      "onFoot": true,
+      "symptoms": "Slight discomfort at the start attributed to oxygen level; needed a stop at every small rise.",
+      "note": "Symptoms eased enough to complete the hike comfortably."
+    }
+  ],
+  "sleepAtAltitude": [
+    {
+      "dates": "Jul 24–26",
+      "nights": 2,
+      "place": "Mammoth Lakes lodging",
+      "elevationFt": 8600,
+      "note": "Two consecutive nights. This is the highest you have slept, and it means the Jul 26 Little Lakes Valley hike at 10,934 ft was done ACCLIMATISED — which is very likely why it went as well as it did, and why the unacclimatised gondola ride the day before produced dizziness instead."
+    }
+  ],
+  "sleepLadder": {
+    "achievedFt": 8600,
+    "cottonwoodFt": 10000,
+    "trailCampFt": 12000,
+    "note": "8,600 ft achieved over two nights, then ~10,000 ft at Cottonwood on Sep 29, then 12,000 ft at Trail Camp on Oct 1. That is a reasonable progression rather than a cold jump. An optional extra night near 10,000 ft in August would make it gentler still, but it is no longer the gaping hole in the plan."
+  },
+  "plannedHikes": [
+    {
+      "date": "2026-08-01",
+      "dateApprox": true,
+      "name": "San Jacinto Peak via Devils Slide Trail",
+      "status": "stated by user — 'this week'",
+      "estDistanceMi": "15-16",
+      "estAscentFt": 4700,
+      "trailheadFt": 6500,
+      "summitFt": 10834,
+      "purpose": "Fueling and hydration rehearsal #1 on a known summit via a longer, more gradual route"
+    },
+    {
+      "date": "2026-08-08",
+      "name": "No hike planned",
+      "status": "stated by user",
+      "purpose": "Recovery week"
+    },
+    {
+      "date": "2026-08-15",
+      "name": "San Gorgonio via Vivian Creek Trail",
+      "status": "stated by user",
+      "estDistanceMi": "17-18",
+      "estAscentFt": 5400,
+      "trailheadFt": 6080,
+      "summitFt": 11503,
+      "purpose": "Biggest single day of the whole plan and the closest available analogue to Whitney Day 1 + Day 2 combined"
+    }
+  ],
+  "hydrationAnalysis": {
+    "sipTarget": {
+      "mlPer15min": "150-200",
+      "mlPerHour": "600-800"
+    },
+    "electrolyteTarget": "1 tab per 500-600 ml",
+    "sodiumFinding": "On San Jacinto ~1,900 mg sodium replaced vs ~7,000-9,000 mg lost. Peeing 4x while dehydrated points at LOW SODIUM, not excess water — kidneys dump water they can't hold.",
+    "volumeFinding": "Drinking large volumes at rest stops outpaces absorption. Sip small and frequent; alternate plain and electrolyte bottles.",
+    "correction": "2 electrolyte tabs in 1L is the same concentration as 1 in 500ml — concentration was never the issue, total sodium was.",
+    "flagToDoctor": "A very salty sweat rate is worth raising with a doctor."
+  },
+  "fuelingProtocol": {
+    "targetCalPerHour": "250-300",
+    "strategy": "Front-load solid food in hours 1-4 so gels are not doing rescue work at hour 8. Mix through the middle, gels freely on descent.",
+    "keepGels": true,
+    "keepGelsReason": "Gels were what made the San Jacinto descent survivable. The fix is MORE total calories spread earlier, not fewer gels.",
+    "swapOut": [
+      "Costco trail mix (fiber + dried fruit ferments)",
+      "coffee/mocha on hike mornings"
+    ],
+    "swapIn": [
+      "dates",
+      "rice snack",
+      "banana",
+      "plain rice/curd post-hike"
+    ],
+    "timerReminder": "Set the Fenix to buzz every 45 min"
+  },
+  "waterCarry": {
+    "currentVessels": [
+      {
+        "item": "Osprey reservoir",
+        "capacityL": 2.5,
+        "usuallyFilledL": 2.0,
+        "note": "Filling to 2.5 rather than 2.0 is a free 500 ml — about 37 extra minutes of drinking at target rate."
+      }
+    ],
+    "totalCapacityL": 2.5,
+    "bladderDrawbacks": [
+      "No volume feedback — you cannot see how much you have drunk, which is one plausible reason intake has stayed low without you noticing.",
+      "Hard to alternate plain and electrolyte fluid, which was the specific fix recommended for the sodium problem.",
+      "Hose and bite valve freeze. This is a classic Whitney summit-morning failure: pre-dawn start at 12,000 ft in October, hose freezes, and you cannot drink at all for hours."
+    ],
+    "freezeMitigations": [
+      "Blow air back down the hose after every sip so no water sits in the line.",
+      "Insulated hose sleeve, or run the hose inside a jacket layer.",
+      "Simplest option: use insulated bottles rather than the bladder on summit morning.",
+      "Sleep with the bladder and bottles inside the tent, not in the vestibule."
+    ],
+    "recommendation": "Keep the 2.5L reservoir for plain water and add roughly 2L of bottle capacity for electrolyte mix. That reaches ~4.5L total, solves the alternating-fluid problem, gives you visible feedback on intake, and gives a freeze-proof fallback for summit morning.",
+    "legs": [
+      {
+        "leg": "San Jacinto via Devils Slide",
+        "estHours": 12,
+        "refillAvailable": "unknown — ask the ranger station",
+        "note": "No reliable water on the Devils Slide switchbacks. Round Valley usually has a source but it can run low by August. Confirm when you follow up on the permit fax."
+      },
+      {
+        "leg": "San Gorgonio via Vivian Creek",
+        "estHours": 13,
+        "refillAvailable": "early only",
+        "note": "Vivian Creek and High Creek are early on the climb; above High Creek there is nothing. Fill to the brim at High Creek."
+      },
+      {
+        "leg": "Whitney Day 1 — Portal to Trail Camp",
+        "estHours": 6.5,
+        "refillAvailable": "yes",
+        "note": "Lone Pine Creek, Outpost Camp, Mirror Lake, Trailside Meadow, Trail Camp pond. Filter freely; carry light."
+      },
+      {
+        "leg": "Whitney Day 2 — summit push from Trail Camp and back",
+        "estHours": 7.5,
+        "refillAvailable": "NO",
+        "note": "THE CRITICAL LEG. Trail Camp pond is the last water. The 97 switchbacks, Trail Crest and the summit ridge have none. Everything you drink on the highest, driest, coldest stretch of the whole trip must be carried from camp.",
+        "critical": true
+      },
+      {
+        "leg": "Whitney Day 2 — Trail Camp down to Portal",
+        "estHours": 3.5,
+        "refillAvailable": "yes",
+        "note": "Same sources as Day 1. Filter on the way down rather than hauling extra."
+      }
+    ]
+  },
+  "diamoxTrial": {
+    "status": "prescribed, 20 days supply — trial not yet done",
+    "why": "You are the one person in this log with a documented fluid and sodium deficit on every long effort, and acetazolamide is a diuretic. Meeting its effects on a low-stakes day rather than at hour eight of a sixteen-mile hike is worth the small delay.",
+    "whenToTrial": "This week, at home or before a short local walk. Not on Devils Slide.",
+    "logThese": [
+      "Tingling (paraesthesia) — where, how strong, how long it lasted. Fingers, toes and around the mouth are the usual spots.",
+      "Taste changes — especially with anything carbonated, which classically turns metallic.",
+      "Urination — how many extra trips, and crucially HOW MANY HOURS after the dose. You will be taking this while sleeping at 12,000 ft, and repeated 2am trips out of a tent cost sleep you cannot spare.",
+      "Drowsiness, nausea, or appetite change — all would compound your existing fuelling problem.",
+      "Whether your actual electrolyte drinks still taste acceptable ON the drug."
+    ],
+    "criticalTest": "Taste your real on-trail drinks — Liquid IV, salt tabs, whatever you plan to carry — while on Diamox. If the drug makes them taste metallic you will drink less, which is the exact opposite of what you need. Far better to discover that this week and swap products than at Trail Camp.",
+    "questionsForDoctor": [
+      "Start date: the plan says Sep 30, but you sleep at ~10,000 ft at Cottonwood on Sep 29. Should it start a day or two earlier so that night is covered?",
+      "Electrolytes: acetazolamide causes potassium loss, and you sweat 690-950 ml/hr with historically low sodium replacement. Any specific guidance or monitoring they want?",
+      "Sulfa: acetazolamide is a sulfonamide derivative — confirm no history of sulfa reaction.",
+      "Whether the two mild altitude episodes and the very salty sweat rate change anything in their plan."
+    ]
+  },
+  "supplements": [
+    {
+      "name": "SuperBeets",
+      "status": "active",
+      "since": "2026-05-30",
+      "note": "~30 days used, one day skipped. No felt difference. Real but small effect (3-5% oxygen efficiency), a few bpm — not a caffeine-like kick. Shrinks as fitness improves. Worth keeping through Whitney because it matters more at altitude."
+    },
+    {
+      "name": "D3/K2",
+      "status": "active"
+    },
+    {
+      "name": "Omega-3",
+      "status": "active"
+    },
+    {
+      "name": "Magnesium glycinate",
+      "status": "active",
+      "note": "Evening, supports sleep after high-load days."
+    },
+    {
+      "name": "Diamox (acetazolamide)",
+      "status": "prescribed",
+      "supplyDays": 20,
+      "startDate": "2026-09-30",
+      "note": "Prescribed with 20 days of supply — comfortably more than a Whitney course needs, so tolerance trials cost nothing from the trip stock. Follow the dose on your own label."
+    }
+  ],
+  "beetProducts": [
+    {
+      "name": "Sol-Ti beet/orange/apple/ginger juice",
+      "verdict": "decent, not optimal",
+      "note": "Beet is 1 of 5 ingredients, lower nitrate than a dedicated shot. Good daily recovery drink. Contains ginger — a reflux trigger."
+    },
+    {
+      "name": "Trader Joe's cold-pressed beet juice (HPP)",
+      "verdict": "good at home, NOT for Trail Camp",
+      "purchased": "2 bottles, Jul 28 2026",
+      "servingMl": 450,
+      "label": {
+        "calories": 150,
+        "carbsG": 36,
+        "sugarsG": 22,
+        "addedSugarsG": 0,
+        "fiberG": 5,
+        "proteinG": 3,
+        "sodiumMg": 170,
+        "potassiumMg": 1010,
+        "potassiumDV": "20%",
+        "calciumMg": 100,
+        "ironMg": 3.6,
+        "ironDV": "20%"
+      },
+      "perBottle": "1¼ medium beets, ⅓ lb spinach, 1½ celery stalks, ½ cucumber, 1 medium apple, 2¼ carrots, 2 inches of ginger, ¼ lemon",
+      "ingredients": "Beet, celery, cucumber, carrot, apple, spinach, ginger, lemon juice",
+      "note": "Using it at home rather than carrying it is the right call — 450 g of perishable liquid up 3,700 ft was never worth it. Nitrate content is plausibly meaningful: the ⅓ lb of spinach may contribute as much nitrate as the beets, since spinach is among the highest-nitrate vegetables by weight."
+    }
+  ],
+  "beetProtocol": {
+    "plan": "One bottle Friday Jul 31, one Saturday Aug 1 before the Devils Slide hike.",
+    "timing": "Plasma nitrite peaks roughly 2–3 h after drinking, so Saturday's bottle wants to go down about 2–2½ h before the trailhead — which lines up with the breakfast slot already in the week plan.",
+    "takeWithFood": "Drink it WITH breakfast, not on an empty stomach in the car. The mocha-on-an-empty-stomach mistake on Jul 11 produced exactly the bloating you are trying to avoid, and this bottle carries 5 g of fiber plus apple and carrot fructose.",
+    "fridayIsTheTest": "Friday's bottle doubles as a tolerance test 18 hours before it matters. Note any reflux, gas or bloating and how long after drinking it appeared.",
+    "decisionRule": "If Friday produces reflux or significant gas, SKIP Saturday's bottle. Two inches of ginger per bottle is more than the Sol-Ti that already gave you reflux, and you have said ginger is always a no. Trading a marginal 3–5% oxygen-efficiency gain for reflux at hour two of a twelve-hour hike is a clearly bad deal.",
+    "countsTowardCarbs": "36 g carbs and 150 cal per bottle — real numbers against Friday's and Saturday's targets, not free extras.",
+    "diamoxSynergy": "1,010 mg of potassium per bottle (20% DV) is a genuine bonus if you are on Diamox, which causes potassium loss. This is the one way the two plans help each other.",
+    "expectations": "Do not expect to feel anything. You ran SuperBeets ~30 days and felt nothing, and two bottles is acute dosing rather than the 3–7 day loading that shows the clearest effect. Whatever this does, it is a rounding error next to hitting your fluid, sodium and calorie targets.",
+    "harmlessSurprise": "Beeturia — pink or red urine, sometimes reddish stool — is common after beet juice and completely harmless. Worth knowing in advance so you do not mistake it for blood mid-hike.",
+    "fridayResult": "PASSED. No reflux from the beet juice, from cold coffee, or from the 35 mg caffeine gel. Saturday's bottle is a go.",
+    "coffeeCaveat": "One distinction worth keeping straight: reflux and bloating are different problems. The Jul 11 trouble was bloating and gas from a MOCHA on an empty stomach at 5am — milk plus fasted gut plus heat. No reflux from cold coffee is genuinely good news, and cold brew is lower in acid than hot brewed, so it fits. But it does not clear coffee of the bloating question. If you want it Saturday, have it with breakfast rather than fasted, and skip the milk."
+  },
+  "gear": [
+    {
+      "item": "Garmin Fenix 8",
+      "status": "owned",
+      "note": "Enable multi-band GPS, calibrate altimeter at known elevation, wear snug."
+    },
+    {
+      "item": "Trekking poles",
+      "status": "owned",
+      "note": "Non-negotiable. Worth ~10 bpm and 9,500 fewer steps on the same route."
+    },
+    {
+      "item": "High Cut 550 boots",
+      "status": "owned",
+      "since": "2026-06-20",
+      "note": "Working well."
+    },
+    {
+      "item": "Big Agnes Copper Spur UL1",
+      "status": "owned"
+    },
+    {
+      "item": "GRAYL UltraPress",
+      "status": "owned",
+      "note": "Know the refill points on the Whitney trail."
+    },
+    {
+      "item": "Black Diamond Spot 400",
+      "status": "owned"
+    },
+    {
+      "item": "OR Foray rain jacket",
+      "status": "owned"
+    },
+    {
+      "item": "OR Rocky Mountain Low Gaiters",
+      "status": "owned"
+    },
+    {
+      "item": "Hydration vest",
+      "status": "NEEDED",
+      "priority": "high",
+      "note": "Flagged urgent on Jun 27. Continuous sipping fixes both the bladder-stop problem and the fluid deficit. Get one before the next big hike."
+    },
+    {
+      "item": "High-UV sunglasses (category 3-4, wraparound)",
+      "status": "NEEDED",
+      "priority": "high",
+      "note": "Nothing in the log covers eye protection. UV climbs steeply with altitude and granite and snow reflect it back — this matters more than usual given you are already sorting out your vision."
+    },
+    {
+      "item": "Sunscreen + SPF lip balm",
+      "status": "NEEDED",
+      "priority": "high",
+      "note": "Thin air, October sun, twelve hours exposed above 12,000 ft."
+    },
+    {
+      "item": "Spare correct-strength reading glasses",
+      "status": "NEEDED",
+      "priority": "medium",
+      "note": "Once the optometrist sets the right power, carry two pairs. You will be reading a watch and map in the dark on summit morning."
+    }
+  ],
+  "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
+  "openIssues": [
+    {
+      "issue": "Pulse oximetry is off — no SpO2 baseline before an altitude objective",
+      "severity": "high",
+      "since": "2026-07-28",
+      "action": "3 readings in 304 days. Enable Pulse Ox on the Fenix now (Health & Wellness > Pulse Ox > All Day or During Sleep) so nine weeks of sea-level baseline exist before Cottonwood. Free, and it is the one sensor that speaks directly to how altitude is being tolerated."
+    },
+    {
+      "issue": "Sleep drops to about 3 hours after every long effort",
+      "severity": "watch",
+      "since": "2026-07-28",
+      "action": "Across the six longest days the night-of average is 3.4 h against 6.8 the night before. Whitney has summit day depending on sleep at 12,000 ft immediately after a 3,700 ft climb. Finishing Day 1 early, fuelling properly and taking no caffeine after midday are the levers."
+    },
+    {
+      "issue": "Diamox tolerance not yet tested",
+      "severity": "high",
+      "since": "2026-07-28",
+      "action": "Prescription and 20 days of supply confirmed, so a trial costs nothing from the trip stock. Do it this week at home or before a short local walk rather than on Devils Slide — acetazolamide is a diuretic and you already run 1.5-5.5L fluid deficits with far too little sodium. Log the timing of the urination effect and taste-test your actual electrolyte drinks while on it."
+    },
+    {
+      "issue": "Diamox start date may not cover the Cottonwood night",
+      "severity": "medium",
+      "since": "2026-07-28",
+      "action": "Plan says start Sep 30, but you sleep at ~10,000 ft on Sep 29. Ask the prescriber whether to start a day or two earlier."
+    },
+    {
+      "issue": "Devils Slide permit faxed, awaiting confirmation",
+      "severity": "medium",
+      "since": "2026-07-28",
+      "action": "Follow up with the San Jacinto Ranger District (909) 382-2921, open Thu-Mon. Marion Mountain is the fallback and was not quota-flagged the way Devils Slide is — but it still needs its own wilderness permit. Adventure Pass ($5/day) required for Humber Park parking."
+    },
+    {
+      "issue": "Never carried more than a 12 lb pack — Whitney Day 1 needs roughly 30 lb",
+      "severity": "high",
+      "since": "2026-07-28",
+      "action": "Progressive loading: 18 lb on Aug 1, 22-25 lb on Aug 15, 28 lb late Aug, full weight in September. At 161 lb that is 7.5% rising to 18.6% of bodyweight — inside normal backpacking range, but it changes HR, pace and knee load on the 6,200 ft descent."
+    },
+    {
+      "issue": "Sleep-altitude ladder has a 3,400 ft step left",
+      "severity": "medium",
+      "since": "2026-07-28",
+      "action": "CORRECTED: two nights at 8,600 ft in Mammoth are now on the board, so this is a progression (8,600 to 10,000 at Cottonwood to 12,000 at Trail Camp), not a cold jump. An optional extra night near 10,000 ft in August would smooth it further but is no longer urgent."
+    },
+    {
+      "issue": "Never hiked two consecutive days — Whitney Day 2 happens on tired legs and poor sleep",
+      "severity": "high",
+      "since": "2026-07-28",
+      "action": "One back-to-back weekend in September: big Saturday, 8-10 mi Sunday."
+    },
+    {
+      "issue": "Two clear mild episodes at 10,500-11,000 ft, plus one that resolved",
+      "severity": "watch",
+      "since": "2026-07-26",
+      "action": "REVISED DOWN from three: San Jacinto clumsiness at 10,500 ft (Jul 18) and unacclimatised gondola dizziness at 11,053 ft (Jul 25) are altitude-relevant. Gem Lakes discomfort (Jul 26) was mild, acclimatised and resolved. The Jul 24 Whitney Portal headache moves out of this column entirely — it is eyestrain, not altitude. Still worth raising with your doctor alongside the Diamox plan."
+    },
+    {
+      "issue": "Diamox is a diuretic and you already run a fluid and sodium deficit",
+      "severity": "watch",
+      "since": "2026-07-28",
+      "action": "Raise this interaction explicitly with the prescribing doctor, and do the trial run in August — not on Sep 30 — so side effects are known before summit week."
+    },
+    {
+      "issue": "Blurry vision — 1.25 readers likely under-corrected",
+      "severity": "medium",
+      "since": "2026-07-24",
+      "action": "Optometrist visit being arranged, which is the right answer. Three things worth telling them: you are going to 14,505 ft in October, you will need to read a watch and map in the dark on summit morning, and whether the blur is only close-up or at distance too. Ask about proper high-UV sunglasses while you are there — UV at 14,000 ft is far stronger than at sea level and granite and snow reflect it back at you."
+    },
+    {
+      "issue": "No sunglasses or sun protection anywhere in the gear list",
+      "severity": "high",
+      "since": "2026-07-28",
+      "action": "Genuine omission. At 14,505 ft in October, with possible snow on the switchbacks, category 3-4 wraparound sunglasses are not optional. Add sunscreen and SPF lip balm too. Also carry a SPARE pair of correct-strength readers — losing your only pair at Trail Camp with a map and a stove to manage is a real problem."
+    },
+    {
+      "issue": "Poles left at home on both Mammoth hikes",
+      "severity": "medium",
+      "since": "2026-07-26",
+      "action": "Low cost on flat family hikes, but the Jun 20 A/B proved poles are worth ~10 bpm. Make them automatic."
+    },
+    {
+      "issue": "Own fluid intake unrecorded on both Mammoth hikes — you were the family's water carrier",
+      "severity": "medium",
+      "since": "2026-07-26",
+      "action": "Carry and log your own bottle separately from the shared supply. Sweat loss was 2,677 ml and 5,115 ml on those two days."
+    },
+    {
+      "issue": "Hydration vest not yet purchased",
+      "severity": "high",
+      "since": "2026-06-27",
+      "action": "Buy before next big hike"
+    },
+    {
+      "issue": "Total sodium far too low on long efforts",
+      "severity": "high",
+      "since": "2026-07-18",
+      "action": "Raise to 700-1000 mg/hr; test on next hike"
+    },
+    {
+      "issue": "Calorie intake ~50% of burn on long days",
+      "severity": "high",
+      "since": "2026-06-13",
+      "action": "250-300 cal/hr front-loaded"
+    },
+    {
+      "issue": "Coordination loss (clumsiness) at ~10,500 ft",
+      "severity": "watch",
+      "since": "2026-07-18",
+      "action": "Likely fuel-driven, but ataxia is a descend-now sign. Brief Siva to watch for it. Retest on a well-fueled second San Jacinto."
+    },
+    {
+      "issue": "Gut distress after long hikes (bloating, gas)",
+      "severity": "medium",
+      "since": "2026-07-11",
+      "action": "No coffee on hike mornings, swap trail mix for dates/rice. Mention to doctor given reflux history if it recurs every long hike."
+    },
+    {
+      "issue": "Left shoulder blade pressure during exertion",
+      "severity": "watch",
+      "since": "2026-05-20",
+      "action": "Single occurrence, likely uneven strap load. Mention to a doctor if it recurs or spreads."
+    },
+    {
+      "issue": "VO2 max 37 vs October target 41-42",
+      "severity": "medium",
+      "action": "Zone 2 volume + one weekly interval session. Prefer incline treadmill 10-15% or uphill hiking intervals over running, given back/hip flexor history."
+    },
+    {
+      "issue": "Watch altimeter and zones need recalibration",
+      "severity": "medium",
+      "since": "2026-07-19",
+      "action": "Switched to %HRR. Still calibrate altimeter at known elevation and enable multi-band GPS."
+    },
+    {
+      "issue": "El Cajon Mountain closed all August",
+      "severity": "info",
+      "action": "Reopens September. Baldy and a second San Jacinto carry August altitude work."
+    },
+    {
+      "issue": "Cottonwood Camp reservation for Sep 29",
+      "severity": "high",
+      "action": "Book on Recreation.gov"
+    }
+  ],
+  "trailOptions": [
+    {
+      "name": "Blue Sky Reserve to Potato Chip Rock",
+      "distanceMi": 10.2,
+      "ascentFt": 2900,
+      "status": "open",
+      "note": "Home route. Best A/B comparison data."
+    },
+    {
+      "name": "Blue Sky long loop",
+      "distanceMi": "13-14",
+      "ascentFt": 4000,
+      "status": "open"
+    },
+    {
+      "name": "Iron Mountain",
+      "distanceMi": 7.3,
+      "ascentFt": 1584,
+      "status": "open"
+    },
+    {
+      "name": "El Cajon Mountain",
+      "distanceMi": 11.2,
+      "ascentFt": 3589,
+      "status": "CLOSED all August",
+      "note": "Closed by county order; reopens September."
+    },
+    {
+      "name": "North + South Fortuna + Kwaaymii, Santee",
+      "distanceMi": 10.0,
+      "ascentFt": 2621,
+      "status": "open"
+    },
+    {
+      "name": "San Jacinto via Marion Mountain",
+      "distanceMi": 13.24,
+      "ascentFt": 4590,
+      "maxElevFt": 10817,
+      "status": "open",
+      "note": "The altitude benchmark. Worth a second, well-fueled attempt."
+    },
+    {
+      "name": "Mt. Baldy",
+      "status": "open",
+      "note": "Carries August altitude work alongside San Jacinto."
+    }
+  ],
+  "trainingPhases": [
+    {
+      "phase": 1,
+      "name": "Base rucking",
+      "window": "May",
+      "status": "complete"
+    },
+    {
+      "phase": 2,
+      "name": "Volume + elevation build",
+      "window": "June",
+      "status": "complete"
+    },
+    {
+      "phase": 3,
+      "name": "Altitude intro",
+      "window": "July",
+      "status": "complete",
+      "note": "San Jacinto summit was the diagnostic gate — passed."
+    },
+    {
+      "phase": 4,
+      "name": "Altitude repeat + load introduction",
+      "window": "August",
+      "status": "current",
+      "note": "Devils Slide and San Gorgonio carry the altitude work while El Cajon is closed. Pack weight starts climbing."
+    },
+    {
+      "phase": 5,
+      "name": "Peak load + Whitney simulation",
+      "window": "September",
+      "status": "upcoming",
+      "note": "Full pack weight, one back-to-back weekend, one night sleeping at altitude."
+    },
+    {
+      "phase": 6,
+      "name": "Taper + summit",
+      "window": "Sep 21 to Oct 2",
+      "status": "upcoming"
+    }
+  ],
+  "forwardPlan": [
+    {
+      "window": "Jul 28 - Jul 31",
+      "phase": 4,
+      "kind": "admin",
+      "title": "Permit follow-up and Diamox tolerance test",
+      "detail": "Devils Slide permit is faxed — follow up with the ranger station (Thu-Mon) to confirm, with Marion Mountain as the fallback. Buy an Adventure Pass for Humber Park. Reserve the free San Gorgonio permit at permits.sgwa.org for Aug 15. Buy the hydration vest. Book Cottonwood Camp for Sep 29.",
+      "targets": "Take the first Diamox dose at home or before a short local walk, NOT on the big hike — you want to meet the tingling, the taste changes and the extra urination somewhere with a bathroom and no 16 miles attached.",
+      "priority": "high"
+    },
+    {
+      "window": "Aug 1 or 2",
+      "phase": 4,
+      "kind": "hike",
+      "title": "San Jacinto Peak via Devils Slide (or Marion Mountain)",
+      "detail": "15-16 mi, ~4,700 ft, summit 10,834 ft. Longer and more gradual than Marion Mountain, so it rewards sustained Zone 2 rather than grinding. If the permit does not land, Marion Mountain at 13.24 mi and 4,590 ft is a known quantity and a fine substitute.",
+      "packLb": 18,
+      "targets": "Fueling rehearsal #1. 250-300 cal/hr on the 45-min Fenix buzzer. 600-800 ml/hr. 700-1,000 mg sodium per litre. Poles from the car park. Log YOUR intake, not the family's. If you do take Diamox on this hike, treat the fluid and sodium targets as floors rather than goals — add roughly another 500 ml/hr of capacity and know your filter points.",
+      "priority": "high"
+    },
+    {
+      "window": "Aug 3 - Aug 7",
+      "phase": 4,
+      "kind": "week",
+      "title": "Recovery + strength",
+      "detail": "Hip flexor routine Monday. Two strength circuits. One Zone 2 ruck 45-60 min at 18 lb. One incline-treadmill interval session at 10-15% if the back and hips are quiet."
+    },
+    {
+      "window": "Aug 8 or 9",
+      "phase": 4,
+      "kind": "rest",
+      "title": "Stated rest weekend — suggest not zero",
+      "detail": "You said no hike, which is the right call between two big efforts. Rather than nothing: one 60-75 min Zone 2 ruck at 20 lb plus a strength circuit keeps the load line from dropping off a cliff."
+    },
+    {
+      "window": "Aug 15",
+      "phase": 4,
+      "kind": "hike",
+      "title": "San Gorgonio via Vivian Creek",
+      "detail": "17-18 mi, ~5,400 ft, summit 11,503 ft — the highest point in Southern California and a new personal altitude record on foot. Biggest single day of the entire plan and the closest analogue to Whitney's combined Day 1 and Day 2.",
+      "packLb": "22-25",
+      "targets": "Fueling rehearsal #2, this time on a day long enough that failure shows. Expect 10-12 hours. Free permit required in advance from permits.sgwa.org.",
+      "priority": "high"
+    },
+    {
+      "window": "Aug 22 or 23",
+      "phase": 4,
+      "kind": "hike",
+      "title": "Load-focused local hike",
+      "detail": "Blue Sky to Potato Chip Rock, ~10 mi. The point is pack weight, not distance or speed — this is where you find out what 28 lb does to your descent.",
+      "packLb": 28
+    },
+    {
+      "window": "Aug 29 - Aug 31",
+      "phase": 4,
+      "kind": "addition",
+      "title": "OPTIONAL: one more night near 10,000 ft",
+      "detail": "Car camp at Horseshoe Meadow (~10,000 ft) and day hike Cottonwood Lakes. Downgraded from high priority now that two nights at 8,600 ft are on the board — your sleep ladder is already 8,600 to 10,000 to 12,000 rather than a cold jump. Still the single best value weekend available if the calendar allows, because it also rehearses the Sep 29 Cottonwood night on a night that does not matter.",
+      "targets": "Second Diamox trial if the first went fine — this time at a sleeping altitude where the drug is actually indicated."
+    },
+    {
+      "window": "Sep 5 - Sep 7",
+      "phase": 5,
+      "kind": "hike",
+      "title": "El Cajon Mountain — reopened",
+      "detail": "11.2 mi, 3,589 ft. Steep, hot, relentless. Carry full intended Whitney Day 1 weight.",
+      "packLb": "full"
+    },
+    {
+      "window": "Sep 12 - Sep 13",
+      "phase": 5,
+      "kind": "hike",
+      "title": "Back-to-back weekend — the Whitney simulation",
+      "detail": "Saturday: San Jacinto via Marion Mountain, full pack, known route. Sunday: 8-10 mi local on deliberately tired legs and short sleep. This is the single most transferable session left, because Whitney Day 2 is not a fresh day.",
+      "packLb": "full",
+      "priority": "high"
+    },
+    {
+      "window": "Sep 19 - Sep 20",
+      "phase": 5,
+      "kind": "hike",
+      "title": "Last big effort",
+      "detail": "San Gorgonio again with full pack, or Baldy. Whatever happens here, the taper starts Monday regardless — resist the urge to cram in late fitness."
+    },
+    {
+      "window": "Sep 21 - Sep 27",
+      "phase": 6,
+      "kind": "week",
+      "title": "Taper",
+      "detail": "Volume down roughly half, intensity light, sleep treated as training. One short flat 5-6 mi hike on the 26th or 27th. No new gear, no new foods."
+    },
+    {
+      "window": "Sep 28",
+      "phase": 6,
+      "kind": "travel",
+      "title": "Travel and pre-load",
+      "detail": "Drive up. Hydrate deliberately, salt food generously, eat carbohydrate-heavy. No alcohol."
+    },
+    {
+      "window": "Sep 29",
+      "phase": 6,
+      "kind": "acclimatization",
+      "title": "Cottonwood Camp — sleep ~10,000 ft",
+      "detail": "Recreation.gov reservation required. Easy walking only. This is the acclimatization night the whole schedule is built around."
+    },
+    {
+      "window": "Sep 30",
+      "phase": 6,
+      "kind": "acclimatization",
+      "title": "Light acclimatization + Diamox start",
+      "detail": "Short hike, no summit ambitions. Start Diamox only as your doctor directs — and only if the August trial run went fine."
+    },
+    {
+      "window": "Oct 1",
+      "phase": 6,
+      "kind": "summit",
+      "title": "Whitney Portal to Trail Camp",
+      "detail": "~6 mi, 3,700 ft to 12,000 ft with full overnight pack. Target Zone 2, arrive with reserves. Filter water at Outpost or Trail Camp. Eat and drink on the clock even if appetite is gone — this is the exact day San Jacinto warned you about.",
+      "priority": "high"
+    },
+    {
+      "window": "Oct 2",
+      "phase": 6,
+      "kind": "summit",
+      "title": "SUMMIT DAY",
+      "detail": "Trail Camp to summit 14,505 ft via the 97 switchbacks and Trail Crest, then all the way down. Roughly 2,500 ft up and 6,200 ft down. Brief Siva on the descend-now signs before you start: coordination loss that does not improve with rest, headache unrelieved by fluid and food, vomiting, breathlessness at rest, confusion.",
+      "priority": "high"
+    }
+  ],
+  "weekdayRoutine": {
+    "template": [
+      {
+        "day": "Mon",
+        "session": "Rest or hip flexor routine",
+        "note": "Post-weekend-hike recovery"
+      },
+      {
+        "day": "Tue",
+        "session": "Strength circuit",
+        "note": "Goblet squats, Romanian deadlifts, step-ups, calf raises"
+      },
+      {
+        "day": "Wed",
+        "session": "Zone 2 ruck or incline treadmill",
+        "note": "45-60 min, 12 lb"
+      },
+      {
+        "day": "Thu",
+        "session": "Strength circuit",
+        "note": "Second of 2x/week"
+      },
+      {
+        "day": "Fri",
+        "session": "Interval session",
+        "note": "Incline treadmill 10-15% or uphill hiking intervals. Stop at any knee/IT-band complaint."
+      },
+      {
+        "day": "Sat",
+        "session": "Rest / pre-hike prep",
+        "note": "Hydrate, no coffee plan for Sunday"
+      },
+      {
+        "day": "Sun",
+        "session": "Long hike",
+        "note": "The main event of the week"
+      }
+    ],
+    "weeks": []
+  },
+  "nutritionWeeks": [
+    {
+      "weekOf": "2026-07-27",
+      "label": "Week 1 — recovery from Mammoth, then Devils Slide",
+      "hikeDay": "Sat Aug 1",
+      "hikeDayNote": "If the hike moves to Sunday Aug 2, slide Friday's load day to Saturday and shift everything one day right.",
+      "context": "Coming off two nights at 8,600 ft and the Gem Lakes hike on Jul 26. Body Battery was only -9, so recovery demand is modest — this is a build week, not a dig-out week. Thursday is the Diamox trial.",
+      "days": [
+        {
+          "day": "Mon Jul 27",
+          "type": "easy",
+          "session": "Rest / hip flexor routine",
+          "carbsG": "219–365",
+          "proteinG": "130–146",
+          "past": true,
+          "note": "Already gone. Post-trip reset."
+        },
+        {
+          "day": "Tue Jul 28",
+          "type": "easy-moderate",
+          "session": "Strength circuit",
+          "carbsG": "300–400",
+          "proteinG": "140–146",
+          "note": "Protein at the top of the range — strength day plus travel recovery."
+        },
+        {
+          "day": "Wed Jul 29",
+          "type": "moderate",
+          "session": "Zone 2 ruck 45–60 min, 18 lb",
+          "carbsG": "365–460",
+          "proteinG": "130–146",
+          "note": "First session at the new pack weight."
+        },
+        {
+          "day": "Thu Jul 30",
+          "type": "moderate",
+          "session": "Strength circuit + DIAMOX TRIAL",
+          "carbsG": "365–460",
+          "proteinG": "130–146",
+          "note": "Diamox is a diuretic and can blunt appetite slightly. Hold carbs on target and be deliberate about fluid — this is the day to over-drink, not under.",
+          "flag": true
+        },
+        {
+          "day": "Fri Jul 31",
+          "type": "load",
+          "session": "Rest / pre-hike prep",
+          "carbsG": "511–730",
+          "proteinG": "117–130",
+          "note": "CARB LOAD. Protein dips to the bottom of the range to make room without going under. Salt your food generously — sodium helps you hold the fluid you are drinking.",
+          "flag": true
+        },
+        {
+          "day": "Sat Aug 1",
+          "type": "hike",
+          "session": "San Jacinto via Devils Slide, ~12 h",
+          "carbsG": "511–730",
+          "proteinG": "117–146",
+          "note": "60–90 g carbs per hour on the trail inside that total. 25–40 g protein within an hour of finishing.",
+          "flag": true
+        },
+        {
+          "day": "Sun Aug 2",
+          "type": "moderate",
+          "session": "Full rest",
+          "carbsG": "365–511",
+          "proteinG": "140–146",
+          "note": "Glycogen repletion runs 24–48 h past the hike, so today still matters. Protein at the top."
+        }
+      ],
+      "loadDayFoodPlan": {
+        "note": "Friday's ~620 g without trail gels to lean on — the harder version of the target.",
+        "meals": [
+          {
+            "when": "Breakfast",
+            "items": "2 cups rice, 1 banana, 2 slices bread",
+            "carbsG": 147
+          },
+          {
+            "when": "Lunch",
+            "items": "3 cups rice, 1 cup curd",
+            "carbsG": 147
+          },
+          {
+            "when": "Afternoon snack",
+            "items": "6 dates, 1 banana",
+            "carbsG": 135
+          },
+          {
+            "when": "Dinner",
+            "items": "3 cups rice, 2 roti, potato poriyal",
+            "carbsG": 195
+          }
+        ]
+      },
+      "measureThis": {
+        "title": "Weigh yourself before and after the hike",
+        "why": "Every sweat-loss number in this whole project is Garmin's model estimate, not a measurement. Pre- and post-hike bodyweight is the real thing: roughly 1 kg lost equals 1 litre of net fluid deficit. One bathroom scale, two readings, and we finally know whether 822 ml/hr is accurate or whether we have been planning around a number that is 30% off.",
+        "how": "Weigh first thing, minimal clothing, before eating or drinking. Weigh again immediately on getting home, before rehydrating further. Note both, plus total fluid drunk and total sodium taken.",
+        "startWeightLb": 161
+      },
+      "actuals": null
+    }
+  ],
+  "nutritionGuidance": {
+    "note": "Targets below are general endurance-training ranges applied to a stated bodyweight of 73 kg, not medical advice or a prescription.",
+    "carbsPerKgPerDay": {
+      "easyDay": "3-5 g",
+      "moderateDay": "5-7 g",
+      "longHikeDay": "7-10 g",
+      "dayBeforeLongHike": "7-10 g"
+    },
+    "proteinPerKgPerDay": {
+      "range": "1.6-2.0 g",
+      "note": "Upper end during heavy load blocks; supports the strength work and recovery."
+    },
+    "onTrail": {
+      "carbsPerHour": "60-90 g",
+      "calPerHour": "250-300",
+      "sodiumPerHour": "700-1000 mg"
+    },
+    "postHike": {
+      "window": "within 60 min",
+      "target": "carbs + 25-40 g protein",
+      "safeFoods": "rice, curd, banana — low fiber given the gut history"
+    },
+    "sampleLongHikeDay": {
+      "note": "Built from foods already in your log. Carb grams are approximate per-item averages.",
+      "meals": [
+        {
+          "when": "Breakfast, 2h before the trailhead",
+          "items": [
+            {
+              "food": "cooked rice",
+              "qty": 2,
+              "unit": "cups",
+              "carbsG": 45
+            },
+            {
+              "food": "banana",
+              "qty": 1,
+              "unit": "",
+              "carbsG": 27
+            },
+            {
+              "food": "slices of bread",
+              "qty": 2,
+              "unit": "",
+              "carbsG": 15
+            }
+          ],
+          "avoid": "No coffee or mocha — it cost you a bloated gut on Jul 11."
+        },
+        {
+          "when": "On the trail, on the 45-min buzzer",
+          "items": [
+            {
+              "food": "energy gels",
+              "qty": 4,
+              "unit": "",
+              "carbsG": 23
+            },
+            {
+              "food": "bananas",
+              "qty": 2,
+              "unit": "",
+              "carbsG": 27
+            },
+            {
+              "food": "dates",
+              "qty": 6,
+              "unit": "",
+              "carbsG": 18
+            },
+            {
+              "food": "rice snacks or plain bars",
+              "qty": 2,
+              "unit": "",
+              "carbsG": 30
+            }
+          ],
+          "avoid": "Trail mix stays home — fiber plus dried fruit is the fermenting culprit."
+        },
+        {
+          "when": "Dinner, within an hour of finishing",
+          "items": [
+            {
+              "food": "cooked rice",
+              "qty": 3,
+              "unit": "cups",
+              "carbsG": 45
+            },
+            {
+              "food": "curd",
+              "qty": 1,
+              "unit": "cup",
+              "carbsG": 12
+            },
+            {
+              "food": "rotis or bread slices",
+              "qty": 2,
+              "unit": "",
+              "carbsG": 30
+            }
+          ],
+          "avoid": "Keep it low-fiber and plain while the gut settles."
+        }
+      ]
+    }
+  },
+  "dataQualityNotes": [
+    "Garmin export is authoritative for every objective metric. Fuelling, hydration, symptoms, gear, conditions and interpretation come from the training conversation, which is the only source for them.",
+    "Sweat loss and resting calories are Garmin model estimates (waterEstimated, bmrCalories), not measurements. Pre- and post-hike bodyweight is the way to replace them with a measured figure.",
+    "Max HR of 178 is estimated, not lab-tested, so every zone percentage inherits that uncertainty.",
+    "Max HR of 178 is an estimate. Every zone percentage in this log inherits that uncertainty.",
+    "H9 (Devils Postpile) and H10 (Gem Lakes) are tagged effortType 'family' — pace, stopped time and heart-rate zones were governed by staying with family, so they are excluded from pace and HR trends. Their elevation exposure and sweat-rate data remain valid.",
+    "San Jacinto (H8) ran at roughly 90 F per Garmin's weather overlay — the hottest recorded hike and the highest sweat loss. Added Jul 28.",
+    "Reconciled against the Garmin export on Jul 28 2026. Two hike dates and four ruck dates were corrected, one moving time was replaced (a derived Strava figure gave 4:56 against Garmin's 4:11:52), and three hikes plus four rucks that were absent from the original PDF were recovered. All objective fields now come from the export; see the override table above."
+  ],
+  "respiratoryTrainer": {
+    "device": "Generic respiratory resistance exerciser (adjustable inspiratory/expiratory resistance, bite mouthpiece)",
+    "started": "2026-07-27",
+    "verdict": "Worth doing. Low risk, cheap, plausible benefit — but small, and it must not displace the things that actually decide this trip.",
+    "whatItDoes": "Inspiratory muscle training has a reasonable evidence base for strengthening the breathing muscles and reducing how hard breathing FEELS. What it does not do is raise VO2 max, improve oxygen saturation, or help you acclimatise. It changes the sensation of breathing effort more than the underlying capacity.",
+    "altitudeRelevance": "There is a genuine mechanistic case at altitude: acclimatisation works largely by breathing much more, so your respiratory muscles work far harder up high than at sea level. Stronger ones plausibly help. The direct evidence for altitude performance specifically is thin, so hold this as reasonable rather than proven.",
+    "bestSideEffect": "The instruction sheet's step 5 — abdominal pressure, slow forceful exhale — is the same mechanic as pressure breathing, the altitude technique already in your plan. Practising it at home on a device makes it automatic on the switchbacks. That may be the most transferable thing about it.",
+    "timing": "Effects need roughly 4-6 weeks. Starting Jul 27 puts you in useful territory by early September, which is comfortably before Oct 2. Good timing.",
+    "protocol": "Typical research protocol is about 30 breaths twice a day, at a resistance where 30 breaths is hard but completable. Generic devices are not calibrated, so set it by feel rather than trusting the dial numbers.",
+    "cautions": [
+      "Do NOT use it shortly before or during a hike. Pre-fatiguing your breathing muscles ahead of a big effort works against you.",
+      "Reflux: forceful inspiration against resistance lowers pressure inside the chest, which can encourage reflux. Given your history, use it well away from meals, sitting upright rather than lying down, and stop if it aggravates symptoms.",
+      "The sheet says consult a doctor if you have health conditions — worth a sentence at the Diamox appointment given the reflux.",
+      "Clean with warm water after use and do not share the mouthpiece."
+    ],
+    "expectations": "Same honesty as the beet juice: do not expect to feel a difference. If it works, it shows up as breathing feeling less desperate on a steep grade at altitude, not as more power."
+  },
+  "whatActuallyMatters": {
+    "note": "Ranked by expected effect on whether you summit comfortably on Oct 2. Worth revisiting whenever a new intervention tempts you.",
+    "items": [
+      {
+        "rank": 1,
+        "item": "Calories on the trail, from hour one",
+        "why": "Confirmed by the energy arithmetic: a ~1,800 kcal tank against a 285–480 kcal/hr burn. Efforts past roughly five hours require eating or they end badly.",
+        "status": "being fixed this Saturday"
+      },
+      {
+        "rank": 2,
+        "item": "Adapting to a ~30 lb pack",
+        "why": "Still untested, and now clearly one of only three things Rim to Rim did not already prove. Every logged session used 12 lb or none.",
+        "status": "progression starts Aug 1"
+      },
+      {
+        "rank": 3,
+        "item": "Acclimatisation",
+        "why": "Real, but a modifier rather than the cause of the midpoint wall. Cottonwood still earns its place.",
+        "status": "in the plan"
+      },
+      {
+        "rank": 4,
+        "item": "Deliberate pacing on unfamiliar grades",
+        "why": "You already do this perfectly at Blue Sky without thinking. Free to transfer.",
+        "status": "practise Saturday"
+      },
+      {
+        "rank": 5,
+        "item": "Zone 2 volume plus one weekly interval session",
+        "why": "Moves VO2 max slowly, and matters less than the aerobic base already demonstrated — 24 miles and sixteen hours at Grand Canyon. Keep it ticking rather than chase it.",
+        "status": "ongoing"
+      },
+      {
+        "rank": 6,
+        "item": "Respiratory muscle training",
+        "why": "Plausible, small, and it teaches pressure breathing. Started Jul 27.",
+        "status": "new"
+      },
+      {
+        "rank": 7,
+        "item": "Beet juice / nitrate",
+        "why": "Real but small, roughly 3-5% oxygen efficiency, and shrinking as fitness improves.",
+        "status": "ongoing"
+      }
+    ]
+  },
+  "energyBudget": {
+    "concept": "Your glycogen tank holds roughly 1,800 usable calories and does not get bigger with training in any way that matters here. Your burn rate is 300-356 cal/hr, steady across ten hikes. So every hike is a simple race: does the clock outlast the tank plus whatever you put in?",
+    "usableGlycogenCal": 1800,
+    "glycogenNote": "Muscle glycogen roughly 1,400-2,000 cal plus liver roughly 400. Individual and approximate, but the shape of the conclusion does not depend on the exact figure.",
+    "burnRateCalPerHour": "300–356",
+    "tankAloneHours": 5.5,
+    "keyInsight": "Blue Sky is a five hour hike and your tank alone lasts five and a half. That is the entire reason it feels good — the trail is shorter than your fuel, so how much you eat barely matters. Every hike where you hit the wall was longer than the tank.",
+    "sanJacinto": {
+      "hours": 11.1,
+      "burnCal": 3940,
+      "burnRate": 356,
+      "ateCal": 1900,
+      "intakeRate": 172,
+      "netDrainRate": 184,
+      "emptyAtHours": 9.8,
+      "verdict": "Ran dry at hour 9.8 of an 11.1 hour hike. The 'vegetable' descent was not a mystery, a fitness limit or altitude — it was an empty tank, arriving roughly 80 minutes before the car."
+    },
+    "scenarios": [
+      {
+        "intakeRate": 0,
+        "label": "eating nothing",
+        "emptyAtHours": 5.1,
+        "outcome": "empty less than half way"
+      },
+      {
+        "intakeRate": 172,
+        "label": "what you actually did on San Jacinto",
+        "emptyAtHours": 9.8,
+        "outcome": "empty during the descent"
+      },
+      {
+        "intakeRate": 206,
+        "label": "bare minimum to reach the car",
+        "emptyAtHours": 12.0,
+        "outcome": "finishes on fumes"
+      },
+      {
+        "intakeRate": 275,
+        "label": "the 250–300 target",
+        "emptyAtHours": 22.3,
+        "outcome": "finishes with real reserves"
+      }
+    ],
+    "saturday": {
+      "estHours": 12,
+      "estBurnCal": 4269,
+      "minIntakeRate": 206,
+      "targetIntakeRate": 275,
+      "reserveAtTargetCal": 831,
+      "note": "Devils Slide at twelve hours will cost roughly 4,269 calories. Your tank covers 1,800 of it. That leaves about 2,470 you have to carry and actually swallow — which is 206 calories an hour just to reach the car, and 275 to arrive with something left. This is the number that decides Saturday."
+    }
+  },
+  "gelMath": {
+    "plan": "Increasing from 4 gels to 6 on Devils Slide.",
+    "verdict": "Good move, but do not mistake it for the solution. Six gels is 600 calories. Devils Slide at twelve hours needs about 2,470 beyond your tank as a floor and 3,300 to arrive with reserves. Six gels cover 18-24% of that. The other 2,700 has to come from real food, and that is the part worth planning.",
+    "coverage": [
+      {
+        "gels": 4,
+        "cal": 400,
+        "pctOfTarget": 12
+      },
+      {
+        "gels": 6,
+        "cal": 600,
+        "pctOfTarget": 18
+      },
+      {
+        "gels": 8,
+        "cal": 800,
+        "pctOfTarget": 24
+      }
+    ],
+    "cautions": [
+      "Check the caffeine on your flavour. Six gels is roughly 210 mg if they are 35 mg each, but 420 mg if they are 70 — and caffeine is a reflux trigger for you.",
+      "Always take a gel WITH water, never dry. A concentrated gel pulls fluid into the gut, which is what makes bloating worse.",
+      "Do not stack two gels close together. Alternate gel and solid food, which is how the schedule below is built.",
+      "Six gels is 150 g of maltodextrin and fructose. Your gut handled four with mild bloating; six is a real step up, so Saturday is the test rather than Whitney."
+    ]
+  },
+  "saturdayFuelPlan": {
+    "hike": "San Jacinto via Devils Slide (or Marion Mountain)",
+    "estHours": 12,
+    "totals": {
+      "cal": 3470,
+      "calPerHour": 289,
+      "carbG": 738,
+      "carbGPerHour": 62,
+      "sodiumMg": 2594,
+      "gels": 6
+    },
+    "targets": {
+      "calPerHourFloor": 206,
+      "calPerHourTarget": 275,
+      "carbGPerHour": "60–90"
+    },
+    "principle": "Anchored to the clock, not to landmarks. Landmarks fail the moment you are slower than planned; the 45-minute buzzer does not. Use the map to check you are on pace, not to decide when to eat — that is exactly how the fuelling ended up back-loaded last time.",
+    "landmarkCheck": "Your San Jacinto chart gives a better checkpoint than any trail map: you summited at hour 6.4 of 11.1. For a twelve-hour Devils Slide, aim to be on the summit around hour 6.5 to 7. If you are past hour 8 at the top, you are looking at a long descent on a dwindling tank — eat more, not less, and consider turning around if the arithmetic stops working.",
+    "sodiumNote": "This plan carries 2,594 mg of sodium in food. Salt tabs and electrolyte mix supply the rest — aim 700-1,000 mg per litre of fluid on top of this.",
+    "hours": [
+      {
+        "hour": 1,
+        "items": [
+          "banana",
+          "dates x2"
+        ],
+        "cal": 237,
+        "carbG": 63,
+        "sodiumMg": 1,
+        "gel": false
+      },
+      {
+        "hour": 2,
+        "items": [
+          "energy bar",
+          "orange"
+        ],
+        "cal": 292,
+        "carbG": 45,
+        "sodiumMg": 180,
+        "gel": false
+      },
+      {
+        "hour": 3,
+        "items": [
+          "GU Roctane gel (caf-free)",
+          "peanut butter sandwich"
+        ],
+        "cal": 450,
+        "carbG": 70,
+        "sodiumMg": 525,
+        "gel": true,
+        "gelType": "caffeine-free",
+        "caffeineMg": 0
+      },
+      {
+        "hour": 4,
+        "items": [
+          "rice/poha pack",
+          "orange"
+        ],
+        "cal": 312,
+        "carbG": 65,
+        "sodiumMg": 300,
+        "gel": false
+      },
+      {
+        "hour": 5,
+        "items": [
+          "GU Roctane gel (caf-free)",
+          "dates x2"
+        ],
+        "cal": 232,
+        "carbG": 61,
+        "sodiumMg": 125,
+        "gel": true,
+        "gelType": "caffeine-free",
+        "caffeineMg": 0
+      },
+      {
+        "hour": 6,
+        "items": [
+          "energy bar",
+          "orange"
+        ],
+        "cal": 292,
+        "carbG": 45,
+        "sodiumMg": 180,
+        "gel": false
+      },
+      {
+        "hour": 7,
+        "items": [
+          "GU Roctane gel (caf 35mg)",
+          "banana",
+          "dates x2"
+        ],
+        "cal": 337,
+        "carbG": 88,
+        "sodiumMg": 126,
+        "gel": true,
+        "gelType": "caffeinated 35 mg",
+        "caffeineMg": 35
+      },
+      {
+        "hour": 8,
+        "items": [
+          "salted pretzels 50g",
+          "orange"
+        ],
+        "cal": 252,
+        "carbG": 55,
+        "sodiumMg": 600,
+        "gel": false
+      },
+      {
+        "hour": 9,
+        "items": [
+          "GU Roctane gel (caf 35mg)",
+          "banana"
+        ],
+        "cal": 205,
+        "carbG": 52,
+        "sodiumMg": 126,
+        "gel": true,
+        "gelType": "caffeinated 35 mg",
+        "caffeineMg": 35
+      },
+      {
+        "hour": 10,
+        "items": [
+          "GU Roctane gel (caf 35mg)",
+          "energy bar"
+        ],
+        "cal": 330,
+        "carbG": 55,
+        "sodiumMg": 305,
+        "gel": true,
+        "gelType": "caffeinated 35 mg",
+        "caffeineMg": 35
+      },
+      {
+        "hour": 11,
+        "items": [
+          "GU Roctane gel (caf 35mg)",
+          "dates x2",
+          "orange"
+        ],
+        "cal": 294,
+        "carbG": 76,
+        "sodiumMg": 125,
+        "gel": true,
+        "gelType": "caffeinated 35 mg",
+        "caffeineMg": 35
+      },
+      {
+        "hour": 12,
+        "items": [
+          "banana",
+          "dates x2"
+        ],
+        "cal": 237,
+        "carbG": 63,
+        "sodiumMg": 1,
+        "gel": false
+      }
+    ],
+    "headroom": "Lands at 289 cal/hr — comfortably above the 206 floor and just past the 275 target, which is the right side to err on. Carry it all; if you finish the day with one bar and an orange left over, that is a well-judged pack, not waste."
+  },
+  "sanJacintoProfile": {
+    "source": "Exact, from the FIT file (8,835 records downsampled to 41 points). No longer traced by eye.",
+    "totalHours": 11.07,
+    "summitAtHours": 6.4,
+    "ascentHours": 6.4,
+    "descentHours": 4.67,
+    "minFt": 6330,
+    "maxFt": 10817,
+    "emptyAtHours": 9.8,
+    "readings": [
+      {
+        "h": 0.0,
+        "ft": 6329
+      },
+      {
+        "h": 0.277,
+        "ft": 6552
+      },
+      {
+        "h": 0.554,
+        "ft": 6921
+      },
+      {
+        "h": 0.831,
+        "ft": 7205
+      },
+      {
+        "h": 1.107,
+        "ft": 7509
+      },
+      {
+        "h": 1.384,
+        "ft": 7711
+      },
+      {
+        "h": 1.661,
+        "ft": 7961
+      },
+      {
+        "h": 1.938,
+        "ft": 8228
+      },
+      {
+        "h": 2.215,
+        "ft": 8480
+      },
+      {
+        "h": 2.492,
+        "ft": 8728
+      },
+      {
+        "h": 2.769,
+        "ft": 8793
+      },
+      {
+        "h": 3.046,
+        "ft": 8955
+      },
+      {
+        "h": 3.322,
+        "ft": 9120
+      },
+      {
+        "h": 3.599,
+        "ft": 9280
+      },
+      {
+        "h": 3.876,
+        "ft": 9423
+      },
+      {
+        "h": 4.153,
+        "ft": 9610
+      },
+      {
+        "h": 4.43,
+        "ft": 9762
+      },
+      {
+        "h": 4.707,
+        "ft": 9848
+      },
+      {
+        "h": 4.984,
+        "ft": 10012
+      },
+      {
+        "h": 5.261,
+        "ft": 10188
+      },
+      {
+        "h": 5.537,
+        "ft": 10368
+      },
+      {
+        "h": 5.814,
+        "ft": 10566
+      },
+      {
+        "h": 6.091,
+        "ft": 10710
+      },
+      {
+        "h": 6.368,
+        "ft": 10814
+      },
+      {
+        "h": 6.645,
+        "ft": 10701
+      },
+      {
+        "h": 6.922,
+        "ft": 10500
+      },
+      {
+        "h": 7.199,
+        "ft": 10178
+      },
+      {
+        "h": 7.476,
+        "ft": 9952
+      },
+      {
+        "h": 7.753,
+        "ft": 9747
+      },
+      {
+        "h": 8.029,
+        "ft": 9749
+      },
+      {
+        "h": 8.306,
+        "ft": 9455
+      },
+      {
+        "h": 8.583,
+        "ft": 9243
+      },
+      {
+        "h": 8.86,
+        "ft": 8948
+      },
+      {
+        "h": 9.137,
+        "ft": 8840
+      },
+      {
+        "h": 9.414,
+        "ft": 8722
+      },
+      {
+        "h": 9.691,
+        "ft": 8313
+      },
+      {
+        "h": 9.967,
+        "ft": 7820
+      },
+      {
+        "h": 10.244,
+        "ft": 7604
+      },
+      {
+        "h": 10.521,
+        "ft": 7213
+      },
+      {
+        "h": 10.798,
+        "ft": 6786
+      },
+      {
+        "h": 11.075,
+        "ft": 6340
+      }
+    ],
+    "insight": "The chart pins down what the numbers could only imply. You summited at hour 6.4 and had 4.7 hours of descending left. Your tank ran dry at hour 9.8 — which is 3.4 hours into that descent, with roughly 1.3 hours still to walk. That is the 'vegetable' stretch, and it is now located precisely on the graph.",
+    "paceObservation": "The blue pace trace is also worth looking at: it is a dense forest of spikes from end to end, swinging between near-stopped and brisk over and over. That is the surge-and-stop pattern rendered as data, and it is most extreme on the descent — exactly where you had the least fuel to absorb it.",
+    "transferToDevilsSlide": "Devils Slide is a similar single-peak shape with comparable gain over more distance, so expect the same profile stretched: summit somewhere around hour 6.5 to 7 of a twelve-hour day, and five hours of descending after it. Your old fuelling put two gels across a 6.4 hour climb — one every three and a bit hours. That is the gap the new plan closes.",
+    "traceCheck": "My hand-traced summit estimate was 6.4 h. The FIT says 6.40. The tracing was sound, which is mildly reassuring about the earlier analysis."
+  },
+  "caffeinePlan": {
+    "confirmed": "Your gels are the 35 mg version, so six gels is 210 mg at most — not the 420 mg I flagged as a possibility.",
+    "totalMg": 140,
+    "strategy": "Caffeine-free for the first two gels, caffeinated for the last four. That puts every milligram in the second half, which is where your own evidence says it pays: the Roctane that transformed your last 2-3 miles arrived at the end, not the start.",
+    "why": [
+      "Caffeine peaks 30-60 minutes after you take it and has a half-life around five hours. Front-loading means it is largely gone by the descent — the exact stretch where you ran empty.",
+      "Perceived effort is highest late. Caffeine works on perceived effort more than on power, so late is when it earns its place.",
+      "Four caffeinated gels from hour seven gives 140 mg total, and because caffeine clears slowly the amount actually on board peaks at about 112 mg around hour eleven — right in the worst stretch of the descent. Modest dose, precise timing."
+    ],
+    "whitneyRule": "Day 1 you arrive at Trail Camp in the afternoon and have to SLEEP at 12,000 ft, where your sleep is already compromised — your San Jacinto score was 39 after a hard day at sea level. So: caffeine-free gels only after about midday on Oct 1, and save the caffeinated ones for the summit push on Oct 2. A 35 mg gel at 4pm still leaves roughly 17 mg on board at 9pm, and on summit eve that is a trade worth avoiding.",
+    "packingTip": "Mark the two kinds differently — a dot of marker on the caffeine-free ones. At hour nine you will not want to be squinting at small print.",
+    "onBoardCurve": [
+      {
+        "hour": 1,
+        "mg": 0
+      },
+      {
+        "hour": 2,
+        "mg": 0
+      },
+      {
+        "hour": 3,
+        "mg": 0
+      },
+      {
+        "hour": 4,
+        "mg": 0
+      },
+      {
+        "hour": 5,
+        "mg": 0
+      },
+      {
+        "hour": 6,
+        "mg": 0
+      },
+      {
+        "hour": 7,
+        "mg": 35.0
+      },
+      {
+        "hour": 8,
+        "mg": 30.5
+      },
+      {
+        "hour": 9,
+        "mg": 61.5
+      },
+      {
+        "hour": 10,
+        "mg": 88.6
+      },
+      {
+        "hour": 11,
+        "mg": 112.1
+      },
+      {
+        "hour": 12,
+        "mg": 97.6
+      }
+    ]
+  },
+  "rimToRim": {
+    "date": "2025-05-25",
+    "name": "Grand Canyon Rim to Rim",
+    "startedAt": "3:12 AM",
+    "distanceMi": 24.45,
+    "ascentFt": 6289,
+    "descentFt": 5246,
+    "minElevFt": 2445,
+    "maxElevFt": 8262,
+    "totalTime": "16:00:25",
+    "movingTime": "8:48:36",
+    "stoppedPct": 45,
+    "avgHR": 142,
+    "maxHR": 171,
+    "kcal": 5472,
+    "steps": 38534,
+    "aerobicEffect": 5.0,
+    "anaerobicEffect": 2.7,
+    "exerciseLoad": 420,
+    "whyItChangesThings": "This was never in the training log and it should have been. You walked 24.45 miles with 6,289 ft of climbing and 5,246 ft of descending in a single sixteen-hour day, starting at 3:12 AM, and finished it. That is MORE distance and MORE ascent than Whitney's two days combined.",
+    "vsWhitney": "Whitney is roughly 22 miles, 6,200 ft up and 6,200 ft down, spread over two days. Rim to Rim was 24.45 miles and 6,289 ft up in one. The distance and the vertical are not the question — you have already done more.",
+    "whatWhitneyAddsThatThisDidnt": [
+      "Altitude. Rim to Rim topped out at 8,262 ft. Whitney's summit is 14,505 — over 6,000 ft higher, and that is the one variable this hike did not test at all.",
+      "Sleeping high. Rim to Rim was a single push with no night at elevation. Whitney has you sleeping at 12,000 ft before the hardest part.",
+      "Pack weight. A day pack there against roughly 30 lb of overnight kit on Whitney Day 1."
+    ],
+    "reassurance": "The honest read: your endurance base is not the limiting factor and never was. Sixteen hours on your feet is a demonstrated capability. What remains untested is narrow and specific — altitude, a night at 12,000 ft, and pack weight. That is a much better position than the log suggested, and it is worth knowing before Saturday."
+  },
+  "stoppedTimeAnalysis": {
+    "headline": "The breakpoint is real, and it sits exactly where your fuel runs out.",
+    "bands": [
+      {
+        "band": "under 3 h",
+        "n": 68,
+        "meanStopped": 5.0,
+        "median": 1,
+        "lo": 0,
+        "hi": 53
+      },
+      {
+        "band": "3–5 h",
+        "n": 18,
+        "meanStopped": 13.2,
+        "median": 14,
+        "lo": 8,
+        "hi": 19
+      },
+      {
+        "band": "5–6 h",
+        "n": 6,
+        "meanStopped": 23.5,
+        "median": 22,
+        "lo": 12,
+        "hi": 35
+      },
+      {
+        "band": "6–9 h",
+        "n": 5,
+        "meanStopped": 32.6,
+        "median": 28,
+        "lo": 18,
+        "hi": 56
+      },
+      {
+        "band": "9 h+",
+        "n": 2,
+        "meanStopped": 50,
+        "median": 50,
+        "lo": 45,
+        "hi": 55
+      }
+    ],
+    "correlation": 0.77,
+    "n": 31,
+    "interpretation": "Across 99 activities the pattern is monotonic and unmistakable. Under three hours you stop 5% of the time. Between three and five, 13%. Five to six, 24%. Six to nine, 33%. Beyond nine hours, 50%. The correlation between duration and stopped time on hikes over three hours is r = +0.77, which is strong.",
+    "theCoincidenceThatIsNot": "Your glycogen tank lasts about 5.5 hours at your burn rate. The stopped-time curve bends sharply between five and six hours. Those two numbers landing in the same place across 31 independent long hikes is the best evidence in this entire project — and it is evidence for YOUR explanation, not any of mine. Under the tank duration you barely stop. Past it, stopping escalates fast.",
+    "whatItPredicts": "If the model is right, Saturday's fuel plan should hold your stopped time near the 3–5 hour band's 13% rather than the 55% you ran on San Jacinto — even though the hike is twelve hours. That is a clean, falsifiable prediction. If stopped time still comes in above 40% on full fuelling, the model is wrong and we look elsewhere."
+  },
+  "whitneyBlock": {
+    "startedBecause": "Whitney permit for Oct 2 2026 secured in April, so this is the window that measures preparation.",
+    "from": "2026-04-01",
+    "to": "2026-07-26",
+    "hikes": 13,
+    "rucks": 11,
+    "walks": 2,
+    "sessions": 26,
+    "distanceMi": 166,
+    "hikeDistanceMi": 132,
+    "ascentFt": 34266,
+    "hikeAscentFt": 32999,
+    "hours": 81,
+    "kcal": 25910,
+    "highestOnFootFt": 10934,
+    "biggestAscentFt": 4590,
+    "supersedes": "The old tiles read 10 hikes, 7 rucks, 123 mi and 25,896 ft from May 20. Every one of those was low, because the log was built from a PDF that only covered part of the block. Garmin has 13 hikes, 11 rucks and 2 walks since April — 166 miles and 34,266 ft.",
+    "whyKeepTheLongHistory": "The twenty-month history stays for two things it alone provides: the Grand Canyon Rim to Rim as proof of capability, and the stopped-time breakpoint, which needs all 99 activities to mean anything statistically. Everything about PROGRESS is measured from April."
+  },
+  "consecutiveDays": {
+    "pairs": [
+      {
+        "first": "2026-05-04",
+        "second": "2026-05-05"
+      },
+      {
+        "first": "2026-05-05",
+        "second": "2026-05-06"
+      },
+      {
+        "first": "2026-05-06",
+        "second": "2026-05-07"
+      },
+      {
+        "first": "2026-05-19",
+        "second": "2026-05-20"
+      },
+      {
+        "first": "2026-05-20",
+        "second": "2026-05-21"
+      },
+      {
+        "first": "2026-05-26",
+        "second": "2026-05-27"
+      },
+      {
+        "first": "2026-06-02",
+        "second": "2026-06-03"
+      },
+      {
+        "first": "2026-07-25",
+        "second": "2026-07-26"
+      }
+    ],
+    "note": "Computed from the data, not assumed. Any pair of back-to-back days appears here."
+  },
+  "garminOverrides": [
+    {
+      "date": "2026-04-25",
+      "field": "aerobic effect",
+      "was": 4.099999904632568,
+      "now": 4.1,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-05-09",
+      "field": "aerobic effect",
+      "was": 4.400000095367432,
+      "now": 4.4,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-06-13",
+      "field": "calories",
+      "was": 1559,
+      "now": 1561,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-06-20",
+      "field": "moving time",
+      "was": "4:25:39",
+      "now": "4:11:52",
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-06-20",
+      "field": "average HR",
+      "was": 126,
+      "now": 125,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-06-20",
+      "field": "calories",
+      "was": 1468,
+      "now": 1470,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-06-27",
+      "field": "calories",
+      "was": 1475,
+      "now": 1477,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-07-11",
+      "field": "calories",
+      "was": 1689,
+      "now": 1691,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-07-18",
+      "field": "calories",
+      "was": 3940,
+      "now": 3946,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-07-25",
+      "field": "calories",
+      "was": 920,
+      "now": 921,
+      "why": "Garmin export is authoritative"
+    },
+    {
+      "date": "2026-07-26",
+      "field": "calories",
+      "was": 1819,
+      "now": 1822,
+      "why": "Garmin export is authoritative"
+    }
+  ],
+  "wellness": {
+    "source": "Garmin sleep and health-status exports: 583 nights 2024-12-07 to 2026-07-28, 304 days of daily metrics.",
+    "sleep": {
+      "meanHrs": 6.28,
+      "medianHrs": 6.57,
+      "under6Pct": 34,
+      "last60MeanHrs": 6.19,
+      "last60MeanScore": 74,
+      "meanDeepMin": 65
+    },
+    "bigDaySleep": {
+      "rows": [
+        {
+          "date": "2025-05-25",
+          "name": "Grand Canyon Rim to Rim Hiking",
+          "duration": "16:00:25",
+          "before": {
+            "hrs": 4.92,
+            "score": 62
+          },
+          "nightOf": {
+            "hrs": 2.27,
+            "score": 18
+          },
+          "after": null
+        },
+        {
+          "date": "2026-07-18",
+          "name": "Mount Marion to San Jacinto Peak Hiking",
+          "duration": "11:04:30",
+          "before": {
+            "hrs": 5.57,
+            "score": 71
+          },
+          "nightOf": {
+            "hrs": 3.15,
+            "score": 40
+          },
+          "after": {
+            "hrs": 5.48,
+            "score": 39
+          }
+        },
+        {
+          "date": "2025-12-07",
+          "name": "Riverside County Hiking",
+          "duration": "8:58:12",
+          "before": {
+            "hrs": 8.82,
+            "score": 68
+          },
+          "nightOf": {
+            "hrs": 3.83,
+            "score": 51
+          },
+          "after": {
+            "hrs": 6.12,
+            "score": 51
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "name": "Poway Hiking",
+          "duration": "6:54:20",
+          "before": {
+            "hrs": 8.12,
+            "score": 83
+          },
+          "nightOf": {
+            "hrs": 3.33,
+            "score": 26
+          },
+          "after": {
+            "hrs": 8.75,
+            "score": 82
+          }
+        },
+        {
+          "date": "2025-04-13",
+          "name": "Poway Hiking",
+          "duration": "6:34:46",
+          "before": {
+            "hrs": 6.12,
+            "score": 40
+          },
+          "nightOf": {
+            "hrs": 5.67,
+            "score": 76
+          },
+          "after": {
+            "hrs": 8.63,
+            "score": 78
+          }
+        },
+        {
+          "date": "2025-04-19",
+          "name": "San Diego Hiking",
+          "duration": "6:08:48",
+          "before": {
+            "hrs": 7.1,
+            "score": 82
+          },
+          "nightOf": {
+            "hrs": 5.82,
+            "score": 69
+          },
+          "after": {
+            "hrs": 8.12,
+            "score": 89
+          }
+        },
+        {
+          "date": "2025-10-05",
+          "name": "San Diego County Hiking",
+          "duration": "6:02:21",
+          "before": {
+            "hrs": 7.05,
+            "score": 74
+          },
+          "nightOf": {
+            "hrs": 2.65,
+            "score": 34
+          },
+          "after": {
+            "hrs": 6.58,
+            "score": 73
+          }
+        }
+      ],
+      "meanNightOfHrs": 3.8,
+      "meanNightBeforeHrs": 6.8,
+      "finding": "Sleep collapses on the night of every long effort. Across the six longest days the night-of average is 3.8 hours against 6.8 the night before and 6.3 typical. Rim to Rim produced 2.3 hours at a score of 18; San Jacinto 3.1 hours at 40; Jun 6 gave 3.3 hours at 26.",
+      "whitneyImplication": "This is the sharpest argument yet for arriving at Trail Camp with reserves. Day 1 ends at 12,000 ft and summit day depends on the sleep that follows it — and the pattern says a hard day costs roughly half a night even at sea level. Altitude, cold and a UL1 tent will not improve on that. Front-loaded fuelling, an early finish and no caffeine after midday all buy sleep that night, which is the real currency for Oct 2."
+    },
+    "recovery": {
+      "hrvMean": 46.9,
+      "hrvRange": [
+        20.0,
+        64.0
+      ],
+      "restingHRMean": 66.6,
+      "restingHRRange": [
+        54.0,
+        89.0
+      ],
+      "trend": "Over the last nine weeks HRV has risen from about 49 to 53 while resting heart rate has eased from 65 to 64, dipping to 61 in early July. Both point the same way: the training is being absorbed rather than accumulating as strain."
+    },
+    "spo2Gap": {
+      "readings": 3,
+      "days": 304,
+      "values": [
+        94.0,
+        96.0,
+        96.0
+      ],
+      "problem": "Pulse oximetry has produced 3 readings in 304 days of health data — effectively off. For an altitude objective this is the most useful sensor on the watch and it is not running.",
+      "action": "Enable it in the Fenix under Health & Wellness, Pulse Ox, set to All Day or at least During Sleep. Doing it now builds a sea-level baseline over the next nine weeks, so the readings at Cottonwood and Trail Camp mean something instead of being the first ever taken. Baseline from the three existing readings is 94-96%."
+    }
+  }
+}
