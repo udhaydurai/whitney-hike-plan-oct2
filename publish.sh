@@ -28,7 +28,16 @@ if [[ -z "$(git status --porcelain)" ]]; then
 fi
 
 git add -A
-git commit -q -m "$MSG"
-git push -q origin HEAD
+git -c user.email=udhaydurai@users.noreply.github.com -c user.name="Udhay Durai" commit -q -m "$MSG"
+
+# A scheduled session gets the credential as GITHUB_TOKEN and pushes over a one-shot
+# URL, so the token is never written into .git/config. Interactively, fall back to
+# whatever credential helper is already configured.
+if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+  REMOTE="https://x-access-token:${GITHUB_TOKEN}@github.com/udhaydurai/whitney-hike-plan-oct2.git"
+  git push -q "$REMOTE" HEAD:main 2>&1 | sed 's/github_pat_[A-Za-z0-9_]*/[token]/g'
+else
+  git push -q origin HEAD:main
+fi
 echo "── published: $MSG"
 echo "   the live site updates within about a minute"

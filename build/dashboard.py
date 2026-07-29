@@ -944,14 +944,21 @@ NAV = [("status", "Status"), ("levers", "What matters"), ("week", "This week"),
        ("altitude", "Altitude"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
        ("log", "Training log"), ("reference", "Reference"), ("appendix", "Appendix")]
 
+# The site is published on a public GitHub Pages URL, so meta.athlete is deliberately
+# null and no name appears anywhere in the output. Removing it from the data rather than
+# only from the render matters: the repo itself is public too, so a name left in the
+# JSON would be just as readable as one in the <title>.
+TITLE_SUFFIX = f" — {e(M['athlete'])}" if M.get("athlete") else ""
+BYLINE = f"{e(M['athlete'])} · " if M.get("athlete") else ""
+
 doc = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mt. Whitney Training Dashboard — {e(M['athlete'])}</title>
+<title>Mt. Whitney Training Dashboard{TITLE_SUFFIX}</title>
 <style>{CSS}</style></head><body><div class="wrap">
 <header class="hero">
   <h1>Mt. Whitney Training Dashboard</h1>
-  <p>{e(M['athlete'])} · summit {summit.strftime('%B %-d, %Y')} · <b>{DAYS} days out</b> ·
+  <p>{BYLINE}summit {summit.strftime('%B %-d, %Y')} · <b>{DAYS} days out</b> ·
   Whitney block {sd(M['logCoversFrom'])}–{sd(M['logCoversTo'])} 2026 ·
   {len(DIG)} activities on record since {DIG[0]['start'][:10]}</p>
 </header>

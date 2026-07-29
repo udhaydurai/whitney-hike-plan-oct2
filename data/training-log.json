@@ -1,11 +1,11 @@
 {
   "meta": {
-    "athlete": "Udhay Durai",
+    "athlete": null,
     "goal": "Mt. Whitney summit via Main Trail",
     "summitDate": "2026-10-02",
     "acclimatizationNight": "2026-09-29",
     "acclimatizationSite": "Cottonwood Camp",
-    "permitHolder": "Siva (overnight permit)",
+    "permitHolder": "overnight permit held by a hiking partner",
     "watch": "Garmin Fenix 8",
     "logCoversFrom": "2026-04-25",
     "logCoversTo": "2026-07-26",
@@ -1773,7 +1773,7 @@
       "issue": "Coordination loss (clumsiness) at ~10,500 ft",
       "severity": "watch",
       "since": "2026-07-18",
-      "action": "Likely fuel-driven, but ataxia is a descend-now sign. Brief Siva to watch for it. Retest on a well-fueled second San Jacinto."
+      "action": "Likely fuel-driven, but ataxia is a descend-now sign. Brief your hiking partner to watch for it. Retest on a well-fueled second San Jacinto."
     },
     {
       "issue": "Gut distress after long hikes (bloating, gas)",
@@ -2022,7 +2022,7 @@
       "phase": 6,
       "kind": "summit",
       "title": "SUMMIT DAY",
-      "detail": "Trail Camp to summit 14,505 ft via the 97 switchbacks and Trail Crest, then all the way down. Roughly 2,500 ft up and 6,200 ft down. Brief Siva on the descend-now signs before you start: coordination loss that does not improve with rest, headache unrelieved by fluid and food, vomiting, breathlessness at rest, confusion.",
+      "detail": "Trail Camp to summit 14,505 ft via the 97 switchbacks and Trail Crest, then all the way down. Roughly 2,500 ft up and 6,200 ft down. Brief your hiking partner on the descend-now signs before you start: coordination loss that does not improve with rest, headache unrelieved by fluid and food, vomiting, breathlessness at rest, confusion.",
       "priority": "high"
     }
   ],

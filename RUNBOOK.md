@@ -8,7 +8,7 @@ Read this file first. It is the contract.
 
 ## The source-of-truth rule
 
-Stated by Udhay, and non-negotiable:
+Stated by the athlete, and non-negotiable:
 
 > Garmin has all the data and I shared it. The PDF should be used for fuelling, my
 > mood or anything which is not there in the data.
@@ -33,7 +33,7 @@ instead of warning about it.
 
 ### Nightly — subjective only
 
-Udhay sends the day's fuelling, training and how it felt. Never numbers Garmin
+The athlete sends the day's fuelling, training and how it felt. Never numbers Garmin
 measures.
 
 ```bash
@@ -53,7 +53,7 @@ If `nightly.py` refuses, do not work around it. The refusal is the feature.
 
 ### Weekly — Garmin authoritative
 
-Udhay sends the watch data weekly. This is the only path that writes objective fields.
+The athlete sends the watch data weekly. This is the only path that writes objective fields.
 
 ```bash
 # 1. from a fresh bulk export folder
@@ -116,7 +116,7 @@ through the page's network emulation — an earlier version of the check logged 
 
 ## Dashboard design rules
 
-Set by Udhay after rejecting the first version: *"this is not a Q&A document or log
+Set by the athlete after rejecting the first version: *"this is not a Q&A document or log
 file."*
 
 * Eleven-plus sections ordered status → action → evidence → reference.
@@ -144,7 +144,7 @@ Use `fitdecode`, not `fitparse` — the latter will not build a wheel here.
 
 Chromium for Playwright is at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`.
 
-## Facts corrected by Udhay — do not reintroduce them
+## Facts corrected by the athlete — do not reintroduce them
 
 * **Gem Lake was a family outing, not a hike.** Tagged `effortType: family` and
   excluded from pace and heart-rate trends. Any argument built on its zone data is
