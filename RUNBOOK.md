@@ -42,6 +42,19 @@ echo '{"date":"2026-08-04","dailyLog":{"carbsG":…,"proteinG":…,"sleepFelt":"
 ./publish.sh "nightly: Aug 4"
 ```
 
+This writes `data/daily/2026-08-04.json` — **one file per date, never the shared log.**
+That is deliberate and load-bearing. The nightly scheduled task and an interactive
+session can both be running on the same evening; when both appended to
+`data/training-log.json`, the second push of the night was rejected, and the only ways
+out were a hand-resolved JSON conflict or a force-push that deletes the other side's
+work. Neither is available to an unattended job at 9 pm. A new date is a new path, and
+git merges different paths without being asked, so the conflict cannot happen rather
+than being handled. `build/dashboard.py` merges the directory at build time.
+
+Never move check-ins back into `training-log.json`, and never resolve a push rejection
+with `--force`. The other writer is a 9 pm job recording food that cannot be
+reconstructed the next morning.
+
 A hike patch may only annotate a hike the weekly rebuild has already created:
 
 ```bash
