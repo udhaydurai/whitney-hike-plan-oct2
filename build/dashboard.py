@@ -920,8 +920,43 @@ def s_log():
         f'<td class="num nw">{a["totalTime"]}</td><td class="num">{a["distanceMi"]}</td>'
         f'<td class="num">{a["ascentFt"]:,}</td><td class="num">{a["stoppedPct"]}%</td></tr>'
         for a in top)
+    # ── nightly check-ins. Without this the check-in loop is write-only: data goes in
+    #    every evening and never appears, which is no way to sustain a daily habit.
+    DL = D.get("dailyLog") or []
+    if DL:
+        LABEL = {"meals": "Food", "carbsG": "Carbs g", "proteinG": "Protein g",
+                 "water": "Water", "waterL": "Water", "sodium": "Sodium",
+                 "sodiumMg": "Sodium mg", "training": "Training", "sleepFelt": "Sleep",
+                 "supplements": "Supplements", "note": "Note", "mood": "How it felt"}
+        drows = ""
+        for x in reversed(DL[-21:]):
+            cells = "".join(
+                f'<div class="sub"><b>{e(LABEL.get(k, k))}:</b> {e(str(v))}</div>'
+                for k, v in x.items() if k != "date" and v not in (None, "", []))
+            drows += (f'<tr><td class="nw" style="vertical-align:top">'
+                      f'<b>{e(sd(x["date"]))}</b></td><td>{cells}</td></tr>')
+        gaps = ""
+        # a missing evening is worth showing, because a gap in the record is itself a fact
+        if len(DL) > 1:
+            import datetime as _d
+            span = ((_d.date.fromisoformat(DL[-1]["date"])
+                     - _d.date.fromisoformat(DL[0]["date"])).days + 1)
+            gaps = (f' · {len(DL)} of the last {span} days logged'
+                    if span > len(DL) else " · no gaps")
+        daily_block = f"""
+  <h3 style="margin:0 0 8px">Nightly check-ins<span class="n">{len(DL)} recorded{gaps}</span></h3>
+  <table class="t" style="width:100%;min-width:0;table-layout:fixed">
+   <thead><tr><th class="nw" style="width:74px">Date</th>
+   <th>What went in, as reported</th></tr></thead><tbody>{drows}</tbody></table>
+  <p class="sub">Self-reported, and the only place fuelling actually lives — the watch
+  cannot see any of it. Figures here are never used where a Garmin measurement exists.</p>
+"""
+    else:
+        daily_block = ""
+
     return f"""<section id="log">
   <h2>Training log<span class="n">{len(HK)} hikes · {len(RK)} rucks · {sd(M['logCoversFrom'])}–{sd(M['logCoversTo'])}</span></h2>
+  {daily_block}
   <div class="scroll"><table><thead><tr><th>Date</th><th>Hike</th><th>Mi</th><th>Ascent</th>
   <th>Max elev</th><th>Mov pace</th><th>HR</th><th>Stop</th><th>Aero</th><th>Load</th>
   <th>Poles</th><th>Fluid gap</th></tr></thead><tbody>{hrows}</tbody></table></div>
