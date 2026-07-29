@@ -28,7 +28,7 @@ import shutil
 import datetime as dt
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = ROOT / "site"
+SITE = ROOT / "docs"
 DASH = ROOT / "whitney-dashboard.html"
 LOGGER = ROOT / "logger" / "whitney-logger.html"
 
@@ -225,7 +225,7 @@ def main():
         raster(SITE / "icon.svg", SITE / f"icon-{s}.png", s)
 
     tot = sum(p.stat().st_size for p in SITE.iterdir() if p.is_file())
-    print(f"site/ built — cache version {ver}, {tot/1024:.0f} KB total")
+    print(f"docs/ built — cache version {ver}, {tot/1024:.0f} KB total")
     for p in sorted(SITE.iterdir()):
         if p.is_file():
             print(f"   {p.name:26s} {p.stat().st_size/1024:7.1f} KB")

@@ -98,6 +98,11 @@ Garmin was right.
 
 ## Publishing
 
+The published folder is `docs/`, not `site/`. GitHub Pages deploying from a branch can
+only serve the branch root or `/docs` — an arbitrary folder name is not an option — so
+`build/site.py` writes there and Pages is configured as **main branch, /docs**. Do not
+rename it back.
+
 `./publish.sh "message"` runs rebuild → dashboard → site → verify → commit → push, and
 exits without committing if nothing changed. It will not publish a site that fails
 verification.

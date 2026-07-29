@@ -23,7 +23,7 @@ import sys
 import threading
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = ROOT / "site"
+SITE = ROOT / "docs"
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 
 

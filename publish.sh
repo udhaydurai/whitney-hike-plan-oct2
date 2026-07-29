@@ -16,7 +16,7 @@ python3 build/rebuild_data.py
 echo "── building the dashboard"
 python3 build/dashboard.py
 
-echo "── assembling site/"
+echo "── assembling docs/ (the published folder)"
 python3 build/site.py
 
 echo "── verifying on a 390px viewport, offline included"
