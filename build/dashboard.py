@@ -397,24 +397,36 @@ def s_weeks():
     quietly resolved — two of them change which permit to reserve.
     """
     P = D["nineWeekPlan"]
+    # Two columns, not six. A six-column table scrolls sideways on a 390px screen, which
+    # pushes distance and ascent off the edge — the two numbers most worth seeing. The
+    # figures move into the target cell as their own line so nothing needs scrolling.
     rows = ""
     for w in P["weeks"]:
-        big = (w["distanceMi"] or 0) >= 18
-        route = f' via {e(w["route"])}' if w["route"] else ""
-        dist = f'{w["distanceMi"]:g} mi' if w["distanceMi"] else "—"
-        asc = f'{w["ascentFt"]:,} ft' if w["ascentFt"] else "—"
-        smt = f'{w["summitFt"]:,} ft' if w["summitFt"] else "—"
-        # hours are estimated from this athlete's own median moving speed, not from a book
-        hrs = (f'{w["distanceMi"] / 1.55:.0f}–{w["distanceMi"] / 1.25:.0f} h'
-               if w["distanceMi"] else "—")
+        mi = w["distanceMi"] or 0
+        away = (w.get("ownNote") or "").strip().lower().startswith("not available")
+        big = mi >= 18 and not away
+        route = f' <span class="sub2">via {e(w["route"])}</span>' if w["route"] else ""
+        bits = []
+        if mi:
+            bits.append(f'{mi:g} mi')
+        if w["ascentFt"]:
+            bits.append(f'{w["ascentFt"]:,} ft')
+        if w["summitFt"]:
+            bits.append(f'summit {w["summitFt"]:,}')
+        if mi:
+            # hours from this athlete's own recorded moving speed, not from a guidebook
+            bits.append(f'~{mi / 1.55:.0f}–{mi / 1.25:.0f} h')
+        stats = (f'<div class="tgt" style="margin-top:4px">{" · ".join(bits)}</div>'
+                 if bits else "")
         notes = " · ".join(x for x in (w.get("partnerNote"), w.get("ownNote"),
                                        w.get("permit")) if x)
-        rows += (f'<tr{" style=background:#fff8e6" if big else ""}>'
-                 f'<td class="nw"><b>{e(sd(w["date"]))}</b><div class="sub2">wk {w["week"]}</div></td>'
-                 f'<td><b>{e(w["peak"])}</b>{route}'
-                 f'{f"<div class=sub>{e(notes)}</div>" if notes else ""}</td>'
-                 f'<td class="num nw">{dist}</td><td class="num nw">{asc}</td>'
-                 f'<td class="num nw">{smt}</td><td class="num nw">{hrs}</td></tr>')
+        style = ("background:#fff8e6" if big else
+                 "background:#f4f6f8;opacity:.62" if away else "")
+        rows += (f'<tr{f" style={style}" if style else ""}>'
+                 f'<td class="nw" style="vertical-align:top">'
+                 f'<b>{e(sd(w["date"]))}</b><div class="sub2">wk {w["week"]}</div></td>'
+                 f'<td><b>{e(w["peak"])}</b>{route}{stats}'
+                 f'{f"<div class=sub>{e(notes)}</div>" if notes else ""}</td></tr>')
 
     conf = "".join(
         f'<div class="issue" style="border-left-color:{C["bad"]}">'
@@ -433,12 +445,11 @@ def s_weeks():
 
     return f"""<section id="weeks">
   <h2>Nine weeks to the summit<span class="n">{tot_mi:g} mi · {tot_ft:,} ft · from the shared plan sheet</span></h2>
-  <div class="scroll"><table class="t"><thead><tr><th>Weekend</th><th>Target</th>
-   <th class="num">Distance</th><th class="num">Ascent</th><th class="num">Summit</th>
-   <th class="num">Est. time</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <table class="t" style="width:100%;min-width:0;table-layout:fixed"><thead><tr><th class="nw" style="width:74px">Weekend</th>
+   <th>Target, size and estimated time</th></tr></thead><tbody>{rows}</tbody></table>
   <div class="sub" style="margin-top:8px">Estimated time uses the recorded moving-speed
    range of 1.25–1.55 mph on climbing terrain, so it is this athlete's pace rather than a
-   guidebook's. Highlighted rows are 18 mi or more — the biggest is
+   guidebook's. Highlighted rows are 18 mi or more; the greyed row is a weekend already marked unavailable — the biggest is
    {e(sd(biggest["date"]))} at {biggest["distanceMi"]:g} mi and {biggest["ascentFt"]:,} ft.</div>
   <h3 style="margin:22px 0 8px">Unresolved against what was here before</h3>
   {conf}
