@@ -1624,6 +1624,12 @@
       "status": "owned"
     },
     {
+      "item": "Osprey 2.5 L reservoir",
+      "status": "owned",
+      "priority": "done",
+      "note": "Hose-fed, so continuous sipping is already solved — which is what the hydration vest had been recommended for. Fill to 2.5 L, not 2 L, and add roughly 2 L of bottle capacity alongside it."
+    },
+    {
       "item": "GRAYL UltraPress",
       "status": "owned",
       "note": "Know the refill points on the Whitney trail."
@@ -1641,22 +1647,16 @@
       "status": "owned"
     },
     {
-      "item": "Hydration vest",
-      "status": "NEEDED",
-      "priority": "high",
-      "note": "Flagged urgent on Jun 27. Continuous sipping fixes both the bladder-stop problem and the fluid deficit. Get one before the next big hike."
-    },
-    {
       "item": "High-UV sunglasses (category 3-4, wraparound)",
-      "status": "NEEDED",
-      "priority": "high",
-      "note": "Nothing in the log covers eye protection. UV climbs steeply with altitude and granite and snow reflect it back — this matters more than usual given you are already sorting out your vision."
+      "status": "owned",
+      "priority": "done",
+      "note": "Owned. Confirmed Jul 28. UV climbs steeply with altitude and granite and snow reflect it back, so this one was worth closing."
     },
     {
-      "item": "Sunscreen + SPF lip balm",
-      "status": "NEEDED",
-      "priority": "high",
-      "note": "Thin air, October sun, twelve hours exposed above 12,000 ft."
+      "item": "SPF 30 lip balm",
+      "status": "owned",
+      "priority": "done",
+      "note": "Owned, SPF 30. Confirmed Jul 28. Body and face sunscreen is a separate item and has not been confirmed either way."
     },
     {
       "item": "Spare correct-strength reading glasses",
@@ -1731,13 +1731,7 @@
       "issue": "Blurry vision — 1.25 readers likely under-corrected",
       "severity": "medium",
       "since": "2026-07-24",
-      "action": "Optometrist visit being arranged, which is the right answer. Three things worth telling them: you are going to 14,505 ft in October, you will need to read a watch and map in the dark on summit morning, and whether the blur is only close-up or at distance too. Ask about proper high-UV sunglasses while you are there — UV at 14,000 ft is far stronger than at sea level and granite and snow reflect it back at you."
-    },
-    {
-      "issue": "No sunglasses or sun protection anywhere in the gear list",
-      "severity": "high",
-      "since": "2026-07-28",
-      "action": "Genuine omission. At 14,505 ft in October, with possible snow on the switchbacks, category 3-4 wraparound sunglasses are not optional. Add sunscreen and SPF lip balm too. Also carry a SPARE pair of correct-strength readers — losing your only pair at Trail Camp with a map and a stove to manage is a real problem."
+      "action": "Optometrist visit being arranged, which is the right answer. Three things worth telling them: you are going to 14,505 ft in October, you will need to read a watch and map in the dark on summit morning, and whether the blur is only close-up or at distance too. Ask about proper high-UV sunglasses while you are there — UV at 14,000 ft is far stronger than at sea level and granite and snow reflect it back at you. Carry a SPARE pair of correct-strength readers — losing your only pair at Trail Camp with a map and a stove to manage is a real problem."
     },
     {
       "issue": "Poles left at home on both Mammoth hikes",
@@ -1750,12 +1744,6 @@
       "severity": "medium",
       "since": "2026-07-26",
       "action": "Carry and log your own bottle separately from the shared supply. Sweat loss was 2,677 ml and 5,115 ml on those two days."
-    },
-    {
-      "issue": "Hydration vest not yet purchased",
-      "severity": "high",
-      "since": "2026-06-27",
-      "action": "Buy before next big hike"
     },
     {
       "issue": "Total sodium far too low on long efforts",
