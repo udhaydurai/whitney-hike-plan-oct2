@@ -116,10 +116,21 @@ only serve the branch root or `/docs` — an arbitrary folder name is not an opt
 `build/site.py` writes there and Pages is configured as **main branch, /docs**. Do not
 rename it back.
 
-`./publish.sh "message"` fetches and rebases onto the remote first, because the nightly
-scheduled task writes the same file — never force-push past it. Then it runs rebuild → dashboard → site → verify → commit → push, and
+`./publish.sh "message"` runs build → verify → **commit** → fetch → rebase → push, and
 exits without committing if nothing changed. It will not publish a site that fails
 verification.
+
+The order matters and was wrong twice. Committing has to come *before* the rebase: git
+rebase refuses to run against a dirty tree, so an earlier version that rebased first
+reported a conflict on literally every run. And the rebuild has to come *after* the
+rebase, because merging in another writer's data makes the generated files stale by
+definition.
+
+Generated paths (`docs/**`, `whitney-dashboard.html`) are routed by `.gitattributes` to a
+merge driver that keeps our copy and reports success. A conflict in 140 KB of generated
+HTML carries no information — both sides are renderings of their own inputs — and the
+rebuild afterwards produces the only version that was ever correct. If anything *else*
+conflicts, publish.sh stops and says so rather than guessing.
 
 `tools/verify_site.py` checks four things on a 390 px viewport: zero JS errors, no
 horizontal overflow, the service worker actually reaches `active`, and a real offline
