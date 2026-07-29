@@ -10,10 +10,17 @@ cd "$(dirname "$0")"
 
 MSG="${1:-dashboard rebuild}"
 
-# Two writers touch data/training-log.json: the nightly scheduled task and whatever
-# session is running now. Without this, the second one to finish gets its push rejected
-# and the tempting fix is --force, which silently deletes the other's work. Rebase
-# first, and fail loudly on a real conflict rather than choosing a winner.
+# Generated files are never a real conflict: they are rebuilt from data/ a few lines
+# below. .gitattributes routes them to this driver, which keeps our copy and reports
+# success, so a rebase never stops on 130 KB of generated HTML. Configured here because
+# a fresh clone has no .git/config of ours.
+git config merge.generated.driver 'true'
+git config merge.generated.name 'keep ours, then regenerate'
+
+# Two writers can run on the same evening: the nightly scheduled task and whatever
+# session is running now. Nightly check-ins go to data/daily/<date>.json — one file per
+# date, so they cannot collide by construction. This rebase covers the rest. The one
+# thing never to do here is --force: it would silently delete the other side's work.
 if [[ -n "${GITHUB_TOKEN:-}" ]]; then
   FETCH="https://x-access-token:${GITHUB_TOKEN}@github.com/udhaydurai/whitney-hike-plan-oct2.git"
 else

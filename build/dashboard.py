@@ -20,6 +20,48 @@ import statistics as st
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = json.loads((ROOT / "data" / "training-log.json").read_text(encoding="utf-8"))
+
+# ── nightly check-ins live one file per day under data/daily/ and are merged here.
+#
+# They used to be written straight into training-log.json, which made the nightly
+# scheduled task and any interactive session two writers on one file. Git cannot merge
+# JSON, so the second push of the evening was rejected and the only ways forward were a
+# hand-resolved conflict or a force-push that deletes the other side's work. Neither is
+# available to an unattended job at 9 pm.
+#
+# One file per date removes the conflict rather than handling it: a new day is a new
+# path, and git merges different paths without being asked. Nothing appends to a shared
+# file, so nothing can collide.
+_daily_dir = ROOT / "data" / "daily"
+_daily = []
+for _f in sorted(_daily_dir.glob("*.json")) if _daily_dir.exists() else []:
+    try:
+        _daily.append(json.loads(_f.read_text(encoding="utf-8")))
+    except json.JSONDecodeError as _e:
+        raise SystemExit(f"{_f.name} is not valid JSON: {_e}")
+
+D["dailyLog"] = sorted(
+    list({e["date"]: e for e in (D.get("dailyLog") or [])
+          + [x["dailyLog"] | {"date": x["date"]} for x in _daily if x.get("dailyLog")]}.values()),
+    key=lambda e: e["date"])
+
+# subjective hike fields from a nightly check-in overlay the hike the weekly Garmin
+# rebuild created; they never replace an objective metric
+for _x in _daily:
+    if _x.get("hike"):
+        for _h in D["hikes"]:
+            if _h["date"] == _x["date"]:
+                _h.update(_x["hike"])
+
+for _x in _daily:
+    for _txt in _x.get("openIssues") or []:
+        D["openIssues"].append({"raised": _x["date"], "issue": _txt, "status": "open",
+                                "severity": "medium", "since": _x["date"], "action": ""})
+    for _needle in _x.get("resolveIssues") or []:
+        for _i in D["openIssues"]:
+            if _needle.lower() in json.dumps(_i).lower() and _i.get("status") != "closed":
+                _i.update(status="closed", closed=_x["date"],
+                          resolution=_i.get("resolution") or "Closed at a nightly check-in.")
 DIG = json.loads((ROOT / "garmin" / "digest.json").read_text(encoding="utf-8"))
 OUT = ROOT / "whitney-dashboard.html"
 

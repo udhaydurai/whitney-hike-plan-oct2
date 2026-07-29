@@ -1,0 +1,15 @@
+# Generated artefacts. These are rebuilt deterministically from data/ by
+# build/dashboard.py and build/site.py, so a merge conflict in one of them carries no
+# information — both sides are just different renderings of their own inputs.
+#
+# Without this, two writers rebuilding on the same evening conflict on 130 KB of
+# minified-ish HTML, which is unresolvable by hand and pointless to try. The custom
+# driver (configured in publish.sh as `true`, i.e. keep ours and report success) makes
+# git stop asking. publish.sh then regenerates from the merged data, which is the only
+# version that was ever correct.
+docs/**              merge=generated -diff
+whitney-dashboard.html merge=generated -diff
+
+# Per-day check-ins are one file per date and should never be merged at all — if two
+# writers ever touch the same day, union the JSON rather than picking a side.
+data/daily/*.json    -diff

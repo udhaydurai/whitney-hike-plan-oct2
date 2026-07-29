@@ -14,6 +14,11 @@ That is stricter than warning, and it is the right way round: a wrong distance t
 from memory on a Tuesday would survive into the dashboard and be indistinguishable
 from a measured one. The weekly Garmin rebuild is the only writer of those fields.
 
+Writes data/daily/<date>.json — one file per day, never the shared log. That is what
+stops the nightly scheduled task and an interactive session from colliding: a new date
+is a new path, and git merges different paths without help. build/dashboard.py merges
+the directory at build time.
+
 Usage:
     python3 build/nightly.py patch.json
     echo '{"date":"2026-07-29","dailyLog":{...}}' | python3 build/nightly.py -
@@ -36,6 +41,7 @@ import datetime as dt
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LOG = ROOT / "data" / "training-log.json"
+DAILY = ROOT / "data" / "daily"
 
 # ── Garmin's territory. Present in a nightly patch, this is an error, not a warning.
 OBJECTIVE = {
@@ -78,10 +84,12 @@ def main():
     except ValueError:
         fail(f"date {date!r} is not YYYY-MM-DD")
 
-    d = json.loads(LOG.read_text(encoding="utf-8"))
-    changed = []
+    log = json.loads(LOG.read_text(encoding="utf-8"))
 
-    # ── hike subjective merge
+    # ── validate against the same rules as before, but write to data/daily/<date>.json
+    #    rather than into the shared log. See the merge comment in build/dashboard.py:
+    #    one file per date is what makes the nightly job and an interactive session stop
+    #    being two writers on one file.
     hp = patch.get("hike") or {}
     if hp:
         bad = sorted(set(hp) & OBJECTIVE)
@@ -93,57 +101,41 @@ def main():
         if unknown:
             fail("unrecognised field(s): " + ", ".join(unknown)
                  + ".\n         Add to SUBJECTIVE in build/nightly.py if genuinely new.")
-        target = next((h for h in d["hikes"] if h["date"] == date), None)
-        if target is None:
+        if not any(h["date"] == date for h in log["hikes"]):
             fail(f"no hike on {date}. The hike record is created by the weekly Garmin "
                  f"rebuild; a nightly patch can only annotate one that exists.")
-        for k, v in hp.items():
-            before = target.get(k)
-            if before != v:
-                target[k] = v
-                changed.append(f"hikes[{date}].{k}: {before!r} -> {v!r}")
 
-    # ── daily record for non-hike days: this is the whole point of the nightly cadence
-    if "dailyLog" in patch:
-        d.setdefault("dailyLog", [])
-        entry = dict(patch["dailyLog"])
-        bad = sorted(set(entry) & OBJECTIVE)
+    dl = patch.get("dailyLog")
+    if dl:
+        bad = sorted(set(dl) & OBJECTIVE)
         if bad:
             fail("dailyLog may not carry Garmin-owned fields: " + ", ".join(bad))
-        entry["date"] = date
-        existing = next((e for e in d["dailyLog"] if e.get("date") == date), None)
-        if existing:
-            existing.update(entry)
-            changed.append(f"dailyLog[{date}] updated ({len(entry)-1} field(s))")
-        else:
-            d["dailyLog"].append(entry)
-            d["dailyLog"].sort(key=lambda e: e["date"])
-            changed.append(f"dailyLog[{date}] added ({len(entry)-1} field(s))")
 
-    # ── issues
-    for text in patch.get("openIssues") or []:
-        d["openIssues"].append({"raised": date, "issue": text, "status": "open"})
-        changed.append(f"openIssues += {text[:60]!r}")
+    if not any(patch.get(k) for k in ("hike", "dailyLog", "openIssues", "resolveIssues")):
+        fail("patch has nothing in it — expected hike, dailyLog, openIssues or resolveIssues")
 
-    for needle in patch.get("resolveIssues") or []:
-        hit = [i for i in d["openIssues"]
-               if needle.lower() in json.dumps(i).lower() and i.get("status") != "resolved"]
-        if not hit:
-            print(f"note: no open issue matched {needle!r}", file=sys.stderr)
-        for i in hit:
-            i["status"] = "resolved"
-            i["resolved"] = date
-            changed.append(f"issue resolved: {needle[:50]!r}")
+    DAILY.mkdir(parents=True, exist_ok=True)
+    out = DAILY / f"{date}.json"
 
-    if not changed:
-        print("no change")
-        return
+    # a second check-in on the same evening merges into that day's file rather than
+    # replacing it, so an afternoon note is not lost by a bedtime one
+    rec = {}
+    if out.exists():
+        rec = json.loads(out.read_text(encoding="utf-8"))
+    for k in ("hike", "dailyLog"):
+        if patch.get(k):
+            rec[k] = {**(rec.get(k) or {}), **patch[k]}
+    for k in ("openIssues", "resolveIssues"):
+        if patch.get(k):
+            rec[k] = list(dict.fromkeys((rec.get(k) or []) + patch[k]))
+    rec["date"] = date
 
-    d["meta"]["lastNightlyCheckIn"] = date
-    LOG.write_text(json.dumps(d, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"applied {len(changed)} change(s) for {date}:")
-    for c in changed:
-        print(f"   {c}")
+    out.write_text(json.dumps(rec, indent=2, ensure_ascii=False), encoding="utf-8")
+    fields = sum(len(v) for k, v in rec.items() if isinstance(v, (dict, list)))
+    print(f"wrote {out.relative_to(ROOT)} — {fields} field(s) for {date}")
+    for k, v in rec.items():
+        if k != "date":
+            print(f"   {k}: {v if not isinstance(v, dict) else ', '.join(v)}")
 
 
 if __name__ == "__main__":

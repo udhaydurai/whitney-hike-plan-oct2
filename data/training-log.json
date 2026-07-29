@@ -3595,15 +3595,5 @@
       ]
     ],
     "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
-  },
-  "dailyLog": [
-    {
-      "meals": "Breakfast: 4 squares Kings Hawaiian bread, 200 mL tea with milk, no sugar. Lunch: rice, dhal and cabbage, good portion, plus 150 g yogurt. No snack. Dinner: 5 dosa with chutney.",
-      "supplements": "No supplements today, just beet powder.",
-      "date": "2026-07-29",
-      "water": "2 L",
-      "sodium": "no supplemental/added sodium today",
-      "training": "none"
-    }
-  ]
+  }
 }
