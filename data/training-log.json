@@ -1676,7 +1676,9 @@
     },
     {
       "item": "Big Agnes Copper Spur UL1",
-      "status": "owned"
+      "status": "owned",
+      "priority": "done",
+      "note": "Owned — the solo tent, roughly 2.5 lb. The default for Whitney unless the shared-tent decision goes the other way at the Labor Day sale."
     },
     {
       "item": "Osprey 2.5 L reservoir",
@@ -1721,9 +1723,9 @@
     },
     {
       "item": "MSR Access 2 tent",
-      "status": "owned",
-      "priority": "done",
-      "note": "From the plan sheet. Conflicts with the Big Agnes Copper Spur UL1 already in this list — needs confirming which one goes up the mountain."
+      "status": "deciding",
+      "priority": "medium",
+      "note": "Not owned. Suggested by the hiking partner as a shared two-person four-season tent, to be decided at the Labor Day sale on Sep 7. Split between two people it is roughly 2 lb each against 2.5 lb for carrying the solo tent, so it is lighter per person as well as warmer — but only if both are genuinely in the same tent."
     },
     {
       "item": "Sawyer Squeeze filter",
@@ -1914,6 +1916,13 @@
       "severity": "high",
       "action": "Book on Recreation.gov",
       "status": "open"
+    },
+    {
+      "issue": "Tent decision lands five days before the only night it can be tested",
+      "severity": "medium",
+      "since": "2026-07-29",
+      "status": "open",
+      "action": "Big Agnes Copper Spur UL1 is owned; the MSR Access 2 is the partner's suggestion for a shared tent, to be settled at the Labor Day sale on Sep 7. Week 7 on Sep 12 is the only scheduled night out before the summit, so a tent bought on Sep 7 gets exactly one rehearsal — pitching, condensation, and whether two people and two packs actually fit. If the decision slips past Sep 12, go to Whitney with the tent already known to work rather than the one bought on offer."
     }
   ],
   "trailOptions": [
