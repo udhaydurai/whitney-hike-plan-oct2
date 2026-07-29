@@ -41,10 +41,16 @@ for _f in sorted(_daily_dir.glob("*.json")) if _daily_dir.exists() else []:
     except json.JSONDecodeError as _e:
         raise SystemExit(f"{_f.name} is not valid JSON: {_e}")
 
-D["dailyLog"] = sorted(
-    list({e["date"]: e for e in (D.get("dailyLog") or [])
-          + [x["dailyLog"] | {"date": x["date"]} for x in _daily if x.get("dailyLog")]}.values()),
-    key=lambda e: e["date"])
+_merged = {e["date"]: dict(e) for e in (D.get("dailyLog") or [])}
+for _x in _daily:
+    _row = _merged.setdefault(_x["date"], {"date": _x["date"]})
+    _row.update(_x.get("dailyLog") or {})
+    if _x.get("morning"):
+        # kept under its own key so the dashboard can label these as typed off the watch
+        # rather than exported, and so the weekly export can be compared against them
+        _row["_morning"] = {k: v for k, v in _x["morning"].items() if k != "source"}
+    _row["date"] = _x["date"]
+D["dailyLog"] = sorted(_merged.values(), key=lambda e: e["date"])
 
 # subjective hike fields from a nightly check-in overlay the hike the weekly Garmin
 # rebuild created; they never replace an objective metric
@@ -935,11 +941,22 @@ def s_log():
                  "water": "Water", "waterL": "Water", "sodium": "Sodium",
                  "sodiumMg": "Sodium mg", "training": "Training", "sleepFelt": "Sleep",
                  "supplements": "Supplements", "note": "Note", "mood": "How it felt"}
+        MLAB = {"hrv": "HRV", "restingHR": "Resting HR", "sleepScore": "Sleep score",
+                "sleepHours": "Sleep h", "bodyBattery": "Body battery", "spo2": "SpO2",
+                "respiration": "Respiration", "weightLb": "Weight lb",
+                "recoveryScore": "Recovery", "note": "Note"}
         drows = ""
         for x in reversed(DL[-21:]):
-            cells = "".join(
+            mg = x.get("_morning") or {}
+            morning = ""
+            if mg:
+                morning = ('<div class="tgt" style="margin:4px 0"><b>Morning glance</b> · '
+                           + " · ".join(f"{e(MLAB.get(k, k))} {e(str(v))}"
+                                        for k, v in mg.items()) + "</div>")
+            cells = morning + "".join(
                 f'<div class="sub"><b>{e(LABEL.get(k, k))}:</b> {e(str(v))}</div>'
-                for k, v in x.items() if k != "date" and v not in (None, "", []))
+                for k, v in x.items()
+                if k not in ("date", "_morning") and v not in (None, "", []))
             drows += (f'<tr><td class="nw" style="vertical-align:top">'
                       f'<b>{e(sd(x["date"]))}</b></td><td>{cells}</td></tr>')
         gaps = ""
@@ -955,8 +972,10 @@ def s_log():
   <table class="t" style="width:100%;min-width:0;table-layout:fixed">
    <thead><tr><th class="nw" style="width:74px">Date</th>
    <th>What went in, as reported</th></tr></thead><tbody>{drows}</tbody></table>
-  <p class="sub">Self-reported, and the only place fuelling actually lives — the watch
-  cannot see any of it. Figures here are never used where a Garmin measurement exists.</p>
+  <p class="sub">Fuelling lines are self-reported and are the only place that data exists —
+  the watch cannot see any of it. The morning glance is different: those numbers ARE watch
+  measurements, typed in the same day so the trend is current, and the weekly export
+  overwrites them the moment it lands. They are labelled separately for that reason.</p>
 """
     else:
         daily_block = ""

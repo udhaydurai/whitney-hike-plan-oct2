@@ -29,6 +29,8 @@ Patch shape — every key optional:
       "date": "2026-07-29",
       "hike":     { subjective hike fields, merged into the hike on that date },
       "dailyLog": { free-form weekday record: meals, carbs, protein, how it felt },
+      "morning":  { hrv, restingHR, sleepScore, sleepHours, bodyBattery, spo2,
+                    respiration, weightLb — read off the watch, range-checked },
       "openIssues":   [ "text to append" ],
       "resolveIssues":[ "substring of an existing issue to mark resolved" ]
     }
@@ -54,6 +56,19 @@ OBJECTIVE = {
     "aerobicEffect", "anaerobicEffect", "exerciseLoad", "steps",
     "bodyBattery", "restingCal", "sweatLossMl", "hrZoneSec", "vo2Max",
     "calories", "durSec", "source", "kind",
+}
+
+# ── The morning glance: numbers read off the watch face and typed in.
+#
+# These ARE Garmin measurements, so they sit in their own namespace rather than in
+# dailyLog, and they are explicitly marked as watch-reported. The weekly export remains
+# authoritative — when it lands, build/rebuild_data.py has the real series and these
+# become a same-day proxy that filled the gap in between. Keeping them separate is what
+# lets the dashboard say which is which instead of blending a typed number into an
+# exported series and losing track of where it came from.
+MORNING = {
+    "hrv", "restingHR", "sleepScore", "sleepHours", "bodyBattery", "spo2",
+    "respiration", "weightLb", "recoveryScore", "note",
 }
 
 # ── what the conversation is allowed to supply. Anything outside both sets is a typo
@@ -126,9 +141,30 @@ def main():
     if dl:
         bad = sorted(set(dl) & OBJECTIVE)
         if bad:
-            fail("dailyLog may not carry Garmin-owned fields: " + ", ".join(bad))
+            fail("dailyLog may not carry Garmin-owned fields: " + ", ".join(bad)
+                 + ".\n         Watch readings belong under \"morning\", not \"dailyLog\".")
 
-    if not any(patch.get(k) for k in ("hike", "dailyLog", "openIssues", "resolveIssues")):
+    mp = patch.get("morning") or {}
+    if mp:
+        unknown = sorted(set(mp) - MORNING)
+        if unknown:
+            fail("unrecognised morning field(s): " + ", ".join(unknown)
+                 + ".\n         Allowed: " + ", ".join(sorted(MORNING)))
+        # sanity bounds. A typo here is silent otherwise: 55 typed as 550 would drag a
+        # trend line and look like a physiological event rather than a fat finger.
+        BOUNDS = {"hrv": (10, 200), "restingHR": (35, 110), "sleepScore": (1, 100),
+                  "sleepHours": (0, 14), "bodyBattery": (0, 100), "spo2": (60, 100),
+                  "respiration": (5, 30), "weightLb": (120, 220),
+                  "recoveryScore": (1, 100)}
+        for k, v in mp.items():
+            if k in BOUNDS and isinstance(v, (int, float)):
+                lo, hi = BOUNDS[k]
+                if not lo <= v <= hi:
+                    fail(f"{k}={v} is outside {lo}-{hi}. Check the reading before storing "
+                         f"it — an out-of-range value looks like an event, not a typo.")
+
+    if not any(patch.get(k) for k in ("hike", "dailyLog", "morning",
+                                      "openIssues", "resolveIssues")):
         fail("patch has nothing in it — expected hike, dailyLog, openIssues or resolveIssues")
 
     DAILY.mkdir(parents=True, exist_ok=True)
@@ -139,9 +175,11 @@ def main():
     rec = {}
     if out.exists():
         rec = json.loads(out.read_text(encoding="utf-8"))
-    for k in ("hike", "dailyLog"):
+    for k in ("hike", "dailyLog", "morning"):
         if patch.get(k):
             rec[k] = {**(rec.get(k) or {}), **patch[k]}
+    if rec.get("morning"):
+        rec["morning"]["source"] = "read off the watch; superseded by the weekly export"
     for k in ("openIssues", "resolveIssues"):
         if patch.get(k):
             rec[k] = list(dict.fromkeys((rec.get(k) or []) + patch[k]))
