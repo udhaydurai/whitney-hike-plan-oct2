@@ -1761,6 +1761,20 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
+      "issue": "The bread is a fibre supplement, not a carbohydrate source",
+      "severity": "high",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "Inked Bread is 11 g total carb and 10 g fibre per 27 g slice, so 1 g net carb and 30 calories. Three slices read as 33 g of carbs and deliver 3 g. This is the likeliest single reason intake keeps landing near half of burn: the tracking was counting fibre as fuel. It is a good bread for protein (4 g) and sodium (140 mg) per slice, and a poor one for loading. Swap it for rice, dosa, poha or dates on Friday load days and on the trail. Also worth noting 3 slices is 30 g of fibre in one sitting, which is a full adult day's worth, and there is a standing gut-distress issue on long efforts."
+    },
+    {
+      "issue": "Bilateral calf cramp two days before a 16 mi hike",
+      "severity": "watch",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "Both calves, at rest, the morning after an hour in a 20 lb vest — new load on the calves, on the back of a day with 2 L of fluid and no added sodium. Two Liquid IV sticks is a sensible response, roughly 1,000 mg of sodium. Watch whether it clears before Saturday. Cramp that becomes one-sided, or comes with swelling or pain in a single leg, is a doctor call and not a dashboard one."
+    },
+    {
       "issue": "Pulse oximetry is off — no SpO2 baseline before an altitude objective",
       "severity": "high",
       "since": "2026-07-28",
@@ -3599,111 +3613,157 @@
   "foodTable": {
     "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick.",
     "measured": [
-      "Kings Hawaiian bread — 33 g carbs for 4 squares, his own figure"
+      "Inked Bread — label read Jul 30: per 27 g slice, 30 cal, 11 g total carb, 10 g FIBRE, 4 g protein, 140 mg sodium. Net carb is 1 g per slice.",
+      "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium."
     ],
     "items": [
-      {
-        "food": "Kings Hawaiian bread, 1 square",
-        "c": 8,
-        "p": 1.5,
-        "tag": "bread"
-      },
       {
         "food": "Tea with milk, no sugar, 200 ml",
         "c": 3,
         "p": 2,
-        "tag": "drink"
+        "tag": "drink",
+        "fib": 0,
+        "na": 0
       },
       {
         "food": "Cooked rice, 1 cup",
         "c": 45,
         "p": 4,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 1,
+        "na": 0
       },
       {
         "food": "Dhal, 1 cup cooked",
         "c": 25,
         "p": 12,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 8,
+        "na": 0
       },
       {
         "food": "Cabbage sabzi, 1 cup",
         "c": 8,
         "p": 2,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 3,
+        "na": 0
       },
       {
         "food": "Yogurt, 150 g plain",
         "c": 9,
         "p": 8,
-        "tag": "protein"
+        "tag": "protein",
+        "fib": 0,
+        "na": 0
       },
       {
         "food": "Dosa, 1 medium",
         "c": 18,
         "p": 3,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 1,
+        "na": 0
       },
       {
         "food": "Coconut chutney, 2 tbsp",
         "c": 3,
         "p": 1,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 1,
+        "na": 0
       },
       {
         "food": "Banana, medium",
         "c": 27,
         "p": 1,
-        "tag": "quick"
+        "tag": "quick",
+        "fib": 3,
+        "na": 0
       },
       {
         "food": "Medjool dates, 2",
         "c": 36,
         "p": 1,
-        "tag": "quick"
+        "tag": "quick",
+        "fib": 3,
+        "na": 0
       },
       {
         "food": "Orange, medium",
         "c": 15,
         "p": 1,
-        "tag": "quick"
+        "tag": "quick",
+        "fib": 3,
+        "na": 0
       },
       {
         "food": "Salted pretzels, 50 g",
         "c": 38,
         "p": 4,
-        "tag": "quick"
+        "tag": "quick",
+        "fib": 2,
+        "na": 0
       },
       {
         "food": "Poha or rice pack",
         "c": 45,
         "p": 5,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 2,
+        "na": 0
       },
       {
         "food": "Peanut butter sandwich",
         "c": 30,
         "p": 12,
-        "tag": "meal"
+        "tag": "meal",
+        "fib": 4,
+        "na": 0
       },
       {
         "food": "Energy bar",
         "c": 30,
         "p": 10,
-        "tag": "quick"
+        "tag": "quick",
+        "fib": 4,
+        "na": 0
       },
       {
         "food": "GU Roctane gel",
         "c": 21,
         "p": 0,
-        "tag": "trail"
+        "tag": "trail",
+        "fib": 0,
+        "na": 0
       },
       {
         "food": "SuperBeets scoop",
         "c": 5,
         "p": 0,
-        "tag": "supp"
+        "tag": "supp",
+        "fib": 1,
+        "na": 0
+      },
+      {
+        "food": "Inked Bread, 1 slice (27 g)",
+        "c": 11,
+        "fib": 10,
+        "p": 4,
+        "na": 140,
+        "tag": "bread",
+        "labelled": true
+      },
+      {
+        "food": "Pressed orange + beet juice, 240 ml",
+        "c": 25,
+        "fib": 0,
+        "p": 2,
+        "na": 10,
+        "tag": "drink",
+        "labelled": true
       }
-    ]
+    ],
+    "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
   }
 }

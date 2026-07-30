@@ -368,10 +368,22 @@ def s_today():
     log = next((x for x in (D.get("dailyLog") or []) if x["date"] == iso), {}) or {}
     # a scanned total wins; an estimate built from foodTable is used but labelled, because
     # a guess presented as a measurement becomes indistinguishable from one later
-    got_c = log.get("carbsG")
+    # NET carbs, not total. The bread that read as 33 g of carbs was 30 g of that in
+    # fibre — 3 g of fuel. Counting total was the reason intake looked adequate and
+    # performance did not.
+    got_c = log.get("netCarbsG", log.get("carbsG"))
     est_c = got_c is None and log.get("carbsGEstimated") is not None
     if est_c:
         got_c = log["carbsGEstimated"]
+    fibre_gap = ""
+    if log.get("totalCarbsG") and log.get("netCarbsG") is not None:
+        lost = log["totalCarbsG"] - log["netCarbsG"]
+        if lost >= 10:
+            fibre_gap = (f'<div class="callout" style="border-color:{C["bad"]}">'
+                         f'<b>{log["totalCarbsG"]} g of carbs on the label, '
+                         f'{log["netCarbsG"]} g of fuel.</b> {lost} g of it is fibre, which '
+                         f'does not reach the muscle. The counter below uses net carbs.'
+                         f'</div>')
     got_p = log.get("proteinG")
 
     def meter(label, got, lo, hi, unit="g", estimated=False):
@@ -388,8 +400,16 @@ def s_today():
                 f'<div class="kv" style="color:{col}">{got:,}</div>'
                 f'<div class="ks">of {lo:,}–{hi:,} {unit} · <b>{tail}</b></div></div>')
 
-    kpis = (meter("Carbs", got_c, CLO, CHI, estimated=est_c)
+    kpis = (meter("Net carbs", got_c, CLO, CHI, estimated=est_c)
             + meter("Protein", got_p, PLO, PHI))
+    if log.get("sodiumMg") is not None:
+        # sodium is a standing high issue and was invisible until the evening
+        smg = log["sodiumMg"]
+        scol = C["primary"] if smg >= 2300 else C["warn"] if smg >= 1200 else C["bad"]
+        kpis += (f'<div class="kpi"><div class="kl">Sodium so far</div>'
+                 f'<div class="kv" style="color:{scol}">{smg:,}</div>'
+                 f'<div class="ks">mg · a rest day wants 2,000–3,000; a Liquid IV stick is '
+                 f'about 500</div></div>')
     if est_c and log.get("carbsEstimateMethod"):
         kpis += (f'<div class="kpi" style="grid-column:1/-1"><div class="kl">How that '
                  f'estimate was built</div><div class="ks">{e(log["carbsEstimateMethod"])}'
@@ -404,7 +424,7 @@ def s_today():
     ITEMS = {i["food"]: i for i in FT["items"]}
     # slot times match the calendar reminders already set, so the two agree
     SLOTS = [("Breakfast", 6.75, .22, ["Cooked rice, 1 cup", "Dosa, 1 medium",
-                                       "Kings Hawaiian bread, 1 square", "Banana, medium"]),
+                                       "Banana, medium", "Poha or rice pack"]),
              ("Mid-morning snack", 10.0, .12, ["Medjool dates, 2", "Banana, medium",
                                                "Energy bar"]),
              ("Lunch", 12.5, .28, ["Cooked rice, 1 cup", "Dhal, 1 cup cooked",
@@ -501,6 +521,7 @@ def s_today():
     <div class="sub">{e(snote)}</div></div>
   {sat}
   <h3 style="margin:18px 0 8px">Eating — where today stands</h3>
+  {fibre_gap}
   <div class="kpis">{kpis}</div>
   {suggest}
   <h3 style="margin:18px 0 8px">Supplements today</h3>
