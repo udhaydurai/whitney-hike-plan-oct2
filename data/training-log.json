@@ -1761,6 +1761,13 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
+      "issue": "The diet is low-carb by composition, not by accident of tracking",
+      "severity": "high",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "Four labelled items on Jul 30: bread 1 g net carb per slice, sardines 0 g, tea 1.5 g, juice 25 g. Three of the four are near-zero carb, so the juice was the entire carbohydrate intake of the morning. This is not a measurement problem — it is what is being chosen. A low-carb pattern is a legitimate way to eat and is directly at odds with nine consecutive weekends of 16-25 mi days on a roughly 1,800 kcal glycogen tank. It is the most economical explanation for intake landing near half of burn on San Jacinto, and for the stopping on inclines. Fixing it means adding rice, dosa, poha, dates and juice deliberately, not tracking better."
+    },
+    {
       "issue": "The bread is a fibre supplement, not a carbohydrate source",
       "severity": "high",
       "since": "2026-07-30",
@@ -3616,7 +3623,8 @@
       "Inked Bread — label read Jul 30: per 27 g slice, 30 cal, 11 g total carb, 10 g FIBRE, 4 g protein, 140 mg sodium. Net carb is 1 g per slice.",
       "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium.",
       "Tea cup measured at 200 ml, Jul 30 — his own measurement.",
-      "Tea fully specified Jul 30 — 200 ml cup, 30 ml milk, no sugar. His own figures."
+      "Tea fully specified Jul 30 — 200 ml cup, 30 ml milk, no sugar. His own figures.",
+      "Sardines in olive oil — label read Jul 30: per 85 g drained tin, 250 cal, 12 g fat, 0 g carb, 20 g protein, 340 mg sodium, plus vitamin D, calcium and iron."
     ],
     "items": [
       {
@@ -3765,6 +3773,15 @@
         "p": 2,
         "na": 10,
         "tag": "drink",
+        "labelled": true
+      },
+      {
+        "food": "Sardines in olive oil, 85 g drained tin",
+        "c": 0,
+        "fib": 0,
+        "p": 20,
+        "na": 340,
+        "tag": "protein",
         "labelled": true
       }
     ],

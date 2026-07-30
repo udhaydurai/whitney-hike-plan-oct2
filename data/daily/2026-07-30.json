@@ -8,14 +8,15 @@
   },
   "date": "2026-07-30",
   "dailyLog": {
-    "meals": "Morning: tea with milk no sugar, 3 slices Inked Bread, 240 ml Pressed orange+beet juice. Labels photographed and read.",
+    "meals": "Tea, 200 ml with 30 ml milk. 3 slices Inked Bread. 240 ml Pressed orange+beet juice. 1 tin sardines in olive oil, 85 g drained. All four read from labels or measured.",
     "netCarbsG": 30,
     "totalCarbsG": 60,
     "fiberG": 30,
-    "proteinG": 13,
-    "sodiumMg": 445,
+    "proteinG": 33,
+    "sodiumMg": 785,
     "symptoms": "Slight cramp in both calves. Bilateral, at rest, the day after wearing a 20 lb vest for about an hour.",
     "plan": "2x Liquid IV through the day",
-    "carbsEstimateMethod": "All from labels or his own measurements: 3 slices Inked Bread = 3 g net (33 g total, 30 g fibre); 240 ml Pressed orange+beet juice = 25 g; tea, 200 ml with 30 ml milk = 1.5 g. Nothing estimated."
+    "carbsEstimateMethod": "Every item from a label or his own measurement: bread 3 g net (33 g total, 30 g fibre), juice 25 g, tea 1.5 g, sardines 0 g. Nothing estimated.",
+    "caloriesKcal": 480
   }
 }
