@@ -3615,18 +3615,19 @@
     "measured": [
       "Inked Bread — label read Jul 30: per 27 g slice, 30 cal, 11 g total carb, 10 g FIBRE, 4 g protein, 140 mg sodium. Net carb is 1 g per slice.",
       "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium.",
-      "Tea cup measured at 200 ml, Jul 30 — his own measurement."
+      "Tea cup measured at 200 ml, Jul 30 — his own measurement.",
+      "Tea fully specified Jul 30 — 200 ml cup, 30 ml milk, no sugar. His own figures."
     ],
     "items": [
       {
-        "food": "Tea with milk, no sugar, 200 ml",
-        "c": 4,
-        "p": 2,
+        "food": "Tea, 200 ml cup with 30 ml milk, no sugar",
+        "c": 1.5,
+        "p": 1,
         "tag": "drink",
         "fib": 0,
-        "na": 25,
+        "na": 15,
         "measuredVolume": true,
-        "note": "Cup volume measured at 200 ml Jul 30. The carb figure still depends on how much milk goes in — at a typical 50-60 ml of whole milk this is about 4 g carb and 2 g protein. Negligible either way against a 400 g target, so it does not need refining further."
+        "note": "Fully specified Jul 30: 200 ml cup, 30 ml milk, no sugar. 30 ml of whole milk is about 1.5 g carb and 1 g protein. Nothing about this item is estimated any more."
       },
       {
         "food": "Cooked rice, 1 cup",
