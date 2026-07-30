@@ -8,5 +8,8 @@
     "spo2": 96,
     "source": "read off the watch; superseded by the weekly export"
   },
-  "date": "2026-07-29"
+  "date": "2026-07-29",
+  "dailyLog": {
+    "meals": "Morning: tea with milk, no sugar, and 2 slices of bread (athlete estimated ~60 cal carb, but noted that figure may be too low). Afternoon: protein bar, 11 g protein. Evening: chicken salad with dressing, another tea with no sugar, and 50 g peanuts. Dinner: 2 eggs and 5 dosas."
+  }
 }
