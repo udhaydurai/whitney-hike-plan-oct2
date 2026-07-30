@@ -395,37 +395,71 @@ def s_today():
                  f'estimate was built</div><div class="ks">{e(log["carbsEstimateMethod"])}'
                  f'</div></div>')
 
-    # ── what closes the gap, built greedily from his own foods
+    # ── what to eat, laid out across the meals that are actually left today
+    #
+    # An earlier version answered "you need 438 g" with a greedy biggest-first list, which
+    # came out as three cups of rice plus three bags of pretzels. Technically 438 g and
+    # useless as instruction. What is wanted is: it is 7 am, here is breakfast.
     FT = D["foodTable"]
-    gap = None
-    if got_c is not None and got_c < CLO:
-        gap = round((CLO + CHI) / 2) - got_c
-    elif got_c is None:
-        gap = round((CLO + CHI) / 2)
+    ITEMS = {i["food"]: i for i in FT["items"]}
+    # slot times match the calendar reminders already set, so the two agree
+    SLOTS = [("Breakfast", 6.75, .22, ["Cooked rice, 1 cup", "Dosa, 1 medium",
+                                       "Kings Hawaiian bread, 1 square", "Banana, medium"]),
+             ("Mid-morning snack", 10.0, .12, ["Medjool dates, 2", "Banana, medium",
+                                               "Energy bar"]),
+             ("Lunch", 12.5, .28, ["Cooked rice, 1 cup", "Dhal, 1 cup cooked",
+                                   "Cabbage sabzi, 1 cup", "Yogurt, 150 g plain"]),
+             ("Afternoon snack", 15.5, .12, ["Salted pretzels, 50 g", "Orange, medium",
+                                             "Peanut butter sandwich"]),
+             ("Dinner", 18.75, .26, ["Dosa, 1 medium", "Cooked rice, 1 cup",
+                                     "Dhal, 1 cup cooked", "Yogurt, 150 g plain"])]
+    hour = clock.now().hour + clock.now().minute / 60
+    left_slots = [x for x in SLOTS if x[1] >= hour - 1.5]
+    target_mid = round((CLO + CHI) / 2)
+    remaining = max(0, target_mid - (got_c or 0))
+
     suggest = ""
-    if gap and gap > 0:
-        # biggest-first, so the list stays short enough to act on
-        pool = sorted([i for i in FT["items"] if i["tag"] in ("meal", "quick", "bread")],
-                      key=lambda i: -i["c"])
-        pick, left = [], gap
-        for it in pool:
-            n = int(left // it["c"])
-            if n >= 1:
-                n = min(n, 3)
-                pick.append((n, it))
-                left -= n * it["c"]
-            if left < 8:
-                break
-        tot_c = sum(n * i["c"] for n, i in pick)
-        tot_p = sum(n * i["p"] for n, i in pick)
-        lis = "".join(f'<li>{n}× {e(i["food"])} — {n*i["c"]:g} g carbs, '
-                      f'{n*i["p"]:g} g protein</li>' for n, i in pick)
-        suggest = (f'<div class="callout"><b>To close roughly {gap:,} g of carbs, '
-                   f'one way from what is already in the kitchen:</b>'
-                   f'<ul class="ul">{lis}</ul>'
-                   f'That combination is about {tot_c:g} g carbs and {tot_p:g} g protein. '
-                   f'Not a prescription — the point is that the number is reachable with '
-                   f'ordinary food rather than needing a plan.</div>')
+    if remaining > 20 and left_slots:
+        wsum = sum(x[2] for x in left_slots)
+        rows = ""
+        for name, at, w, foods in left_slots:
+            want = round(remaining * w / wsum)
+            pick, acc, accp = [], 0, 0
+            # round-robin the slot's own foods so portions stay sane rather than stacking
+            for it in (foods * 4):
+                if acc >= want - 6:
+                    break
+                f = ITEMS.get(it)
+                if not f:
+                    continue
+                pick.append(it); acc += f["c"]; accp += f["p"]
+            counts = {}
+            for it in pick:
+                counts[it] = counts.get(it, 0) + 1
+            what = ", ".join(f'{n}× {k}' if n > 1 else k for k, n in counts.items())
+            clock_h = int(at); clock_m = int(round((at - clock_h) * 60))
+            rows += (f'<tr><td class="nw" style="vertical-align:top">'
+                     f'<b>{clock_h}:{clock_m:02d}</b><div class="sub2">{e(name)}</div></td>'
+                     f'<td><b>~{want} g carbs</b>'
+                     f'<div class="sub">{e(what)} — about {acc:g} g carbs, '
+                     f'{accp:g} g protein</div></td></tr>')
+        suggest = f"""
+  <div class="callout"><b>{remaining:,} g of carbs left to eat today.</b> Spread across the
+   meals still ahead, from foods already in the log — so nothing needs scanning or deciding:
+  </div>
+  <table class="t" style="width:100%;min-width:0;table-layout:fixed">
+   <thead><tr><th class="nw" style="width:84px">When</th>
+   <th>Roughly this much, roughly this</th></tr></thead><tbody>{rows}</tbody></table>
+  <p class="sub">Portions are approximate and interchangeable — swap anything for something
+   of similar size. The number is what matters, not the menu. {e(FT["note"])}</p>
+"""
+    elif remaining <= 20:
+        suggest = ('<div class="callout"><b>Today\'s carb target is met.</b> Nothing more '
+                   'is needed on that front.</div>')
+    else:
+        suggest = (f'<div class="callout"><b>{remaining:,} g of carbs short and the eating '
+                   f'day is over.</b> Worth knowing rather than fixing tonight — a late '
+                   f'large meal costs sleep, and sleep is the scarcer resource.</div>')
 
     # ── supplements due today
     act = [x for x in D["supplements"] if x.get("status") == "active"]
