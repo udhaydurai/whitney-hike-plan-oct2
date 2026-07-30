@@ -326,6 +326,157 @@ def tile(lab, val, sub, col):
             f'<div class="ts">{e(sub)}</div></div>')
 
 
+
+def s_today():
+    """
+    The answer to "what do I do today", first thing, without opening a calendar.
+
+    This section exists because the dashboard was a reference document: correct, and
+    useless at 7 am. Everything here is computed — day type from the weekday and the
+    nine-week plan, carb and protein targets from bodyweight, the remainder from what has
+    actually been logged today, and the suggestion from foods already in the log. Nothing
+    is typed in, so it cannot go stale.
+    """
+    iso = today.isoformat()
+    dow = today.strftime("%a")
+    row = next((r for r in D["weekdayRoutine"]["template"] if r["day"] == dow), None)
+    session = row["session"] if row else "—"
+    snote = row.get("note", "") if row else ""
+
+    # this Saturday's hike, from the agreed plan sheet
+    wk = next((w for w in D["nineWeekPlan"]["weeks"] if w["date"] >= iso), None)
+    days_to_sat = ((dt.date.fromisoformat(wk["date"]) - today).days) if wk else None
+    hike_sat = bool(wk and wk["distanceMi"])
+
+    # day type drives the carb target. Friday loads for Saturday; Saturday is the effort.
+    if dow == "Sat" and hike_sat and days_to_sat == 0:
+        dtype, key = "long hike day", "longHikeDay"
+    elif dow == "Fri" and hike_sat and days_to_sat == 1:
+        dtype, key = "load day — tomorrow is the hike", "dayBeforeLongHike"
+    elif dow == "Mon":
+        dtype, key = "easy day", "easyDay"
+    else:
+        dtype, key = "moderate day", "moderateDay"
+
+    G = D["nutritionGuidance"]
+    clo, chi = [float(x) for x in G["carbsPerKgPerDay"][key].replace(" g", "").split("-")]
+    plo, phi = [float(x) for x in G["proteinPerKgPerDay"]["range"].replace(" g", "").split("-")]
+    CLO, CHI = round(KG * clo), round(KG * chi)
+    PLO, PHI = round(KG * plo), round(KG * phi)
+
+    # what has actually gone in today
+    log = next((x for x in (D.get("dailyLog") or []) if x["date"] == iso), {}) or {}
+    # a scanned total wins; an estimate built from foodTable is used but labelled, because
+    # a guess presented as a measurement becomes indistinguishable from one later
+    got_c = log.get("carbsG")
+    est_c = got_c is None and log.get("carbsGEstimated") is not None
+    if est_c:
+        got_c = log["carbsGEstimated"]
+    got_p = log.get("proteinG")
+
+    def meter(label, got, lo, hi, unit="g", estimated=False):
+        if got is None:
+            return (f'<div class="kpi"><div class="kl">{e(label)} target</div>'
+                    f'<div class="kv" style="color:{C["ink2"]}">{lo:,}–{hi:,}</div>'
+                    f'<div class="ks">{unit} · nothing logged yet today</div></div>')
+        need_lo, need_hi = max(0, lo - got), max(0, hi - got)
+        col = C["primary"] if got >= lo else C["warn"] if got >= lo * 0.6 else C["bad"]
+        tail = ("target met" if need_hi == 0 else
+                f"{need_lo:,}–{need_hi:,} {unit} still to go")
+        tag = " (estimated, not scanned)" if estimated else ""
+        return (f'<div class="kpi"><div class="kl">{e(label)} so far{e(tag)}</div>'
+                f'<div class="kv" style="color:{col}">{got:,}</div>'
+                f'<div class="ks">of {lo:,}–{hi:,} {unit} · <b>{tail}</b></div></div>')
+
+    kpis = (meter("Carbs", got_c, CLO, CHI, estimated=est_c)
+            + meter("Protein", got_p, PLO, PHI))
+    if est_c and log.get("carbsEstimateMethod"):
+        kpis += (f'<div class="kpi" style="grid-column:1/-1"><div class="kl">How that '
+                 f'estimate was built</div><div class="ks">{e(log["carbsEstimateMethod"])}'
+                 f'</div></div>')
+
+    # ── what closes the gap, built greedily from his own foods
+    FT = D["foodTable"]
+    gap = None
+    if got_c is not None and got_c < CLO:
+        gap = round((CLO + CHI) / 2) - got_c
+    elif got_c is None:
+        gap = round((CLO + CHI) / 2)
+    suggest = ""
+    if gap and gap > 0:
+        # biggest-first, so the list stays short enough to act on
+        pool = sorted([i for i in FT["items"] if i["tag"] in ("meal", "quick", "bread")],
+                      key=lambda i: -i["c"])
+        pick, left = [], gap
+        for it in pool:
+            n = int(left // it["c"])
+            if n >= 1:
+                n = min(n, 3)
+                pick.append((n, it))
+                left -= n * it["c"]
+            if left < 8:
+                break
+        tot_c = sum(n * i["c"] for n, i in pick)
+        tot_p = sum(n * i["p"] for n, i in pick)
+        lis = "".join(f'<li>{n}× {e(i["food"])} — {n*i["c"]:g} g carbs, '
+                      f'{n*i["p"]:g} g protein</li>' for n, i in pick)
+        suggest = (f'<div class="callout"><b>To close roughly {gap:,} g of carbs, '
+                   f'one way from what is already in the kitchen:</b>'
+                   f'<ul class="ul">{lis}</ul>'
+                   f'That combination is about {tot_c:g} g carbs and {tot_p:g} g protein. '
+                   f'Not a prescription — the point is that the number is reachable with '
+                   f'ordinary food rather than needing a plan.</div>')
+
+    # ── supplements due today
+    act = [x for x in D["supplements"] if x.get("status") == "active"]
+    supp = " · ".join(e(x["name"]) for x in act)
+    evening = [x["name"] for x in act if "vening" in (x.get("note") or "")]
+    supp_note = (f'Take in the evening: {e(", ".join(evening))}.' if evening else "")
+
+    # ── the actions that are actually live, from the forward plan
+    live = [x for x in D["forwardPlan"]
+            if x.get("kind") == "admin" and x.get("detail")][:1]
+    todo = "".join(f'<li>{e(x["detail"])}</li>' for x in live)
+    for c in D["nineWeekPlan"]["conflicts"]:
+        todo += (f'<li><b>Unresolved:</b> {e(c["what"])} — sheet says '
+                 f'{e(c["sheet"].split(" — ")[0])}, log says '
+                 f'{e(c["log"].split(" — ")[0])}. Different permit either way.</li>')
+
+    sat = ""
+    if wk:
+        when = ("today" if days_to_sat == 0 else "tomorrow" if days_to_sat == 1
+                else f"in {days_to_sat} days")
+        # precomputed: a nested same-quote f-string is a syntax error on 3.11, and this
+        # is the third time that has bitten in this file. See RUNBOOK.md.
+        via = f' via {e(wk["route"])}' if wk["route"] else ""
+        size = (f'{wk["distanceMi"]:g} mi · {wk["ascentFt"]:,} ft'
+                if wk["distanceMi"] else "taper")
+        sat = (f'<div class="step" style="border-left-color:{C["gold"]}">'
+               f'<div class="swin"><span style="color:{C["gold"]};font-weight:700">'
+               f'Next big day</span> {e(sd(wk["date"]))} — {e(when)}</div>'
+               f'<div class="stt">{e(wk["peak"])}'
+               f'{via}</div>'
+               f'<div class="sub">{size}</div></div>')
+
+    return f"""<section id="today" style="border:2px solid {C['primary']}">
+  <h2>Today<span class="n">{e(today.strftime('%A, %B'))} {today.day} · {DAYS} days to the summit</span></h2>
+  <div class="step" style="border-left-color:{C['accent']}">
+    <div class="swin"><span style="color:{C['accent']};font-weight:700">Training</span>
+     {e(dow)} · {e(dtype)}</div>
+    <div class="stt">{e(session)}</div>
+    <div class="sub">{e(snote)}</div></div>
+  {sat}
+  <h3 style="margin:18px 0 8px">Eating — where today stands</h3>
+  <div class="kpis">{kpis}</div>
+  {suggest}
+  <h3 style="margin:18px 0 8px">Supplements today</h3>
+  <p class="sub">{supp}. {supp_note} Beet powder matters more at altitude, so it stays
+   through Whitney even though no difference is felt day to day.</p>
+  <h3 style="margin:18px 0 8px">Decisions waiting on you</h3>
+  <ul class="ul">{todo}</ul>
+</section>"""
+
+
 def s_status():
     hi_note = "on foot"
     nf = [a for a in D.get("altitudeExposure", []) if not a.get("onFoot")]
@@ -1175,7 +1326,7 @@ ol.steps li{{padding:3px 0}}
 footer{{color:{C['ink3']};font-size:12px;text-align:center;padding:24px 12px 0;line-height:1.7}}
 """
 
-NAV = [("status", "Status"), ("levers", "What matters"), ("week", "This week"),
+NAV = [("today", "Today"), ("status", "Status"), ("levers", "What matters"), ("week", "This week"),
        ("weeks", "Nine weeks"), ("summit", "Summit day"),
        ("plan", "Plan to Oct 2"), ("energy", "Energy budget"), ("fuel", "Fuel & fluid"),
        ("altitude", "Altitude"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
@@ -1200,6 +1351,7 @@ doc = f"""<!doctype html>
   {len(DIG)} activities on record since {DIG[0]['start'][:10]}</p>
 </header>
 <nav class="toc">{''.join(f'<a href="#{i}">{e(l)}</a>' for i,l in NAV)}</nav>
+{s_today()}
 {s_status()}
 {s_levers()}
 {s_week()}

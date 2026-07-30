@@ -11,6 +11,9 @@
   "date": "2026-07-29",
   "dailyLog": {
     "meals": "Morning: tea with milk, no sugar, and 2 slices of bread (athlete estimated ~60 cal carb, but noted that figure may be too low). Afternoon: protein bar, 11 g protein. Evening: chicken salad with dressing, another tea with no sugar, and 50 g peanuts. Dinner: 2 eggs and 5 dosas.",
-    "training": "No hike — planned to go out wearing a 20 lb weighted vest but stayed in to talk with his wife instead. Wore the 20 lb vest at home for about 1 hour: roughly 20 min standing/walking around, ~40 min sitting."
+    "training": "No hike — planned to go out wearing a 20 lb weighted vest but stayed in to talk with his wife instead. Wore the 20 lb vest at home for about 1 hour: roughly 20 min standing/walking around, ~40 min sitting.",
+    "breadCarbsG": 33,
+    "carbsGEstimated": 168,
+    "carbsEstimateMethod": "Summed from foodTable: tea x2 ~6, 2 slices bread 33 (his figure), protein bar ~20, chicken salad with dressing ~10, 50 g peanuts ~8, 2 eggs ~1, 5 dosas ~90. Not scanned."
   }
 }

@@ -3595,5 +3595,115 @@
       ]
     ],
     "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
+  },
+  "foodTable": {
+    "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick.",
+    "measured": [
+      "Kings Hawaiian bread — 33 g carbs for 4 squares, his own figure"
+    ],
+    "items": [
+      {
+        "food": "Kings Hawaiian bread, 1 square",
+        "c": 8,
+        "p": 1.5,
+        "tag": "bread"
+      },
+      {
+        "food": "Tea with milk, no sugar, 200 ml",
+        "c": 3,
+        "p": 2,
+        "tag": "drink"
+      },
+      {
+        "food": "Cooked rice, 1 cup",
+        "c": 45,
+        "p": 4,
+        "tag": "meal"
+      },
+      {
+        "food": "Dhal, 1 cup cooked",
+        "c": 25,
+        "p": 12,
+        "tag": "meal"
+      },
+      {
+        "food": "Cabbage sabzi, 1 cup",
+        "c": 8,
+        "p": 2,
+        "tag": "meal"
+      },
+      {
+        "food": "Yogurt, 150 g plain",
+        "c": 9,
+        "p": 8,
+        "tag": "protein"
+      },
+      {
+        "food": "Dosa, 1 medium",
+        "c": 18,
+        "p": 3,
+        "tag": "meal"
+      },
+      {
+        "food": "Coconut chutney, 2 tbsp",
+        "c": 3,
+        "p": 1,
+        "tag": "meal"
+      },
+      {
+        "food": "Banana, medium",
+        "c": 27,
+        "p": 1,
+        "tag": "quick"
+      },
+      {
+        "food": "Medjool dates, 2",
+        "c": 36,
+        "p": 1,
+        "tag": "quick"
+      },
+      {
+        "food": "Orange, medium",
+        "c": 15,
+        "p": 1,
+        "tag": "quick"
+      },
+      {
+        "food": "Salted pretzels, 50 g",
+        "c": 38,
+        "p": 4,
+        "tag": "quick"
+      },
+      {
+        "food": "Poha or rice pack",
+        "c": 45,
+        "p": 5,
+        "tag": "meal"
+      },
+      {
+        "food": "Peanut butter sandwich",
+        "c": 30,
+        "p": 12,
+        "tag": "meal"
+      },
+      {
+        "food": "Energy bar",
+        "c": 30,
+        "p": 10,
+        "tag": "quick"
+      },
+      {
+        "food": "GU Roctane gel",
+        "c": 21,
+        "p": 0,
+        "tag": "trail"
+      },
+      {
+        "food": "SuperBeets scoop",
+        "c": 5,
+        "p": 0,
+        "tag": "supp"
+      }
+    ]
   }
 }
