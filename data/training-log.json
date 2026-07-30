@@ -1591,15 +1591,21 @@
       "name": "SuperBeets",
       "status": "active",
       "since": "2026-05-30",
-      "note": "~30 days used, one day skipped. No felt difference. Real but small effect (3-5% oxygen efficiency), a few bpm — not a caffeine-like kick. Shrinks as fitness improves. Worth keeping through Whitney because it matters more at altitude."
+      "note": "~30 days used, one day skipped. No felt difference. Real but small effect (3-5% oxygen efficiency), a few bpm — not a caffeine-like kick. Shrinks as fitness improves. Worth keeping through Whitney because it matters more at altitude.",
+      "label": "Label read Jul 30. Per 1 tsp (5 g) serving, 30 per container: 40 cal, 4 g carb of which 3 g sugars, 1 g protein, 65 mg sodium, 180 mg potassium, 50 mg vitamin C, 18 mg magnesium. Non-GMO beetroot powder plus fermented beetroot, NO3-T. The label does NOT declare nitrate content, so the effective dose cannot be checked against the 5-8 mmol used in exercise research — that is the one number that matters here and it is the one number missing.",
+      "labelRead": "2026-07-30"
     },
     {
       "name": "D3/K2",
-      "status": "active"
+      "status": "active",
+      "label": "Label read Jul 30. Sports Research, 1 veggie softgel: vitamin D3 125 mcg (5,000 IU, 625% DV) and vitamin K2 as MK-7 100 mcg, in coconut MCT oil. 160 per container. K2 alongside D3 is the sensible pairing.",
+      "labelRead": "2026-07-30"
     },
     {
       "name": "Omega-3",
-      "status": "active"
+      "status": "active",
+      "label": "Label read Jul 30. 1 liquid softgel: 15 cal, 1.5 g fat, 1,250 mg fish oil concentrate giving 1,055 mg total omega-3 — EPA 690 mg, DHA 310 mg. A real dose rather than a token one.",
+      "labelRead": "2026-07-30"
     },
     {
       "name": "Magnesium glycinate",
@@ -1655,7 +1661,9 @@
     "expectations": "Do not expect to feel anything. You ran SuperBeets ~30 days and felt nothing, and two bottles is acute dosing rather than the 3–7 day loading that shows the clearest effect. Whatever this does, it is a rounding error next to hitting your fluid, sodium and calorie targets.",
     "harmlessSurprise": "Beeturia — pink or red urine, sometimes reddish stool — is common after beet juice and completely harmless. Worth knowing in advance so you do not mistake it for blood mid-hike.",
     "fridayResult": "PASSED. No reflux from the beet juice, from cold coffee, or from the 35 mg caffeine gel. Saturday's bottle is a go.",
-    "coffeeCaveat": "One distinction worth keeping straight: reflux and bloating are different problems. The Jul 11 trouble was bloating and gas from a MOCHA on an empty stomach at 5am — milk plus fasted gut plus heat. No reflux from cold coffee is genuinely good news, and cold brew is lower in acid than hot brewed, so it fits. But it does not clear coffee of the bloating question. If you want it Saturday, have it with breakfast rather than fasted, and skip the milk."
+    "coffeeCaveat": "One distinction worth keeping straight: reflux and bloating are different problems. The Jul 11 trouble was bloating and gas from a MOCHA on an empty stomach at 5am — milk plus fasted gut plus heat. No reflux from cold coffee is genuinely good news, and cold brew is lower in acid than hot brewed, so it fits. But it does not clear coffee of the bloating question. If you want it Saturday, have it with breakfast rather than fasted, and skip the milk.",
+    "nitrateTiming": "Plasma nitrite peaks roughly 2-3 hours after ingestion, so on a hike day the beet dose belongs 2-3 h before the start rather than the night before or at the trailhead. For a 6 am start that means taking it around 3-4 am, which in practice means with the pre-drive coffee and food, not in the car park.",
+    "doseUnknown": "SuperBeets does not declare milligrams of nitrate on the label. The exercise literature uses roughly 5-8 mmol, and there is no way to tell from the tub how close one teaspoon gets. Beetroot juice is the more verifiable route if the nitrate effect is the reason for taking it at all."
   },
   "gear": [
     {

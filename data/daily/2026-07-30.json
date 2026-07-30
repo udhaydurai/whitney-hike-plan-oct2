@@ -9,14 +9,15 @@
   "date": "2026-07-30",
   "dailyLog": {
     "meals": "Tea, 200 ml with 30 ml milk. 3 slices Inked Bread. 240 ml Pressed orange+beet juice. 1 tin sardines in olive oil, 85 g drained. All four read from labels or measured.",
-    "netCarbsG": 30,
-    "totalCarbsG": 60,
+    "netCarbsG": 34,
+    "totalCarbsG": 64,
     "fiberG": 30,
-    "proteinG": 33,
-    "sodiumMg": 785,
+    "proteinG": 34,
+    "sodiumMg": 850,
     "symptoms": "Slight cramp in both calves. Bilateral, at rest, the day after wearing a 20 lb vest for about an hour.",
     "plan": "2x Liquid IV through the day",
-    "carbsEstimateMethod": "Every item from a label or his own measurement: bread 3 g net (33 g total, 30 g fibre), juice 25 g, tea 1.5 g, sardines 0 g. Nothing estimated.",
-    "caloriesKcal": 480
+    "carbsEstimateMethod": "Every item from a label or his own measurement: bread 3 g net (33 g total, 30 g fibre), juice 25 g, tea 1.5 g, sardines 0 g, SuperBeets 4 g. Nothing estimated.",
+    "caloriesKcal": 520,
+    "supplements": "SuperBeets 1 tsp, D3/K2 5,000 IU + 100 mcg MK-7, Omega-3 1,055 mg (EPA 690 / DHA 310). All three labels photographed and read."
   }
 }
