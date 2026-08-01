@@ -1773,14 +1773,14 @@
       "severity": "high",
       "since": "2026-07-30",
       "status": "open",
-      "action": "His own record says he has acid reflux and that ginger is a trigger. The ingredient list on this bottle is celery, beet, carrot, apple, spinach, GINGER, lemon. It is late in the list so the amount is small, and it has not obviously caused a problem yet — but it is a known trigger going in daily and unnoticed, and reflux on a 4 am summit-day start would be miserable. Check whether the Pressed orange+beet juice is ginger-free (it lists only orange and beet juice, so it appears to be) and prefer that one on Friday and Saturday. Worth a deliberate test rather than an assumption either way."
+      "action": "Escalated after reading the front label. This is not a trace: the bottle states TWO INCHES of ginger per 450 ml serving, roughly 20-25 g of fresh root — more than most recipes use for a whole dish. His own record says he has acid reflux and that ginger is a trigger. It sat sixth in the ingredient list, which is why the back label made it look incidental. Stop using this one on Friday and Saturday. The Pressed orange+beet juice lists only orange and beet, so that is the hike-day drink. Whether to keep this as a weekday drink is his call, but it should be a decision rather than an accident."
     },
     {
       "issue": "Three overlapping beet sources in one day, total nitrate unknown",
       "severity": "medium",
       "since": "2026-07-30",
       "status": "open",
-      "action": "Jul 30 included SuperBeets powder, the Pressed orange+beet juice and the Trader Joe's beet blend. None of the three declares nitrate content, so the combined dose cannot be checked against the 5-8 mmol used in research. More is not automatically better and the cost is calories and gut volume that carbohydrate needs. Pick one primary beet source, ideally the one taken 2-3 h before a hike start, rather than stacking three."
+      "action": "Jul 30 included SuperBeets powder, the Pressed orange+beet juice and the Trader Joe's blend. None declares nitrate, so the total is unknowable. The front label does help: 1¼ medium beets plus ⅓ lb of spinach per bottle, and spinach is among the highest-nitrate vegetables there is — often higher per gram than beetroot. So this bottle is probably a better nitrate source than its name suggests, though still likely below the ~6.5 mmol concentrated shots used in research. Pick one primary source, timed 2-3 h before a start, rather than stacking three."
     },
     {
       "issue": "The diet is low-carb by composition, not by accident of tracking",
@@ -3839,7 +3839,8 @@
         "na": 170,
         "tag": "drink",
         "labelled": true,
-        "note": "CONTAINS GINGER — see the reflux issue."
+        "note": "CONTAINS 2 INCHES OF GINGER PER BOTTLE — not a trace. See reflux issue.",
+        "composition": "Per 450 ml bottle, from the front label: 1¼ medium beets, ⅓ lb spinach, 1½ celery stalks, almost ½ cucumber, 1 medium apple, 2¼ carrots, 2 INCHES of ginger, ¼ lemon. HPP cold-pressure processed."
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
