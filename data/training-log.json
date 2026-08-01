@@ -3794,5 +3794,26 @@
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
+  },
+  "wheyProtein": {
+    "asked": "2026-07-30",
+    "verdict": "Not during the hike. Yes within an hour after it, and yes on weekdays.",
+    "duringHike": {
+      "recommendation": "No",
+      "why": [
+        "Carbohydrate is the limiting fuel on a climb, not protein. Where studies show a benefit from adding protein during endurance exercise, it is mostly in trials where carbohydrate intake was already too low — the correct fix there is more carbohydrate, not a protein substitute. The evidence for a performance gain when carbs are adequate is weak.",
+        "Gut capacity on a long day is finite and it is already the bottleneck. Protein and fat slow gastric emptying, and there is a standing record of bloating with four gels and gut distress after long efforts, plus reflux.",
+        "Every calorie of shake displaces a calorie of carbohydrate at the exact hours the tank is emptying. On the current pattern that trade goes the wrong way."
+      ]
+    },
+    "afterHike": {
+      "recommendation": "Yes — this is the good use",
+      "detail": "25-40 g of whey with carbohydrate inside about 60 minutes of finishing. Liquid is easier than food when appetite is gone after a big day, which it reliably is. Whey plus a banana, or whey stirred into the usual rice and curd, both work."
+    },
+    "weekdays": {
+      "recommendation": "Yes — the easiest fix available",
+      "detail": "Daily protein target is 117-146 g and Jul 30 stood at 34 g by mid-morning. One or two shakes closes most of that gap without cooking, and it does not compete with anything."
+    },
+    "caution": "Whey is a common trigger for bloating in people who already get it. Test it on a weekday before relying on it after a big Saturday."
   }
 }
