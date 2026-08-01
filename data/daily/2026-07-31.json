@@ -7,5 +7,8 @@
     "bodyBattery": 36,
     "source": "read off the watch; superseded by the weekly export"
   },
-  "date": "2026-07-31"
+  "date": "2026-07-31",
+  "dailyLog": {
+    "meals": "Morning: all supplements, protein drink, 2 eggs, milk tea (no sugar). Lunch: 8 oz salmon with fried rice and vegetables. Evening: tea with chickpea snack. Dinner: 6 rotis with cauliflower."
+  }
 }
