@@ -8,18 +8,22 @@
   },
   "date": "2026-07-30",
   "dailyLog": {
-    "meals": "Tea, 200 ml with 30 ml milk. 3 slices Inked Bread. 240 ml Pressed orange+beet juice. 1 tin sardines in olive oil, 85 g drained. All four read from labels or measured. Lunch: 2 cups rice, dhal, and 2.5 scrambled eggs with onion and Thai chilli. Afternoon: another tea with milk, no sugar, plus a chickpea snack. Dinner: pasta.",
-    "netCarbsG": 34,
-    "totalCarbsG": 64,
-    "fiberG": 30,
-    "proteinG": 34,
+    "meals": "Morning: tea 200 ml with 30 ml milk; 3 slices Inked Bread; 240 ml Pressed orange+beet juice; 1 tin sardines in olive oil 85 g. Lunch: 500 g cooked rice (weighed) with spinach, dhal and 1 egg, preceded by a Trader Joe's beet juice.",
+    "netCarbsG": 216,
+    "totalCarbsG": 257,
+    "fiberG": 41,
+    "proteinG": 70,
     "sodiumMg": 850,
     "symptoms": "Slight cramp in both calves. Bilateral, at rest, the day after wearing a 20 lb vest for about an hour.",
     "plan": "2x Liquid IV through the day",
-    "carbsEstimateMethod": "Every item from a label or his own measurement: bread 3 g net (33 g total, 30 g fibre), juice 25 g, tea 1.5 g, sardines 0 g, SuperBeets 4 g. Nothing estimated.",
-    "caloriesKcal": 520,
+    "carbsEstimateMethod": "Labelled or weighed: bread 3 g net (33 total, 30 fibre), Pressed juice 25 g, tea 1.5 g, sardines 0 g, SuperBeets 4 g, 500 g weighed rice 138 g net. Estimated from typical values: dhal ~1 cup 17 g net, spinach ~2 g net, egg 0.5 g. UNKNOWN: the Trader Joe's beet juice, assumed 240 ml at 25 g pending its label.",
+    "caloriesKcal": 1575,
     "supplements": "SuperBeets 1 tsp, D3/K2 5,000 IU + 100 mcg MK-7, Omega-3 1,055 mg (EPA 690 / DHA 310). All three labels photographed and read.",
     "water": "2 Liquid IV pouches, taken roughly 4 hours apart",
-    "training": "Stretching"
+    "training": "Stretching",
+    "openQuestions": [
+      "Trader Joe's beet juice — volume and label not yet read",
+      "Whether the 2 Liquid IV sticks were actually taken"
+    ]
   }
 }

@@ -3626,7 +3626,7 @@
     "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
   },
   "foodTable": {
-    "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick.",
+    "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick. Rice is listed per 100 g so a weighed portion can be computed exactly rather than guessed by the cup — 500 g weighed beats 3 cups estimated.",
     "measured": [
       "Inked Bread — label read Jul 30: per 27 g slice, 30 cal, 11 g total carb, 10 g FIBRE, 4 g protein, 140 mg sodium. Net carb is 1 g per slice.",
       "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium.",
@@ -3791,6 +3791,30 @@
         "na": 340,
         "tag": "protein",
         "labelled": true
+      },
+      {
+        "food": "Cooked rice, per 100 g",
+        "c": 28,
+        "fib": 0.4,
+        "p": 2.7,
+        "na": 1,
+        "tag": "meal"
+      },
+      {
+        "food": "Spinach, 100 g cooked",
+        "c": 4,
+        "fib": 2,
+        "p": 3,
+        "na": 70,
+        "tag": "meal"
+      },
+      {
+        "food": "Egg, 1 large",
+        "c": 0.5,
+        "fib": 0,
+        "p": 6,
+        "na": 70,
+        "tag": "protein"
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
