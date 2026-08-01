@@ -1769,6 +1769,20 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
+      "issue": "The Trader Joe's beet juice contains ginger — a stated reflux trigger",
+      "severity": "high",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "His own record says he has acid reflux and that ginger is a trigger. The ingredient list on this bottle is celery, beet, carrot, apple, spinach, GINGER, lemon. It is late in the list so the amount is small, and it has not obviously caused a problem yet — but it is a known trigger going in daily and unnoticed, and reflux on a 4 am summit-day start would be miserable. Check whether the Pressed orange+beet juice is ginger-free (it lists only orange and beet juice, so it appears to be) and prefer that one on Friday and Saturday. Worth a deliberate test rather than an assumption either way."
+    },
+    {
+      "issue": "Three overlapping beet sources in one day, total nitrate unknown",
+      "severity": "medium",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "Jul 30 included SuperBeets powder, the Pressed orange+beet juice and the Trader Joe's beet blend. None of the three declares nitrate content, so the combined dose cannot be checked against the 5-8 mmol used in research. More is not automatically better and the cost is calories and gut volume that carbohydrate needs. Pick one primary beet source, ideally the one taken 2-3 h before a hike start, rather than stacking three."
+    },
+    {
       "issue": "The diet is low-carb by composition, not by accident of tracking",
       "severity": "high",
       "since": "2026-07-30",
@@ -3632,7 +3646,8 @@
       "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium.",
       "Tea cup measured at 200 ml, Jul 30 — his own measurement.",
       "Tea fully specified Jul 30 — 200 ml cup, 30 ml milk, no sugar. His own figures.",
-      "Sardines in olive oil — label read Jul 30: per 85 g drained tin, 250 cal, 12 g fat, 0 g carb, 20 g protein, 340 mg sodium, plus vitamin D, calcium and iron."
+      "Sardines in olive oil — label read Jul 30: per 85 g drained tin, 250 cal, 12 g fat, 0 g carb, 20 g protein, 340 mg sodium, plus vitamin D, calcium and iron.",
+      "Trader Joe's beet blend juice — label read Jul 30: 450 ml bottle, 150 cal, 36 g carb of which 5 g fibre so 31 g net, 22 g sugars, 3 g protein, 170 mg sodium, 1,010 mg potassium, 3.5 mg iron. Ingredients: celery, beet, carrot, apple, spinach, GINGER, lemon juice."
     ],
     "items": [
       {
@@ -3815,6 +3830,16 @@
         "p": 6,
         "na": 70,
         "tag": "protein"
+      },
+      {
+        "food": "Trader Joe's beet blend juice, 450 ml bottle",
+        "c": 36,
+        "fib": 5,
+        "p": 3,
+        "na": 170,
+        "tag": "drink",
+        "labelled": true,
+        "note": "CONTAINS GINGER — see the reflux issue."
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
