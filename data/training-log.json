@@ -1769,18 +1769,20 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
-      "issue": "The Trader Joe's beet juice contains ginger — a stated reflux trigger",
-      "severity": "high",
+      "issue": "Ginger in the Trader Joe's juice — tested, no reaction",
+      "severity": "watch",
       "since": "2026-07-30",
-      "status": "open",
-      "action": "Escalated after reading the front label. This is not a trace: the bottle states TWO INCHES of ginger per 450 ml serving, roughly 20-25 g of fresh root — more than most recipes use for a whole dish. His own record says he has acid reflux and that ginger is a trigger. It sat sixth in the ingredient list, which is why the back label made it look incidental. Stop using this one on Friday and Saturday. The Pressed orange+beet juice lists only orange and beet, so that is the hike-day drink. Whether to keep this as a weekday drink is his call, but it should be a decision rather than an accident."
+      "status": "closed",
+      "action": "Escalated after reading the front label. This is not a trace: the bottle states TWO INCHES of ginger per 450 ml serving, roughly 20-25 g of fresh root — more than most recipes use for a whole dish. His own record says he has acid reflux and that ginger is a trigger. It sat sixth in the ingredient list, which is why the back label made it look incidental. Stop using this one on Friday and Saturday. The Pressed orange+beet juice lists only orange and beet, so that is the hike-day drink. Whether to keep this as a weekday drink is his call, but it should be a decision rather than an accident.",
+      "closed": "2026-07-30",
+      "resolution": "Overstated on my side and corrected by him. It is not a daily drink — it is taken only on hike days, and he had it once before with no problem. Today it has been an hour and a half to two hours with nothing. So the ginger dose in this form, juiced and diluted among 450 ml of other vegetables, does not trigger his reflux at this quantity. The label told me the dose; it could not tell me the response, and the response is his data, not mine to infer. Same rule as Garmin versus the PDF, pointing the other way: he owns how it felt."
     },
     {
-      "issue": "Three overlapping beet sources in one day, total nitrate unknown",
+      "issue": "Beet sources overlap on hike days; total nitrate still unknown",
       "severity": "medium",
       "since": "2026-07-30",
       "status": "open",
-      "action": "Jul 30 included SuperBeets powder, the Pressed orange+beet juice and the Trader Joe's blend. None declares nitrate, so the total is unknowable. The front label does help: 1¼ medium beets plus ⅓ lb of spinach per bottle, and spinach is among the highest-nitrate vegetables there is — often higher per gram than beetroot. So this bottle is probably a better nitrate source than its name suggests, though still likely below the ~6.5 mmol concentrated shots used in research. Pick one primary source, timed 2-3 h before a start, rather than stacking three."
+      "action": "Corrected: the Trader Joe's bottle is hike-day only, not daily, so the three-way overlap is narrower than it looked. What stands is that none of the sources declares nitrate, so the dose cannot be checked against research. The front label helps — 1¼ beets plus ⅓ lb of spinach, and spinach is among the highest-nitrate vegetables there is. The actionable part is timing rather than quantity: take it 2-3 h before the start, since plasma nitrite peaks around then."
     },
     {
       "issue": "The diet is low-carb by composition, not by accident of tracking",
@@ -1966,6 +1968,13 @@
       "since": "2026-07-28",
       "status": "open",
       "action": "Big Agnes Copper Spur UL1 is owned; the MSR Access 2 is the partner's suggestion for a shared tent, to be settled at the Labor Day sale on Sep 7. Week 7 on Sep 12 is the only scheduled night out before the summit, so a tent bought on Sep 7 gets exactly one rehearsal — pitching, condensation, and whether two people and two packs actually fit. If the decision slips past Sep 12, go to Whitney with the tent already known to work rather than the one bought on offer."
+    },
+    {
+      "issue": "Reflux under a loaded pack and lying at Trail Camp is still untested",
+      "severity": "watch",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "The juice is now tested at rest and on a hike day with no reaction, which settles the ordinary case. The condition that has not occurred yet is the specific one: a hipbelt compressing the abdomen under roughly 30 lb, ten hours of exertion, and then lying down at 12,000 ft. Exertion and recumbency both raise reflux risk independently of what was drunk. Not a reason to change anything now — a reason to notice it on the Week 7 overnight, which is the rehearsal for exactly that combination."
     }
   ],
   "trailOptions": [
