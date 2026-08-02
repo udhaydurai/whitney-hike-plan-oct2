@@ -1769,6 +1769,20 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
+      "issue": "Jul 30 hit the carb target, but by a route that will not repeat",
+      "severity": "medium",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "First day on record to reach the carb target: ~398 g net against 365-511. Worth noting how. Roughly 138 g came from 500 g of weighed rice at lunch and 176 g net from a feast dinner carrying about 88 g of fat. Total fat for the day was around 118 g and calories around 3,550. That works once. It is not a Friday template: tomorrow's load target is 511-730 g, which is more carbohydrate than tonight delivered, and fat at that level crowds out the volume needed and slows everything down. The repeatable route is the LUNCH pattern — weighed rice with dhal — run twice, plus juice and dates. Fried food is the wrong tool for a load day."
+    },
+    {
+      "issue": "Fried, late and high-fat two nights before a 16 mi day",
+      "severity": "watch",
+      "since": "2026-07-30",
+      "status": "open",
+      "action": "Deep-fried vadai, mutton curry and chilli chicken together put roughly 88 g of fat in one evening meal, against a standing record of reflux and of gut distress on long efforts. Nothing to do about it tonight. The thing to actually check is tomorrow's morning glance: sleep score and hours against the recent run. If sleep drops, that is the cost, and it lands on the load day before Saturday."
+    },
+    {
       "issue": "Ginger in the Trader Joe's juice — tested, no reaction",
       "severity": "watch",
       "since": "2026-07-30",
@@ -3649,7 +3663,7 @@
     "landmarkNote": "Cumulative distance and elevation from the Portal, with switchback counts. The reference column in the sheet is a 7:10 ascent, which is a fast time and not the target — the value here is having real landmarks to pin the fuelling schedule to instead of clock hours."
   },
   "foodTable": {
-    "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick. Rice is listed per 100 g so a weighed portion can be computed exactly rather than guessed by the cup — 500 g weighed beats 3 cups estimated.",
+    "note": "Approximate values for foods already in the log, so a target can be hit without scanning anything. Scanning is more accurate; these are close enough that the error is small against a 400 g daily target, and the alternative is not eating because the number was unknown. Correct any of these at a nightly check-in and they will stick. Rice is listed per 100 g so a weighed portion can be computed exactly rather than guessed by the cup — 500 g weighed beats 3 cups estimated. Restaurant and fried items are the widest estimates in this table — portion size and oil absorbed both vary a lot. Treat them as ±20%.",
     "measured": [
       "Inked Bread — label read Jul 30: per 27 g slice, 30 cal, 11 g total carb, 10 g FIBRE, 4 g protein, 140 mg sodium. Net carb is 1 g per slice.",
       "Pressed orange + beet juice — label read Jul 30: per 240 ml, 110 cal, 25 g carb, 0 g fibre, 20 g sugar, 2 g protein, 490 mg potassium, 10 mg sodium.",
@@ -3850,6 +3864,66 @@
         "labelled": true,
         "note": "CONTAINS 2 INCHES OF GINGER PER BOTTLE — not a trace. See reflux issue.",
         "composition": "Per 450 ml bottle, from the front label: 1¼ medium beets, ⅓ lb spinach, 1½ celery stalks, almost ½ cucumber, 1 medium apple, 2¼ carrots, 2 INCHES of ginger, ¼ lemon. HPP cold-pressure processed."
+      },
+      {
+        "food": "Paratha, 1 medium",
+        "c": 28,
+        "fib": 2,
+        "p": 4,
+        "na": 220,
+        "tag": "meal",
+        "fatG": 9,
+        "estimated": true
+      },
+      {
+        "food": "Mutton curry, ~1 cup with gravy",
+        "c": 8,
+        "fib": 1,
+        "p": 25,
+        "na": 600,
+        "tag": "meal",
+        "fatG": 22,
+        "estimated": true
+      },
+      {
+        "food": "Chilli chicken, ~150 g",
+        "c": 20,
+        "fib": 1,
+        "p": 25,
+        "na": 900,
+        "tag": "meal",
+        "fatG": 20,
+        "estimated": true
+      },
+      {
+        "food": "Biryani rice, ~1 cup",
+        "c": 45,
+        "fib": 1,
+        "p": 5,
+        "na": 500,
+        "tag": "meal",
+        "fatG": 10,
+        "estimated": true
+      },
+      {
+        "food": "Vermicelli payasam, 100 g",
+        "c": 19,
+        "fib": 0,
+        "p": 2.5,
+        "na": 60,
+        "tag": "sweet",
+        "fatG": 4,
+        "estimated": true
+      },
+      {
+        "food": "Medu vadai, 1 small",
+        "c": 8,
+        "fib": 2,
+        "p": 3,
+        "na": 180,
+        "tag": "meal",
+        "fatG": 4,
+        "estimated": true
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."

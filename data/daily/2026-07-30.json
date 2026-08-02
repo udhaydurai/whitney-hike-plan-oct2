@@ -8,22 +8,23 @@
   },
   "date": "2026-07-30",
   "dailyLog": {
-    "meals": "Morning: tea 200 ml with 30 ml milk; 3 slices Inked Bread; 240 ml Pressed orange+beet juice; 1 tin sardines in olive oil 85 g. Lunch: 500 g cooked rice (weighed) with spinach, dhal and 1 egg, preceded by a Trader Joe's beet juice.",
-    "netCarbsG": 222,
-    "totalCarbsG": 268,
-    "fiberG": 46,
-    "proteinG": 71,
+    "meals": "Morning: tea 200 ml with 30 ml milk; 3 slices Inked Bread; 240 ml Pressed orange+beet juice; 1 tin sardines in olive oil 85 g. Lunch: 500 g cooked rice (weighed) with spinach, dhal and 1 egg, preceded by a Trader Joe's beet juice. Dinner: 2 paratha with mutton curry, chilli chicken, biryani rice, 200 g vermicelli payasam, 5 small vadai.",
+    "netCarbsG": 398,
+    "totalCarbsG": 475,
+    "fiberG": 77,
+    "proteinG": 150,
     "sodiumMg": 1020,
     "symptoms": "Slight cramp in both calves. Bilateral, at rest, the day after wearing a 20 lb vest for about an hour. No reflux from the Trader Joe's beet juice — an hour and a half to two hours after, nothing. Also had it once before on a hike day with no problem.",
     "plan": "2x Liquid IV through the day",
-    "carbsEstimateMethod": "Labelled or weighed: bread 3 g net (33 total, 30 fibre), Pressed juice 25 g, tea 1.5 g, sardines 0 g, SuperBeets 4 g, Trader Joe's beet blend 31 g net (36 total, 5 fibre, 450 ml bottle), 500 g weighed rice 138 g net. Estimated: dhal ~17 g net, spinach ~2 g, egg 0.5 g. Nothing unknown remains.",
-    "caloriesKcal": 1615,
+    "carbsEstimateMethod": "Labelled or weighed: bread 3 g net (33 total, 30 fibre), Pressed juice 25 g, tea 1.5 g, sardines 0 g, SuperBeets 4 g, Trader Joe's beet blend 31 g net (36 total, 5 fibre, 450 ml bottle), 500 g weighed rice 138 g net. Estimated: dhal ~17 g net, spinach ~2 g, egg 0.5 g. Nothing unknown remains. Dinner estimated at 207 g carb / 176 g net, 79 g protein, 88 g fat — fried and restaurant items are the loosest figures here, ±20%.",
+    "caloriesKcal": 3551,
     "supplements": "SuperBeets 1 tsp, D3/K2 5,000 IU + 100 mcg MK-7, Omega-3 1,055 mg (EPA 690 / DHA 310). All three labels photographed and read.",
     "water": "2 Liquid IV pouches, taken roughly 4 hours apart",
     "training": "Stretching",
     "openQuestions": [
       "Whether the 2 Liquid IV sticks were actually taken"
     ],
-    "potassiumMg": 1680
+    "potassiumMg": 1680,
+    "fatG": 118
   }
 }
