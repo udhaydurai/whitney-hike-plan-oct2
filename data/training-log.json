@@ -4254,6 +4254,33 @@
         },
         "howMuchToBuy": "A 30-stick box covers roughly two sticks per big day across the six remaining training weekends plus Whitney's three days, with spares. One box is enough — he does not need a second.",
         "cautionOnStacking": "1,000 mg per stick is a large dose. Three LMNT plus seven SaltStick plus 5 L of PF mix would be roughly 9,500 mg of sodium in a day, well past any target. Count the total against 700-1,000 mg per litre drunk and let the mix do most of the work."
+      },
+      "lmntVsPH1500": {
+        "bothAreTheSameThing": "Both are electrolyte-only with zero carbohydrate. This is a like-for-like comparison, and neither one touches the 25 g/hr carbohydrate problem.",
+        "lmnt": {
+          "asin": "B08ZJQ1XD4",
+          "sodiumPerStick": 1000,
+          "potassiumMg": 200,
+          "magnesiumMg": 60,
+          "unitsPerPack": 30,
+          "totalSodiumMg": 30000,
+          "form": "powder stick",
+          "source": "drinklmnt.com, read Aug 3 2026"
+        },
+        "ph1500": {
+          "asin": "B07L452157",
+          "sodiumPerTablet": 750,
+          "sodiumPerLitre": 1500,
+          "waterPerTablet": "16 oz (473 ml)",
+          "unitsPerPack": 10,
+          "totalSodiumMg": 7500,
+          "kcalPerTablet": 10,
+          "form": "effervescent tablet",
+          "source": "thefeed.com product page, read Aug 3 2026"
+        },
+        "verdict": "LMNT, for this project. Three reasons. It carries 30,000 mg of sodium per pack against 7,500 — four times the sodium for what is usually a similar price, so the cost per gram of sodium is not close. It declares potassium at 200 mg and magnesium at 60 mg, which the PH tube does not state, and after bilateral calf cramps those two are worth knowing. And at 1,000 mg in roughly 500 ml it mixes to about 2,000 mg per litre, so it can be diluted down to any target, whereas a 750 mg tablet is a fixed step.",
+        "wherePH1500Wins": "Carry weight and convenience. A tube of ten effervescent tablets is far lighter and less messy than powder sticks, dissolves without shaking, and 750 mg per 473 ml bottle is a clean single-bottle dose with no measuring. If the goal were the lightest possible trail kit rather than the cheapest sodium, the tablets would win.",
+        "theActualRecommendation": "Buy LMNT as the bulk sodium and skip the PH tablets. The Precision Fuel drink mix already delivers 1,000 mg per litre alongside its carbohydrate, so most of the sodium is coming from the fuel itself — LMNT only has to cover the plain water in the reservoir. Buying a second branded electrolyte to do a job the mix already does is paying twice for the same milligrams."
       }
     },
     "shoppingList": [
