@@ -4456,7 +4456,14 @@
       },
       "correction": "His hypothesis was that buying gels alone would be cheaper. It is the other way round: the drink mix is about 33% cheaper per gram of carbohydrate than PF gels, and it also delivers 1,000 mg of sodium per litre that gels do not. $31 of mix is 450 g of carbohydrate; $45.99 of gels is 450 g. Same carbohydrate, $15 apart, and only one of them fixes the sodium number.",
       "cheapestThatWorks": "Plain maltodextrin plus table sugar plus salt is roughly a fifth of the price per gram and is chemically most of what the branded mixes are — maltodextrin for glucose, sucrose for the fructose half, salt for sodium. The premium buys flavour engineering, a fixed ratio and convenience, not different molecules. Worth it if it means he actually drinks it; not worth it if cost stops him buying enough.",
-      "recommendation": "Buy one $31 tub of PF60 for Aug 15 and Aug 22 and treat it as the test. If 41 g/hr lands and the stomach holds, switch the bulk of the volume to DIY maltodextrin and sucrose for September and keep PF gels only for the summit push, where a sachet in a hip pocket beats a bottle. Gels are the expensive way to buy carbohydrate — use them for convenience, not for volume."
+      "recommendation": "Buy one $31 tub of PF60 for Aug 15 and Aug 22 and treat it as the test. If 41 g/hr lands and the stomach holds, switch the bulk of the volume to DIY maltodextrin and sucrose for September and keep PF gels only for the summit push, where a sachet in a hip pocket beats a bottle. Gels are the expensive way to buy carbohydrate — use them for convenience, not for volume.",
+      "pf90": {
+        "specs": "90 g carbohydrate per 153 g sachet. $59.49 per box of 10, about $5.95 each. Source: fuelgoods.com and precisionhydration.com, read Aug 3 2026.",
+        "costPer100gCarb": 6.61,
+        "verdict": "He is right — it is the cheapest of the three PF options per gram of carbohydrate, at $6.61 per 100 g against $6.89 for the mix and $10.22 for PF 30 gels. It is also the lightest way to carry a large amount: three PF 90 sachets is 459 g and covers 270 g of carbohydrate, where nine PF 30 sachets is about 414 g of packaging for the same. Marginal on weight, real on price.",
+        "theCatch": "It is designed to be taken a third to a half at a time every 60 minutes, not in one go. That means an opened 153 g sachet rides in a pocket for two to three hours — sticky, awkward to reseal, and easy to lose track of. Set against the Aug 2 finding that dates were carried and not eaten, a fuel source that needs rationing and resealing is the wrong shape for him right now. A finished bottle or an empty wrapper is unambiguous; a half-used jumbo sachet is not.",
+        "recommendation": "Buy one box of PF 90 and use them on the two biggest days — Sep 12 and Whitney Day 3 — where carrying less matters most and where he will have a 45-minute alert running by then. Keep the drink mix as the everyday volume and PF 30 for the summit push. Do not make PF 90 the primary source until the alert habit is proven, because it depends on discipline he has not yet demonstrated on the trail."
+      }
     },
     "carbMixInBladder": {
       "asked": "2026-08-03",
@@ -4524,6 +4531,17 @@
       "whyThatPlacement": "Tuesday and Wednesday leaves two clear days before Saturday. Thursday strength before a Saturday 19-miler borrows from the hike.",
       "falsifiableCheck": "The morning glance already collects resting HR and HRV. Across the block, if resting HR climbs 5 or more bpm above his own baseline, or HRV drops and stays down for three or four days, that is the signal to make one of those five weekends deliberately easy. Do not wait for a bad Saturday to find out.",
       "notMedicalAdvice": "General endurance-training principle, not a prescription. Any actual knee or IT-band pain is a physio conversation, not a dashboard one."
+    },
+    "descentCorrection": {
+      "stated": "2026-08-03 — 'going down is much easier than going up for me'",
+      "supportingEvidence": [
+        "Aug 2: the last three miles of the descent at 22, 21 and 23 minutes — about 2.7 mph after 11 hours. That is not a compromised descent.",
+        "No muscular or knee complaint reported on Aug 2 at all, on 4,501 ft of descent."
+      ],
+      "theOneContradiction": "The log holds his own note from San Jacinto on Jul 18: 'Descent was brutally depleting — like a vegetable.' Both can be true. That day he was 50% fuelled, so the depletion was glycogen, not legs. Aug 2 was better fuelled and the descent was fine. Read together, the evidence says descent is hard when empty and easy when fed — which is the same finding as everything else in this project.",
+      "whatThisChanges": "It downgrades the descent argument for strength training. Eccentric damage does not necessarily feel hard in the moment — it shows up as next-day capacity, not as a hard descent — so 'easier going down' does not by itself prove tolerance. But it removes the urgency. The strength case now rests on one thing only: descending 6,200 ft under 30 lb, which has never been done.",
+      "theTestThatSettlesIt": "Week 7, Sep 12 — San Gorgonio, 25 mi, overnight at High Creek, double summit. If eccentric load were quietly damaging him, it would show up there as a compromised second day, not as a hard descent. That weekend answers the strength question empirically. If day two feels fine, the two short weekly sessions can stay small or go. If day two is wrecked while fuelling is on target, that is the eccentric bill arriving.",
+      "revisedPrescription": "Keep two 20-minute sessions Tuesday and Wednesday through August as insurance, biased to slow lowering. Do not add volume. Re-decide after Sep 12 on evidence rather than on my assumption."
     }
   }
 }
