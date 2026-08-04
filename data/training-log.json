@@ -1421,11 +1421,11 @@
     },
     {
       "date": "2026-08-15",
-      "name": "San Jacinto via Deer Springs loop",
-      "estDistanceMi": 18,
-      "estAscentFt": 5298,
-      "summitFt": 10834,
-      "status": "from the shared plan sheet",
+      "name": "San Gorgonio via Vivian Creek",
+      "estDistanceMi": 19,
+      "estAscentFt": 5400,
+      "summitFt": 11503,
+      "status": "confirmed, permit secured",
       "purpose": "20 lb of water"
     },
     {
@@ -1768,6 +1768,13 @@
   ],
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
+    {
+      "issue": "Carrying food is not eating food — dates were carried unused on Aug 2",
+      "severity": "high",
+      "since": "2026-08-03",
+      "status": "open",
+      "action": "He carried dates the whole way and ate none. That reframes the Aug 2 shortfall: it was not a packing failure, it was an execution failure, and no shopping list fixes it. Five gels over 11.6 h is one every 2.3 hours — the 45-minute recurring Time alert on the Fenix either was not set or was not obeyed, and that alert is the entire mechanism. Three concrete changes: set the alert and treat it as non-negotiable; put the next two items in a HIP-BELT pocket, not the pack, because anything requiring a stop and a shoulder-strap removal does not get eaten; and pre-open the dates into a single ziplock so eating one is a one-handed action while walking."
+    },
     {
       "issue": "Ran out of gels near the summit — the pivot of the whole day",
       "severity": "high",
@@ -2145,8 +2152,8 @@
       "window": "Aug 15",
       "phase": 4,
       "kind": "hike",
-      "title": "San Jacinto via Deer Springs loop, or San Gorgonio via Vivian Creek",
-      "detail": "The sheet says San Jacinto via Deer Springs loop, 18 mi and 5,298 ft, while its own notes column says plan for Gorgonio, 19 mi and 5,400 ft. Either is the biggest day yet and either is a new altitude record on foot. Gorgonio needs a free advance permit from permits.sgwa.org; Deer Springs needs a San Jacinto wilderness permit. Pick one this week.",
+      "title": "San Gorgonio via Vivian Creek",
+      "detail": "19 mi, 5,400 ft, summit 11,503 ft — the highest point in Southern California and a new altitude record on foot. Permit secured. Biggest day of the plan so far and the closest analogue to Whitney Day 1 and Day 2 combined.",
       "packLb": "22-25",
       "targets": "Fueling rehearsal #2, this time on a day long enough that failure shows. Expect 10-12 hours. Free permit required in advance from permits.sgwa.org.",
       "priority": "high"
@@ -3450,14 +3457,14 @@
       {
         "week": 3,
         "date": "2026-08-15",
-        "peak": "San Bernardino Peak",
-        "route": "Main Trail (Forsee Creek)",
-        "summitFt": 10691,
-        "ascentFt": 4700,
-        "distanceMi": 16,
-        "permit": null,
+        "peak": "San Gorgonio",
+        "route": "Vivian Creek",
+        "summitFt": 11503,
+        "ascentFt": 5400,
+        "distanceMi": 19,
+        "permit": "permit secured",
         "partnerNote": "20 lb of water",
-        "ownNote": "Confirmed by him Aug 3. Replaces both the sheet's San Jacinto Deer Springs and his own earlier Gorgonio note — this is the third answer for Aug 15 and the current one. Needs a San Gorgonio Wilderness permit from permits.sgwa.org."
+        "ownNote": null
       },
       {
         "week": 4,
@@ -3532,21 +3539,7 @@
         "ownNote": null
       }
     ],
-    "conflicts": [
-      {
-        "what": "Saturday Aug 1",
-        "sheet": "San Bernardino Peak via Forsee Creek — 16 mi, 4,700 ft, summit 10,691 ft",
-        "log": "San Jacinto Peak via Devils Slide — permit faxed to the ranger station",
-        "matters": "Different mountain, and the Devils Slide permit follow-up is only relevant to the version in the log. Everything already written for Saturday — the fuelling schedule, the Diamox trial, the stopped-time prediction — still applies, because it is pinned to hours on the clock rather than to a route.",
-        "resolved": "Settled by the Garmin export: the hike happened Sunday Aug 2 on Devils Slide, so the faxed permit was the one that mattered and San Bernardino Peak did not happen. Week 1 is closed."
-      },
-      {
-        "what": "Saturday Aug 15",
-        "sheet": "San Jacinto via Deer Springs loop — 18 mi, 5,298 ft",
-        "log": "San Gorgonio via Vivian Creek — the free permit was to be reserved at permits.sgwa.org",
-        "matters": "The sheet's own notes column carries the same disagreement: the target says San Jacinto while the note says plan for Gorgonio. Unresolved, and it changes which permit to reserve."
-      }
-    ],
+    "conflicts": [],
     "readsOnThePlan": [
       {
         "point": "The plan is bigger than what the log had",
@@ -3564,7 +3557,8 @@
         "point": "Every week now exceeds the tank",
         "detail": "At the median burn of 331 kcal/hr, roughly 1,800 kcal of usable glycogen runs out at about 5.2 h. A 16-19 mi day is 9-12 h. Every one of these weeks is a fuelling test whether it is planned as one or not."
       }
-    ]
+    ],
+    "conflictsNote": "Both open conflicts closed Aug 3. Aug 1 was settled by the Garmin file — the hike happened Sunday Aug 2 on Devils Slide. Aug 15 is San Gorgonio via Vivian Creek and the permit is secured; the San Bernardino and San Jacinto Deer Springs alternatives are removed rather than kept as options, because leaving them in is what made the date ambiguous three times."
   },
   "summitItinerary": {
     "source": "Shared Google Sheet, sheet 3. Times are the plan's own estimates.",
@@ -4313,7 +4307,7 @@
       "keepLMNT": "Still worth having. The PF mix covers sodium inside the fluid; LMNT is the top-up when sweat rate outruns drinking, and it is the simpler thing to hand to a partner. Do not run PF mix AND 3 LMNT AND 7 SaltStick — count the total against 700-1,000 mg per litre drunk."
     },
     "scheduleAug15": {
-      "target": "San Bernardino Peak via Forsee Creek — 16 mi, 4,700 ft, summit 10,691 ft",
+      "target": "San Gorgonio via Vivian Creek — 19 mi, 5,400 ft, summit 11,503 ft. Permit secured.",
       "preStart": [
         {
           "when": "~4:00 am, T-2h15",
