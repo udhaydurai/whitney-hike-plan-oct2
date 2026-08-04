@@ -4457,6 +4457,13 @@
       "correction": "His hypothesis was that buying gels alone would be cheaper. It is the other way round: the drink mix is about 33% cheaper per gram of carbohydrate than PF gels, and it also delivers 1,000 mg of sodium per litre that gels do not. $31 of mix is 450 g of carbohydrate; $45.99 of gels is 450 g. Same carbohydrate, $15 apart, and only one of them fixes the sodium number.",
       "cheapestThatWorks": "Plain maltodextrin plus table sugar plus salt is roughly a fifth of the price per gram and is chemically most of what the branded mixes are — maltodextrin for glucose, sucrose for the fructose half, salt for sodium. The premium buys flavour engineering, a fixed ratio and convenience, not different molecules. Worth it if it means he actually drinks it; not worth it if cost stops him buying enough.",
       "recommendation": "Buy one $31 tub of PF60 for Aug 15 and Aug 22 and treat it as the test. If 41 g/hr lands and the stomach holds, switch the bulk of the volume to DIY maltodextrin and sucrose for September and keep PF gels only for the summit push, where a sachet in a hip pocket beats a bottle. Gels are the expensive way to buy carbohydrate — use them for convenience, not for volume."
+    },
+    "carbMixInBladder": {
+      "asked": "2026-08-03",
+      "safeToDrink": "Yes. The question is the reservoir, not the drink.",
+      "ospreyGuidance": "Osprey does not prohibit it. Their own instruction is to always rinse the reservoir after every use, especially with sugary drinks, clean with warm water and mild washing-up liquid, and never use bleach or boiling water because that damages the reservoir and voids the guarantee. Freezing the reservoir is fine and is a legitimate way to stop growth between uses — just do not freeze it full, because water expands. Source: osprey.com, read Aug 3 2026.",
+      "theRealReason": "Hygiene is the second reason. The first is dosing. A bladder has no volume markings and a hose hides what is left, so there is no way to know how much carbohydrate has gone in. A 750 ml bottle is a countable unit: bottle empty means 45 g absorbed, and it sits in a side pocket as a visible progress meter. Given that dates were carried and not eaten on Aug 2, a fuel source that shows its own progress is worth more than one that does not.",
+      "verdict": "Mix in bottles, plain water in the reservoir. If the mix does go in the bladder, rinse it the same evening and freeze it between hikes rather than letting it sit damp — and expect the hose and bite valve to be the part that goes bad first, because those are the parts a brush cannot reach."
     }
   },
   "gearDecisions": {
@@ -4491,6 +4498,32 @@
         "FREEZING DESTROYS FILTERS and a frozen one is unsafe rather than merely slow. October at 12,000 ft will freeze one left out. The filter sleeps in the bag with him — this is already in the freeze mitigations for the bladder and now covers the filter too."
       ],
       "keepGrayl": "The GRAYL is a purifier, not just a filter — it handles viruses, which the others do not. Worth keeping for travel. It is simply the wrong tool for filling 6 L at altitude with tired arms."
+    }
+  },
+  "strengthQuestion": {
+    "asked": "2026-08-03",
+    "observation": "He is already running this experiment. The Garmin file shows only two strength sessions in the whole window, Jul 8 and Jul 9, of 17 and 13 minutes. Strength training has effectively been absent for a month already.",
+    "soFarSoGood": "Aug 2 gives partial evidence it is survivable: 16.12 mi and 4,511 ft with no muscular complaint at all. Every problem that day was fuel, stomach or morale, and he finished the last three miles at 2.7 mph. The legs were not the limiter.",
+    "whyItStillMatters": [
+      {
+        "point": "Descent is the untested load, not ascent",
+        "detail": "Whitney is 6,200 ft of descent, most of it on day three on tired legs. Eccentric loading is what damages quads and knees, and walking uphill does not train it. The forward plan already carries a standing instruction to stop at any knee or IT-band complaint, which names the tissue at risk."
+      },
+      {
+        "point": "The pack is the other untested load",
+        "detail": "Everything so far has been a day pack. Whitney Day 1 is roughly 30 lb at 161 lb bodyweight — 18.6% of bodyweight. Load carriage is a strength quality, and the descent under that load is where an unprepared knee finds out."
+      },
+      {
+        "point": "The real risk in that block is not strength at all",
+        "detail": "Aug 15, 22, 29 and Sep 5 then 12 is five consecutive big weekends — 19, 16, 19, 12 and 25 mi — with no down week anywhere. Given that his sleep collapses to about 3.8 h on the night of a long effort, the accumulating cost is recovery, not muscle. Adding hard strength on top would make that worse, not better."
+      }
+    ],
+    "recommendation": {
+      "verdict": "Do not drop it, but make it small, eccentric and early in the week.",
+      "prescription": "Two sessions of 20-30 minutes, Tuesday and Wednesday, nothing on Thursday or Friday. Slow eccentric step-downs, slow-lower split squats, slow-lower calf raises, single-leg balance. Nothing to failure — the goal is to keep the descent tissue prepared, not to add muscle in seven weeks.",
+      "whyThatPlacement": "Tuesday and Wednesday leaves two clear days before Saturday. Thursday strength before a Saturday 19-miler borrows from the hike.",
+      "falsifiableCheck": "The morning glance already collects resting HR and HRV. Across the block, if resting HR climbs 5 or more bpm above his own baseline, or HRV drops and stays down for three or four days, that is the signal to make one of those five weekends deliberately easy. Do not wait for a bad Saturday to find out.",
+      "notMedicalAdvice": "General endurance-training principle, not a prescription. Any actual knee or IT-band pain is a physio conversation, not a dashboard one."
     }
   }
 }
