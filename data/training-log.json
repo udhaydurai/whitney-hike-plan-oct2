@@ -3450,14 +3450,14 @@
       {
         "week": 3,
         "date": "2026-08-15",
-        "peak": "San Jacinto",
-        "route": "Deer Springs loop",
-        "summitFt": 10834,
-        "ascentFt": 5298,
-        "distanceMi": 18,
+        "peak": "San Bernardino Peak",
+        "route": "Main Trail (Forsee Creek)",
+        "summitFt": 10691,
+        "ascentFt": 4700,
+        "distanceMi": 16,
         "permit": null,
         "partnerNote": "20 lb of water",
-        "ownNote": "plan for Gorgonio"
+        "ownNote": "Confirmed by him Aug 3. Replaces both the sheet's San Jacinto Deer Springs and his own earlier Gorgonio note — this is the third answer for Aug 15 and the current one. Needs a San Gorgonio Wilderness permit from permits.sgwa.org."
       },
       {
         "week": 4,
@@ -4291,6 +4291,199 @@
         "item": "Inked bread on hike days",
         "why": "1 g net carb per slice. Fine at home for protein and sodium, useless as fuel."
       }
-    ]
+    ],
+    "precisionFuel": {
+      "verdict": "Yes, switch. It is a genuine upgrade for two specific reasons, not marketing.",
+      "gel": {
+        "product": "PF 30 Gel (and PF 30 Caff)",
+        "carbsG": 30,
+        "vsGU": "GU Roctane is 21-23 g. Same number of sachets in the pocket, 36% more carbohydrate. Eight PF gels is 240 g where eight GU is ~176 g.",
+        "source": "precisionhydration.com, read Aug 3 2026"
+      },
+      "drinkMix": {
+        "product": "Carb & Electrolyte Drink Mix",
+        "perLitre": {
+          "carbsG": 60,
+          "sodiumMg": 1000
+        },
+        "whyItMatters": "This one product hits both open targets at once. He needed 700-1,000 mg sodium per litre and got 539 on Aug 2, and he needed carbohydrate in the water he was already drinking. At label strength, 3 L of mix is 180 g of carbohydrate and 3,000 mg of sodium with no gels and no tablets.",
+        "math": "750 ml bottle at label strength = 45 g carb + 750 mg sodium. Mix to 1 L for 60 g.",
+        "source": "precisionhydration.com, read Aug 3 2026"
+      },
+      "keepLMNT": "Still worth having. The PF mix covers sodium inside the fluid; LMNT is the top-up when sweat rate outruns drinking, and it is the simpler thing to hand to a partner. Do not run PF mix AND 3 LMNT AND 7 SaltStick — count the total against 700-1,000 mg per litre drunk."
+    },
+    "scheduleAug15": {
+      "target": "San Bernardino Peak via Forsee Creek — 16 mi, 4,700 ft, summit 10,691 ft",
+      "preStart": [
+        {
+          "when": "~4:00 am, T-2h15",
+          "what": "Beet juice, 1 bottle (already doing this)",
+          "carbsG": 31,
+          "kcal": 150,
+          "sodiumMg": 170
+        },
+        {
+          "when": "~4:00 am",
+          "what": "3 slices bread + honey",
+          "carbsG": 74,
+          "kcal": 400,
+          "sodiumMg": 405
+        },
+        {
+          "when": "~4:15 am",
+          "what": "1 banana",
+          "carbsG": 24,
+          "kcal": 105,
+          "sodiumMg": 1
+        }
+      ],
+      "onTrail": [
+        {
+          "when": "Hr 1",
+          "what": "Bottle 1 — PF Carb & Electrolyte, sip continuously",
+          "carbsG": 45,
+          "kcal": 180,
+          "sodiumMg": 750
+        },
+        {
+          "when": "Hr 2",
+          "what": "2 Medjool dates",
+          "carbsG": 33,
+          "kcal": 140,
+          "sodiumMg": 0
+        },
+        {
+          "when": "Hr 3",
+          "what": "PF 30 gel, no caffeine",
+          "carbsG": 30,
+          "kcal": 120,
+          "sodiumMg": 50
+        },
+        {
+          "when": "Hr 3",
+          "what": "Bottle 2 — PF mix",
+          "carbsG": 45,
+          "kcal": 180,
+          "sodiumMg": 750
+        },
+        {
+          "when": "Hr 4",
+          "what": "1 slice bread with peanut butter",
+          "carbsG": 18,
+          "kcal": 200,
+          "sodiumMg": 210
+        },
+        {
+          "when": "Hr 5",
+          "what": "PF 30 gel, no caffeine",
+          "carbsG": 30,
+          "kcal": 120,
+          "sodiumMg": 50
+        },
+        {
+          "when": "Hr 5",
+          "what": "Bottle 3 — PF mix",
+          "carbsG": 45,
+          "kcal": 180,
+          "sodiumMg": 750
+        },
+        {
+          "when": "Hr 6 SUMMIT",
+          "what": "PF 30 CAFF gel + 1 banana",
+          "carbsG": 54,
+          "kcal": 225,
+          "sodiumMg": 50
+        },
+        {
+          "when": "Hr 7",
+          "what": "2 Medjool dates",
+          "carbsG": 33,
+          "kcal": 140,
+          "sodiumMg": 0
+        },
+        {
+          "when": "Hr 7",
+          "what": "Bottle 4 — refill at the filter stop, re-dose",
+          "carbsG": 45,
+          "kcal": 180,
+          "sodiumMg": 750
+        },
+        {
+          "when": "Hr 8",
+          "what": "PF 30 CAFF gel",
+          "carbsG": 30,
+          "kcal": 120,
+          "sodiumMg": 50
+        },
+        {
+          "when": "Hr 9",
+          "what": "Chews or 1 orange (early, not after five gels)",
+          "carbsG": 24,
+          "kcal": 100,
+          "sodiumMg": 40
+        },
+        {
+          "when": "Hr 10",
+          "what": "PF 30 CAFF gel",
+          "carbsG": 30,
+          "kcal": 120,
+          "sodiumMg": 50
+        },
+        {
+          "when": "Hr 11",
+          "what": "PF 30 gel — THE SPARE, the one that ran out",
+          "carbsG": 30,
+          "kcal": 120,
+          "sodiumMg": 50
+        }
+      ],
+      "totals": {
+        "preCarbsG": 129,
+        "trailCarbsG": 492,
+        "dayCarbsG": 621,
+        "trailKcal": 2125,
+        "dayKcal": 2780,
+        "carbsPerHour": 41,
+        "kcalPerHour": 177,
+        "sodiumMg": 4126,
+        "sodiumPerLitre": 825,
+        "gels": 6,
+        "bottlesOfMix": 4
+      }
+    }
+  },
+  "gearDecisions": {
+    "waterFilter": {
+      "problem": "GRAYL UltraPress needs real force on the press. He says it is hard now and will be worse at Trail Camp, which is correct — at 12,000 ft, cold, tired, filling for two people and for cooking.",
+      "answer": "Gravity, not squeeze. A gravity system is the only category that needs no force at all: hang the dirty bag and walk away. Squeeze filters just move the effort from your palms to your hands.",
+      "flowRates": {
+        "Katadyn BeFree": "2 L/min",
+        "Sawyer Squeeze": "1.7 L/min",
+        "Platypus QuickDraw": "~1.5 L/min in the field, not the advertised 3",
+        "source": "CleverHiker filter testing, read Aug 3 2026"
+      },
+      "recommendation": [
+        {
+          "use": "Trail Camp and any overnight",
+          "pick": "Gravity — CNOC Vecto 3 L + the Sawyer Squeeze already in the plan sheet, or a Platypus GravityWorks 4 L",
+          "why": "Zero force. Hang it while setting up the tent. The Sawyer is already owned per the gear sheet, so the CNOC bag is the only purchase and it is the cheap route."
+        },
+        {
+          "use": "Day hikes on the move",
+          "pick": "Platypus QuickDraw or Katadyn BeFree",
+          "why": "Easy squeeze and fast. BeFree has the best real-world flow but clogs soonest."
+        },
+        {
+          "use": "Backup that cannot fail",
+          "pick": "Aquamira drops or Aquatabs",
+          "why": "Grams, no moving parts, no force. Chemical treatment is the answer when a filter clogs or freezes."
+        }
+      ],
+      "twoWarnings": [
+        "SILT: Trail Camp water is silty and silt clogs squeeze and gravity filters alike. Pre-filter through a bandana into the dirty bag and backflush often.",
+        "FREEZING DESTROYS FILTERS and a frozen one is unsafe rather than merely slow. October at 12,000 ft will freeze one left out. The filter sleeps in the bag with him — this is already in the freeze mitigations for the bladder and now covers the filter too."
+      ],
+      "keepGrayl": "The GRAYL is a purifier, not just a filter — it handles viruses, which the others do not. Worth keeping for travel. It is simply the wrong tool for filling 6 L at altitude with tired arms."
+    }
   }
 }
