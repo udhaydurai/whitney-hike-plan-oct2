@@ -1,0 +1,12 @@
+{
+  "morning": {
+    "hrv": 45,
+    "restingHR": 52,
+    "sleepScore": 87,
+    "sleepHours": 7.93,
+    "spo2": 95,
+    "weightLb": 162,
+    "source": "read off the watch; superseded by the weekly export"
+  },
+  "date": "2026-08-04"
+}
