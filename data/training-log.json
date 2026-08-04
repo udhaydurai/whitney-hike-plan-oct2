@@ -1402,13 +1402,13 @@
   },
   "plannedHikes": [
     {
-      "date": "2026-08-01",
-      "name": "San Bernardino Peak via Main Trail (Forsee Creek)",
-      "estDistanceMi": 16,
-      "estAscentFt": 4700,
-      "summitFt": 10691,
-      "status": "from the shared plan sheet",
-      "purpose": ""
+      "date": "2026-08-02",
+      "name": "San Jacinto via Devils Slide",
+      "estDistanceMi": 16.12,
+      "estAscentFt": 4511,
+      "summitFt": 10814,
+      "status": "completed",
+      "purpose": "Fuelling rehearsal 1"
     },
     {
       "date": "2026-08-08",
@@ -2116,22 +2116,22 @@
   ],
   "forwardPlan": [
     {
-      "window": "Jul 28 - Jul 31",
+      "window": "Aug 3 - Aug 14",
       "phase": 4,
       "kind": "admin",
-      "title": "Permit follow-up and Diamox tolerance test",
-      "detail": "Confirm which mountain Saturday actually is — the shared plan sheet says San Bernardino Peak via Forsee Creek, while the faxed Devils Slide permit belongs to the San Jacinto version. San Bernardino Peak needs its own San Gorgonio Wilderness permit from permits.sgwa.org, so this is not a decision that can wait. Reserve the Aug 15 permit too, once the San Jacinto versus Gorgonio question in the sheet is settled. Book Cottonwood Camp for Sep 29.",
-      "targets": "Take the first Diamox dose at home or before a short local walk, NOT on the big hike — you want to meet the tingling, the taste changes and the extra urination somewhere with a bathroom and no 16 miles attached.",
+      "title": "Buy the fuel and fix the filter before Aug 15",
+      "detail": "Order Precision Fuel drink mix and PF 30 gels — 4 plain, 2 caffeine. Buy a CNOC Vecto 3 L bag to run gravity through the Sawyer instead of pressing the GRAYL. Add LMNT sticks. Book Cottonwood Camp for Sep 29 if not already done.",
+      "targets": "Set the recurring 45-minute Time alert on the Fenix hike profile and confirm it vibrates. Dates were carried and not eaten on Aug 2 — the alert is the fix, not more food.",
       "priority": "high"
     },
     {
-      "window": "Aug 1 or 2",
+      "window": "Aug 15",
       "phase": 4,
       "kind": "hike",
-      "title": "San Bernardino Peak via Forsee Creek",
-      "detail": "16 mi, 4,700 ft, summit 10,691 ft — from the shared plan sheet. Longer than anything recorded so far: San Jacinto was 13.24 mi and 4,590 ft and ran 11:04, so expect 11–13 hours. The earlier plan here was San Jacinto via Devils Slide; if the faxed permit lands and that is the route instead, every target below still applies unchanged, because they are set against hours on the clock rather than against a route.",
+      "title": "San Gorgonio via Vivian Creek",
+      "detail": "19 mi, 5,400 ft, summit 11,503 ft. Permit secured. Highest point in Southern California and a new altitude record on foot. Biggest day of the plan so far.",
       "packLb": 18,
-      "targets": "Fueling rehearsal #1. 250-300 cal/hr on the 45-min Fenix buzzer. 600-800 ml/hr. 700-1,000 mg sodium per litre. Poles from the car park. Log YOUR intake, not the family's. If you do take Diamox on this hike, treat the fluid and sodium targets as floors rather than goals — add roughly another 500 ml/hr of capacity and know your filter points.",
+      "targets": "Fuelling rehearsal 2 on the Precision Fuel plan: 41 g carb/hr and 825 mg sodium per litre, against 25 g/hr and 539 mg/L on Aug 2. Falsifiable test — does stopped time drop below 40%? It went 54.6% to 46.5% between Jul 18 and Aug 2.",
       "priority": "high"
     },
     {
@@ -3432,15 +3432,16 @@
     "weeks": [
       {
         "week": 1,
-        "date": "2026-08-01",
-        "peak": "San Bernardino Peak",
-        "route": "Main Trail (Forsee Creek)",
-        "summitFt": 10691,
-        "ascentFt": 4700,
-        "distanceMi": 16,
-        "permit": null,
+        "date": "2026-08-02",
+        "peak": "San Jacinto",
+        "route": "Devils Slide",
+        "summitFt": 10814,
+        "ascentFt": 4511,
+        "distanceMi": 16.12,
+        "permit": "Devils Slide permit used",
         "partnerNote": null,
-        "ownNote": null
+        "ownNote": "DONE — 11:36:45, stopped 46.5%, intake 54% of burn. See devilsSlideAug2.",
+        "completed": true
       },
       {
         "week": 2,
@@ -3558,7 +3559,7 @@
         "detail": "At the median burn of 331 kcal/hr, roughly 1,800 kcal of usable glycogen runs out at about 5.2 h. A 16-19 mi day is 9-12 h. Every one of these weeks is a fuelling test whether it is planned as one or not."
       }
     ],
-    "conflictsNote": "Both open conflicts closed Aug 3. Aug 1 was settled by the Garmin file — the hike happened Sunday Aug 2 on Devils Slide. Aug 15 is San Gorgonio via Vivian Creek and the permit is secured; the San Bernardino and San Jacinto Deer Springs alternatives are removed rather than kept as options, because leaving them in is what made the date ambiguous three times."
+    "conflictsNote": "No open conflicts. Aug 15 is San Gorgonio via Vivian Creek with the permit secured, and the alternatives that once competed for that date have been removed rather than archived — keeping them listed is what let the date read three different ways."
   },
   "summitItinerary": {
     "source": "Shared Google Sheet, sheet 3. Times are the plan's own estimates.",
