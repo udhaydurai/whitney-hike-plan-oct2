@@ -4080,6 +4080,217 @@
       "Real food carbs on the way up: sandwich bread at 18 g net a slice, dates, banana. Cheaper on the gut than a fifth gel.",
       "Sodium worked — keep the SaltStick and Liquid IV protocol, and push toward 700 mg/L.",
       "Carry 4.5 L rather than 6 and plan a filter stop. 13.2 lb of water is 45% of the Whitney Day 1 pack target, spent on something a GRAYL can refill."
+    ],
+    "thingsDoneRight": [
+      "Beet juice at 4 am for a 6:15-6:30 start — 2.25 to 2.5 h before moving, which is the plasma-nitrite peak window. The timing protocol was followed correctly.",
+      "30 g protein shake (Okyo) immediately after finishing — exactly the post-hike use that was recommended, in the window that matters.",
+      "7 SaltStick tablets plus a Liquid IV: 2,965 mg total, the best sodium day on record."
+    ]
+  },
+  "fuelPlanV2": {
+    "builtFrom": "Devils Slide Aug 2, where intake ran 174 cal/hr and 25 g carb/hr.",
+    "target": {
+      "carbsPerHour": "45-55 g, roughly double Aug 2",
+      "why": "Not 60-90 g/hr. That is race guidance and jumping from 25 straight to 60 invites exactly the GI event that already happened at 9,700 ft. The gut adapts to what it is asked to absorb, so 45-55 on Aug 15, 60 by September."
+    },
+    "biggestSingleFix": {
+      "what": "Put carbohydrate in the water",
+      "detail": "5.5 L of plain water was drunk on Aug 2. At 60 g per 750 ml bottle, four bottles is 240 g of carbohydrate with no extra chewing, no gut bulk and nothing to run out of in a pocket. That one change is larger than every gel carried. Plain water stays in the reservoir — mix goes in bottles, or the bladder grows things."
+    },
+    "preStart": {
+      "items": [
+        [
+          "Beet juice, 1 bottle",
+          31,
+          150
+        ],
+        [
+          "3 slices sandwich bread + honey",
+          74,
+          400
+        ],
+        [
+          "1 banana",
+          24,
+          105
+        ]
+      ],
+      "netCarbsG": 129,
+      "kcal": 655,
+      "note": "Beet juice at T-2h30 is already correct. Bread and banana are the addition."
+    },
+    "onTrail": {
+      "items": [
+        [
+          "Hour 1-2",
+          "Bottle 1 of carb drink, sipped",
+          "60 g in the water he is drinking anyway",
+          60,
+          240
+        ],
+        [
+          "Hour 2",
+          "2 Medjool dates",
+          "",
+          33,
+          140
+        ],
+        [
+          "Hour 3",
+          "GU Roctane, no caffeine",
+          "",
+          21,
+          100
+        ],
+        [
+          "Hour 3-4",
+          "Bottle 2 of carb drink",
+          "",
+          60,
+          240
+        ],
+        [
+          "Hour 4",
+          "1 slice bread with peanut butter",
+          "chewing variety before gels get sickening",
+          18,
+          200
+        ],
+        [
+          "Hour 5",
+          "GU Roctane, no caffeine",
+          "",
+          21,
+          100
+        ],
+        [
+          "Hour 5-6",
+          "Bottle 3 of carb drink",
+          "",
+          60,
+          240
+        ],
+        [
+          "Hour 6  SUMMIT",
+          "GU Roctane WITH caffeine + 1 banana",
+          "caffeine starts here, not earlier",
+          45,
+          205
+        ],
+        [
+          "Hour 7",
+          "2 Medjool dates",
+          "",
+          33,
+          140
+        ],
+        [
+          "Hour 7-8",
+          "Bottle 4 — refill and re-dose after the filter stop",
+          "",
+          60,
+          240
+        ],
+        [
+          "Hour 8",
+          "GU Roctane WITH caffeine",
+          "",
+          21,
+          100
+        ],
+        [
+          "Hour 9",
+          "Chews or 1 orange",
+          "texture change; oranges EARLY not after five gels",
+          24,
+          100
+        ],
+        [
+          "Hour 10",
+          "GU Roctane WITH caffeine",
+          "",
+          21,
+          100
+        ],
+        [
+          "Hour 11",
+          "GU Roctane spare — the one that ran out last time",
+          "",
+          21,
+          100
+        ]
+      ],
+      "netCarbsG": 498,
+      "kcal": 2245,
+      "carbsPerHour": 42,
+      "kcalPerHour": 187
+    },
+    "afterFinish": {
+      "items": [
+        "30 g protein shake (Okyo) — already doing this, keep it",
+        "PLUS 60-80 g of carbohydrate with it: banana, juice, or rice",
+        "The shake alone refills muscle protein. It does not refill glycogen, and glycogen is what is empty."
+      ]
+    },
+    "electrolytes": {
+      "switchToLMNT": {
+        "verdict": "Yes. LMNT is the right call.",
+        "why": "LMNT is 1,000 mg sodium per stick against roughly 500 for Liquid IV, plus 200 mg potassium and 60 mg magnesium. Aug 2 landed at 539 mg per litre against a 700-1,000 target, and that was already the best sodium day on record. Doubling the sodium per stick closes it without adding volume.",
+        "carbCaveat": "LMNT carries no carbohydrate. It is a sodium tool, not a fuel tool — it does not replace the carb drink, it goes alongside it.",
+        "dose": "Target 700-1,000 mg per litre drunk, not a fixed stick count. At 5 L that is 3,500-5,000 mg total. Three LMNT sticks is 3,000 mg; food and a few SaltStick cover the rest. Do not simply stack 4 LMNT on top of 7 SaltStick — count the total.",
+        "diamoxNote": "Acetazolamide is a diuretic. On any day he takes it, fluid and sodium both go up, and the per-litre target becomes a floor rather than a goal."
+      }
+    },
+    "shoppingList": [
+      {
+        "item": "Carbohydrate drink mix — Tailwind Endurance Fuel, Skratch, or Gatorade Endurance powder",
+        "why": "THE priority buy. 50-60 g carb per bottle, absorbed with water he already drinks. This is the fix that is bigger than all the gels combined.",
+        "howMuch": "A bulk bag. Four bottles per big hike, six weekends left."
+      },
+      {
+        "item": "LMNT sticks",
+        "why": "1,000 mg sodium each, double Liquid IV.",
+        "howMuch": "3-4 per big hike."
+      },
+      {
+        "item": "GU Roctane gels, mixed caffeine and caffeine-free",
+        "why": "Running out was the pivot of Aug 2. Two spare gels weigh 80 g.",
+        "howMuch": "8 per hike, not 5. Caffeine-free for the ascent, caffeinated from the summit."
+      },
+      {
+        "item": "Medjool dates",
+        "why": "33 g net carbs for two, real food, already eaten and tolerated.",
+        "howMuch": "A tub. 4-6 per hike."
+      },
+      {
+        "item": "Sandwich bread — the 19 g-per-slice one, plus honey or jam",
+        "why": "18 g net per slice for 110 cal. Twice the carbohydrate of the 40 g bar at half the calories. Cheapest carbohydrate in this entire list.",
+        "howMuch": "A loaf."
+      },
+      {
+        "item": "Chews — Clif Bloks or GU Chews",
+        "why": "24 g per packet. Texture variety matters at hour nine when gels become unbearable.",
+        "howMuch": "3-4 packets."
+      },
+      {
+        "item": "Bananas and oranges",
+        "why": "27 g and 15 g. Eat them EARLY, not at 9,000 ft after five gels — that was part of the stomach event.",
+        "howMuch": "2 bananas, 2 oranges."
+      }
+    ],
+    "stopBuying": [
+      {
+        "item": "The 40 g bar (200 cal, 15 g carb, 6 g fibre, 12 g fat)",
+        "why": "9 g of net carbohydrate for 200 calories, and a gastrointestinal-discomfort warning on the flap. A live suspect for the 9,700 ft event."
+      },
+      {
+        "item": "Protein bar on the trail",
+        "why": "Protein and fat at the summit compete for gut capacity with the carbohydrate that is actually missing. Keep the protein for immediately after finishing, where it works."
+      },
+      {
+        "item": "Inked bread on hike days",
+        "why": "1 g net carb per slice. Fine at home for protein and sodium, useless as fuel."
+      }
     ]
   }
 }
