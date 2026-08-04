@@ -1769,6 +1769,34 @@
   "gearNote": "This list is what has come up in conversation, not a full kit audit — insulation layers, gloves, a warm hat, sleeping bag and pad for a 12,000 ft October night may already be sorted. Worth a full gear shakedown on the Aug 22 loaded hike.",
   "openIssues": [
     {
+      "issue": "Ran out of gels near the summit — the pivot of the whole day",
+      "severity": "high",
+      "since": "2026-08-02",
+      "status": "open",
+      "action": "His own words: as soon as the GU ran out he was thinking about how to get down. Five gels over 11.6 h is 105 g of the 289 g total, and the supply ended before the effort did. Carry more than feels necessary — the marginal weight of two extra gels is 80 g against 13.2 lb of water. This is the single cheapest fix available."
+    },
+    {
+      "issue": "The 40 g bar is fat and fibre wearing a fuel label",
+      "severity": "medium",
+      "since": "2026-08-03",
+      "status": "open",
+      "action": "200 cal for 9 g of net carbohydrate, two thirds of it fat, 6 g fibre, and a gastrointestinal-discomfort warning on the flap which normally means sugar alcohols. One slice of ordinary sandwich bread gives 18 g net for 110 cal. Drop the bar from the trail list; it is also a live suspect for the 9,700 ft stomach event. Third bread-or-bar in this project counted as carbohydrate while delivering almost none — 1 g, 9 g and 18 g net respectively."
+    },
+    {
+      "issue": "Carrying 6 L of water costs 13.2 lb",
+      "severity": "medium",
+      "since": "2026-08-02",
+      "status": "open",
+      "action": "He carried 6 L and drank 5.5. Water alone was 13.2 lb — 45% of the 30 lb Whitney Day 1 target, spent on something the GRAYL can refill. Carry 4.5 L and plan a filter stop. The pack felt heavy because it was, and most of the weight was replaceable."
+    },
+    {
+      "issue": "Wanting to stop training arrived with an empty tank",
+      "severity": "watch",
+      "since": "2026-08-02",
+      "status": "open",
+      "action": "At 9,000 ft, 1,723 kcal behind burn, he questioned whether to do Whitney at all. Then he walked the last three miles at 22, 21 and 23 minutes. Low carbohydrate availability degrades mood and judgement directly — the thought tracked the fuel, not the fitness. Worth recording so the next time it happens it is recognised as a symptom with a known cause, the same way the calf cramp was."
+    },
+    {
       "issue": "Jul 30 hit the carb target, but by a route that will not repeat",
       "severity": "medium",
       "since": "2026-07-30",
@@ -3509,7 +3537,8 @@
         "what": "Saturday Aug 1",
         "sheet": "San Bernardino Peak via Forsee Creek — 16 mi, 4,700 ft, summit 10,691 ft",
         "log": "San Jacinto Peak via Devils Slide — permit faxed to the ranger station",
-        "matters": "Different mountain, and the Devils Slide permit follow-up is only relevant to the version in the log. Everything already written for Saturday — the fuelling schedule, the Diamox trial, the stopped-time prediction — still applies, because it is pinned to hours on the clock rather than to a route."
+        "matters": "Different mountain, and the Devils Slide permit follow-up is only relevant to the version in the log. Everything already written for Saturday — the fuelling schedule, the Diamox trial, the stopped-time prediction — still applies, because it is pinned to hours on the clock rather than to a route.",
+        "resolved": "Settled by the Garmin export: the hike happened Sunday Aug 2 on Devils Slide, so the faxed permit was the one that mattered and San Bernardino Peak did not happen. Week 1 is closed."
       },
       {
         "what": "Saturday Aug 15",
@@ -3670,7 +3699,9 @@
       "Tea cup measured at 200 ml, Jul 30 — his own measurement.",
       "Tea fully specified Jul 30 — 200 ml cup, 30 ml milk, no sugar. His own figures.",
       "Sardines in olive oil — label read Jul 30: per 85 g drained tin, 250 cal, 12 g fat, 0 g carb, 20 g protein, 340 mg sodium, plus vitamin D, calcium and iron.",
-      "Trader Joe's beet blend juice — label read Jul 30: 450 ml bottle, 150 cal, 36 g carb of which 5 g fibre so 31 g net, 22 g sugars, 3 g protein, 170 mg sodium, 1,010 mg potassium, 3.5 mg iron. Ingredients: celery, beet, carrot, apple, spinach, GINGER, lemon juice."
+      "Trader Joe's beet blend juice — label read Jul 30: 450 ml bottle, 150 cal, 36 g carb of which 5 g fibre so 31 g net, 22 g sugars, 3 g protein, 170 mg sodium, 1,010 mg potassium, 3.5 mg iron. Ingredients: celery, beet, carrot, apple, spinach, GINGER, lemon juice.",
+      "Hike-day sandwich bread — label read Aug 3: 1 slice, 110 cal, 19 g carb, 1 g fibre, 3 g protein, 135 mg sodium. 18 g net.",
+      "40 g bar — label read Aug 3: 200 cal, 12 g fat, 15 g carb, 6 g fibre, 7 g sugars, 10 g protein, 160 mg sodium. 9 g net carb. Flap warns of gastrointestinal discomfort."
     ],
     "items": [
       {
@@ -3924,6 +3955,27 @@
         "tag": "meal",
         "fatG": 4,
         "estimated": true
+      },
+      {
+        "food": "Sandwich bread (hike day), 1 slice",
+        "c": 19,
+        "fib": 1,
+        "p": 3,
+        "na": 135,
+        "tag": "bread",
+        "labelled": true,
+        "note": "110 cal, 19 g carb, only 1 g fibre so 18 g NET. This is a real carbohydrate source, unlike the Inked bread at 1 g net."
+      },
+      {
+        "food": "Bar, 40 g (200 cal, 15 g carb, 6 g fibre, 10 g protein)",
+        "c": 15,
+        "fib": 6,
+        "p": 10,
+        "na": 160,
+        "tag": "quick",
+        "labelled": true,
+        "fatG": 12,
+        "note": "9 g NET carb for 200 cal — two thirds of it is fat. The wrapper flap carries a gastrointestinal-discomfort warning, which points to sugar alcohols. A poor trail carbohydrate and a live suspect for the 9,700 ft stomach event."
       }
     ],
     "netCarbNote": "Fibre is not fuel. The dashboard counts NET carbs — total minus fibre — because that is what reaches the muscle. The distinction was invisible until the bread label was read."
@@ -3948,5 +4000,86 @@
       "detail": "Daily protein target is 117-146 g and Jul 30 stood at 34 g by mid-morning. One or two shakes closes most of that gap without cooking, and it does not compete with anything."
     },
     "caution": "Whey is a common trigger for bloating in people who already get it. Test it on a weekday before relying on it after a big Saturday."
+  },
+  "devilsSlideAug2": {
+    "garmin": {
+      "date": "2026-08-02",
+      "route": "Devils Slide to San Jacinto",
+      "distanceMi": 16.12,
+      "ascentFt": 4511,
+      "minElevFt": 6518,
+      "maxElevFt": 10814,
+      "totalTime": "11:36:45",
+      "movingTime": "06:12:45",
+      "stoppedPct": 46.5,
+      "avgHR": 140,
+      "maxHR": 166,
+      "aerobicEffect": 5.0,
+      "steps": 24076,
+      "bodyBatteryDelta": -6,
+      "calories": 3748,
+      "burnPerHour": 323
+    },
+    "prediction": {
+      "asked": "Does stopped time drop below 40%?",
+      "sanJacintoJul18": 54.6,
+      "devilsSlideAug2": 46.5,
+      "verdict": "Improved by 8 points on a bigger day. Did not reach 40%. Directionally right, target missed — and the fuelling number below says why."
+    },
+    "intake": {
+      "netCarbsG": 289,
+      "kcal": 2025,
+      "kcalPerHour": 174,
+      "carbsPerHour": 25,
+      "pctOfBurn": 54,
+      "shortfallKcal": 1723,
+      "gels": 5,
+      "note": "Bread and bar computed from the labels he photographed. 174 cal/hr against a 250-300 target and 25 g carb/hr against 60-90. Absolute intake rose, but the day was bigger, so the RATIO barely moved: 54% of burn against ~50% on San Jacinto."
+    },
+    "fluidSodium": {
+      "carriedL": 6,
+      "drunkL": 5.5,
+      "mlPerHour": 474,
+      "sodiumMg": 2965,
+      "sodiumMgPerHour": 255,
+      "sodiumMgPerL": 539,
+      "note": "Best sodium day on record by a wide margin — 7 SaltStick plus a Liquid IV. Still 539 mg/L against a 700-1,000 target. 6 L carried is 13.2 lb of water alone, which is most of why the pack felt heavy."
+    },
+    "whatHappened": [
+      "Woke early, incomplete bowel movement in two attempts, poor sleep before a 3:45 am start.",
+      "Fuelled steadily on the way up. Ran out of gels near the top and the mood changed as soon as they were gone.",
+      "GI event at 9,700 ft on descent requiring a stop.",
+      "Questioned at 9,000 ft whether to do Whitney at all and whether to stop training.",
+      "Then covered the last three miles in 22, 21 and 23 minutes — about 2.7 mph."
+    ],
+    "readsOnIt": [
+      {
+        "point": "The legs were never the problem",
+        "detail": "Average HR 140 on 16.12 mi and 4,511 ft, against 146 on San Jacinto's 13.24 mi and 4,590 ft. Lower heart rate on a bigger day is a fitness gain, not a loss. Body Battery drained only 6 points across 11.6 hours."
+      },
+      {
+        "point": "The last three miles are the proof",
+        "detail": "22, 21, 23 minutes per mile — about 2.7 mph — at the end of an 11.6 hour day, after the low point. His own read is correct: the energy was there and the mind did not believe it. Something external broke the spell and the body immediately delivered."
+      },
+      {
+        "point": "Wanting to quit at hour eight is a blood-glucose event, not a verdict",
+        "detail": "Intake ran 1,723 kcal behind burn. Low carbohydrate availability degrades mood and decision-making directly and reliably — that is the mechanism, not a character flaw. The thought arrived when the gels ran out and left when the oranges and a distraction went in. Treat it as a symptom on the same footing as the cramping calves."
+      },
+      {
+        "point": "The two carbohydrate decoys",
+        "detail": "The 40 g bar looks like fuel and gives 9 g of net carbohydrate for 200 calories, two thirds of it fat. Ordinary sandwich bread gives 18 g net per slice — twice the whole bar, for half the calories. The Inked bread at 1 g net is a third case again. Three breads and bars in this project now, all counted as carbs, delivering 1, 9 and 18 g."
+      },
+      {
+        "point": "The stomach has three named suspects",
+        "detail": "Five gels over the day is a heavy concentrated-carbohydrate load; the 40 g bar carries 6 g of fibre and a gastrointestinal-discomfort warning on the flap, which usually means sugar alcohols; and four oranges at 9,000 ft added fructose, fibre and acid at the worst moment. The incomplete morning bowel movement is a fourth. Only one of those needs removing to find out which."
+      }
+    ],
+    "whatToChange": [
+      "Carry more gels than felt necessary. Running out was the pivot of the whole day.",
+      "Drop the 40 g bar from the trail list. It is fat and fibre wearing a fuel label.",
+      "Real food carbs on the way up: sandwich bread at 18 g net a slice, dates, banana. Cheaper on the gut than a fifth gel.",
+      "Sodium worked — keep the SaltStick and Liquid IV protocol, and push toward 700 mg/L.",
+      "Carry 4.5 L rather than 6 and plan a filter stop. 13.2 lb of water is 45% of the Whitney Day 1 pack target, spent on something a GRAYL can refill."
+    ]
   }
 }
