@@ -4445,6 +4445,18 @@
         "gels": 6,
         "bottlesOfMix": 4
       }
+    },
+    "cost": {
+      "pricesRead": "Aug 3 2026 — PF60 mix $31 for 7.5 L (his figure); PF 30 gel $45.99 per box of 15 (fuelgoods.com)",
+      "perHundredGramsCarb": {
+        "PF60 drink mix": 6.89,
+        "PF 30 gel": 10.22,
+        "Tailwind": 2.96,
+        "DIY maltodextrin + sucrose + salt": 0.95
+      },
+      "correction": "His hypothesis was that buying gels alone would be cheaper. It is the other way round: the drink mix is about 33% cheaper per gram of carbohydrate than PF gels, and it also delivers 1,000 mg of sodium per litre that gels do not. $31 of mix is 450 g of carbohydrate; $45.99 of gels is 450 g. Same carbohydrate, $15 apart, and only one of them fixes the sodium number.",
+      "cheapestThatWorks": "Plain maltodextrin plus table sugar plus salt is roughly a fifth of the price per gram and is chemically most of what the branded mixes are — maltodextrin for glucose, sucrose for the fructose half, salt for sodium. The premium buys flavour engineering, a fixed ratio and convenience, not different molecules. Worth it if it means he actually drinks it; not worth it if cost stops him buying enough.",
+      "recommendation": "Buy one $31 tub of PF60 for Aug 15 and Aug 22 and treat it as the test. If 41 g/hr lands and the stomach holds, switch the bulk of the volume to DIY maltodextrin and sucrose for September and keep PF gels only for the summit push, where a sachet in a hip pocket beats a bottle. Gels are the expensive way to buy carbohydrate — use them for convenience, not for volume."
     }
   },
   "gearDecisions": {
