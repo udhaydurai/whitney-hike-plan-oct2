@@ -4234,6 +4234,26 @@
         "carbCaveat": "LMNT carries no carbohydrate. It is a sodium tool, not a fuel tool — it does not replace the carb drink, it goes alongside it.",
         "dose": "Target 700-1,000 mg per litre drunk, not a fixed stick count. At 5 L that is 3,500-5,000 mg total. Three LMNT sticks is 3,000 mg; food and a few SaltStick cover the rest. Do not simply stack 4 LMNT on top of 7 SaltStick — count the total.",
         "diamoxNote": "Acetazolamide is a diuretic. On any day he takes it, fluid and sodium both go up, and the per-litre target becomes a floor rather than a goal."
+      },
+      "lmntSpec": {
+        "product": "LMNT Zero Sugar Electrolytes, 30-stick box (ASIN B08ZJQ1XD4, watermelon salt)",
+        "perStick": {
+          "sodiumMg": 1000,
+          "potassiumMg": 200,
+          "magnesiumMg": 60,
+          "carbsG": 0
+        },
+        "source": "drinklmnt.com ingredients page, read Aug 3 2026",
+        "importantDistinction": "Zero sugar means zero carbohydrate. This is not an alternative to the Precision Fuel mix or the gels — it sits on the other axis. Two separate problems have been getting compared as if they were one: carbohydrate, where Aug 2 delivered 25 g/hr against a 60-90 target, and sodium, where Aug 2 delivered 539 mg/L against a 700-1,000 target. LMNT solves only the second and cannot touch the first.",
+        "howItComparesOnSodium": {
+          "LMNT, per stick": 1000,
+          "Liquid IV, per stick": 500,
+          "SaltStick, per tablet": 215,
+          "PF60 drink mix, per litre": 1000,
+          "note": "PF60 already delivers 1,000 mg per litre alongside its 60 g of carbohydrate, so on the Aug 15 plan the mix alone reaches 825 mg per litre across the whole day's fluid. LMNT is the top-up for the plain water in the reservoir and for the litres that carry no mix — not an addition on top of a target already met."
+        },
+        "howMuchToBuy": "A 30-stick box covers roughly two sticks per big day across the six remaining training weekends plus Whitney's three days, with spares. One box is enough — he does not need a second.",
+        "cautionOnStacking": "1,000 mg per stick is a large dose. Three LMNT plus seven SaltStick plus 5 L of PF mix would be roughly 9,500 mg of sodium in a day, well past any target. Count the total against 700-1,000 mg per litre drunk and let the mix do most of the work."
       }
     },
     "shoppingList": [
