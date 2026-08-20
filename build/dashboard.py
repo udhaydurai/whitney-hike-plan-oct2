@@ -70,6 +70,10 @@ for _x in _daily:
                 _i.update(status="closed", closed=_x["date"],
                           resolution=_i.get("resolution") or "Closed at a nightly check-in.")
 DIG = json.loads((ROOT / "garmin" / "digest.json").read_text(encoding="utf-8"))
+# Garmin's derived metrics (acclimation, training status, load, readiness). Optional:
+# an export without them should degrade to hiding the section, not to a failed build.
+_mp = ROOT / "garmin" / "metrics.json"
+MET = json.loads(_mp.read_text(encoding="utf-8")) if _mp.exists() else None
 OUT = ROOT / "whitney-dashboard.html"
 
 C = dict(ink="#101720", ink2="#3d4a5c", ink3="#6b7a8f", line="#dfe5ec", bg="#f6f8fa",
@@ -977,6 +981,96 @@ def s_altitude():
 </section>"""
 
 
+def s_acclim():
+    """
+    Garmin's own acclimation and load models. These are objective — the watch computed
+    them — so they fall under the Garmin source-of-truth rule and are never typed here.
+
+    altitudeAcclimation is metres of acclimated altitude, converted to feet in the
+    digest. It is a model output, not a measurement: it rises from time spent high and
+    decays otherwise. Read as a percentage it would say 1400%, which is how the unit
+    announces itself.
+    """
+    if not MET:
+        return ""
+    A = MET["altitudeAcclimation"]
+    cur, pk = A["latest"], A["peak"]
+    if not cur or not pk:
+        return ""
+    tc = D["sleepLadder"]["trailCampFt"]
+    mx = WP["summitElevationFt"]   # the one owning source, same as s_altitude
+    decay_ft = round((A["meanDailyDecayM"] or 0) * 3.28084)
+    gap_tc = tc - cur["acclimFt"]
+    days_since_peak = (dt.date.fromisoformat(cur["date"]) - dt.date.fromisoformat(pk["date"])).days
+
+    apts = [(x["date"][5:], x["acclimFt"]) for x in A["series"][-70:]
+            if x["acclimFt"] is not None]
+    # ymin=0: acclimation cannot be negative, and the default padding drew a −735 ft
+    # gridline that reads as a real value.
+    ACC_CHART = lines([{"lab": "acclimated to", "col": C["accent"], "pts": apts}],
+                      ylab="ft", fmt=lambda v: f"{v:,.0f}", ymin=0)
+
+    L = MET["trainingLoad"]["latest"]
+    S = MET["trainingStatus"]["latest"]
+    R = MET["trainingReadiness"]["latest"]
+    E = MET["enduranceScore"]
+
+    lpts = [(x["date"][5:], x["acwr"]) for x in MET["trainingLoad"]["series"][-70:]
+            if x.get("acwr") is not None]
+    ACWR_CHART = lines([{"lab": "acute:chronic", "col": C["warn"], "pts": lpts}],
+                       ylab="ratio", fmt=lambda v: f"{v:.1f}")
+
+    # status runs, most recent first, so a fortnight of RECOVERY is visible as one row
+    runs = []
+    for x in MET["trainingStatus"]["series"][-90:]:
+        if runs and runs[-1][0] == x["status"]:
+            runs[-1][2] = x["date"]
+        else:
+            runs.append([x["status"], x["date"], x["date"]])
+    srows = ""
+    for st_, a1, b1 in reversed(runs[-8:]):
+        n = (dt.date.fromisoformat(b1) - dt.date.fromisoformat(a1)).days + 1
+        col = {"OVERREACHING": C["bad"], "STRAINED": C["bad"], "RECOVERY": C["warn"],
+               "PRODUCTIVE": C["primary"], "MAINTAINING": C["ink2"]}.get(st_, C["ink2"])
+        rng = sd(a1) if a1 == b1 else f"{sd(a1)}–{sd(b1)}"
+        srows += (f'<tr><td style="color:{col};font-weight:700">{e(str(st_).title().replace("_"," "))}</td>'
+                  f'<td class="num nw">{n} d</td><td class="nw sub">{e(rng)}</td></tr>')
+
+    es_now = E["latest"]["score"] if E.get("latest") else None
+    es_then = next((x["score"] for x in E["series"] if x["date"] >= "2026-04-20"), None)
+    es_sub = (f"{es_now - es_then:+,} since {sd('2026-04-20')}"
+              if es_now and es_then else "single reading")
+    cov = A["coverage"]
+    return f"""<section id="acclim">
+  <h2>Acclimation and load<span class="n">Garmin's own models · {cov['days']} days
+  to {e(cov['to'])}</span></h2>
+  <div class="tiles">{''.join([
+    tile("Acclimated to", f"{cur['acclimFt']:,} ft", f"peak {pk['acclimFt']:,} ft on {sd(pk['date'])}, {days_since_peak} days ago", C["accent"]),
+    tile("Short of Trail Camp", f"{gap_tc:,} ft", f"Trail Camp is {tc:,} ft · summit {mx:,} ft", C["bad"]),
+    tile("Decay", f"−{decay_ft} ft/day", "when sleeping at home elevation", C["warn"]),
+    tile("Acute:chronic", f"{L['acwr']:.1f}", f"{e(str(L['status']).replace('_',' ').lower())} · acute {L['acute']:,} vs chronic {L['chronic']:,}", C["bad"] if (L['acwr'] or 0) >= 1.5 else C["primary"]),
+  ])}</div>
+
+  <h3>Altitude acclimation, last ten weeks</h3>
+  {ACC_CHART}
+  <p class="lede">Acclimation is earned by time spent high and lost otherwise. It peaked
+  at {pk['acclimFt']:,} ft after the nights at Mammoth and has fallen to
+  {cur['acclimFt']:,} ft, about {decay_ft} ft a day. Day hikes bump it for a day or two;
+  they do not hold it. At this rate the figure on summit day is set almost entirely by
+  where the last few nights before Oct 2 are spent, not by the training block.</p>
+
+  <h3>Training status, last runs</h3>
+  <div class="scroll"><table><thead><tr><th>Status</th><th>Days</th><th>When</th>
+  </tr></thead><tbody>{srows}</tbody></table></div>
+
+  <h3>Acute:chronic workload, last ten weeks</h3>
+  {ACWR_CHART}
+  <p class="sub">Readiness on {e(sd(R['date']))} was {R['score']} ({e(str(R['level']).title())}),
+  sleep score {R['sleepScore']}, recovery time {R['recoveryTimeH']} h.
+  Endurance score {es_now:,} · {e(es_sub)}.</p>
+</section>"""
+
+
 def s_wellness():
     w = D["wellness"]
     sl, bd, rc, sp = w["sleep"], w["bigDaySleep"], w["recovery"], w["spo2Gap"]
@@ -1389,7 +1483,7 @@ footer{{color:{C['ink3']};font-size:12px;text-align:center;padding:24px 12px 0;l
 NAV = [("today", "Today"), ("status", "Status"), ("levers", "What matters"), ("week", "This week"),
        ("weeks", "Nine weeks"), ("summit", "Summit day"),
        ("plan", "Plan to Oct 2"), ("energy", "Energy budget"), ("fuel", "Fuel & fluid"),
-       ("altitude", "Altitude"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
+       ("altitude", "Altitude"), ("acclim", "Acclimation & load"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
        ("log", "Training log"), ("reference", "Reference"), ("appendix", "Appendix")]
 
 # The site is published on a public GitHub Pages URL, so meta.athlete is deliberately
@@ -1421,6 +1515,7 @@ doc = f"""<!doctype html>
 {s_energy()}
 {s_fuel()}
 {s_altitude()}
+{s_acclim()}
 {s_wellness()}
 {s_untested()}
 {s_issues()}

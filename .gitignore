@@ -4,6 +4,8 @@
 garmin/ex/
 garmin/health/
 garmin/hist/
+# raw derived-metric window files; tools/metrics_digest.py turns them into metrics.json
+garmin/metrics/
 garmin/*.zip
 garmin/*.fit
 

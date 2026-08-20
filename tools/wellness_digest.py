@@ -163,6 +163,28 @@ res = {
     "sleepByDate": sleep,
     "dailyByDate": daily,
 }
+# ── refuse to blank a populated digest.
+# A weekly run pointed at a folder with no wellness files produces a structurally valid
+# but completely empty digest, and writing it destroyed 583 sleep nights, 303 HRV points
+# and the zone configuration in one commit. An export that does not contain wellness data
+# is not evidence that the wellness data is gone. Refuse, the way nightly.py refuses.
+_new_empty = not zones and not sleep and not daily
+if _new_empty and OUT.exists():
+    try:
+        _old = json.loads(OUT.read_text())
+    except Exception:
+        _old = {}
+    _had = ((_old.get("coverage") or {}).get("sleepNights") or 0) \
+        or ((_old.get("coverage") or {}).get("healthDays") or 0) or _old.get("zones")
+    if _had:
+        sys.exit(
+            f"REFUSED: no wellness files found in {SRC}, but {OUT} already holds "
+            f"{(_old.get('coverage') or {}).get('sleepNights')} sleep nights and "
+            f"{(_old.get('coverage') or {}).get('healthDays')} health days. "
+            "Writing the empty digest would delete them. Send the sleepData / "
+            "healthStatusData / heartRateZones files, or leave the existing digest alone."
+        )
+
 OUT.write_text(json.dumps(res, indent=1), encoding="utf-8")
 
 print(f"wrote {OUT} ({OUT.stat().st_size/1024:.0f} KB)")

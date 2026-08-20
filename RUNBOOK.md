@@ -98,6 +98,47 @@ Do not reintroduce a magnitude heuristic for the centimetre fields. Guessing the
 from size reported 31,824 ft of ascent on a six-mile neighbourhood walk, and read a
 0.5 mi walk as metres. Always centimetres.
 
+## Units in the derived-metric exports (Metrics*, TrainingHistory, HillScore …)
+
+A second family of Garmin files, one JSON per metric per ~100-day window, overlapping at
+the seams. `tools/metrics_digest.py` reads them.
+
+| Field | Stored as | Convert |
+|---|---|---|
+| `altitudeAcclimation` | **metres of acclimated altitude** | × 3.28084 → feet |
+| `currentAltitude` | metres | × 3.28084 → feet |
+| `acclimationPercentage` | a real percent, populated only on exposure days | as-is |
+| `calendarDate` | ISO string in some metrics, **epoch ms in others** | handle both |
+
+`altitudeAcclimation` is not a percentage. It reads 1400 after two nights at Mammoth,
+which is 4,593 ft and plausible; as a percent it would be 1400%. Deduplicate the window
+overlaps by keeping the last record for a date.
+
+Epoch `calendarDate` values are midnight UTC. Convert them as UTC — a local conversion
+moves every one of them back a day in this container.
+
+## A digest may never blank its own output
+
+A weekly run pointed at an export with no wellness files produced a structurally valid
+but empty `wellness.json`, and writing it deleted 583 sleep nights, 303 HRV points and
+the zone configuration in a single commit. An export that lacks a metric is not evidence
+that the metric is gone. `wellness_digest.py` now exits rather than overwrite a populated
+digest with an empty one, the same way `nightly.py` refuses an objective field.
+
+## Do not identify a hike by a superlative
+
+`SJ` was "the hike with the highest maxElevFt", which meant San Jacinto until San
+Gorgonio (11,510 ft, Aug 15) out-topped it (10,817 ft). `SJ` then silently pointed at a
+hike with no fuel record and the build died mid-publish. Identify a specific hike by
+route or label. The same reasoning as "never index a hike by position".
+
+A Garmin-only hike has no `route` until the conversation names one, and the altitude
+table indexes `h["route"]` directly. `rebuild_data.py` fills it from Garmin's own
+activity name so the key always exists.
+
+Chromium's path is not fixed across containers. `verify_site.py` resolves `$CHROME_PATH`,
+then any installed Playwright chromium, before falling back to `/opt/pw-browsers`.
+
 `rucking` is its own activity type and shares no substring with hiking or walking.
 Leaving it out of `HIKEY` silently dropped eleven sessions.
 
