@@ -1086,6 +1086,10 @@ def s_wellness():
                  f'<td class="num nw">{f(r["before"])}</td>'
                  f'<td class="num nw" style="color:{col};font-weight:700">{f(n)}</td>'
                  f'<td class="num nw">{f(r["after"])}</td></tr>')
+    # the heading was the literal string "Pulse oximetry is off", which stopped being
+    # true on 2026-07-29 and would have kept saying it. State comes from the data.
+    SPO2_TITLE = ("Pulse oximetry is on." if sp.get("on")
+                  else "Pulse oximetry is off.")
     hrv_pts = [(x["date"][5:], x["v"]) for x in
                json.loads((ROOT / "garmin" / "wellness.json").read_text())["hrvSeries"][-56:]]
     HRV_CHART = lines([{"lab": "HRV", "col": C["primary"], "pts": hrv_pts}],
@@ -1099,7 +1103,7 @@ def s_wellness():
     tile("HRV", f"{rc['hrvMean']:.0f}", f"range {rc['hrvRange'][0]:.0f}–{rc['hrvRange'][1]:.0f} · resting HR {rc['restingHRMean']:.0f}", C["primary"]),
   ])}</div>
 
-  <h3>Sleep around the six longest days</h3>
+  <h3>Sleep around the {len(bd['rows'])} longest days</h3>
   <div class="scroll"><table><thead><tr><th>Day</th><th>Duration</th><th>Night before</th>
   <th>Night of</th><th>Night after</th></tr></thead><tbody>{rows}</tbody></table></div>
   <p class="lede">{e(bd['finding'])}</p>
@@ -1110,7 +1114,8 @@ def s_wellness():
   {HRV_CHART}
   <p class="sub">{e(rc['trend'])}</p>
 
-  <div class="callout"><b>Pulse oximetry is off.</b> {e(sp['problem'])} {e(sp['action'])}</div>
+  <div class="callout" style="border-color:{C['primary2'] if sp.get('on') else C['bad2']}">
+  <b>{e(SPO2_TITLE)}</b> {e(sp['problem'])} {e(sp['action'])}</div>
 </section>"""
 
 

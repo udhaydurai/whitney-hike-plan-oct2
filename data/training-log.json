@@ -3437,13 +3437,13 @@
     }
   ],
   "wellness": {
-    "source": "Garmin sleep and health-status exports: 583 nights 2024-12-07 to 2026-07-28, 304 days of daily metrics.",
+    "source": "Garmin sleep and health-status exports: 604 nights 2024-12-07 to 2026-08-18, 325 days of daily metrics.",
     "sleep": {
-      "meanHrs": 6.28,
+      "meanHrs": 6.27,
       "medianHrs": 6.57,
       "under6Pct": 34,
-      "last60MeanHrs": 6.19,
-      "last60MeanScore": 74,
+      "last60MeanHrs": 6.12,
+      "last60MeanScore": 73,
       "meanDeepMin": 65
     },
     "bigDaySleep": {
@@ -3461,6 +3461,40 @@
             "score": 18
           },
           "after": null
+        },
+        {
+          "date": "2026-08-15",
+          "name": "San Bernardino County Rucking",
+          "duration": "13:07:55",
+          "before": {
+            "hrs": 5.07,
+            "score": 67
+          },
+          "nightOf": {
+            "hrs": 5.5,
+            "score": 75
+          },
+          "after": {
+            "hrs": 8.15,
+            "score": 73
+          }
+        },
+        {
+          "date": "2026-08-02",
+          "name": "Devils slide Hiking ",
+          "duration": "11:36:45",
+          "before": {
+            "hrs": 6.97,
+            "score": 57
+          },
+          "nightOf": {
+            "hrs": 3.92,
+            "score": 41
+          },
+          "after": {
+            "hrs": 2.93,
+            "score": 26
+          }
         },
         {
           "date": "2026-07-18",
@@ -3529,70 +3563,65 @@
             "hrs": 8.63,
             "score": 78
           }
-        },
-        {
-          "date": "2025-04-19",
-          "name": "San Diego Hiking",
-          "duration": "6:08:48",
-          "before": {
-            "hrs": 7.1,
-            "score": 82
-          },
-          "nightOf": {
-            "hrs": 5.82,
-            "score": 69
-          },
-          "after": {
-            "hrs": 8.12,
-            "score": 89
-          }
-        },
-        {
-          "date": "2025-10-05",
-          "name": "San Diego County Hiking",
-          "duration": "6:02:21",
-          "before": {
-            "hrs": 7.05,
-            "score": 74
-          },
-          "nightOf": {
-            "hrs": 2.65,
-            "score": 34
-          },
-          "after": {
-            "hrs": 6.58,
-            "score": 73
-          }
         }
       ],
-      "meanNightOfHrs": 3.8,
-      "meanNightBeforeHrs": 6.8,
-      "finding": "Sleep collapses on the night of every long effort. Across the six longest days the night-of average is 3.8 hours against 6.8 the night before and 6.3 typical. Rim to Rim produced 2.3 hours at a score of 18; San Jacinto 3.1 hours at 40; Jun 6 gave 3.3 hours at 26.",
+      "meanNightOfHrs": 4.0,
+      "meanNightBeforeHrs": 6.5,
+      "finding": "Across the 7 longest days the night-of average is 4.0 hours against 6.5 the night before, and 7 of 7 fell below the 6.57 h median.",
       "whitneyImplication": "This is the sharpest argument yet for arriving at Trail Camp with reserves. Day 1 ends at 12,000 ft and summit day depends on the sleep that follows it — and the pattern says a hard day costs roughly half a night even at sea level. Altitude, cold and a UL1 tent will not improve on that. Front-loaded fuelling, an early finish and no caffeine after midday all buy sleep that night, which is the real currency for Oct 2."
     },
     "recovery": {
-      "hrvMean": 46.9,
+      "hrvMean": 47.2,
       "hrvRange": [
         20.0,
-        64.0
+        67.0
       ],
-      "restingHRMean": 66.6,
+      "restingHRMean": 66.4,
       "restingHRRange": [
         54.0,
         89.0
       ],
-      "trend": "Over the last nine weeks HRV has risen from about 49 to 53 while resting heart rate has eased from 65 to 64, dipping to 61 in early July. Both point the same way: the training is being absorbed rather than accumulating as strain."
+      "trend": "Over the last nine weeks HRV has moved from about 53 to 51 ms, against a full-record mean of 47.2 ms."
     },
     "spo2Gap": {
-      "readings": 3,
-      "days": 304,
+      "readings": 24,
+      "days": 325,
       "values": [
         94.0,
         96.0,
+        96.0,
+        96.0,
+        95.0,
+        94.0,
+        96.0,
+        95.0,
+        96.0,
+        95.0,
+        96.0,
+        97.0,
+        94.0,
+        97.0,
+        95.0,
+        94.0,
+        96.0,
+        96.0,
+        95.0,
+        96.0,
+        95.0,
+        96.0,
+        95.0,
         96.0
       ],
-      "problem": "Pulse oximetry has produced 3 readings in 304 days of health data — effectively off. For an altitude objective this is the most useful sensor on the watch and it is not running.",
-      "action": "Enable it in the Fenix under Health & Wellness, Pulse Ox, set to All Day or at least During Sleep. Doing it now builds a sea-level baseline over the next nine weeks, so the readings at Cottonwood and Trail Camp mean something instead of being the first ever taken. Baseline from the three existing readings is 94-96%."
+      "on": true,
+      "runNights": 21,
+      "runFrom": "2026-07-29",
+      "recentMean": 95.5,
+      "recentRange": [
+        94.0,
+        97.0
+      ],
+      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 21 consecutive nights, against 24 readings in 325 days of health data overall.",
+      "action": "The sea-level baseline is now 95.5% (range 94–97%) over 21 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
     }
   },
   "nineWeekPlan": {

@@ -15,6 +15,7 @@ Garmin won, and the disagreement is recorded in the changelog rather than narrat
 in the dashboard.
 """
 
+import datetime as dt
 import json
 import pathlib
 
@@ -174,6 +175,157 @@ out["consecutiveDays"] = {
     "pairs": [{"first": a, "second": b} for a, b in consec],
     "note": ("Computed from the data, not assumed. Any pair of back-to-back days appears here.")}
 out["garminOverrides"] = changelog
+
+
+def _spo2_block(spo2, spo2_days, _keep):
+    """
+    Pulse ox state, read from the data rather than asserted.
+
+    The log said "3 readings in 304 days — effectively off" and told him to enable it.
+    He did, on 2026-07-29, and it has recorded nightly since. A dashboard still telling
+    him to turn on a setting he already turned on is worse than silent, so both the state
+    and the recommendation are computed. The device instructions are kept only for the
+    case where the readings actually stop.
+    """
+    import datetime as _dt
+    if not spo2:
+        return {"readings": 0, "days": spo2_days, "values": [],
+                "on": False,
+                "problem": f"Pulse oximetry has produced no readings in {spo2_days} days "
+                           f"of health data.",
+                "action": _keep(["spo2Gap", "action"], "")}
+    dates = [x["date"] for x in spo2]
+    vals = [x["v"] for x in spo2]
+    # the current run: consecutive daily readings ending at the most recent one
+    run_end = _dt.date.fromisoformat(dates[-1])
+    run = 1
+    for a, b in zip(reversed(dates[:-1]), reversed(dates[1:])):
+        if (_dt.date.fromisoformat(b) - _dt.date.fromisoformat(a)).days == 1:
+            run += 1
+        else:
+            break
+    run_from = (run_end - _dt.timedelta(days=run - 1)).isoformat()
+    recent = [x["v"] for x in spo2 if x["date"] >= run_from]
+    on = run >= 7
+    lo, hi = min(recent), max(recent)
+    mean = round(sum(recent) / len(recent), 1)
+    if on:
+        problem = (f"Pulse oximetry has been recording nightly since {run_from} — "
+                   f"{run} consecutive nights, against {len(spo2)} readings in "
+                   f"{spo2_days} days of health data overall.")
+        action = (f"The sea-level baseline is now {mean}% (range {lo:.0f}–{hi:.0f}%) over "
+                  f"{run} nights, which is enough for the readings at Cottonwood and Trail "
+                  f"Camp to be read as a drop from something rather than as first-ever "
+                  f"numbers. Leave it on through Oct 2.")
+    else:
+        problem = (f"Pulse oximetry has produced {len(spo2)} readings in {spo2_days} days "
+                   f"of health data, the most recent on {dates[-1]}.")
+        action = _keep(["spo2Gap", "action"], "")
+    return {"readings": len(spo2), "days": spo2_days, "values": vals, "on": on,
+            "runNights": run, "runFrom": run_from, "recentMean": mean,
+            "recentRange": [lo, hi], "problem": problem, "action": action}
+
+
+# ── wellness: recomputed from the Garmin digest, not carried over.
+# These are objective metrics — nights, hours, HRV, SpO2 — and under the source-of-truth
+# rule they may not sit frozen in the log. They were, and the block still read "583 nights
+# to 2026-07-28" three weeks after the export moved on. The prose that interprets them is
+# conversation-owned and is preserved; any figure inside that prose is rebuilt from the
+# numbers so the sentence cannot drift from the data it describes.
+_wp = ROOT / "garmin" / "wellness.json"
+if _wp.exists():
+    W = json.loads(_wp.read_text(encoding="utf-8"))
+    old_w = OLD.get("wellness", {})
+    sleep_by, daily_by = W["sleepByDate"], W["dailyByDate"]
+    nights = sorted(sleep_by)
+
+    def _hrs(d):
+        r = sleep_by.get(d)
+        return r["totalHrs"] if r else None
+
+    def _night(d):
+        r = sleep_by.get(d)
+        return {"hrs": r["totalHrs"], "score": r["score"]} if r else None
+
+    allh = [sleep_by[d]["totalHrs"] for d in nights]
+    last60 = nights[-60:]
+    l60h = [sleep_by[d]["totalHrs"] for d in last60]
+    l60s = [sleep_by[d]["score"] for d in last60 if sleep_by[d].get("score") is not None]
+    deep = [sleep_by[d]["deepMin"] for d in nights if sleep_by[d].get("deepMin") is not None]
+
+    # the longest efforts, ranked by duration in SECONDS — a lexicographic sort on
+    # "8:58" vs "11:04" is what once buried San Jacinto below a nine-minute walk
+    longest = sorted([a for a in DIG if a.get("durSec")],
+                     key=lambda a: -a["durSec"])[:7]
+    brows = []
+    for a in longest:
+        d0 = a["start"][:10]
+        day = dt.date.fromisoformat(d0)
+        brows.append({
+            "date": d0,
+            "name": a.get("name"),
+            "duration": a.get("totalTime"),
+            "before": _night((day - dt.timedelta(days=1)).isoformat()),
+            "nightOf": _night(d0),
+            "after": _night((day + dt.timedelta(days=1)).isoformat()),
+        })
+    _med = round(sorted(allh)[len(allh) // 2], 2)
+    non = [r["nightOf"]["hrs"] for r in brows if r["nightOf"]]
+    nbe = [r["before"]["hrs"] for r in brows if r["before"]]
+    mean_on = round(sum(non) / len(non), 1) if non else None
+    mean_be = round(sum(nbe) / len(nbe), 1) if nbe else None
+
+    hrv = [x["v"] for x in W["hrvSeries"]]
+    rhr_vals = [v["HR"] for v in daily_by.values() if v.get("HR") is not None]
+    h9 = [x for x in W["hrvSeries"] if x["date"] >= (dt.date.fromisoformat(nights[-1])
+                                                     - dt.timedelta(days=63)).isoformat()]
+    half = len(h9) // 2 or 1
+    hrv_then = round(sum(x["v"] for x in h9[:half]) / half) if h9 else None
+    hrv_now = round(sum(x["v"] for x in h9[half:]) / max(1, len(h9) - half)) if h9 else None
+
+    spo2 = W["spo2Series"]
+    spo2_days = W["coverage"]["healthDays"]
+
+    def _keep(path, default):
+        cur = old_w
+        for k in path:
+            cur = (cur or {}).get(k) if isinstance(cur, dict) else None
+        return cur if cur else default
+
+    out["wellness"] = {
+        "source": (f"Garmin sleep and health-status exports: {len(nights)} nights "
+                   f"{nights[0]} to {nights[-1]}, {spo2_days} days of daily metrics."),
+        "sleep": {
+            "meanHrs": round(sum(allh) / len(allh), 2),
+            "medianHrs": round(sorted(allh)[len(allh) // 2], 2),
+            "under6Pct": round(sum(1 for v in allh if v < 6) / len(allh) * 100),
+            "last60MeanHrs": round(sum(l60h) / len(l60h), 2),
+            "last60MeanScore": round(sum(l60s) / len(l60s)) if l60s else None,
+            "meanDeepMin": round(sum(deep) / len(deep)) if deep else None,
+        },
+        "bigDaySleep": {
+            "rows": brows,
+            "meanNightOfHrs": mean_on,
+            "meanNightBeforeHrs": mean_be,
+            # "collapses on every long effort" was prose, and Aug 15 broke it: 5.5 h and
+            # a score of 75 after thirteen hours out. State the count that is true.
+            "finding": (f"Across the {len(brows)} longest days the night-of average is "
+                        f"{mean_on} hours against {mean_be} the night before, and "
+                        f"{sum(1 for r in brows if r['nightOf'] and r['nightOf']['hrs'] < _med)} "
+                        f"of {len(non)} fell below the {_med} h median."),
+            "whitneyImplication": _keep(["bigDaySleep", "whitneyImplication"], ""),
+        },
+        "recovery": {
+            "hrvMean": round(sum(hrv) / len(hrv), 1),
+            "hrvRange": [min(hrv), max(hrv)],
+            "restingHRMean": round(sum(rhr_vals) / len(rhr_vals), 1),
+            "restingHRRange": [min(rhr_vals), max(rhr_vals)],
+            "trend": (f"Over the last nine weeks HRV has moved from about {hrv_then} to "
+                      f"{hrv_now} ms, against a full-record mean of "
+                      f"{round(sum(hrv)/len(hrv),1)} ms."),
+        },
+        "spo2Gap": _spo2_block(spo2, spo2_days, _keep),
+    }
 
 # drop keys that were conversation scaffolding rather than dashboard content
 for k in ("physiologyAnswers", "fitFindings", "fitExport", "watchConfig",

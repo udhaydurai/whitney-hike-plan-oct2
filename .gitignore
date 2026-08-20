@@ -3,6 +3,7 @@
 # that the build actually reads, and those are what get committed.
 garmin/ex/
 garmin/health/
+garmin/wellness_src/
 garmin/hist/
 # raw derived-metric window files; tools/metrics_digest.py turns them into metrics.json
 garmin/metrics/
