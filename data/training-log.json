@@ -8,7 +8,7 @@
     "permitHolder": "overnight permit held by a hiking partner",
     "watch": "Garmin Fenix 8",
     "logCoversFrom": "2026-04-25",
-    "logCoversTo": "2026-07-26",
+    "logCoversTo": "2026-08-18",
     "lastUpdated": "2026-07-28",
     "whitneyProfile": {
       "day1AscentFt": 3700,
@@ -293,7 +293,8 @@
       "packLb": 12,
       "notes": "Recovered from the Garmin export — not in the original log.",
       "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Walking"
     },
     {
       "id": "R2",
@@ -334,7 +335,8 @@
       "packLb": 12,
       "notes": "Recovered from the Garmin export — not in the original log.",
       "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Walking"
     },
     {
       "id": "R3",
@@ -375,7 +377,8 @@
       "packLb": 12,
       "notes": "Recovered from the Garmin export — not in the original log.",
       "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R4",
@@ -416,7 +419,8 @@
       "packLb": 12,
       "notes": "Recovered from the Garmin export — not in the original log.",
       "coachNote": "The rucking block actually began May 4, not May 20. Four consecutive days, ~42 min, ~2.25 mi each.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R5",
@@ -457,7 +461,8 @@
       "packLb": 12,
       "notes": "First rucking check-in. Conservative start.",
       "coachNote": "Zone 2 endurance territory; pace on the slow side vs 15-18 min/mi target.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R6",
@@ -499,7 +504,8 @@
       "notes": "Sprinted to beat closing park gate. Felt pressure near left shoulder blade.",
       "coachNote": "Hit the 18:13 target same day; 7:40 best pace is the gate sprint, not real. Shoulder pressure flagged for a doctor if it recurs.",
       "flag": "symptom",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R7",
@@ -541,7 +547,8 @@
       "notes": "Recovery time jumped 12h to 20h.",
       "coachNote": "Blew past 18:00 target and covered the 5K. Respect the 20h recovery.",
       "recoveryHours": 20,
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R8",
@@ -583,7 +590,8 @@
       "notes": "",
       "coachNote": "Faster at LOWER heart rate (106) — textbook cardiovascular adaptation. Outgrew the 18:00 target.",
       "flag": "breakthrough",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R9",
@@ -625,7 +633,8 @@
       "notes": "Hip flexor stiffness. Felt off.",
       "coachNote": "Same pace as R4 but HR +14 bpm — recovery debt, not lost fitness. 2 full days off rucking.",
       "flag": "fatigue",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R10",
@@ -667,7 +676,8 @@
       "notes": "Second day on beetroot juice.",
       "coachNote": "Best pace ever, first sub-17. HR back to 117 after the fatigue spike. Too early to credit beet.",
       "flag": "breakthrough",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     },
     {
       "id": "R11",
@@ -708,7 +718,48 @@
       "packLb": 12,
       "notes": "Rolling hills route.",
       "coachNote": "34 sec slower but with elevation added — equivalent or better than the flat best. HR tracked terrain and recovered on descents: the Whitney switchback pattern.",
-      "effortType": "training"
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R12",
+      "date": "2026-08-18",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 2.26,
+      "ascentFt": 85,
+      "descentFt": 102,
+      "minElevFt": 574,
+      "maxElevFt": 598,
+      "totalTime": "0:42:01",
+      "movingTime": "0:41:35",
+      "stoppedPct": 1,
+      "avgPace": "18:35",
+      "movingPace": "18:23",
+      "avgSpeedMph": 3.23,
+      "movingSpeedMph": 3.26,
+      "avgHR": 107,
+      "maxHR": 121,
+      "totalCal": 233,
+      "aerobicEffect": 1.7,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 18,
+      "steps": 4750,
+      "bodyBattery": -3,
+      "restingCal": 56,
+      "sweatLossMl": 461,
+      "hrZoneSec": {
+        "z0": 2521,
+        "z1": 0,
+        "z2": 0,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     }
   ],
   "hikes": [
@@ -1354,6 +1405,123 @@
       "notes": "Left the hotel at 7am, on trail by 8am, finished 2:20pm. Hiked without poles. Slight discomfort at the start attributed to the thinner air. Had to stop at every small rise; took many short breaks to keep heart rate down. Peaked at 140 bpm. Son (gym-trained) sat around 120, wife around 117 — she stopped for rest more often despite no hiking background.",
       "coachNote": "The whole hike sat above 10,000 ft — your longest sustained exposure at that altitude, and pacing discipline was outstanding: 43% Zone 1, 38% Zone 2, only 47 seconds above threshold. Two flags. Sweat loss 5,115 ml for only 1,342 ft of climbing is the dry-thin-air tax at altitude, and you were again splitting water three ways. And needing to stop at every rise at 10-11k is the third time altitude has cost you something.",
       "flag": "milestone"
+    },
+    {
+      "id": "H14",
+      "date": "2026-08-02",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 16.12,
+      "ascentFt": 4511,
+      "descentFt": 4501,
+      "minElevFt": 6518,
+      "maxElevFt": 10814,
+      "totalTime": "11:36:45",
+      "movingTime": "6:12:45",
+      "stoppedPct": 47,
+      "avgPace": "43:13",
+      "movingPace": "23:07",
+      "avgSpeedMph": 1.39,
+      "movingSpeedMph": 2.59,
+      "avgHR": 140,
+      "maxHR": 166,
+      "totalCal": 3753,
+      "aerobicEffect": 5.0,
+      "anaerobicEffect": 1.0,
+      "exerciseLoad": 355,
+      "steps": 24076,
+      "bodyBattery": -6,
+      "restingCal": 927,
+      "sweatLossMl": 10847,
+      "hrZoneSec": {
+        "z0": 1409,
+        "z1": 9228,
+        "z2": 15623,
+        "z3": 12600,
+        "z4": 2944,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Devils slide Hiking ",
+      "effortType": "training"
+    },
+    {
+      "id": "H15",
+      "date": "2026-08-09",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 5.65,
+      "ascentFt": 1168,
+      "descentFt": 1158,
+      "minElevFt": 1604,
+      "maxElevFt": 2647,
+      "totalTime": "2:22:09",
+      "movingTime": "2:07:39",
+      "stoppedPct": 10,
+      "avgPace": "25:09",
+      "movingPace": "22:35",
+      "avgSpeedMph": 2.38,
+      "movingSpeedMph": 2.66,
+      "avgHR": 126,
+      "maxHR": 156,
+      "totalCal": 764,
+      "aerobicEffect": 2.9,
+      "anaerobicEffect": 0.4,
+      "exerciseLoad": 66,
+      "steps": 13558,
+      "bodyBattery": -14,
+      "restingCal": 189,
+      "sweatLossMl": 2086,
+      "hrZoneSec": {
+        "z0": 3132,
+        "z1": 2573,
+        "z2": 1910,
+        "z3": 912,
+        "z4": 3,
+        "z5": 0,
+        "z6": 0
+      },
+      "route": "Poway Hiking",
+      "effortType": "training"
+    },
+    {
+      "id": "H16",
+      "date": "2026-08-15",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 18.67,
+      "ascentFt": 5591,
+      "descentFt": 5597,
+      "minElevFt": 6089,
+      "maxElevFt": 11510,
+      "totalTime": "13:07:55",
+      "movingTime": "7:03:18",
+      "stoppedPct": 46,
+      "avgPace": "42:12",
+      "movingPace": "22:40",
+      "avgSpeedMph": 1.42,
+      "movingSpeedMph": 2.65,
+      "avgHR": 141,
+      "maxHR": 176,
+      "totalCal": 4312,
+      "aerobicEffect": 5.0,
+      "anaerobicEffect": 4.1,
+      "exerciseLoad": 677,
+      "steps": 24468,
+      "bodyBattery": -50,
+      "restingCal": 1048,
+      "sweatLossMl": 9873,
+      "hrZoneSec": {
+        "z0": 2647,
+        "z1": 11157,
+        "z2": 14979,
+        "z3": 11946,
+        "z4": 6316,
+        "z5": 225,
+        "z6": 0
+      },
+      "route": "San Bernardino County Rucking",
+      "effortType": "training"
     }
   ],
   "altitudeExposure": [

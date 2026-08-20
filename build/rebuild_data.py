@@ -110,6 +110,11 @@ def build_activity(a, subj, kind):
         if k in subj and subj[k] is not None:
             rec[k] = subj[k]
     rec.setdefault("effortType", "training")
+    # A hike Garmin recorded but the conversation has not yet named still needs a place
+    # string: the dashboard's altitude-exposure table indexes h["route"] directly. Fall
+    # back to Garmin's own activity name, then its location — both are Garmin fields, so
+    # this invents nothing. Do not leave it absent; a KeyError here blocked a whole publish.
+    rec.setdefault("route", a.get("name") or a.get("location") or "Unnamed Garmin activity")
     return rec
 
 

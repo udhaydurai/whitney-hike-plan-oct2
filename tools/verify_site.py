@@ -15,6 +15,7 @@ project before:
 Run: python3 tools/verify_site.py
 """
 
+import os
 import http.server
 import functools
 import pathlib
@@ -24,7 +25,25 @@ import threading
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "docs"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# Chromium's location is not stable across containers: the image that carried
+# /opt/pw-browsers/chromium-1194 is not the only one this repo gets cloned into, and a
+# hardcoded path turns a healthy build into a failed publish. Prefer $CHROME_PATH, then
+# any playwright chromium in the image or the user cache, then the original path.
+def _find_chrome():
+    import glob as _g
+    env = os.environ.get("CHROME_PATH")
+    if env and os.path.exists(env):
+        return env
+    pats = ["/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+            os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")]
+    for pat in pats:
+        hits = sorted(_g.glob(pat))
+        if hits:
+            return hits[-1]
+    return "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+
+
+CHROME = _find_chrome()
 
 
 def serve(directory):

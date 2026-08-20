@@ -162,7 +162,12 @@ R_CORR = (sum((p - _mx) * (q - _my) for p, q in zip(_x, _y))
           / (sum((p - _mx) ** 2 for p in _x) * sum((q - _my) ** 2 for q in _y)) ** .5)
 VO2 = PH["vo2maxSeries"]
 R2R = D["rimToRim"]
-SJ = next(h for h in HK if h["maxElevFt"] == max(x["maxElevFt"] for x in TRN))
+# San Jacinto is identified by route, not by elevation. Picking "highest hike" broke
+# the moment San Gorgonio (11,510 ft, Aug 15) out-topped San Jacinto (10,817 ft):
+# SJ silently became a hike with no subjective fuel record and the build died.
+SJ = next(h for h in HK
+         if "jacinto" in f"{h.get('route') or ''} {h.get('label') or ''}".lower()
+         and h.get("fuel"))
 BIG = max(HK, key=lambda h: h["ascentFt"])
 HIGH = max(HK, key=lambda h: h["maxElevFt"])
 CONSEC = D["consecutiveDays"]["pairs"]
