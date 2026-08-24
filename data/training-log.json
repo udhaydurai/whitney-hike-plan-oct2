@@ -3609,7 +3609,7 @@
     }
   ],
   "wellness": {
-    "source": "Garmin sleep and health-status exports: 609 nights 2024-12-07 to 2026-08-23, 330 days of daily metrics.",
+    "source": "Garmin sleep and health-status exports: 609 nights 2024-12-07 to 2026-08-23, 626 days of daily metrics.",
     "sleep": {
       "meanHrs": 6.27,
       "medianHrs": 6.55,
@@ -3757,7 +3757,7 @@
     },
     "spo2Gap": {
       "readings": 29,
-      "days": 330,
+      "days": 626,
       "values": [
         94.0,
         96.0,
@@ -3797,7 +3797,7 @@
         93.0,
         97.0
       ],
-      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 26 consecutive nights, against 29 readings in 330 days of health data overall.",
+      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 26 consecutive nights, against 29 readings in 626 days of health data overall.",
       "action": "The sea-level baseline is now 95.4% (range 93–97%) over 26 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
     }
   },

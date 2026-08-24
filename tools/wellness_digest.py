@@ -88,6 +88,51 @@ for _, d in load("*healthStatusData*"):
             if m.get("status") not in (None, "UNKNOWN"):
                 rec[m["type"] + "_status"] = m["status"]
 
+# ─── true resting heart rate, from the daily user-summary (UDS) files
+#
+# healthStatusData carries a metric called "HR", and it is NOT resting heart rate. It
+# reads about 5-6 bpm high: for Aug 17-23 2026 it averaged 58.3 while Garmin Connect's
+# own 7-day resting figure for the same week was 52. Reporting the wrong one made the
+# dashboard describe an athlete measurably less recovered than he actually is, and it
+# was only caught because he checked the number against his watch.
+#
+# UDSFile_*.json carries Garmin's own `restingHeartRate` per calendarDate, which
+# reproduces Connect to within a beat (53.3 vs 52 for that week). Prefer it always, and
+# keep the healthStatusData value only as a labelled fallback so a missing UDS file
+# degrades to something rather than nothing.
+#
+# The UDS files live in DI-Connect-Aggregator, a sibling of the wellness folder, so look
+# there as well as in SRC itself.
+import itertools
+uds_pats = ["UDSFile*.json", "../DI-Connect-Aggregator/UDSFile*.json",
+            "**/UDSFile*.json"]
+uds_rows, uds_files = {}, 0
+for pat in uds_pats:
+    for f in sorted(glob.glob(str(SRC / pat), recursive=True)):
+        try:
+            rows = json.load(open(f, encoding="utf-8"))
+        except Exception as ex:
+            print(f"  ! {f}: {ex}")
+            continue
+        uds_files += 1
+        for row in (rows if isinstance(rows, list) else [rows]):
+            day = row.get("calendarDate")
+            v = row.get("restingHeartRate")
+            if day and v:
+                uds_rows[day] = v          # later windows win on overlap
+    if uds_rows:
+        break
+
+for day, v in uds_rows.items():
+    rec = daily.setdefault(day, {})
+    rec["RESTING_HR"] = v
+
+if uds_rows:
+    print(f"resting HR: {len(uds_rows)} days from {uds_files} UDS file(s) "
+          f"— Garmin's own restingHeartRate")
+else:
+    print("  ! no UDSFile found; falling back to healthStatusData HR, which reads high")
+
 # ─── sleep
 sleep = {}
 for _, d in load("*sleepData*"):
@@ -131,7 +176,9 @@ def stats(vals):
 
 spo2 = series("SPO2", daily)
 hrv = series("HRV", daily)
-rhr = series("HR", daily)
+# prefer the UDS resting series; fall back to the high-reading healthStatusData one
+rhr = series("RESTING_HR", daily) or series("HR", daily)
+rhr_src = "UDSFile restingHeartRate" if series("RESTING_HR", daily) else "healthStatusData HR (reads ~5 bpm high)"
 resp = series("RESPIRATION", daily)
 sc = series("score", sleep)
 dur = series("totalHrs", sleep)
@@ -153,6 +200,7 @@ res = {
     "spo2": stats([v for _, v in spo2]),
     "hrv": stats([v for _, v in hrv]),
     "restingHR": stats([v for _, v in rhr]),
+    "restingHRSource": rhr_src,
     "respiration": stats([v for _, v in resp]),
     "sleepScore": stats([v for _, v in sc]),
     "sleepHours": stats([v for _, v in dur]),

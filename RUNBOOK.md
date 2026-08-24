@@ -117,6 +117,38 @@ overlaps by keeping the last record for a date.
 Epoch `calendarDate` values are midnight UTC. Convert them as UTC — a local conversion
 moves every one of them back a day in this container.
 
+## `HR` in healthStatusData is not resting heart rate
+
+It reads about 5-6 bpm high. For Aug 17-23 2026 it averaged 58.3 while Garmin Connect's
+own 7-day resting figure for that week was 52. The dashboard therefore described an
+athlete measurably less recovered than he was, and reported his resting heart rate as
+roughly flat when Connect showed it falling to a twelve-month low.
+
+Garmin's own value is `restingHeartRate`, per `calendarDate`, in
+`DI-Connect-Aggregator/UDSFile_*.json`. It reproduces Connect across every window:
+
+| window | UDSFile | Garmin Connect |
+|---|---|---|
+| 7 d, Aug 17-23 | 53.3 | 52 |
+| 4 w, Jul 27 - Aug 23 | 55.6 | 55 |
+| 1 y, Aug 2025 - Aug 2026 | 58.6 | 59 |
+
+`wellness_digest.py` now reads the UDS series and keeps the healthStatusData value only
+as a labelled fallback. `wellness.json` carries `restingHRSource` so the dashboard can
+say which one it used.
+
+This was caught only because the athlete checked the number against his watch. The
+narrative built on the wrong field happened to be directionally right, which is the
+dangerous case — a wrong number that agrees with the story does not announce itself.
+When a figure here disagrees with what Connect shows him, Connect is right and the
+digest has the bug.
+
+Note that the *zone configuration's* `restingHeartRateUsed` is a different thing again:
+it is whatever was saved when zones were last set, not a measurement. As of Aug 2026 it
+reads 65 against a measured 53, so every %HRR zone floor on the watch sits about 5 bpm
+too high and the watch under-reports how hard a given effort was. `maxHeartRateUsed` of
+179 is sound — 179 was actually recorded on 2025-11-30.
+
 ## A digest may never blank its own output
 
 A weekly run pointed at an export with no wellness files produced a structurally valid
