@@ -224,7 +224,44 @@ Python 3.11. Two things bite repeatedly when generating HTML from f-strings:
 
 Use `fitdecode`, not `fitparse` — the latter will not build a wheel here.
 
-Chromium for Playwright is at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`.
+Chromium for Playwright is **not** reliably present, and where it exists the path varies.
+Do not hardcode `/opt/pw-browsers/chromium-1194/...`; that path does not exist in current
+containers. `verify_site.py` already resolves `$CHROME_PATH`, then any chromium under
+`~/.cache/ms-playwright`, before falling back to it.
+
+## The container bootstrap — read this before concluding a session "could not push"
+
+A fresh session container has neither the `playwright` python module nor a Chromium, and
+has no root, so the fix Playwright itself prints — `sudo playwright install-deps` — cannot
+run. `publish.sh` will not publish a site that fails verification, so on such a container
+the whole publish stops at the verification step.
+
+**It stops *before* the commit.** That matters more than it sounds, because it means the
+working tree still holds every change and nothing has reached git. A session that hit this
+reported that it could not check the data in, which was read as a git problem and very
+nearly answered with a force push. There was no git problem. There was nothing committed
+yet. If a run reports a failure to publish, check `git status` and `git log` before
+touching anything — and never reach for `--force`, which is the one move that destroys the
+other writer's work while appearing to fix this.
+
+`tools/bootstrap_env.sh` resolves all of it without root: pip-installs playwright to
+`--user`, downloads Chromium to `~/.cache/ms-playwright`, and for shared libraries the
+image lacks, fetches the `.deb` with `apt-get download` — which needs no privileges because
+it only writes to the cwd — and unpacks the payload into `~/.local/whitney-deps`, which it
+puts on `LD_LIBRARY_PATH`.
+
+`publish.sh` sources it automatically. There is no separate step to remember and no reason
+for any session to work this out again. From a wiped container it takes about 27 seconds,
+almost all of it the Chromium download; when the container is already set up it is silent
+and adds about a second.
+
+On Aug 23 2026 exactly one library was missing, `libXdamage.so.1`. The mapping table in
+`_libpkg()` covers the rest of Chromium's headless set so that further drift stays a
+scripted fix. If a library appears that is not in the table, the script says so by name
+rather than failing inside a browser launch.
+
+`$HOME` is writable; `/home/claude` is **not** — it cannot even be created. Clone into
+`$HOME` or a path derived from it, never a hardcoded `/home/<name>`.
 
 ## Facts corrected by the athlete — do not reintroduce them
 
