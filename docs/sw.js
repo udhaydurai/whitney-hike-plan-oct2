@@ -1,6 +1,6 @@
 /* Cache-first for the shell, so the dashboard opens with the radio off.
    CACHE is stamped by build/site.py; a new build evicts the old one on activate. */
-const CACHE = "whitney-64bd60e984";
+const CACHE = "whitney-ad64af537a";
 const SHELL = ["./", "./index.html", "./logger.html",
                "./manifest.webmanifest", "./icon.svg",
                "./icon-192.png", "./icon-512.png"];

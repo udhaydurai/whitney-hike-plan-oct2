@@ -8,7 +8,7 @@
     "permitHolder": "overnight permit held by a hiking partner",
     "watch": "Garmin Fenix 8",
     "logCoversFrom": "2026-04-25",
-    "logCoversTo": "2026-08-18",
+    "logCoversTo": "2026-08-23",
     "lastUpdated": "2026-07-28",
     "whitneyProfile": {
       "day1AscentFt": 3700,
@@ -760,6 +760,166 @@
       "packLb": 12,
       "effortType": "training",
       "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R13",
+      "date": "2026-08-19",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.38,
+      "ascentFt": 118,
+      "descentFt": 121,
+      "minElevFt": 573,
+      "maxElevFt": 602,
+      "totalTime": "0:54:24",
+      "movingTime": "0:54:17",
+      "stoppedPct": 0,
+      "avgPace": "16:05",
+      "movingPace": "16:03",
+      "avgSpeedMph": 3.73,
+      "movingSpeedMph": 3.74,
+      "avgHR": 117,
+      "maxHR": 146,
+      "totalCal": 356,
+      "aerobicEffect": 2.2,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 36,
+      "steps": 6678,
+      "bodyBattery": -5,
+      "restingCal": 72,
+      "sweatLossMl": 712,
+      "hrZoneSec": {
+        "z0": 2488,
+        "z1": 698,
+        "z2": 64,
+        "z3": 14,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R14",
+      "date": "2026-08-20",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.58,
+      "ascentFt": 115,
+      "descentFt": 112,
+      "minElevFt": 586,
+      "maxElevFt": 612,
+      "totalTime": "0:58:11",
+      "movingTime": "0:58:03",
+      "stoppedPct": 0,
+      "avgPace": "16:15",
+      "movingPace": "16:12",
+      "avgSpeedMph": 3.69,
+      "movingSpeedMph": 3.7,
+      "avgHR": 121,
+      "maxHR": 134,
+      "totalCal": 377,
+      "aerobicEffect": 2.3,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 39,
+      "steps": 7180,
+      "bodyBattery": -1,
+      "restingCal": 77,
+      "sweatLossMl": 783,
+      "hrZoneSec": {
+        "z0": 1599,
+        "z1": 1880,
+        "z2": 12,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R15",
+      "date": "2026-08-22",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 5.91,
+      "ascentFt": 285,
+      "descentFt": 289,
+      "minElevFt": 404,
+      "maxElevFt": 608,
+      "totalTime": "1:39:11",
+      "movingTime": "1:39:07",
+      "stoppedPct": 0,
+      "avgPace": "16:46",
+      "movingPace": "16:46",
+      "avgSpeedMph": 3.58,
+      "movingSpeedMph": 3.58,
+      "avgHR": 114,
+      "maxHR": 131,
+      "totalCal": 615,
+      "aerobicEffect": 2.7,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 53,
+      "steps": 12028,
+      "bodyBattery": -15,
+      "restingCal": 132,
+      "sweatLossMl": 1117,
+      "hrZoneSec": {
+        "z0": 4788,
+        "z1": 1163,
+        "z2": 0,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R16",
+      "date": "2026-08-23",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 4.18,
+      "ascentFt": 246,
+      "descentFt": 190,
+      "minElevFt": 409,
+      "maxElevFt": 608,
+      "totalTime": "1:12:35",
+      "movingTime": "1:12:26",
+      "stoppedPct": 0,
+      "avgPace": "17:21",
+      "movingPace": "17:19",
+      "avgSpeedMph": 3.46,
+      "movingSpeedMph": 3.46,
+      "avgHR": 130,
+      "maxHR": 153,
+      "totalCal": 457,
+      "aerobicEffect": 2.4,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 42,
+      "steps": 10086,
+      "bodyBattery": -13,
+      "restingCal": 96,
+      "sweatLossMl": 1175,
+      "hrZoneSec": {
+        "z0": 1090,
+        "z1": 424,
+        "z2": 2583,
+        "z3": 258,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego Rucking"
     }
   ],
   "hikes": [
@@ -3353,6 +3513,18 @@
       {
         "first": "2026-07-25",
         "second": "2026-07-26"
+      },
+      {
+        "first": "2026-08-18",
+        "second": "2026-08-19"
+      },
+      {
+        "first": "2026-08-19",
+        "second": "2026-08-20"
+      },
+      {
+        "first": "2026-08-22",
+        "second": "2026-08-23"
       }
     ],
     "note": "Computed from the data, not assumed. Any pair of back-to-back days appears here."
@@ -3437,12 +3609,12 @@
     }
   ],
   "wellness": {
-    "source": "Garmin sleep and health-status exports: 604 nights 2024-12-07 to 2026-08-18, 325 days of daily metrics.",
+    "source": "Garmin sleep and health-status exports: 609 nights 2024-12-07 to 2026-08-23, 330 days of daily metrics.",
     "sleep": {
       "meanHrs": 6.27,
-      "medianHrs": 6.57,
+      "medianHrs": 6.55,
       "under6Pct": 34,
-      "last60MeanHrs": 6.12,
+      "last60MeanHrs": 6.15,
       "last60MeanScore": 73,
       "meanDeepMin": 65
     },
@@ -3567,25 +3739,25 @@
       ],
       "meanNightOfHrs": 4.0,
       "meanNightBeforeHrs": 6.5,
-      "finding": "Across the 7 longest days the night-of average is 4.0 hours against 6.5 the night before, and 7 of 7 fell below the 6.57 h median.",
+      "finding": "Across the 7 longest days the night-of average is 4.0 hours against 6.5 the night before, and 7 of 7 fell below the 6.55 h median.",
       "whitneyImplication": "This is the sharpest argument yet for arriving at Trail Camp with reserves. Day 1 ends at 12,000 ft and summit day depends on the sleep that follows it — and the pattern says a hard day costs roughly half a night even at sea level. Altitude, cold and a UL1 tent will not improve on that. Front-loaded fuelling, an early finish and no caffeine after midday all buy sleep that night, which is the real currency for Oct 2."
     },
     "recovery": {
-      "hrvMean": 47.2,
+      "hrvMean": 47.4,
       "hrvRange": [
         20.0,
         67.0
       ],
-      "restingHRMean": 66.4,
+      "restingHRMean": 66.2,
       "restingHRRange": [
         54.0,
         89.0
       ],
-      "trend": "Over the last nine weeks HRV has moved from about 53 to 51 ms, against a full-record mean of 47.2 ms."
+      "trend": "Over the last nine weeks HRV has moved from about 52 to 53 ms, against a full-record mean of 47.4 ms."
     },
     "spo2Gap": {
-      "readings": 24,
-      "days": 325,
+      "readings": 29,
+      "days": 330,
       "values": [
         94.0,
         96.0,
@@ -3610,18 +3782,23 @@
         95.0,
         96.0,
         95.0,
+        96.0,
+        93.0,
+        96.0,
+        95.0,
+        95.0,
         96.0
       ],
       "on": true,
-      "runNights": 21,
+      "runNights": 26,
       "runFrom": "2026-07-29",
-      "recentMean": 95.5,
+      "recentMean": 95.4,
       "recentRange": [
-        94.0,
+        93.0,
         97.0
       ],
-      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 21 consecutive nights, against 24 readings in 325 days of health data overall.",
-      "action": "The sea-level baseline is now 95.5% (range 94–97%) over 21 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
+      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 26 consecutive nights, against 29 readings in 330 days of health data overall.",
+      "action": "The sea-level baseline is now 95.4% (range 93–97%) over 26 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
     }
   },
   "nineWeekPlan": {

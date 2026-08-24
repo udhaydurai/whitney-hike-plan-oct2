@@ -47,66 +47,66 @@
   "healthyAllBioAge": 38.0
  },
  "coverage": {
-  "sleepNights": 604,
+  "sleepNights": 609,
   "sleepFrom": "2024-12-07",
-  "sleepTo": "2026-08-18",
-  "healthDays": 325,
+  "sleepTo": "2026-08-23",
+  "healthDays": 330,
   "healthFrom": "2025-09-17",
-  "healthTo": "2026-08-18"
+  "healthTo": "2026-08-23"
  },
  "spo2": {
-  "n": 24,
-  "mean": 95.5,
+  "n": 29,
+  "mean": 95.4,
   "median": 96.0,
-  "lo": 94.0,
+  "lo": 93.0,
   "hi": 97.0
  },
  "hrv": {
-  "n": 324,
-  "mean": 47.2,
+  "n": 329,
+  "mean": 47.4,
   "median": 48.0,
   "lo": 20.0,
   "hi": 67.0
  },
  "restingHR": {
-  "n": 324,
-  "mean": 66.4,
+  "n": 329,
+  "mean": 66.2,
   "median": 65.0,
   "lo": 54.0,
   "hi": 89.0
  },
  "respiration": {
-  "n": 324,
+  "n": 329,
   "mean": 15.0,
   "median": 14.9,
   "lo": 13.6,
   "hi": 19.4
  },
  "sleepScore": {
-  "n": 604,
-  "mean": 69.3,
-  "median": 75.0,
+  "n": 609,
+  "mean": 69.4,
+  "median": 75,
   "lo": 16,
   "hi": 98
  },
  "sleepHours": {
-  "n": 604,
+  "n": 609,
   "mean": 6.3,
-  "median": 6.6,
+  "median": 6.5,
   "lo": 0.5,
   "hi": 9.2
  },
  "deepSleepMin": {
-  "n": 604,
-  "mean": 65.0,
-  "median": 63.0,
+  "n": 609,
+  "mean": 65.2,
+  "median": 63,
   "lo": 0,
   "hi": 136
  },
  "recoveryScore": {
-  "n": 604,
-  "mean": 63.3,
-  "median": 69.0,
+  "n": 609,
+  "mean": 63.4,
+  "median": 69,
   "lo": 0,
   "hi": 100
  },
@@ -205,6 +205,26 @@
   },
   {
    "date": "2026-08-18",
+   "v": 96.0
+  },
+  {
+   "date": "2026-08-19",
+   "v": 93.0
+  },
+  {
+   "date": "2026-08-20",
+   "v": 96.0
+  },
+  {
+   "date": "2026-08-21",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-22",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-23",
    "v": 96.0
   }
  ],
@@ -1504,6 +1524,26 @@
   {
    "date": "2026-08-18",
    "v": 55.0
+  },
+  {
+   "date": "2026-08-19",
+   "v": 54.0
+  },
+  {
+   "date": "2026-08-20",
+   "v": 59.0
+  },
+  {
+   "date": "2026-08-21",
+   "v": 54.0
+  },
+  {
+   "date": "2026-08-22",
+   "v": 59.0
+  },
+  {
+   "date": "2026-08-23",
+   "v": 62.0
   }
  ],
  "sleepByDate": {
@@ -9962,6 +10002,76 @@
    "avgStress": 15.670000076293945,
    "respirationAvg": 15.11,
    "restlessMoments": 64
+  },
+  "2026-08-19": {
+   "totalHrs": 7.42,
+   "deepMin": 46,
+   "lightMin": 306,
+   "remMin": 93,
+   "awakeMin": 6,
+   "score": 82,
+   "recoveryScore": 70,
+   "deepScore": 69,
+   "feedback": "POSITIVE_LONG_AND_CONTINUOUS",
+   "avgStress": 20.040000915527344,
+   "respirationAvg": 15.21,
+   "restlessMoments": 62
+  },
+  "2026-08-20": {
+   "totalHrs": 4.57,
+   "deepMin": 113,
+   "lightMin": 120,
+   "remMin": 41,
+   "awakeMin": 1,
+   "score": 67,
+   "recoveryScore": 89,
+   "deepScore": 100,
+   "feedback": "POSITIVE_SHORT_BUT_DEEP",
+   "avgStress": 12.779999732971191,
+   "respirationAvg": 14.44,
+   "restlessMoments": 33
+  },
+  "2026-08-21": {
+   "totalHrs": 6.17,
+   "deepMin": 71,
+   "lightMin": 219,
+   "remMin": 80,
+   "awakeMin": 9,
+   "score": 83,
+   "recoveryScore": 81,
+   "deepScore": 96,
+   "feedback": "POSITIVE_DEEP",
+   "avgStress": 14.760000228881836,
+   "respirationAvg": 15.52,
+   "restlessMoments": 38
+  },
+  "2026-08-22": {
+   "totalHrs": 5.75,
+   "deepMin": 65,
+   "lightMin": 217,
+   "remMin": 63,
+   "awakeMin": 21,
+   "score": 72,
+   "recoveryScore": 67,
+   "deepScore": 94,
+   "feedback": "POSITIVE_DEEP",
+   "avgStress": 21.260000228881836,
+   "respirationAvg": 14.88,
+   "restlessMoments": 48
+  },
+  "2026-08-23": {
+   "totalHrs": 7.58,
+   "deepMin": 125,
+   "lightMin": 228,
+   "remMin": 102,
+   "awakeMin": 5,
+   "score": 95,
+   "recoveryScore": 89,
+   "deepScore": 100,
+   "feedback": "POSITIVE_OPTIMAL_STRUCTURE",
+   "avgStress": 12.65999984741211,
+   "respirationAvg": 15.07,
+   "restlessMoments": 49
   }
  },
  "dailyByDate": {
@@ -13253,6 +13363,66 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-08-19": {
+   "HRV": 54.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 61.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 93.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.2,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-08-20": {
+   "HRV": 59.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 57.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.2,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.4,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-08-21": {
+   "HRV": 54.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.3,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.5,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-08-22": {
+   "HRV": 59.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.8,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-08-23": {
+   "HRV": 62.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 56.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.0,
    "RESPIRATION_status": "IN_RANGE"
   }
  }
