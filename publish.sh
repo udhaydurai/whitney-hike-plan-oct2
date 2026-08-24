@@ -30,6 +30,16 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# -- Make the container able to verify before we rely on it.
+#
+# The build step below ends in tools/verify_site.py, which drives a real Chromium through
+# Playwright, and a fresh session container has neither installed. Sourcing this here
+# rather than leaving it to the caller is deliberate: a session that had to work the
+# toolchain out for itself stopped before reaching the commit step, which looked from the
+# outside like the data had failed to check in when in fact nothing had been written yet.
+# Near-instant when the container is already set up. See tools/bootstrap_env.sh.
+source tools/bootstrap_env.sh
+
 MSG="${1:-dashboard rebuild}"
 REPO="github.com/udhaydurai/whitney-hike-plan-oct2.git"
 if [[ -n "${GITHUB_TOKEN:-}" ]]; then
