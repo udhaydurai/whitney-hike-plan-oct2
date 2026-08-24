@@ -3851,7 +3851,8 @@
         "distanceMi": 16,
         "permit": "day-hike permit",
         "partnerNote": "day hike plan",
-        "ownNote": null
+        "ownNote": "No long hike this week by intent. Weekday rucking carried the phase; the ruck rows for this week are in ruckSessions. The Saturday effort moves to Aug 29.",
+        "completed": false
       },
       {
         "week": 5,
@@ -3863,7 +3864,7 @@
         "distanceMi": 19,
         "permit": null,
         "partnerNote": "day hike, or camp at the halfway camp",
-        "ownNote": null
+        "ownNote": "Confirmed by the athlete on Aug 23 as the week's hike. This is the next long effort and the next test of the stopped-time prediction."
       },
       {
         "week": 6,
