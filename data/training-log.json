@@ -4054,8 +4054,8 @@
         "ascentFt": 4600,
         "distanceMi": 12,
         "permit": null,
-        "partnerNote": "skipping this one — hiking Half Dome instead",
-        "ownNote": null
+        "partnerNote": "superseded — no summit attempt this week; replaced with weekday rucking and a 30 lb pack carry to Potato Chip Rock from Blue Sky (see ownNote).",
+        "ownNote": "Athlete decided against weekly big mountain pushes without matching strength training (Aug 31). This week: weekday rucking, then Saturday Sep 5 — 30 lb pack to Potato Chip Rock from Blue Sky; repeated Sunday Sep 6 if recovery is normal. No summit attempt."
       },
       {
         "week": 7,
@@ -4063,11 +4063,11 @@
         "peak": "San Gorgonio (heavy pack)",
         "route": "Vivian Creek",
         "summitFt": 11503,
-        "ascentFt": 7500,
-        "distanceMi": 25,
+        "ascentFt": 5400,
+        "distanceMi": 19,
         "permit": "overnight permit at High Creek Camp",
-        "partnerNote": "double summit — down to High Creek, then up again",
-        "ownNote": "Confirmed by the athlete Aug 31: camping at High Creek Campground the night of Sep 11, alpine start 3am Sep 12 for the San Gorgonio summit — built explicitly to simulate the Mt. Whitney summit-day structure (overnight camp, pre-dawn start)."
+        "partnerNote": "single summit via Vivian Creek, overnight camp at High Creek — double-summit variant dropped.",
+        "ownNote": "Confirmed by the athlete Aug 31: camping at High Creek Campground the night of Sep 11, alpine start 3am Sep 12 for a single San Gorgonio summit via Vivian Creek — built to simulate the Mt. Whitney summit-day structure (overnight camp, pre-dawn start). Double summit dropped: no more weekly big mountain pushes without matching strength training. This is the last big push in the plan — everything after Sep 12 shifts to local hikes with a pack."
       },
       {
         "week": 8,
@@ -4079,7 +4079,7 @@
         "distanceMi": 5.5,
         "permit": null,
         "partnerNote": null,
-        "ownNote": null
+        "ownNote": "Confirmed as the pattern going forward per the athlete (Aug 31): local hikes with a pack, no further weekend big-mountain pushes after Sep 12."
       },
       {
         "week": 9,
@@ -4098,15 +4098,15 @@
     "readsOnThePlan": [
       {
         "point": "The plan is bigger than what the log had",
-        "detail": "Six of the nine weeks are 16-25 mi. The largest effort recorded so far is San Jacinto at 13.24 mi and 4,590 ft, which ran 11:04. Aug 1 is 16 mi and 4,700 ft — a step up, not a repeat."
+        "detail": "Six of the nine weeks are 16-19 mi (down from a 16-25 mi range after the athlete dropped the Sep 12 double summit, Aug 31). The largest effort recorded so far is San Jacinto at 13.24 mi and 4,590 ft, which ran 11:04. Aug 1 is 16 mi and 4,700 ft — a step up, not a repeat."
       },
       {
         "point": "Week 7 is the whole plan's keystone",
-        "detail": "25 mi and 7,500 ft with an overnight at High Creek Camp, double summit. That single week tests the three things nothing else does: sleeping high, carrying a full pack, and a big day on legs that already did a big day. If any week has to survive a schedule cut, it is this one."
+        "detail": "19 mi and 5,400 ft with an overnight at High Creek Camp, single summit via Vivian Creek — the double-summit variant was dropped by the athlete Aug 31 in favor of stopping weekly big pushes without matching strength training. It remains the plan's last big push, testing sleeping high and carrying a full pack for the Whitney simulation."
       },
       {
         "point": "There is no recovery week between Weeks 3 and 7",
-        "detail": "Aug 15, 22, 29, Sep 5 and Sep 12 are consecutive weekends of 18, 16, 19, 12 and 25 mi. Week 9 is the only taper. Worth watching resting heart rate and sleep across that block rather than assuming it absorbs cleanly."
+        "detail": "Aug 15, 22 and 29 were consecutive big weekends (18, 16, 19 mi). Sep 5 is now a lighter week by the athlete's own call (Aug 31) — rucking and a 30 lb Potato Chip Rock carry rather than a mountain push — before the last big push on Sep 12 (19 mi, single summit). Week 9 remains the only taper."
       },
       {
         "point": "Every week now exceeds the tank",
