@@ -357,6 +357,14 @@ def s_today():
     days_to_sat = ((dt.date.fromisoformat(wk["date"]) - today).days) if wk else None
     hike_sat = bool(wk and wk["distanceMi"])
 
+    # "Next big day" means the next mountain push, not just the next dated row — a local
+    # pack carry (Potato Chip Rock, week 6) is a training day, not a big day, and showing
+    # it as one buried the actual next push (week 7, Sep 12) under a stale-looking label.
+    # Same 18 mi threshold s_weeks() uses to highlight a row gold.
+    big_wk = next((w for w in D["nineWeekPlan"]["weeks"]
+                   if w["date"] >= iso and (w["distanceMi"] or 0) >= 18), None)
+    days_to_big = ((dt.date.fromisoformat(big_wk["date"]) - today).days) if big_wk else None
+
     # day type drives the carb target. Friday loads for Saturday; Saturday is the effort.
     if dow == "Sat" and hike_sat and days_to_sat == 0:
         dtype, key = "long hike day", "longHikeDay"
@@ -506,18 +514,18 @@ def s_today():
                  f'{e(c["log"].split(" — ")[0])}. Different permit either way.</li>')
 
     sat = ""
-    if wk:
-        when = ("today" if days_to_sat == 0 else "tomorrow" if days_to_sat == 1
-                else f"in {days_to_sat} days")
+    if big_wk:
+        when = ("today" if days_to_big == 0 else "tomorrow" if days_to_big == 1
+                else f"in {days_to_big} days")
         # precomputed: a nested same-quote f-string is a syntax error on 3.11, and this
         # is the third time that has bitten in this file. See RUNBOOK.md.
-        via = f' via {e(wk["route"])}' if wk["route"] else ""
-        size = (f'{wk["distanceMi"]:g} mi · {wk["ascentFt"]:,} ft'
-                if wk["distanceMi"] else "taper")
+        via = f' via {e(big_wk["route"])}' if big_wk["route"] else ""
+        size = (f'{big_wk["distanceMi"]:g} mi · {big_wk["ascentFt"]:,} ft'
+                if big_wk["distanceMi"] else "taper")
         sat = (f'<div class="step" style="border-left-color:{C["gold"]}">'
                f'<div class="swin"><span style="color:{C["gold"]};font-weight:700">'
-               f'Next big day</span> {e(sd(wk["date"]))} — {e(when)}</div>'
-               f'<div class="stt">{e(wk["peak"])}'
+               f'Next big day</span> {e(sd(big_wk["date"]))} — {e(when)}</div>'
+               f'<div class="stt">{e(big_wk["peak"])}'
                f'{via}</div>'
                f'<div class="sub">{size}</div></div>')
 

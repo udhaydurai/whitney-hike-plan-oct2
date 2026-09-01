@@ -2055,7 +2055,7 @@
     ]
   },
   "diamoxTrial": {
-    "status": "prescribed, 20 days supply — trial not yet done",
+    "status": "trial complete — tolerated across 3 hikes above 10,000 ft (Jul 18 San Jacinto, Aug 2 Devils Slide, Aug 29 San Gorgonio range); no tingling, taste change or problematic urination reported. Acclimatisation is no longer an open risk on Diamox.",
     "why": "You are the one person in this log with a documented fluid and sodium deficit on every long effort, and acetazolamide is a diuretic. Meeting its effects on a low-stakes day rather than at hour eight of a sixteen-mile hike is worth the small delay.",
     "whenToTrial": "This week, at home or before a short local walk. Not on Devils Slide.",
     "logThese": [
@@ -4048,14 +4048,14 @@
       {
         "week": 6,
         "date": "2026-09-05",
-        "peak": "San Jacinto (heavy pack)",
-        "route": "Marion Mountain",
-        "summitFt": 10834,
-        "ascentFt": 4600,
-        "distanceMi": 12,
+        "peak": "Local pack carry via Potato Chip Rock",
+        "route": "Blue Sky",
+        "summitFt": null,
+        "ascentFt": 2100,
+        "distanceMi": 5.5,
         "permit": null,
-        "partnerNote": "superseded — no summit attempt this week; replaced with weekday rucking and a 30 lb pack carry to Potato Chip Rock from Blue Sky (see ownNote).",
-        "ownNote": "Athlete decided against weekly big mountain pushes without matching strength training (Aug 31). This week: weekday rucking, then Saturday Sep 5 — 30 lb pack to Potato Chip Rock from Blue Sky; repeated Sunday Sep 6 if recovery is normal. No summit attempt."
+        "partnerNote": "Sheet originally planned San Jacinto (heavy pack) via Marion Mountain, 12 mi / 4,600 ft — dropped by the athlete Aug 31.",
+        "ownNote": "No summit attempt this week — stopping weekly big mountain pushes without matching strength training (Aug 31). Weekday rucking, then Saturday Sep 5: 30 lb pack to Potato Chip Rock from Blue Sky; repeat Sunday Sep 6 if recovery is normal."
       },
       {
         "week": 7,
