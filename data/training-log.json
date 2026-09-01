@@ -8,7 +8,7 @@
     "permitHolder": "overnight permit held by a hiking partner",
     "watch": "Garmin Fenix 8",
     "logCoversFrom": "2026-04-25",
-    "logCoversTo": "2026-08-23",
+    "logCoversTo": "2026-08-29",
     "lastUpdated": "2026-07-28",
     "whitneyProfile": {
       "day1AscentFt": 3700,
@@ -920,6 +920,126 @@
       "packLb": 12,
       "effortType": "training",
       "route": "San Diego Rucking"
+    },
+    {
+      "id": "R17",
+      "date": "2026-08-24",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.09,
+      "ascentFt": 98,
+      "descentFt": 95,
+      "minElevFt": 591,
+      "maxElevFt": 612,
+      "totalTime": "0:59:25",
+      "movingTime": "0:59:18",
+      "stoppedPct": 0,
+      "avgPace": "19:13",
+      "movingPace": "19:11",
+      "avgSpeedMph": 3.12,
+      "movingSpeedMph": 3.13,
+      "avgHR": 103,
+      "maxHR": 117,
+      "totalCal": 313,
+      "aerobicEffect": 2.0,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 23,
+      "steps": 6696,
+      "bodyBattery": -2,
+      "restingCal": 79,
+      "sweatLossMl": 680,
+      "hrZoneSec": {
+        "z0": 3530,
+        "z1": 35,
+        "z2": 0,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R18",
+      "date": "2026-08-25",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.19,
+      "ascentFt": 102,
+      "descentFt": 102,
+      "minElevFt": 590,
+      "maxElevFt": 612,
+      "totalTime": "0:59:21",
+      "movingTime": "0:59:04",
+      "stoppedPct": 0,
+      "avgPace": "18:36",
+      "movingPace": "18:30",
+      "avgSpeedMph": 3.22,
+      "movingSpeedMph": 3.24,
+      "avgHR": 109,
+      "maxHR": 126,
+      "totalCal": 325,
+      "aerobicEffect": 2.0,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 25,
+      "steps": 6698,
+      "bodyBattery": -2,
+      "restingCal": 79,
+      "sweatLossMl": 723,
+      "hrZoneSec": {
+        "z0": 3014,
+        "z1": 547,
+        "z2": 0,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
+    },
+    {
+      "id": "R19",
+      "date": "2026-08-26",
+      "kind": "ruck",
+      "source": "garmin",
+      "distanceMi": 3.35,
+      "ascentFt": 118,
+      "descentFt": 118,
+      "minElevFt": 579,
+      "maxElevFt": 603,
+      "totalTime": "0:58:08",
+      "movingTime": "0:58:01",
+      "stoppedPct": 0,
+      "avgPace": "17:21",
+      "movingPace": "17:19",
+      "avgSpeedMph": 3.46,
+      "movingSpeedMph": 3.46,
+      "avgHR": 111,
+      "maxHR": 122,
+      "totalCal": 344,
+      "aerobicEffect": 2.1,
+      "anaerobicEffect": 0.0,
+      "exerciseLoad": 29,
+      "steps": 6878,
+      "bodyBattery": -6,
+      "restingCal": 77,
+      "sweatLossMl": 719,
+      "hrZoneSec": {
+        "z0": 2857,
+        "z1": 631,
+        "z2": 0,
+        "z3": 0,
+        "z4": 0,
+        "z5": 0,
+        "z6": 0
+      },
+      "packLb": 12,
+      "effortType": "training",
+      "route": "San Diego County Rucking"
     }
   ],
   "hikes": [
@@ -1681,6 +1801,45 @@
         "z6": 0
       },
       "route": "San Bernardino County Rucking",
+      "effortType": "training"
+    },
+    {
+      "id": "H17",
+      "date": "2026-08-29",
+      "kind": "hike",
+      "source": "garmin",
+      "distanceMi": 18.34,
+      "ascentFt": 5584,
+      "descentFt": 5594,
+      "minElevFt": 6108,
+      "maxElevFt": 11518,
+      "totalTime": "13:03:51",
+      "movingTime": "7:29:58",
+      "stoppedPct": 43,
+      "avgPace": "42:44",
+      "movingPace": "24:32",
+      "avgSpeedMph": 1.4,
+      "movingSpeedMph": 2.45,
+      "avgHR": 137,
+      "maxHR": 169,
+      "totalCal": 3962,
+      "aerobicEffect": 5.0,
+      "anaerobicEffect": 2.8,
+      "exerciseLoad": 404,
+      "steps": 25960,
+      "bodyBattery": -12,
+      "restingCal": 1042,
+      "sweatLossMl": 10291,
+      "hrZoneSec": {
+        "z0": 1530,
+        "z1": 9104,
+        "z2": 18591,
+        "z3": 14163,
+        "z4": 3588,
+        "z5": 52,
+        "z6": 0
+      },
+      "route": "San Bernardino County Hiking",
       "effortType": "training"
     }
   ],
@@ -3525,6 +3684,18 @@
       {
         "first": "2026-08-22",
         "second": "2026-08-23"
+      },
+      {
+        "first": "2026-08-23",
+        "second": "2026-08-24"
+      },
+      {
+        "first": "2026-08-24",
+        "second": "2026-08-25"
+      },
+      {
+        "first": "2026-08-25",
+        "second": "2026-08-26"
       }
     ],
     "note": "Computed from the data, not assumed. Any pair of back-to-back days appears here."
@@ -3609,13 +3780,13 @@
     }
   ],
   "wellness": {
-    "source": "Garmin sleep and health-status exports: 609 nights 2024-12-07 to 2026-08-23, 626 days of daily metrics.",
+    "source": "Garmin sleep and health-status exports: 617 nights 2024-12-07 to 2026-08-31, 634 days of daily metrics.",
     "sleep": {
-      "meanHrs": 6.27,
-      "medianHrs": 6.55,
+      "meanHrs": 6.28,
+      "medianHrs": 6.57,
       "under6Pct": 34,
-      "last60MeanHrs": 6.15,
-      "last60MeanScore": 73,
+      "last60MeanHrs": 6.2,
+      "last60MeanScore": 72,
       "meanDeepMin": 65
     },
     "bigDaySleep": {
@@ -3649,6 +3820,23 @@
           "after": {
             "hrs": 8.15,
             "score": 73
+          }
+        },
+        {
+          "date": "2026-08-29",
+          "name": "San Bernardino County Hiking",
+          "duration": "13:03:51",
+          "before": {
+            "hrs": 6.92,
+            "score": 87
+          },
+          "nightOf": {
+            "hrs": 1.85,
+            "score": 26
+          },
+          "after": {
+            "hrs": 8.55,
+            "score": 76
           }
         },
         {
@@ -3718,46 +3906,29 @@
             "hrs": 8.75,
             "score": 82
           }
-        },
-        {
-          "date": "2025-04-13",
-          "name": "Poway Hiking",
-          "duration": "6:34:46",
-          "before": {
-            "hrs": 6.12,
-            "score": 40
-          },
-          "nightOf": {
-            "hrs": 5.67,
-            "score": 76
-          },
-          "after": {
-            "hrs": 8.63,
-            "score": 78
-          }
         }
       ],
-      "meanNightOfHrs": 4.0,
-      "meanNightBeforeHrs": 6.5,
-      "finding": "Across the 7 longest days the night-of average is 4.0 hours against 6.5 the night before, and 7 of 7 fell below the 6.55 h median.",
+      "meanNightOfHrs": 3.4,
+      "meanNightBeforeHrs": 6.6,
+      "finding": "Across the 7 longest days the night-of average is 3.4 hours against 6.6 the night before, and 7 of 7 fell below the 6.57 h median.",
       "whitneyImplication": "This is the sharpest argument yet for arriving at Trail Camp with reserves. Day 1 ends at 12,000 ft and summit day depends on the sleep that follows it — and the pattern says a hard day costs roughly half a night even at sea level. Altitude, cold and a UL1 tent will not improve on that. Front-loaded fuelling, an early finish and no caffeine after midday all buy sleep that night, which is the real currency for Oct 2."
     },
     "recovery": {
-      "hrvMean": 47.4,
+      "hrvMean": 47.7,
       "hrvRange": [
         20.0,
-        67.0
+        69.0
       ],
-      "restingHRMean": 66.2,
+      "restingHRMean": 66.1,
       "restingHRRange": [
         54.0,
         89.0
       ],
-      "trend": "Over the last nine weeks HRV has moved from about 52 to 53 ms, against a full-record mean of 47.4 ms."
+      "trend": "Over the last nine weeks HRV has moved from about 52 to 55 ms, against a full-record mean of 47.7 ms."
     },
     "spo2Gap": {
-      "readings": 29,
-      "days": 626,
+      "readings": 37,
+      "days": 634,
       "values": [
         94.0,
         96.0,
@@ -3787,18 +3958,26 @@
         96.0,
         95.0,
         95.0,
+        96.0,
+        97.0,
+        95.0,
+        95.0,
+        95.0,
+        95.0,
+        95.0,
+        96.0,
         96.0
       ],
       "on": true,
-      "runNights": 26,
+      "runNights": 34,
       "runFrom": "2026-07-29",
       "recentMean": 95.4,
       "recentRange": [
         93.0,
         97.0
       ],
-      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 26 consecutive nights, against 29 readings in 626 days of health data overall.",
-      "action": "The sea-level baseline is now 95.4% (range 93–97%) over 26 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
+      "problem": "Pulse oximetry has been recording nightly since 2026-07-29 — 34 consecutive nights, against 37 readings in 634 days of health data overall.",
+      "action": "The sea-level baseline is now 95.4% (range 93–97%) over 34 nights, which is enough for the readings at Cottonwood and Trail Camp to be read as a drop from something rather than as first-ever numbers. Leave it on through Oct 2."
     }
   },
   "nineWeekPlan": {

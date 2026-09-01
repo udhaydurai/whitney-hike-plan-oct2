@@ -1,28 +1,28 @@
 {
  "zones": {
   "method": "HR_RESERVE (%HRR)",
-  "restingHR": 65,
+  "restingHR": 53,
   "maxHR": 179,
   "lthrUsed": 174,
   "bands": {
    "Z1": [
-    122,
-    132
+    116,
+    128
    ],
    "Z2": [
-    133,
-    144
+    129,
+    140
    ],
    "Z3": [
-    145,
-    155
+    141,
+    153
    ],
    "Z4": [
-    156,
-    167
+    154,
+    165
    ],
    "Z5": [
-    168,
+    166,
     179
    ]
   },
@@ -47,66 +47,66 @@
   "healthyAllBioAge": 38.0
  },
  "coverage": {
-  "sleepNights": 609,
+  "sleepNights": 617,
   "sleepFrom": "2024-12-07",
-  "sleepTo": "2026-08-23",
-  "healthDays": 626,
+  "sleepTo": "2026-08-31",
+  "healthDays": 634,
   "healthFrom": "2024-12-06",
-  "healthTo": "2026-08-23"
+  "healthTo": "2026-08-31"
  },
  "spo2": {
-  "n": 29,
+  "n": 37,
   "mean": 95.4,
-  "median": 96.0,
+  "median": 95.0,
   "lo": 93.0,
   "hi": 97.0
  },
  "hrv": {
-  "n": 329,
-  "mean": 47.4,
+  "n": 337,
+  "mean": 47.7,
   "median": 48.0,
   "lo": 20.0,
-  "hi": 67.0
+  "hi": 69.0
  },
  "restingHR": {
-  "n": 626,
-  "mean": 58.3,
+  "n": 634,
+  "mean": 58.2,
   "median": 58.0,
   "lo": 52,
   "hi": 70
  },
  "restingHRSource": "UDSFile restingHeartRate",
  "respiration": {
-  "n": 329,
+  "n": 337,
   "mean": 15.0,
   "median": 14.9,
   "lo": 13.6,
   "hi": 19.4
  },
  "sleepScore": {
-  "n": 609,
+  "n": 617,
   "mean": 69.4,
   "median": 75,
   "lo": 16,
   "hi": 98
  },
  "sleepHours": {
-  "n": 609,
+  "n": 617,
   "mean": 6.3,
-  "median": 6.5,
+  "median": 6.6,
   "lo": 0.5,
   "hi": 9.2
  },
  "deepSleepMin": {
-  "n": 609,
+  "n": 617,
   "mean": 65.2,
   "median": 63,
   "lo": 0,
   "hi": 136
  },
  "recoveryScore": {
-  "n": 609,
-  "mean": 63.4,
+  "n": 617,
+  "mean": 63.5,
   "median": 69,
   "lo": 0,
   "hi": 100
@@ -226,6 +226,38 @@
   },
   {
    "date": "2026-08-23",
+   "v": 96.0
+  },
+  {
+   "date": "2026-08-24",
+   "v": 97.0
+  },
+  {
+   "date": "2026-08-25",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-26",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-27",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-28",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-29",
+   "v": 95.0
+  },
+  {
+   "date": "2026-08-30",
+   "v": 96.0
+  },
+  {
+   "date": "2026-08-31",
    "v": 96.0
   }
  ],
@@ -1544,6 +1576,38 @@
   },
   {
    "date": "2026-08-23",
+   "v": 62.0
+  },
+  {
+   "date": "2026-08-24",
+   "v": 52.0
+  },
+  {
+   "date": "2026-08-25",
+   "v": 53.0
+  },
+  {
+   "date": "2026-08-26",
+   "v": 56.0
+  },
+  {
+   "date": "2026-08-27",
+   "v": 63.0
+  },
+  {
+   "date": "2026-08-28",
+   "v": 69.0
+  },
+  {
+   "date": "2026-08-29",
+   "v": 62.0
+  },
+  {
+   "date": "2026-08-30",
+   "v": 49.0
+  },
+  {
+   "date": "2026-08-31",
    "v": 62.0
   }
  ],
@@ -10073,6 +10137,118 @@
    "avgStress": 12.65999984741211,
    "respirationAvg": 15.07,
    "restlessMoments": 49
+  },
+  "2026-08-24": {
+   "totalHrs": 6.18,
+   "deepMin": 72,
+   "lightMin": 221,
+   "remMin": 78,
+   "awakeMin": 97,
+   "score": 62,
+   "recoveryScore": 63,
+   "deepScore": 97,
+   "feedback": "NEGATIVE_DISCONTINUOUS",
+   "avgStress": 23.559999465942383,
+   "respirationAvg": 15.71,
+   "restlessMoments": 52
+  },
+  "2026-08-25": {
+   "totalHrs": 7.38,
+   "deepMin": 46,
+   "lightMin": 294,
+   "remMin": 103,
+   "awakeMin": 6,
+   "score": 84,
+   "recoveryScore": 72,
+   "deepScore": 69,
+   "feedback": "POSITIVE_LONG_AND_REFRESHING",
+   "avgStress": 18.959999084472656,
+   "respirationAvg": 15.21,
+   "restlessMoments": 65
+  },
+  "2026-08-26": {
+   "totalHrs": 6.78,
+   "deepMin": 65,
+   "lightMin": 260,
+   "remMin": 82,
+   "awakeMin": 13,
+   "score": 84,
+   "recoveryScore": 84,
+   "deepScore": 80,
+   "feedback": "POSITIVE_LONG_AND_RECOVERING",
+   "avgStress": 13.880000114440918,
+   "respirationAvg": 14.86,
+   "restlessMoments": 58
+  },
+  "2026-08-27": {
+   "totalHrs": 7.45,
+   "deepMin": 37,
+   "lightMin": 301,
+   "remMin": 109,
+   "awakeMin": 42,
+   "score": 77,
+   "recoveryScore": 80,
+   "deepScore": 65,
+   "feedback": "NEGATIVE_LONG_BUT_RESTLESS",
+   "avgStress": 14.930000305175781,
+   "respirationAvg": 14.7,
+   "restlessMoments": 63
+  },
+  "2026-08-28": {
+   "totalHrs": 6.92,
+   "deepMin": 106,
+   "lightMin": 225,
+   "remMin": 84,
+   "awakeMin": 12,
+   "score": 87,
+   "recoveryScore": 82,
+   "deepScore": 100,
+   "feedback": "POSITIVE_LONG_AND_DEEP",
+   "avgStress": 14.600000381469727,
+   "respirationAvg": 14.64,
+   "restlessMoments": 53
+  },
+  "2026-08-29": {
+   "totalHrs": 1.85,
+   "deepMin": 54,
+   "lightMin": 57,
+   "remMin": 0,
+   "awakeMin": 112,
+   "score": 26,
+   "recoveryScore": 78,
+   "deepScore": null,
+   "feedback": "NEGATIVE_SHORT_AND_POOR_STRUCTURE",
+   "avgStress": 15.989999771118164,
+   "respirationAvg": 16.26,
+   "restlessMoments": 14
+  },
+  "2026-08-30": {
+   "totalHrs": 8.55,
+   "deepMin": 69,
+   "lightMin": 329,
+   "remMin": 115,
+   "awakeMin": 4,
+   "score": 76,
+   "recoveryScore": 53,
+   "deepScore": 75,
+   "feedback": "NEGATIVE_LONG_BUT_NOT_RESTORATIVE",
+   "avgStress": 27.850000381469727,
+   "respirationAvg": 16.4,
+   "restlessMoments": 50
+  },
+  "2026-08-31": {
+   "totalHrs": 7.07,
+   "deepMin": 58,
+   "lightMin": 273,
+   "remMin": 93,
+   "awakeMin": 4,
+   "score": 85,
+   "recoveryScore": 76,
+   "deepScore": 75,
+   "feedback": "POSITIVE_LONG_AND_REFRESHING",
+   "avgStress": 16.829999923706055,
+   "respirationAvg": 15.66,
+   "restlessMoments": 68
   }
  },
  "dailyByDate": {
@@ -13753,6 +13929,110 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 52
+  },
+  "2026-08-24": {
+   "HRV": 52.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 61.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 97.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.3,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.7,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 52
+  },
+  "2026-08-25": {
+   "HRV": 53.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 60.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.2,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 53
+  },
+  "2026-08-26": {
+   "HRV": 56.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 56.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.3,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.8,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 52
+  },
+  "2026-08-27": {
+   "HRV": 63.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 59.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.7,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 52
+  },
+  "2026-08-28": {
+   "HRV": 69.0,
+   "HRV_status": "ABOVE",
+   "HR": 54.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.6,
+   "RESPIRATION_status": "IN_RANGE",
+   "RESTING_HR": 52
+  },
+  "2026-08-29": {
+   "HRV": 62.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 57.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.5,
+   "SKIN_TEMP_C_status": "ABOVE",
+   "RESPIRATION": 16.2,
+   "RESPIRATION_status": "ABOVE",
+   "RESTING_HR": 52
+  },
+  "2026-08-30": {
+   "HRV": 49.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 63.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 16.4,
+   "RESPIRATION_status": "ABOVE",
+   "RESTING_HR": 53
+  },
+  "2026-08-31": {
+   "HRV": 62.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.2,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.6,
    "RESPIRATION_status": "IN_RANGE",
    "RESTING_HR": 52
   },
