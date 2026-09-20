@@ -45,14 +45,14 @@ fi
 # verify_site.py resolves $CHROME_PATH, then any chromium under ~/.cache/ms-playwright,
 # before its historical /opt/pw-browsers fallback — so installing to the user cache is
 # enough and no path needs to be passed anywhere.
-if ! ls "$HOME"/.cache/ms-playwright/chromium-*/chrome-linux/chrome >/dev/null 2>&1; then
+if ! ls "$HOME"/.cache/ms-playwright/chromium-*/chrome-linux*/chrome >/dev/null 2>&1; then
   _bootstrap_note "downloading chromium (~110 MB, once per container)"
   # This prints a host-validation warning about missing libs and exits non-zero on some
   # versions. The download still succeeds, and step 3 is what actually resolves the libs.
   python3 -m playwright install chromium >/dev/null 2>&1 || true
 fi
 
-_CHROME=$(ls -d "$HOME"/.cache/ms-playwright/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
+_CHROME=$(ls -d "$HOME"/.cache/ms-playwright/chromium-*/chrome-linux*/chrome 2>/dev/null | head -1)
 if [[ -z "$_CHROME" ]]; then
   echo "   bootstrap FAILED: chromium did not install." >&2
   return 1 2>/dev/null || exit 1
@@ -95,6 +95,17 @@ _libpkg() {
 _missing=$(ldd "$_CHROME" 2>/dev/null | awk '/not found/{print $1}' | sort -u)
 if [[ -n "$_missing" ]]; then
   mkdir -p "$_DEPS" && _tmp=$(mktemp -d)
+  _APTCACHE="$_DEPS/apt-cache"
+  mkdir -p "$_APTCACHE/lists/partial" "$_APTCACHE/archives/partial"
+  _apt() {
+    apt-get -o "Dir::State::lists=$_APTCACHE/lists" \
+            -o "Dir::Cache=$_APTCACHE" \
+            -o "Dir::Cache::archives=$_APTCACHE/archives" "$@"
+  }
+  if [[ ! -e "$_APTCACHE/lists/lock" ]] || [[ -z "$(ls -A "$_APTCACHE/lists" 2>/dev/null)" ]]; then
+    _bootstrap_note "populating a user-scoped apt cache (system one is root-owned and empty here)"
+    _apt update >/dev/null 2>&1 || echo "   bootstrap: apt-get update (user cache) failed" >&2
+  fi
   for _lib in $_missing; do
     _pkg=$(_libpkg "$_lib")
     if [[ -z "$_pkg" ]]; then
@@ -102,7 +113,7 @@ if [[ -n "$_missing" ]]; then
       continue
     fi
     _bootstrap_note "fetching $_pkg for $_lib"
-    ( cd "$_tmp" && apt-get download "$_pkg" >/dev/null 2>&1 \
+    ( cd "$_tmp" && _apt download "$_pkg" >/dev/null 2>&1 \
         && dpkg-deb -x "$_pkg"*.deb "$_DEPS" ) \
       || echo "   bootstrap: could not fetch $_pkg" >&2
   done
@@ -118,4 +129,4 @@ if [[ -n "$_missing" ]]; then
   _bootstrap_note "shared libraries resolved"
 fi
 
-unset _bootstrap_note _libpkg _CHROME _missing _still _lib _pkg _tmp _DEPS
+unset _bootstrap_note _libpkg _CHROME _missing _still _lib _pkg _tmp _DEPS _apt _APTCACHE

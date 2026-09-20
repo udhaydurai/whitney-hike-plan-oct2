@@ -1,16 +1,16 @@
 {
  "zones": {
   "method": "HR_RESERVE (%HRR)",
-  "restingHR": 53,
+  "restingHR": 52,
   "maxHR": 179,
   "lthrUsed": 174,
   "bands": {
    "Z1": [
     116,
-    128
+    127
    ],
    "Z2": [
-    129,
+    128,
     140
    ],
    "Z3": [
@@ -47,67 +47,67 @@
   "healthyAllBioAge": 38.0
  },
  "coverage": {
-  "sleepNights": 617,
+  "sleepNights": 630,
   "sleepFrom": "2024-12-07",
-  "sleepTo": "2026-08-31",
-  "healthDays": 634,
-  "healthFrom": "2024-12-06",
-  "healthTo": "2026-08-31"
+  "sleepTo": "2026-09-13",
+  "healthDays": 351,
+  "healthFrom": "2025-09-17",
+  "healthTo": "2026-09-13"
  },
  "spo2": {
-  "n": 37,
-  "mean": 95.4,
+  "n": 50,
+  "mean": 95.2,
   "median": 95.0,
-  "lo": 93.0,
+  "lo": 89.0,
   "hi": 97.0
  },
  "hrv": {
-  "n": 337,
-  "mean": 47.7,
+  "n": 350,
+  "mean": 48.1,
   "median": 48.0,
   "lo": 20.0,
-  "hi": 69.0
+  "hi": 73.0
  },
  "restingHR": {
-  "n": 634,
-  "mean": 58.2,
-  "median": 58.0,
-  "lo": 52,
-  "hi": 70
+  "n": 350,
+  "mean": 65.9,
+  "median": 65.0,
+  "lo": 54.0,
+  "hi": 89.0
  },
- "restingHRSource": "UDSFile restingHeartRate",
+ "restingHRSource": "healthStatusData HR (reads ~5 bpm high)",
  "respiration": {
-  "n": 337,
+  "n": 350,
   "mean": 15.0,
   "median": 14.9,
   "lo": 13.6,
   "hi": 19.4
  },
  "sleepScore": {
-  "n": 617,
-  "mean": 69.4,
-  "median": 75,
+  "n": 630,
+  "mean": 69.5,
+  "median": 75.0,
   "lo": 16,
   "hi": 98
  },
  "sleepHours": {
-  "n": 617,
+  "n": 630,
   "mean": 6.3,
   "median": 6.6,
   "lo": 0.5,
   "hi": 9.2
  },
  "deepSleepMin": {
-  "n": 617,
-  "mean": 65.2,
-  "median": 63,
+  "n": 630,
+  "mean": 65.1,
+  "median": 63.0,
   "lo": 0,
   "hi": 136
  },
  "recoveryScore": {
-  "n": 617,
+  "n": 630,
   "mean": 63.5,
-  "median": 69,
+  "median": 69.0,
   "lo": 0,
   "hi": 100
  },
@@ -259,6 +259,58 @@
   {
    "date": "2026-08-31",
    "v": 96.0
+  },
+  {
+   "date": "2026-09-01",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-02",
+   "v": 96.0
+  },
+  {
+   "date": "2026-09-03",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-04",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-05",
+   "v": 94.0
+  },
+  {
+   "date": "2026-09-06",
+   "v": 94.0
+  },
+  {
+   "date": "2026-09-07",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-08",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-09",
+   "v": 94.0
+  },
+  {
+   "date": "2026-09-10",
+   "v": 96.0
+  },
+  {
+   "date": "2026-09-11",
+   "v": 96.0
+  },
+  {
+   "date": "2026-09-12",
+   "v": 95.0
+  },
+  {
+   "date": "2026-09-13",
+   "v": 89.0
   }
  ],
  "hrvSeries": [
@@ -1609,6 +1661,58 @@
   {
    "date": "2026-08-31",
    "v": 62.0
+  },
+  {
+   "date": "2026-09-01",
+   "v": 55.0
+  },
+  {
+   "date": "2026-09-02",
+   "v": 57.0
+  },
+  {
+   "date": "2026-09-03",
+   "v": 59.0
+  },
+  {
+   "date": "2026-09-04",
+   "v": 52.0
+  },
+  {
+   "date": "2026-09-05",
+   "v": 57.0
+  },
+  {
+   "date": "2026-09-06",
+   "v": 55.0
+  },
+  {
+   "date": "2026-09-07",
+   "v": 59.0
+  },
+  {
+   "date": "2026-09-08",
+   "v": 60.0
+  },
+  {
+   "date": "2026-09-09",
+   "v": 61.0
+  },
+  {
+   "date": "2026-09-10",
+   "v": 73.0
+  },
+  {
+   "date": "2026-09-11",
+   "v": 71.0
+  },
+  {
+   "date": "2026-09-12",
+   "v": 69.0
+  },
+  {
+   "date": "2026-09-13",
+   "v": 34.0
   }
  ],
  "sleepByDate": {
@@ -10249,12 +10353,193 @@
    "avgStress": 16.829999923706055,
    "respirationAvg": 15.66,
    "restlessMoments": 68
+  },
+  "2026-09-01": {
+   "totalHrs": 6.77,
+   "deepMin": 33,
+   "lightMin": 280,
+   "remMin": 93,
+   "awakeMin": 34,
+   "score": 62,
+   "recoveryScore": 36,
+   "deepScore": 64,
+   "feedback": "NEGATIVE_LONG_BUT_NOT_RESTORATIVE",
+   "avgStress": 35.099998474121094,
+   "respirationAvg": 16.04,
+   "restlessMoments": 58
+  },
+  "2026-09-02": {
+   "totalHrs": 5.38,
+   "deepMin": 54,
+   "lightMin": 209,
+   "remMin": 60,
+   "awakeMin": 4,
+   "score": 73,
+   "recoveryScore": 73,
+   "deepScore": 84,
+   "feedback": "POSITIVE_CONTINUOUS",
+   "avgStress": 18.59000015258789,
+   "respirationAvg": 15.71,
+   "restlessMoments": 45
+  },
+  "2026-09-03": {
+   "totalHrs": 7.55,
+   "deepMin": 110,
+   "lightMin": 240,
+   "remMin": 103,
+   "awakeMin": 17,
+   "score": 87,
+   "recoveryScore": 80,
+   "deepScore": 100,
+   "feedback": "POSITIVE_LONG_AND_DEEP",
+   "avgStress": 14.880000114440918,
+   "respirationAvg": 15.16,
+   "restlessMoments": 71
+  },
+  "2026-09-04": {
+   "totalHrs": 7.45,
+   "deepMin": 34,
+   "lightMin": 317,
+   "remMin": 96,
+   "awakeMin": 29,
+   "score": 73,
+   "recoveryScore": 64,
+   "deepScore": 63,
+   "feedback": "POSITIVE_LONG_AND_REFRESHING",
+   "avgStress": 22.799999237060547,
+   "respirationAvg": 15.46,
+   "restlessMoments": 63
+  },
+  "2026-09-05": {
+   "totalHrs": 5.07,
+   "deepMin": 48,
+   "lightMin": 243,
+   "remMin": 13,
+   "awakeMin": 26,
+   "score": 49,
+   "recoveryScore": 31,
+   "deepScore": 80,
+   "feedback": "NEGATIVE_NOT_RESTORATIVE",
+   "avgStress": 36.95000076293945,
+   "respirationAvg": 14.86,
+   "restlessMoments": 47
+  },
+  "2026-09-06": {
+   "totalHrs": 8.25,
+   "deepMin": 74,
+   "lightMin": 321,
+   "remMin": 100,
+   "awakeMin": 2,
+   "score": 84,
+   "recoveryScore": 72,
+   "deepScore": 78,
+   "feedback": "POSITIVE_LONG_AND_CONTINUOUS",
+   "avgStress": 18.8799991607666,
+   "respirationAvg": 15.96,
+   "restlessMoments": 68
+  },
+  "2026-09-07": {
+   "totalHrs": 5.67,
+   "deepMin": 56,
+   "lightMin": 257,
+   "remMin": 27,
+   "awakeMin": 3,
+   "score": 68,
+   "recoveryScore": 65,
+   "deepScore": 82,
+   "feedback": "NEGATIVE_NOT_ENOUGH_REM",
+   "avgStress": 22.639999389648438,
+   "respirationAvg": 15.38,
+   "restlessMoments": 41
+  },
+  "2026-09-08": {
+   "totalHrs": 6.63,
+   "deepMin": 56,
+   "lightMin": 258,
+   "remMin": 84,
+   "awakeMin": 14,
+   "score": 75,
+   "recoveryScore": 67,
+   "deepScore": 76,
+   "feedback": "POSITIVE_REFRESHING",
+   "avgStress": 21.709999084472656,
+   "respirationAvg": 15.69,
+   "restlessMoments": 62
+  },
+  "2026-09-09": {
+   "totalHrs": 7.2,
+   "deepMin": 88,
+   "lightMin": 252,
+   "remMin": 92,
+   "awakeMin": 11,
+   "score": 88,
+   "recoveryScore": 81,
+   "deepScore": 100,
+   "feedback": "POSITIVE_LONG_AND_DEEP",
+   "avgStress": 14.649999618530273,
+   "respirationAvg": 15.17,
+   "restlessMoments": 62
+  },
+  "2026-09-10": {
+   "totalHrs": 7.75,
+   "deepMin": 98,
+   "lightMin": 269,
+   "remMin": 98,
+   "awakeMin": 12,
+   "score": 81,
+   "recoveryScore": 66,
+   "deepScore": 100,
+   "feedback": "POSITIVE_LONG_AND_DEEP",
+   "avgStress": 22.15999984741211,
+   "respirationAvg": 15.11,
+   "restlessMoments": 76
+  },
+  "2026-09-11": {
+   "totalHrs": 7.02,
+   "deepMin": 64,
+   "lightMin": 265,
+   "remMin": 92,
+   "awakeMin": 9,
+   "score": 87,
+   "recoveryScore": 78,
+   "deepScore": 78,
+   "feedback": "POSITIVE_LONG_AND_CONTINUOUS",
+   "avgStress": 15.930000305175781,
+   "respirationAvg": 15.39,
+   "restlessMoments": 56
+  },
+  "2026-09-12": {
+   "totalHrs": 7.1,
+   "deepMin": 94,
+   "lightMin": 237,
+   "remMin": 95,
+   "awakeMin": 4,
+   "score": 89,
+   "recoveryScore": 74,
+   "deepScore": 100,
+   "feedback": "POSITIVE_LONG_AND_DEEP",
+   "avgStress": 18.020000457763672,
+   "respirationAvg": 14.71,
+   "restlessMoments": 53
+  },
+  "2026-09-13": {
+   "totalHrs": 3.13,
+   "deepMin": 0,
+   "lightMin": 188,
+   "remMin": 0,
+   "awakeMin": 0,
+   "score": 24,
+   "recoveryScore": 0,
+   "deepScore": 0,
+   "feedback": "NEGATIVE_SHORT_AND_POOR_QUALITY",
+   "avgStress": 74.12999725341797,
+   "respirationAvg": 17.85,
+   "restlessMoments": 12
   }
  },
  "dailyByDate": {
   "2025-09-17": {
-   "SKIN_TEMP_C": 0.0,
-   "RESTING_HR": 58
+   "SKIN_TEMP_C": 0.0
   },
   "2025-09-18": {
    "HRV": 56.0,
@@ -10266,8 +10551,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-19": {
    "HRV": 53.0,
@@ -10279,8 +10563,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-20": {
    "HRV": 50.0,
@@ -10292,8 +10575,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-21": {
    "HRV": 52.0,
@@ -10303,8 +10585,7 @@
    "SKIN_TEMP_C": null,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-22": {
    "HRV": 57.0,
@@ -10314,8 +10595,7 @@
    "SKIN_TEMP_C": null,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-23": {
    "HRV": 58.0,
@@ -10325,8 +10605,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-24": {
    "HRV": 50.0,
@@ -10336,8 +10615,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-25": {
    "HRV": 55.0,
@@ -10347,8 +10625,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-26": {
    "HRV": 50.0,
@@ -10358,8 +10635,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-27": {
    "HRV": 60.0,
@@ -10369,8 +10645,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-28": {
    "HRV": 52.0,
@@ -10380,8 +10655,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-29": {
    "HRV": 58.0,
@@ -10391,8 +10665,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-09-30": {
    "HRV": 52.0,
@@ -10402,8 +10675,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-10-01": {
    "HRV": 58.0,
@@ -10413,8 +10685,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-10-02": {
    "HRV": 52.0,
@@ -10424,8 +10695,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-10-03": {
    "HRV": 56.0,
@@ -10435,8 +10705,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-10-04": {
    "HRV": 54.0,
@@ -10446,8 +10715,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "ONBOARDING",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "ONBOARDING",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "ONBOARDING"
   },
   "2025-10-05": {
    "HRV": 55.0,
@@ -10457,8 +10725,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-06": {
    "HRV": 49.0,
@@ -10468,8 +10735,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-07": {
    "HRV": 51.0,
@@ -10479,8 +10745,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-08": {
    "HRV": 53.0,
@@ -10490,8 +10755,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-09": {
    "HRV": 56.0,
@@ -10501,8 +10765,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-10": {
    "HRV": 51.0,
@@ -10512,8 +10775,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-11": {
    "HRV": 60.0,
@@ -10523,8 +10785,7 @@
    "SKIN_TEMP_C": -0.9,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-12": {
    "HRV": 53.0,
@@ -10534,8 +10795,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-13": {
    "HRV": 51.0,
@@ -10545,8 +10805,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-14": {
    "HRV": 48.0,
@@ -10556,8 +10815,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-15": {
    "HRV": 59.0,
@@ -10567,8 +10825,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-16": {
    "HRV": 48.0,
@@ -10578,8 +10835,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-17": {
    "HRV": 52.0,
@@ -10589,8 +10845,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-18": {
    "HRV": 47.0,
@@ -10600,8 +10855,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-19": {
    "HRV": 46.0,
@@ -10611,8 +10865,7 @@
    "SKIN_TEMP_C": 0.8,
    "SKIN_TEMP_C_status": "ABOVE",
    "RESPIRATION": 16.1,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "ABOVE"
   },
   "2025-10-20": {
    "HRV": 47.0,
@@ -10622,8 +10875,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-21": {
    "HRV": 48.0,
@@ -10633,8 +10885,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-22": {
    "HRV": 50.0,
@@ -10644,8 +10895,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-23": {
    "HRV": 45.0,
@@ -10655,8 +10905,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-24": {
    "HRV": 44.0,
@@ -10666,8 +10915,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-25": {
    "HRV": 39.0,
@@ -10677,8 +10925,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "ABOVE"
   },
   "2025-10-26": {
    "HRV": 53.0,
@@ -10688,8 +10935,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-27": {
    "HRV": 48.0,
@@ -10699,8 +10945,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-28": {
    "HRV": 48.0,
@@ -10710,8 +10955,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 13.8,
-   "RESPIRATION_status": "BELOW",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "BELOW"
   },
   "2025-10-29": {
    "HRV": 54.0,
@@ -10721,8 +10965,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-30": {
    "HRV": 43.0,
@@ -10732,8 +10975,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-10-31": {
    "HRV": 47.0,
@@ -10743,8 +10985,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-01": {
    "HRV": 45.0,
@@ -10754,8 +10995,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-02": {
    "HRV": 51.0,
@@ -10765,8 +11005,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-03": {
    "HRV": 51.0,
@@ -10776,8 +11015,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-04": {
    "HRV": 43.0,
@@ -10787,8 +11025,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-05": {
    "HRV": 44.0,
@@ -10798,8 +11035,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-06": {
    "HRV": 37.0,
@@ -10809,8 +11045,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-07": {
    "HRV": 42.0,
@@ -10820,8 +11055,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-08": {
    "HRV": 52.0,
@@ -10831,8 +11065,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-09": {
    "HRV": 38.0,
@@ -10842,8 +11075,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-10": {
    "HRV": 48.0,
@@ -10853,8 +11085,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-12": {
    "HRV": 51.0,
@@ -10864,8 +11095,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-13": {
    "HRV": 47.0,
@@ -10875,8 +11105,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-14": {
    "HRV": 43.0,
@@ -10886,8 +11115,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-15": {
    "HRV": 44.0,
@@ -10897,8 +11125,7 @@
    "SKIN_TEMP_C": -0.7,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-16": {
    "HRV": 30.0,
@@ -10908,8 +11135,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "ABOVE"
   },
   "2025-11-17": {
    "HRV": 45.0,
@@ -10919,8 +11145,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 13.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-18": {
    "HRV": 43.0,
@@ -10930,8 +11155,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-19": {
    "HRV": 42.0,
@@ -10941,8 +11165,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-20": {
    "HRV": 38.0,
@@ -10952,8 +11175,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-21": {
    "HRV": 47.0,
@@ -10963,8 +11185,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-22": {
    "HRV": 50.0,
@@ -10974,8 +11195,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 13.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-23": {
    "HRV": 47.0,
@@ -10985,8 +11205,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-24": {
    "HRV": 48.0,
@@ -10996,8 +11215,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-25": {
    "HRV": 39.0,
@@ -11007,8 +11225,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-26": {
    "HRV": 45.0,
@@ -11018,8 +11235,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-27": {
    "HRV": 37.0,
@@ -11029,8 +11245,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-28": {
    "HRV": 44.0,
@@ -11040,8 +11255,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-11-30": {
    "HRV": 46.0,
@@ -11051,8 +11265,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-01": {
    "HRV": 39.0,
@@ -11062,8 +11275,7 @@
    "SKIN_TEMP_C": -0.6,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-02": {
    "HRV": 32.0,
@@ -11073,8 +11285,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-03": {
    "HRV": 42.0,
@@ -11084,8 +11295,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-04": {
    "HRV": 38.0,
@@ -11095,8 +11305,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-05": {
    "HRV": 42.0,
@@ -11106,8 +11315,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-06": {
    "HRV": 46.0,
@@ -11117,8 +11325,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-07": {
    "HRV": 37.0,
@@ -11128,8 +11335,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-08": {
    "HRV": 31.0,
@@ -11139,8 +11345,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-09": {
    "HRV": 44.0,
@@ -11150,8 +11355,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 13.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-10": {
    "HRV": 44.0,
@@ -11161,8 +11365,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-11": {
    "HRV": 35.0,
@@ -11172,8 +11375,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-12": {
    "HRV": 38.0,
@@ -11183,8 +11385,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-13": {
    "HRV": 48.0,
@@ -11194,8 +11395,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-14": {
    "HRV": 29.0,
@@ -11205,8 +11405,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-15": {
    "HRV": 46.0,
@@ -11216,8 +11415,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-16": {
    "HRV": 42.0,
@@ -11227,8 +11425,7 @@
    "SKIN_TEMP_C": 0.6,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-17": {
    "HRV": 44.0,
@@ -11238,8 +11435,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-18": {
    "HRV": 45.0,
@@ -11249,8 +11445,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-19": {
    "HRV": 41.0,
@@ -11260,8 +11455,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.6,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "ABOVE"
   },
   "2025-12-20": {
    "HRV": 54.0,
@@ -11271,8 +11465,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-21": {
    "HRV": 58.0,
@@ -11282,8 +11475,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-22": {
    "HRV": 48.0,
@@ -11293,8 +11485,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-23": {
    "HRV": 40.0,
@@ -11304,8 +11495,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-24": {
    "HRV": 38.0,
@@ -11315,8 +11505,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-25": {
    "HRV": 41.0,
@@ -11326,8 +11515,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-26": {
    "HRV": 58.0,
@@ -11337,8 +11525,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-27": {
    "HRV": 48.0,
@@ -11348,8 +11535,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-28": {
    "HRV": 47.0,
@@ -11359,8 +11545,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-29": {
    "HRV": 36.0,
@@ -11370,8 +11555,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-30": {
    "HRV": 37.0,
@@ -11381,8 +11565,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2025-12-31": {
    "HRV": 36.0,
@@ -11392,8 +11575,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-01": {
    "HRV": 31.0,
@@ -11403,8 +11585,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-02": {
    "HRV": 56.0,
@@ -11414,8 +11595,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-03": {
    "HRV": 54.0,
@@ -11425,8 +11605,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 13.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-04": {
    "HRV": 44.0,
@@ -11436,8 +11615,7 @@
    "SKIN_TEMP_C": -0.8,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 13.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-05": {
    "HRV": 55.0,
@@ -11446,8 +11624,7 @@
    "HR_status": "IN_RANGE",
    "SKIN_TEMP_C": null,
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-06": {
    "HRV": 46.0,
@@ -11457,8 +11634,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-07": {
    "HRV": 37.0,
@@ -11468,8 +11644,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-08": {
    "HRV": 52.0,
@@ -11479,8 +11654,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-09": {
    "HRV": 45.0,
@@ -11490,8 +11664,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-10": {
    "HRV": 40.0,
@@ -11501,8 +11674,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-11": {
    "HRV": 48.0,
@@ -11512,8 +11684,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-12": {
    "HRV": 44.0,
@@ -11523,8 +11694,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-13": {
    "HRV": 34.0,
@@ -11534,8 +11704,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-14": {
    "HRV": 39.0,
@@ -11545,8 +11714,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-15": {
    "HRV": 46.0,
@@ -11556,8 +11724,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-16": {
    "HRV": 49.0,
@@ -11567,8 +11734,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-17": {
    "HRV": 52.0,
@@ -11578,8 +11744,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-18": {
    "HRV": 43.0,
@@ -11589,8 +11754,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-19": {
    "HRV": 52.0,
@@ -11600,8 +11764,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-20": {
    "HRV": 23.0,
@@ -11611,8 +11774,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-21": {
    "HRV": 20.0,
@@ -11622,8 +11784,7 @@
    "SKIN_TEMP_C": 1.5,
    "SKIN_TEMP_C_status": "ABOVE",
    "RESPIRATION": 18.5,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-01-22": {
    "HRV": 21.0,
@@ -11633,8 +11794,7 @@
    "SKIN_TEMP_C": 1.0,
    "SKIN_TEMP_C_status": "ABOVE",
    "RESPIRATION": 19.4,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-01-23": {
    "HRV": 38.0,
@@ -11644,8 +11804,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.9,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-01-24": {
    "HRV": 37.0,
@@ -11655,8 +11814,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.9,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-01-25": {
    "HRV": 43.0,
@@ -11666,8 +11824,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-26": {
    "HRV": 38.0,
@@ -11677,8 +11834,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.8,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-01-27": {
    "HRV": 42.0,
@@ -11688,8 +11844,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-28": {
    "HRV": 38.0,
@@ -11699,8 +11854,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-29": {
    "HRV": 51.0,
@@ -11710,8 +11864,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-30": {
    "HRV": 51.0,
@@ -11721,8 +11874,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-01-31": {
    "HRV": 49.0,
@@ -11732,8 +11884,7 @@
    "SKIN_TEMP_C": -0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-01": {
    "HRV": 48.0,
@@ -11743,8 +11894,7 @@
    "SKIN_TEMP_C": -0.6,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-02": {
    "HRV": 46.0,
@@ -11754,8 +11904,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-03": {
    "HRV": 42.0,
@@ -11765,8 +11914,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-04": {
    "HRV": 45.0,
@@ -11776,8 +11924,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-05": {
    "HRV": 43.0,
@@ -11787,8 +11934,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-06": {
    "HRV": 51.0,
@@ -11798,8 +11944,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-07": {
    "HRV": 39.0,
@@ -11809,8 +11954,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-08": {
    "HRV": 53.0,
@@ -11820,8 +11964,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-09": {
    "HRV": 41.0,
@@ -11831,8 +11974,7 @@
    "SKIN_TEMP_C": -0.8,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-10": {
    "HRV": 41.0,
@@ -11842,8 +11984,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-11": {
    "HRV": 47.0,
@@ -11853,8 +11994,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-12": {
    "HRV": 48.0,
@@ -11864,8 +12004,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-13": {
    "HRV": 42.0,
@@ -11875,8 +12014,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-14": {
    "HRV": 34.0,
@@ -11886,8 +12024,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-15": {
    "HRV": 47.0,
@@ -11897,8 +12034,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-16": {
    "HRV": 50.0,
@@ -11908,8 +12044,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-17": {
    "HRV": 50.0,
@@ -11919,8 +12054,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-18": {
    "HRV": 35.0,
@@ -11930,8 +12064,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-19": {
    "HRV": 46.0,
@@ -11941,8 +12074,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-20": {
    "HRV": 47.0,
@@ -11952,8 +12084,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-21": {
    "HRV": 46.0,
@@ -11963,8 +12094,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-22": {
    "HRV": 49.0,
@@ -11974,8 +12104,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-23": {
    "HRV": 47.0,
@@ -11985,8 +12114,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-24": {
    "HRV": 49.0,
@@ -11996,8 +12124,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-25": {
    "HRV": 36.0,
@@ -12007,8 +12134,7 @@
    "SKIN_TEMP_C": 0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-26": {
    "HRV": 53.0,
@@ -12018,8 +12144,7 @@
    "SKIN_TEMP_C": -0.6,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-27": {
    "HRV": 24.0,
@@ -12029,8 +12154,7 @@
    "SKIN_TEMP_C": 0.6,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-02-28": {
    "HRV": 42.0,
@@ -12040,8 +12164,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-08": {
    "HRV": 35.0,
@@ -12051,8 +12174,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-09": {
    "HRV": 39.0,
@@ -12062,8 +12184,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-10": {
    "HRV": 42.0,
@@ -12073,8 +12194,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-11": {
    "HRV": 50.0,
@@ -12084,8 +12204,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-12": {
    "HRV": 48.0,
@@ -12095,8 +12214,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-13": {
    "HRV": 51.0,
@@ -12106,8 +12224,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-14": {
    "HRV": 43.0,
@@ -12117,8 +12234,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-15": {
    "HRV": 54.0,
@@ -12128,8 +12244,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-16": {
    "HRV": 52.0,
@@ -12139,8 +12254,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-18": {
    "HRV": 34.0,
@@ -12150,8 +12264,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-19": {
    "HRV": 53.0,
@@ -12161,8 +12274,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-20": {
    "HRV": 45.0,
@@ -12172,8 +12284,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-21": {
    "HRV": 52.0,
@@ -12183,8 +12294,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-22": {
    "HRV": 54.0,
@@ -12194,8 +12304,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-23": {
    "HRV": 48.0,
@@ -12205,8 +12314,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-24": {
    "HRV": 50.0,
@@ -12216,8 +12324,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-25": {
    "HRV": 50.0,
@@ -12227,8 +12334,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-26": {
    "HRV": 49.0,
@@ -12238,8 +12344,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-27": {
    "HRV": 45.0,
@@ -12249,8 +12354,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-28": {
    "HRV": 42.0,
@@ -12260,8 +12364,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-29": {
    "HRV": 47.0,
@@ -12271,8 +12374,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-30": {
    "HRV": 53.0,
@@ -12282,8 +12384,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-03-31": {
    "HRV": 41.0,
@@ -12293,8 +12394,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-01": {
    "HRV": 44.0,
@@ -12304,8 +12404,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-02": {
    "HRV": 50.0,
@@ -12315,8 +12414,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-03": {
    "HRV": 46.0,
@@ -12326,8 +12424,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-04": {
    "HRV": 35.0,
@@ -12337,8 +12434,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-05": {
    "HRV": 46.0,
@@ -12348,8 +12444,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-06": {
    "HRV": 53.0,
@@ -12359,8 +12454,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-07": {
    "HRV": 50.0,
@@ -12370,8 +12464,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-08": {
    "HRV": 52.0,
@@ -12381,8 +12474,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-09": {
    "HRV": 41.0,
@@ -12392,8 +12484,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-10": {
    "HRV": 49.0,
@@ -12403,8 +12494,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-11": {
    "HRV": 41.0,
@@ -12414,8 +12504,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-12": {
    "HRV": 46.0,
@@ -12425,8 +12514,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-13": {
    "HRV": 44.0,
@@ -12436,8 +12524,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-14": {
    "HRV": 44.0,
@@ -12447,8 +12534,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-15": {
    "HRV": 44.0,
@@ -12458,8 +12544,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-17": {
    "HRV": 37.0,
@@ -12469,8 +12554,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-18": {
    "HRV": 45.0,
@@ -12480,8 +12564,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-19": {
    "HRV": 52.0,
@@ -12491,8 +12574,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-20": {
    "HRV": 47.0,
@@ -12502,8 +12584,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-21": {
    "HRV": 45.0,
@@ -12513,8 +12594,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-22": {
    "HRV": 42.0,
@@ -12524,8 +12604,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-23": {
    "HRV": 48.0,
@@ -12535,8 +12614,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-24": {
    "HRV": 43.0,
@@ -12546,8 +12624,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-25": {
    "HRV": 35.0,
@@ -12557,8 +12634,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-26": {
    "HRV": 47.0,
@@ -12568,8 +12644,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-27": {
    "HRV": 39.0,
@@ -12579,8 +12654,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-28": {
    "HRV": 41.0,
@@ -12590,8 +12664,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-29": {
    "HRV": 34.0,
@@ -12601,8 +12674,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 64
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-04-30": {
    "HRV": 45.0,
@@ -12612,8 +12684,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 64
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-01": {
    "HRV": 47.0,
@@ -12623,8 +12694,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 64
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-02": {
    "HRV": 46.0,
@@ -12634,8 +12704,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 64
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-03": {
    "HRV": 39.0,
@@ -12645,8 +12714,7 @@
    "SKIN_TEMP_C": -0.5,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 64
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-04": {
    "HRV": 50.0,
@@ -12656,8 +12724,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-05": {
    "HRV": 40.0,
@@ -12667,8 +12734,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-06": {
    "HRV": 44.0,
@@ -12678,8 +12744,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 63
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-07": {
    "HRV": 54.0,
@@ -12689,8 +12754,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-08": {
    "HRV": 44.0,
@@ -12700,8 +12764,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-09": {
    "HRV": 38.0,
@@ -12711,8 +12774,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-10": {
    "HRV": 51.0,
@@ -12722,8 +12784,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-11": {
    "HRV": 58.0,
@@ -12733,8 +12794,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 61
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-12": {
    "HRV": 51.0,
@@ -12744,8 +12804,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 60
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-13": {
    "HRV": 48.0,
@@ -12755,8 +12814,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-14": {
    "HRV": 47.0,
@@ -12766,8 +12824,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-15": {
    "HRV": 50.0,
@@ -12777,8 +12834,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-16": {
    "HRV": 40.0,
@@ -12788,8 +12844,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-17": {
    "HRV": 52.0,
@@ -12799,8 +12854,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-18": {
    "HRV": 52.0,
@@ -12810,8 +12864,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-19": {
    "HRV": 49.0,
@@ -12821,8 +12874,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-20": {
    "HRV": 54.0,
@@ -12832,8 +12884,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-21": {
    "HRV": 46.0,
@@ -12843,8 +12894,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-22": {
    "HRV": 43.0,
@@ -12854,8 +12904,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-23": {
    "HRV": 51.0,
@@ -12865,8 +12914,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-24": {
    "HRV": 48.0,
@@ -12876,8 +12924,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-25": {
    "HRV": 53.0,
@@ -12887,8 +12934,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-26": {
    "HRV": 53.0,
@@ -12898,8 +12944,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-27": {
    "HRV": 53.0,
@@ -12909,8 +12954,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-28": {
    "HRV": 49.0,
@@ -12920,8 +12964,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-29": {
    "HRV": 52.0,
@@ -12931,8 +12974,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-30": {
    "HRV": 36.0,
@@ -12942,8 +12984,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-05-31": {
    "HRV": 52.0,
@@ -12953,8 +12994,7 @@
    "SKIN_TEMP_C": -0.6,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-01": {
    "HRV": 48.0,
@@ -12964,8 +13004,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-02": {
    "HRV": 50.0,
@@ -12975,8 +13014,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-03": {
    "HRV": 51.0,
@@ -12986,8 +13024,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-04": {
    "HRV": 52.0,
@@ -12997,8 +13034,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-05": {
    "HRV": 51.0,
@@ -13008,8 +13044,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-06": {
    "HRV": 40.0,
@@ -13019,8 +13054,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-07": {
    "HRV": 49.0,
@@ -13030,8 +13064,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-08": {
    "HRV": 54.0,
@@ -13041,8 +13074,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-09": {
    "HRV": 51.0,
@@ -13052,8 +13084,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-10": {
    "HRV": 49.0,
@@ -13063,8 +13094,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-11": {
    "HRV": 53.0,
@@ -13074,8 +13104,7 @@
    "SKIN_TEMP_C": -0.5,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-12": {
    "HRV": 52.0,
@@ -13085,8 +13114,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-13": {
    "HRV": 56.0,
@@ -13096,8 +13124,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-14": {
    "HRV": 47.0,
@@ -13107,8 +13134,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-15": {
    "HRV": 53.0,
@@ -13118,8 +13144,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-16": {
    "HRV": 55.0,
@@ -13129,8 +13154,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-17": {
    "HRV": 48.0,
@@ -13140,8 +13164,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-18": {
    "HRV": 52.0,
@@ -13151,8 +13174,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-19": {
    "HRV": 56.0,
@@ -13162,8 +13184,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-20": {
    "HRV": 50.0,
@@ -13173,8 +13194,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-21": {
    "HRV": 50.0,
@@ -13184,8 +13204,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-22": {
    "HRV": 54.0,
@@ -13195,8 +13214,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-23": {
    "HRV": 50.0,
@@ -13206,8 +13224,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-24": {
    "HRV": 48.0,
@@ -13217,8 +13234,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-25": {
    "HRV": 50.0,
@@ -13228,8 +13244,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-26": {
    "HRV": 58.0,
@@ -13239,8 +13254,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-27": {
    "HRV": 55.0,
@@ -13250,8 +13264,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-28": {
    "HRV": 51.0,
@@ -13261,8 +13274,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-29": {
    "HRV": 46.0,
@@ -13272,8 +13284,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-06-30": {
    "HRV": 54.0,
@@ -13283,8 +13294,7 @@
    "SKIN_TEMP_C": -0.6,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-01": {
    "HRV": 44.0,
@@ -13294,8 +13304,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-02": {
    "HRV": 55.0,
@@ -13305,8 +13314,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-03": {
    "HRV": 53.0,
@@ -13316,8 +13324,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-04": {
    "HRV": 52.0,
@@ -13327,8 +13334,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-05": {
    "HRV": 59.0,
@@ -13338,8 +13344,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-06": {
    "HRV": 60.0,
@@ -13349,8 +13354,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-07": {
    "HRV": 55.0,
@@ -13360,8 +13364,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-08": {
    "HRV": 49.0,
@@ -13371,8 +13374,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-09": {
    "HRV": 47.0,
@@ -13382,8 +13384,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-10": {
    "HRV": 64.0,
@@ -13393,8 +13394,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-11": {
    "HRV": 59.0,
@@ -13404,8 +13404,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-12": {
    "HRV": 49.0,
@@ -13415,8 +13414,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-13": {
    "HRV": 53.0,
@@ -13426,8 +13424,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-14": {
    "HRV": 52.0,
@@ -13437,8 +13434,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-15": {
    "HRV": 54.0,
@@ -13448,8 +13444,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-16": {
    "HRV": 56.0,
@@ -13459,8 +13454,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-17": {
    "HRV": 50.0,
@@ -13470,8 +13464,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-18": {
    "HRV": 44.0,
@@ -13481,8 +13474,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-19": {
    "HRV": 35.0,
@@ -13492,8 +13484,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.2,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-07-20": {
    "HRV": 60.0,
@@ -13503,8 +13494,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-21": {
    "HRV": 58.0,
@@ -13514,8 +13504,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-22": {
    "HRV": 52.0,
@@ -13525,8 +13514,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-23": {
    "HRV": 53.0,
@@ -13536,8 +13524,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-24": {
    "HRV": 53.0,
@@ -13547,8 +13534,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-25": {
    "HRV": 45.0,
@@ -13558,8 +13544,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-26": {
    "HRV": 38.0,
@@ -13569,8 +13554,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.5,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-07-27": {
    "HRV": 43.0,
@@ -13580,8 +13564,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-28": {
    "HRV": 64.0,
@@ -13591,8 +13574,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-29": {
    "HRV": 54.0,
@@ -13604,8 +13586,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-30": {
    "HRV": 48.0,
@@ -13617,8 +13598,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-07-31": {
    "HRV": 45.0,
@@ -13630,8 +13610,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-01": {
    "HRV": 43.0,
@@ -13643,8 +13622,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-02": {
    "HRV": 45.0,
@@ -13656,8 +13634,7 @@
    "SKIN_TEMP_C": 0.9,
    "SKIN_TEMP_C_status": "ABOVE",
    "RESPIRATION": 15.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-03": {
    "HRV": 25.0,
@@ -13669,8 +13646,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.7,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-08-04": {
    "HRV": 64.0,
@@ -13682,8 +13658,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-05": {
    "HRV": 56.0,
@@ -13695,8 +13670,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-06": {
    "HRV": 44.0,
@@ -13708,8 +13682,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 59
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-07": {
    "HRV": 53.0,
@@ -13721,8 +13694,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.3,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 58
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-08": {
    "HRV": 61.0,
@@ -13734,8 +13706,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 57
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-09": {
    "HRV": 49.0,
@@ -13747,8 +13718,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 56
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-10": {
    "HRV": 53.0,
@@ -13760,8 +13730,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.9,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-11": {
    "HRV": 59.0,
@@ -13773,8 +13742,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-12": {
    "HRV": 58.0,
@@ -13786,8 +13754,7 @@
    "SKIN_TEMP_C": -0.9,
    "SKIN_TEMP_C_status": "BELOW",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 55
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-13": {
    "HRV": 55.0,
@@ -13799,8 +13766,7 @@
    "SKIN_TEMP_C": -0.4,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-14": {
    "HRV": 61.0,
@@ -13812,8 +13778,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-15": {
    "HRV": 67.0,
@@ -13825,8 +13790,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-16": {
    "HRV": 44.0,
@@ -13838,8 +13802,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.4,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-08-17": {
    "HRV": 60.0,
@@ -13851,8 +13814,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-18": {
    "HRV": 55.0,
@@ -13864,8 +13826,7 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.1,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-19": {
    "HRV": 54.0,
@@ -13877,8 +13838,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-20": {
    "HRV": 59.0,
@@ -13890,8 +13850,7 @@
    "SKIN_TEMP_C": -0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.4,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 54
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-21": {
    "HRV": 54.0,
@@ -13903,8 +13862,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.5,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-22": {
    "HRV": 59.0,
@@ -13916,8 +13874,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-23": {
    "HRV": 62.0,
@@ -13929,8 +13886,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.0,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-24": {
    "HRV": 52.0,
@@ -13942,8 +13898,7 @@
    "SKIN_TEMP_C": 0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-25": {
    "HRV": 53.0,
@@ -13955,8 +13910,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.2,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-26": {
    "HRV": 56.0,
@@ -13968,8 +13922,7 @@
    "SKIN_TEMP_C": -0.3,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.8,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-27": {
    "HRV": 63.0,
@@ -13981,8 +13934,7 @@
    "SKIN_TEMP_C": 0.0,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.7,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-28": {
    "HRV": 69.0,
@@ -13994,8 +13946,7 @@
    "SKIN_TEMP_C": -0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 14.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "IN_RANGE"
   },
   "2026-08-29": {
    "HRV": 62.0,
@@ -14007,8 +13958,7 @@
    "SKIN_TEMP_C": 0.5,
    "SKIN_TEMP_C_status": "ABOVE",
    "RESPIRATION": 16.2,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 52
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-08-30": {
    "HRV": 49.0,
@@ -14020,8 +13970,7 @@
    "SKIN_TEMP_C": 0.1,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 16.4,
-   "RESPIRATION_status": "ABOVE",
-   "RESTING_HR": 53
+   "RESPIRATION_status": "ABOVE"
   },
   "2026-08-31": {
    "HRV": 62.0,
@@ -14033,896 +13982,163 @@
    "SKIN_TEMP_C": 0.2,
    "SKIN_TEMP_C_status": "IN_RANGE",
    "RESPIRATION": 15.6,
-   "RESPIRATION_status": "IN_RANGE",
-   "RESTING_HR": 52
-  },
-  "2024-12-06": {
-   "RESTING_HR": 70
-  },
-  "2024-12-07": {
-   "RESTING_HR": 64
-  },
-  "2024-12-08": {
-   "RESTING_HR": 61
-  },
-  "2024-12-09": {
-   "RESTING_HR": 59
-  },
-  "2024-12-10": {
-   "RESTING_HR": 57
-  },
-  "2024-12-11": {
-   "RESTING_HR": 58
-  },
-  "2024-12-12": {
-   "RESTING_HR": 58
-  },
-  "2024-12-13": {
-   "RESTING_HR": 56
-  },
-  "2024-12-14": {
-   "RESTING_HR": 56
-  },
-  "2024-12-15": {
-   "RESTING_HR": 57
-  },
-  "2024-12-16": {
-   "RESTING_HR": 57
-  },
-  "2024-12-17": {
-   "RESTING_HR": 58
-  },
-  "2024-12-18": {
-   "RESTING_HR": 58
-  },
-  "2024-12-19": {
-   "RESTING_HR": 57
-  },
-  "2024-12-20": {
-   "RESTING_HR": 58
-  },
-  "2024-12-21": {
-   "RESTING_HR": 59
-  },
-  "2024-12-22": {
-   "RESTING_HR": 58
-  },
-  "2024-12-23": {
-   "RESTING_HR": 58
-  },
-  "2024-12-24": {
-   "RESTING_HR": 59
-  },
-  "2024-12-25": {
-   "RESTING_HR": 60
-  },
-  "2024-12-26": {
-   "RESTING_HR": 60
-  },
-  "2024-12-27": {
-   "RESTING_HR": 59
-  },
-  "2024-12-28": {
-   "RESTING_HR": 59
-  },
-  "2024-12-29": {
-   "RESTING_HR": 59
-  },
-  "2024-12-30": {
-   "RESTING_HR": 60
-  },
-  "2024-12-31": {
-   "RESTING_HR": 60
-  },
-  "2025-01-01": {
-   "RESTING_HR": 60
-  },
-  "2025-01-02": {
-   "RESTING_HR": 60
-  },
-  "2025-01-03": {
-   "RESTING_HR": 61
-  },
-  "2025-01-04": {
-   "RESTING_HR": 62
-  },
-  "2025-01-05": {
-   "RESTING_HR": 61
-  },
-  "2025-01-06": {
-   "RESTING_HR": 61
-  },
-  "2025-01-07": {
-   "RESTING_HR": 61
-  },
-  "2025-01-08": {
-   "RESTING_HR": 61
-  },
-  "2025-01-09": {
-   "RESTING_HR": 60
-  },
-  "2025-01-10": {
-   "RESTING_HR": 60
-  },
-  "2025-01-11": {
-   "RESTING_HR": 60
-  },
-  "2025-01-12": {
-   "RESTING_HR": 60
-  },
-  "2025-01-13": {
-   "RESTING_HR": 61
-  },
-  "2025-01-14": {
-   "RESTING_HR": 60
-  },
-  "2025-01-15": {
-   "RESTING_HR": 60
-  },
-  "2025-01-16": {
-   "RESTING_HR": 61
-  },
-  "2025-01-17": {
-   "RESTING_HR": 61
-  },
-  "2025-01-18": {
-   "RESTING_HR": 61
-  },
-  "2025-01-19": {
-   "RESTING_HR": 61
-  },
-  "2025-01-20": {
-   "RESTING_HR": 60
-  },
-  "2025-01-21": {
-   "RESTING_HR": 60
-  },
-  "2025-01-22": {
-   "RESTING_HR": 60
-  },
-  "2025-01-23": {
-   "RESTING_HR": 60
-  },
-  "2025-01-24": {
-   "RESTING_HR": 60
-  },
-  "2025-01-25": {
-   "RESTING_HR": 61
-  },
-  "2025-01-26": {
-   "RESTING_HR": 62
-  },
-  "2025-01-27": {
-   "RESTING_HR": 62
-  },
-  "2025-01-28": {
-   "RESTING_HR": 62
-  },
-  "2025-01-29": {
-   "RESTING_HR": 62
-  },
-  "2025-01-30": {
-   "RESTING_HR": 61
-  },
-  "2025-01-31": {
-   "RESTING_HR": 60
-  },
-  "2025-02-01": {
-   "RESTING_HR": 59
-  },
-  "2025-02-02": {
-   "RESTING_HR": 58
-  },
-  "2025-02-03": {
-   "RESTING_HR": 58
-  },
-  "2025-02-04": {
-   "RESTING_HR": 58
-  },
-  "2025-02-05": {
-   "RESTING_HR": 58
-  },
-  "2025-02-06": {
-   "RESTING_HR": 58
-  },
-  "2025-02-07": {
-   "RESTING_HR": 58
-  },
-  "2025-02-08": {
-   "RESTING_HR": 58
-  },
-  "2025-02-09": {
-   "RESTING_HR": 58
-  },
-  "2025-02-10": {
-   "RESTING_HR": 58
-  },
-  "2025-02-11": {
-   "RESTING_HR": 58
-  },
-  "2025-02-12": {
-   "RESTING_HR": 58
-  },
-  "2025-02-13": {
-   "RESTING_HR": 58
-  },
-  "2025-02-14": {
-   "RESTING_HR": 58
-  },
-  "2025-02-15": {
-   "RESTING_HR": 57
-  },
-  "2025-02-16": {
-   "RESTING_HR": 56
-  },
-  "2025-02-17": {
-   "RESTING_HR": 57
-  },
-  "2025-02-18": {
-   "RESTING_HR": 57
-  },
-  "2025-02-19": {
-   "RESTING_HR": 57
-  },
-  "2025-02-20": {
-   "RESTING_HR": 57
-  },
-  "2025-02-21": {
-   "RESTING_HR": 57
-  },
-  "2025-02-22": {
-   "RESTING_HR": 58
-  },
-  "2025-02-23": {
-   "RESTING_HR": 59
-  },
-  "2025-02-24": {
-   "RESTING_HR": 58
-  },
-  "2025-02-25": {
-   "RESTING_HR": 58
-  },
-  "2025-02-26": {
-   "RESTING_HR": 57
-  },
-  "2025-02-27": {
-   "RESTING_HR": 57
-  },
-  "2025-02-28": {
-   "RESTING_HR": 56
-  },
-  "2025-03-01": {
-   "RESTING_HR": 56
-  },
-  "2025-03-02": {
-   "RESTING_HR": 56
-  },
-  "2025-03-03": {
-   "RESTING_HR": 56
-  },
-  "2025-03-04": {
-   "RESTING_HR": 56
-  },
-  "2025-03-05": {
-   "RESTING_HR": 56
-  },
-  "2025-03-06": {
-   "RESTING_HR": 56
-  },
-  "2025-03-07": {
-   "RESTING_HR": 56
-  },
-  "2025-03-08": {
-   "RESTING_HR": 56
-  },
-  "2025-03-09": {
-   "RESTING_HR": 56
-  },
-  "2025-03-10": {
-   "RESTING_HR": 56
-  },
-  "2025-03-11": {
-   "RESTING_HR": 56
-  },
-  "2025-03-12": {
-   "RESTING_HR": 57
-  },
-  "2025-03-13": {
-   "RESTING_HR": 57
-  },
-  "2025-03-14": {
-   "RESTING_HR": 58
-  },
-  "2025-03-15": {
-   "RESTING_HR": 58
-  },
-  "2025-03-16": {
-   "RESTING_HR": 58
-  },
-  "2025-03-17": {
-   "RESTING_HR": 59
-  },
-  "2025-03-18": {
-   "RESTING_HR": 59
-  },
-  "2025-03-19": {
-   "RESTING_HR": 59
-  },
-  "2025-03-20": {
-   "RESTING_HR": 58
-  },
-  "2025-03-21": {
-   "RESTING_HR": 58
-  },
-  "2025-03-22": {
-   "RESTING_HR": 57
-  },
-  "2025-03-23": {
-   "RESTING_HR": 57
-  },
-  "2025-03-24": {
-   "RESTING_HR": 56
-  },
-  "2025-03-25": {
-   "RESTING_HR": 56
-  },
-  "2025-03-26": {
-   "RESTING_HR": 56
-  },
-  "2025-03-27": {
-   "RESTING_HR": 56
-  },
-  "2025-03-28": {
-   "RESTING_HR": 56
-  },
-  "2025-03-29": {
-   "RESTING_HR": 56
-  },
-  "2025-03-30": {
-   "RESTING_HR": 56
-  },
-  "2025-03-31": {
-   "RESTING_HR": 56
-  },
-  "2025-04-01": {
-   "RESTING_HR": 56
-  },
-  "2025-04-02": {
-   "RESTING_HR": 56
-  },
-  "2025-04-03": {
-   "RESTING_HR": 56
-  },
-  "2025-04-04": {
-   "RESTING_HR": 56
-  },
-  "2025-04-05": {
-   "RESTING_HR": 56
-  },
-  "2025-04-06": {
-   "RESTING_HR": 57
-  },
-  "2025-04-07": {
-   "RESTING_HR": 57
-  },
-  "2025-04-08": {
-   "RESTING_HR": 57
-  },
-  "2025-04-09": {
-   "RESTING_HR": 57
-  },
-  "2025-04-10": {
-   "RESTING_HR": 57
-  },
-  "2025-04-11": {
-   "RESTING_HR": 57
-  },
-  "2025-04-12": {
-   "RESTING_HR": 56
-  },
-  "2025-04-13": {
-   "RESTING_HR": 56
-  },
-  "2025-04-14": {
-   "RESTING_HR": 55
-  },
-  "2025-04-15": {
-   "RESTING_HR": 55
-  },
-  "2025-04-16": {
-   "RESTING_HR": 55
-  },
-  "2025-04-17": {
-   "RESTING_HR": 54
-  },
-  "2025-04-18": {
-   "RESTING_HR": 54
-  },
-  "2025-04-19": {
-   "RESTING_HR": 54
-  },
-  "2025-04-20": {
-   "RESTING_HR": 55
-  },
-  "2025-04-21": {
-   "RESTING_HR": 55
-  },
-  "2025-04-22": {
-   "RESTING_HR": 55
-  },
-  "2025-04-23": {
-   "RESTING_HR": 55
-  },
-  "2025-04-24": {
-   "RESTING_HR": 55
-  },
-  "2025-04-25": {
-   "RESTING_HR": 55
-  },
-  "2025-04-26": {
-   "RESTING_HR": 55
-  },
-  "2025-04-27": {
-   "RESTING_HR": 55
-  },
-  "2025-04-28": {
-   "RESTING_HR": 55
-  },
-  "2025-04-29": {
-   "RESTING_HR": 55
-  },
-  "2025-04-30": {
-   "RESTING_HR": 55
-  },
-  "2025-05-01": {
-   "RESTING_HR": 55
-  },
-  "2025-05-02": {
-   "RESTING_HR": 55
-  },
-  "2025-05-03": {
-   "RESTING_HR": 55
-  },
-  "2025-05-04": {
-   "RESTING_HR": 55
-  },
-  "2025-05-05": {
-   "RESTING_HR": 54
-  },
-  "2025-05-06": {
-   "RESTING_HR": 55
-  },
-  "2025-05-07": {
-   "RESTING_HR": 55
-  },
-  "2025-05-08": {
-   "RESTING_HR": 56
-  },
-  "2025-05-09": {
-   "RESTING_HR": 56
-  },
-  "2025-05-10": {
-   "RESTING_HR": 57
-  },
-  "2025-05-11": {
-   "RESTING_HR": 58
-  },
-  "2025-05-12": {
-   "RESTING_HR": 58
-  },
-  "2025-05-13": {
-   "RESTING_HR": 57
-  },
-  "2025-05-14": {
-   "RESTING_HR": 56
-  },
-  "2025-05-15": {
-   "RESTING_HR": 55
-  },
-  "2025-05-16": {
-   "RESTING_HR": 54
-  },
-  "2025-05-17": {
-   "RESTING_HR": 54
-  },
-  "2025-05-18": {
-   "RESTING_HR": 53
-  },
-  "2025-05-19": {
-   "RESTING_HR": 53
-  },
-  "2025-05-20": {
-   "RESTING_HR": 53
-  },
-  "2025-05-21": {
-   "RESTING_HR": 54
-  },
-  "2025-05-22": {
-   "RESTING_HR": 54
-  },
-  "2025-05-23": {
-   "RESTING_HR": 54
-  },
-  "2025-05-24": {
-   "RESTING_HR": 54
-  },
-  "2025-05-25": {
-   "RESTING_HR": 54
-  },
-  "2025-05-26": {
-   "RESTING_HR": 55
-  },
-  "2025-05-27": {
-   "RESTING_HR": 55
-  },
-  "2025-05-28": {
-   "RESTING_HR": 54
-  },
-  "2025-05-29": {
-   "RESTING_HR": 55
-  },
-  "2025-05-30": {
-   "RESTING_HR": 55
-  },
-  "2025-05-31": {
-   "RESTING_HR": 56
-  },
-  "2025-06-01": {
-   "RESTING_HR": 55
-  },
-  "2025-06-02": {
-   "RESTING_HR": 55
-  },
-  "2025-06-03": {
-   "RESTING_HR": 56
-  },
-  "2025-06-04": {
-   "RESTING_HR": 57
-  },
-  "2025-06-05": {
-   "RESTING_HR": 58
-  },
-  "2025-06-06": {
-   "RESTING_HR": 58
-  },
-  "2025-06-07": {
-   "RESTING_HR": 59
-  },
-  "2025-06-08": {
-   "RESTING_HR": 60
-  },
-  "2025-06-09": {
-   "RESTING_HR": 61
-  },
-  "2025-06-10": {
-   "RESTING_HR": 62
-  },
-  "2025-06-11": {
-   "RESTING_HR": 61
-  },
-  "2025-06-12": {
-   "RESTING_HR": 61
-  },
-  "2025-06-13": {
-   "RESTING_HR": 61
-  },
-  "2025-06-14": {
-   "RESTING_HR": 60
-  },
-  "2025-06-15": {
-   "RESTING_HR": 59
-  },
-  "2025-06-16": {
-   "RESTING_HR": 58
-  },
-  "2025-06-17": {
-   "RESTING_HR": 57
-  },
-  "2025-06-18": {
-   "RESTING_HR": 58
-  },
-  "2025-06-19": {
-   "RESTING_HR": 57
-  },
-  "2025-06-20": {
-   "RESTING_HR": 57
-  },
-  "2025-06-21": {
-   "RESTING_HR": 57
-  },
-  "2025-06-22": {
-   "RESTING_HR": 57
-  },
-  "2025-06-23": {
-   "RESTING_HR": 57
-  },
-  "2025-06-24": {
-   "RESTING_HR": 57
-  },
-  "2025-06-25": {
-   "RESTING_HR": 56
-  },
-  "2025-06-26": {
-   "RESTING_HR": 56
-  },
-  "2025-06-27": {
-   "RESTING_HR": 56
-  },
-  "2025-06-28": {
-   "RESTING_HR": 57
-  },
-  "2025-06-29": {
-   "RESTING_HR": 56
-  },
-  "2025-06-30": {
-   "RESTING_HR": 56
-  },
-  "2025-07-01": {
-   "RESTING_HR": 56
-  },
-  "2025-07-02": {
-   "RESTING_HR": 56
-  },
-  "2025-07-03": {
-   "RESTING_HR": 56
-  },
-  "2025-07-04": {
-   "RESTING_HR": 57
-  },
-  "2025-07-05": {
-   "RESTING_HR": 57
-  },
-  "2025-07-06": {
-   "RESTING_HR": 57
-  },
-  "2025-07-07": {
-   "RESTING_HR": 57
-  },
-  "2025-07-08": {
-   "RESTING_HR": 57
-  },
-  "2025-07-09": {
-   "RESTING_HR": 58
-  },
-  "2025-07-10": {
-   "RESTING_HR": 58
-  },
-  "2025-07-11": {
-   "RESTING_HR": 58
-  },
-  "2025-07-12": {
-   "RESTING_HR": 58
-  },
-  "2025-07-13": {
-   "RESTING_HR": 58
-  },
-  "2025-07-14": {
-   "RESTING_HR": 59
-  },
-  "2025-07-15": {
-   "RESTING_HR": 60
-  },
-  "2025-07-16": {
-   "RESTING_HR": 60
-  },
-  "2025-07-17": {
-   "RESTING_HR": 61
-  },
-  "2025-07-18": {
-   "RESTING_HR": 62
-  },
-  "2025-07-19": {
-   "RESTING_HR": 62
-  },
-  "2025-07-20": {
-   "RESTING_HR": 62
-  },
-  "2025-07-21": {
-   "RESTING_HR": 60
-  },
-  "2025-07-22": {
-   "RESTING_HR": 61
-  },
-  "2025-07-23": {
-   "RESTING_HR": 61
-  },
-  "2025-07-24": {
-   "RESTING_HR": 61
-  },
-  "2025-07-25": {
-   "RESTING_HR": 61
-  },
-  "2025-07-26": {
-   "RESTING_HR": 61
-  },
-  "2025-07-27": {
-   "RESTING_HR": 60
-  },
-  "2025-07-28": {
-   "RESTING_HR": 60
-  },
-  "2025-07-29": {
-   "RESTING_HR": 60
-  },
-  "2025-07-30": {
-   "RESTING_HR": 60
-  },
-  "2025-07-31": {
-   "RESTING_HR": 62
-  },
-  "2025-08-01": {
-   "RESTING_HR": 61
-  },
-  "2025-08-02": {
-   "RESTING_HR": 62
-  },
-  "2025-08-03": {
-   "RESTING_HR": 61
-  },
-  "2025-08-04": {
-   "RESTING_HR": 61
-  },
-  "2025-08-05": {
-   "RESTING_HR": 61
-  },
-  "2025-08-06": {
-   "RESTING_HR": 60
-  },
-  "2025-08-07": {
-   "RESTING_HR": 60
-  },
-  "2025-08-08": {
-   "RESTING_HR": 59
-  },
-  "2025-08-09": {
-   "RESTING_HR": 60
-  },
-  "2025-08-10": {
-   "RESTING_HR": 60
-  },
-  "2025-08-11": {
-   "RESTING_HR": 60
-  },
-  "2025-08-12": {
-   "RESTING_HR": 59
-  },
-  "2025-08-13": {
-   "RESTING_HR": 58
-  },
-  "2025-08-14": {
-   "RESTING_HR": 58
-  },
-  "2025-08-15": {
-   "RESTING_HR": 59
-  },
-  "2025-08-16": {
-   "RESTING_HR": 60
-  },
-  "2025-08-17": {
-   "RESTING_HR": 59
-  },
-  "2025-08-18": {
-   "RESTING_HR": 59
-  },
-  "2025-08-19": {
-   "RESTING_HR": 59
-  },
-  "2025-08-20": {
-   "RESTING_HR": 60
-  },
-  "2025-08-21": {
-   "RESTING_HR": 60
-  },
-  "2025-08-22": {
-   "RESTING_HR": 60
-  },
-  "2025-08-23": {
-   "RESTING_HR": 60
-  },
-  "2025-08-24": {
-   "RESTING_HR": 60
-  },
-  "2025-08-25": {
-   "RESTING_HR": 59
-  },
-  "2025-08-26": {
-   "RESTING_HR": 59
-  },
-  "2025-08-27": {
-   "RESTING_HR": 59
-  },
-  "2025-08-28": {
-   "RESTING_HR": 59
-  },
-  "2025-08-29": {
-   "RESTING_HR": 59
-  },
-  "2025-08-30": {
-   "RESTING_HR": 59
-  },
-  "2025-08-31": {
-   "RESTING_HR": 58
-  },
-  "2025-09-01": {
-   "RESTING_HR": 59
-  },
-  "2025-09-02": {
-   "RESTING_HR": 59
-  },
-  "2025-09-03": {
-   "RESTING_HR": 59
-  },
-  "2025-09-04": {
-   "RESTING_HR": 58
-  },
-  "2025-09-05": {
-   "RESTING_HR": 58
-  },
-  "2025-09-06": {
-   "RESTING_HR": 58
-  },
-  "2025-09-07": {
-   "RESTING_HR": 58
-  },
-  "2025-09-08": {
-   "RESTING_HR": 57
-  },
-  "2025-09-09": {
-   "RESTING_HR": 57
-  },
-  "2025-09-10": {
-   "RESTING_HR": 56
-  },
-  "2025-09-11": {
-   "RESTING_HR": 56
-  },
-  "2025-09-12": {
-   "RESTING_HR": 56
-  },
-  "2025-09-13": {
-   "RESTING_HR": 57
-  },
-  "2025-09-14": {
-   "RESTING_HR": 57
-  },
-  "2025-09-15": {
-   "RESTING_HR": 58
-  },
-  "2025-09-16": {
-   "RESTING_HR": 58
-  },
-  "2025-11-11": {
-   "RESTING_HR": 60
-  },
-  "2025-11-29": {
-   "RESTING_HR": 60
-  },
-  "2026-03-01": {
-   "RESTING_HR": 62
-  },
-  "2026-03-02": {
-   "RESTING_HR": 63
-  },
-  "2026-03-03": {
-   "RESTING_HR": 63
-  },
-  "2026-03-04": {
-   "RESTING_HR": 63
-  },
-  "2026-03-05": {
-   "RESTING_HR": 63
-  },
-  "2026-03-06": {
-   "RESTING_HR": 63
-  },
-  "2026-03-07": {
-   "RESTING_HR": 63
-  },
-  "2026-03-17": {
-   "RESTING_HR": 62
-  },
-  "2026-04-16": {
-   "RESTING_HR": 62
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-01": {
+   "HRV": 55.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 64.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.2,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 16.0,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-02": {
+   "HRV": 57.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 60.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.7,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-03": {
+   "HRV": 59.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 57.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.2,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.1,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-04": {
+   "HRV": 52.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 61.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.4,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-05": {
+   "HRV": 57.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 68.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 94.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.8,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-06": {
+   "HRV": 55.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 94.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.4,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.9,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-07": {
+   "HRV": 59.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 60.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.3,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-08": {
+   "HRV": 60.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.3,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.6,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-09": {
+   "HRV": 61.0,
+   "HRV_status": "IN_RANGE",
+   "HR": 57.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 94.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.1,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-10": {
+   "HRV": 73.0,
+   "HRV_status": "ABOVE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.1,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.1,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-11": {
+   "HRV": 71.0,
+   "HRV_status": "ABOVE",
+   "HR": 58.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 96.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": 0.0,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 15.3,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-12": {
+   "HRV": 69.0,
+   "HRV_status": "ABOVE",
+   "HR": 56.0,
+   "HR_status": "IN_RANGE",
+   "SPO2": 95.0,
+   "SPO2_status": "IN_RANGE",
+   "SKIN_TEMP_C": -0.2,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 14.7,
+   "RESPIRATION_status": "IN_RANGE"
+  },
+  "2026-09-13": {
+   "HRV": 34.0,
+   "HRV_status": "BELOW",
+   "HR": 87.0,
+   "HR_status": "ABOVE",
+   "SPO2": 89.0,
+   "SPO2_status": "BELOW",
+   "SKIN_TEMP_C": 0.4,
+   "SKIN_TEMP_C_status": "IN_RANGE",
+   "RESPIRATION": 17.8,
+   "RESPIRATION_status": "ABOVE"
   }
  }
 }

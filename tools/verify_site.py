@@ -34,8 +34,11 @@ def _find_chrome():
     env = os.environ.get("CHROME_PATH")
     if env and os.path.exists(env):
         return env
-    pats = ["/opt/pw-browsers/chromium-*/chrome-linux/chrome",
-            os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")]
+    # chrome-linux on x86_64, chrome-linux-arm64 on aarch64 - an aarch64
+    # container matched neither pattern here and fell through to the
+    # hardcoded /opt path below, which doesn't exist on this image either.
+    pats = ["/opt/pw-browsers/chromium-*/chrome-linux*/chrome",
+            os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux*/chrome")]
     for pat in pats:
         hits = sorted(_g.glob(pat))
         if hits:

@@ -27,8 +27,6 @@ _bk = ROOT / "data" / "training-log.backup.json"
 PRE = json.loads(_bk.read_text(encoding="utf-8")) if _bk.exists() else OLD
 DIG = json.loads((ROOT / "garmin" / "digest.json").read_text(encoding="utf-8"))
 
-BY_DATE = {a["start"][:10]: a for a in DIG}
-
 
 def sec(t):
     if not t:
@@ -53,6 +51,98 @@ def pace(seconds, miles):
 
 def r1(v):
     return None if v is None else round(float(v), 1)
+
+
+# ── multi-segment hikes ──────────────────────────────────────────────────
+# Garmin sometimes records one continuous outing as several separate GPS
+# activities - an overnight hike auto-splits across the stationary period at
+# camp. Each group below is an explicit, confirmed list of activityIds, never
+# inferred from proximity or duration - the same "identify a hike by route or
+# label, not a superlative or position" rule the sort and index bugs already
+# in this project taught. Add an entry here only after confirming with the
+# athlete which segments belong to one outing.
+MULTI_SEGMENT_HIKES = [
+    {
+        "mergedDate": "2026-09-12",
+        "activityIds": [24351608415, 24351608579, 24351608708],
+        "route": "San Gorgonio (overnight)",
+        "label": "SAN GORGONIO — overnight ascent",
+        "notes": ("Garmin recorded this as three separate activities: evening "
+                  "climb 2026-09-12 12:46-18:29, pre-dawn summit push and start "
+                  "of descent 2026-09-13 04:48-09:24, final descent 2026-09-13 "
+                  "10:09-12:57. Objective fields are summed across all three; "
+                  "totalTime/movingTime/stoppedPct exclude the overnight gap at "
+                  "camp, which is rest, not hiking."),
+    },
+]
+_merged_ids = {i for g in MULTI_SEGMENT_HIKES for i in g["activityIds"]}
+
+
+def _merge_segments(ids, activities):
+    segs = sorted((a for a in activities if a["activityId"] in ids),
+                  key=lambda a: a["start"])
+    found = {a["activityId"] for a in segs}
+    missing = ids - found
+    if missing:
+        raise SystemExit(f"MULTI_SEGMENT_HIKES: activityId(s) {missing} not "
+                         f"found in garmin/digest.json - check the export.")
+    tot = sum(a["durSec"] for a in segs)
+    mov = sum(sec(a["movingTime"]) for a in segs)
+    hr_zone = {}
+    for a in segs:
+        for z, s in (a.get("hrZoneSec") or {}).items():
+            hr_zone[z] = hr_zone.get(z, 0) + s
+    weighted_hr = sum((a.get("avgHR") or 0) * a["durSec"] for a in segs)
+    return {
+        "activityId": segs[0]["activityId"],
+        "name": segs[0]["name"],
+        "type": "hiking",
+        "start": segs[0]["start"],
+        "durSec": tot,
+        "distanceMi": round(sum(a["distanceMi"] for a in segs), 2),
+        "ascentFt": sum(a["ascentFt"] for a in segs),
+        "descentFt": sum(a["descentFt"] for a in segs),
+        "minElevFt": min(a["minElevFt"] for a in segs),
+        "maxElevFt": max(a["maxElevFt"] for a in segs),
+        "movingTime": hhmmss(mov),
+        # peak physiological stimulus of the outing, not a sum - training
+        # effect is a saturating 0-5 scale, not an additive quantity
+        "stoppedPct": round((tot - mov) / tot * 100) if tot else None,
+        "avgHR": round(weighted_hr / tot) if tot else None,
+        "maxHR": max((a.get("maxHR") or 0) for a in segs) or None,
+        "calories": sum(a.get("calories") or 0 for a in segs),
+        "aerobicEffect": max((a.get("aerobicEffect") or 0) for a in segs),
+        "anaerobicEffect": max((a.get("anaerobicEffect") or 0) for a in segs),
+        "exerciseLoad": sum(a.get("exerciseLoad") or 0 for a in segs),
+        "steps": sum(a.get("steps") or 0 for a in segs),
+        "bodyBatteryDelta": sum(a.get("bodyBatteryDelta") or 0 for a in segs),
+        "restingCal": sum(a.get("restingCal") or 0 for a in segs),
+        "sweatLossMl": sum(a.get("sweatLossMl") or 0 for a in segs),
+        "hrZoneSec": hr_zone,
+        "location": segs[0].get("location"),
+    }
+
+
+MERGED = []
+for g in MULTI_SEGMENT_HIKES:
+    _m = _merge_segments(set(g["activityIds"]), DIG)
+    _m["_mergedDate"] = g["mergedDate"]
+    _m["_route"] = g.get("route")
+    _m["_label"] = g.get("label")
+    _m["_notes"] = g.get("notes")
+    MERGED.append(_m)
+
+# Group every remaining activity by date. A dict keyed by date alone once let
+# a same-day activity silently overwrite another - the 2026-09-13 pre-dawn
+# hiking segment vanished behind a later same-day ruck - so this is a list
+# per date and nothing is ever dropped just for sharing a calendar date.
+from collections import defaultdict
+BY_DATE = defaultdict(list)
+for a in DIG:
+    if a["activityId"] not in _merged_ids:
+        BY_DATE[a["start"][:10]].append(a)
+for _lst in BY_DATE.values():
+    _lst.sort(key=lambda a: a["start"])
 
 
 # ---- the subjective layer, keyed by corrected date. Objective fields deliberately absent.
@@ -119,33 +209,56 @@ def build_activity(a, subj, kind):
     return rec
 
 
+def _record_overrides(date, rec):
+    old = next((h for h in PRE["hikes"] if h["date"] == date), None)
+    if not old:
+        return
+    for f, label in [("movingTime", "moving time"), ("avgHR", "average HR"),
+                     ("totalCal", "calories"), ("maxHR", "max HR"),
+                     ("aerobicEffect", "aerobic effect")]:
+        ov, nv = old.get(f), rec.get(f)
+        if ov is not None and nv is not None and str(ov) != str(nv):
+            changelog.append({"date": date, "field": label,
+                              "was": ov, "now": nv, "why": "Garmin export is authoritative"})
+
+
 # ---- hikes
 hikes = []
-for date in sorted(d for d in BY_DATE if BY_DATE[d]["type"] == "hiking" and d >= "2026-04-01"):
-    a = BY_DATE[date]
-    s = SUBJ.get(date, {})
-    if not s.get("id"):
-        s = dict(s, id=f"H?{date[5:]}")
-    rec = build_activity(a, s, "hike")
-    # record where Garmin overrode the PDF
-    old = next((h for h in PRE["hikes"] if h["date"] == date), None)
-    if old:
-        for f, label in [("movingTime", "moving time"), ("avgHR", "average HR"),
-                         ("totalCal", "calories"), ("maxHR", "max HR"),
-                         ("aerobicEffect", "aerobic effect")]:
-            ov, nv = old.get(f), rec.get(f)
-            if ov is not None and nv is not None and str(ov) != str(nv):
-                changelog.append({"date": date, "field": label,
-                                  "was": ov, "now": nv, "why": "Garmin export is authoritative"})
+for m in MERGED:
+    date = m["_mergedDate"]
+    s = dict(SUBJ.get(date, {}))
+    s.setdefault("id", f"H?{date[5:]}")
+    s["route"] = m["_route"]
+    if m.get("_label"):
+        s["label"] = m["_label"]
+    if m.get("_notes"):
+        s["notes"] = m["_notes"]
+    rec = build_activity(m, s, "hike")
+    _record_overrides(date, rec)
     hikes.append(rec)
+
+for date in sorted(d for d in BY_DATE if d >= "2026-04-01"):
+    for a in BY_DATE[date]:
+        if a["type"] != "hiking":
+            continue
+        s = SUBJ.get(date, {})
+        if not s.get("id"):
+            s = dict(s, id=f"H?{date[5:]}")
+        rec = build_activity(a, s, "hike")
+        _record_overrides(date, rec)
+        hikes.append(rec)
+
+hikes.sort(key=lambda h: h["date"])
 
 # ---- rucks
 rucks = []
-for date in sorted(d for d in BY_DATE if "ruck" in (BY_DATE[d]["type"] or "")):
-    a = BY_DATE[date]
-    s = RSUBJ.get(date, {"id": f"R?{date[5:]}"})
-    s.setdefault("packLb", 12)
-    rucks.append(build_activity(a, s, "ruck"))
+for date in sorted(BY_DATE):
+    for a in BY_DATE[date]:
+        if "ruck" not in (a["type"] or ""):
+            continue
+        s = dict(RSUBJ.get(date, {"id": f"R?{date[5:]}"}))
+        s.setdefault("packLb", 12)
+        rucks.append(build_activity(a, s, "ruck"))
 
 # renumber cleanly in date order
 for i, h in enumerate(hikes, 1):
