@@ -37,14 +37,14 @@
   "ftpCycling": 194
  },
  "fitnessAge": {
-  "asOfDateGmt": "2024-12-06T00:00:00.0",
-  "chronologicalAge": 44,
-  "bmi": 24.1,
-  "rhr": 70,
-  "vo2MaxForHealthyActive": 45.9,
-  "biometricVo2Max": 42.2,
-  "currentBioAge": 42.4,
-  "healthyAllBioAge": 38.0
+  "asOfDateGmt": "2026-09-13T00:00:00.0",
+  "chronologicalAge": 46,
+  "bmi": 25.2,
+  "rhr": 52,
+  "vo2MaxForHealthyActive": 45.1,
+  "biometricVo2Max": 43.5,
+  "currentBioAge": 43.1,
+  "healthyAllBioAge": 39.8
  },
  "coverage": {
   "sleepNights": 630,

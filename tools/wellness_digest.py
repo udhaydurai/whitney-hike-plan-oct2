@@ -62,15 +62,22 @@ for _, d in load("*bioMetrics_latest*"):
         bio["ftpCycling"] = d[0].get("functionalThresholdPower")
 
 # ─── fitness age
+#
+# fitnessAgeData is a daily time series (491 rows here, 2024-12-06 to
+# present), not a single snapshot. Taking d[0] took the FIRST row - the
+# oldest one in the export, from 2024-12-06 - and every fitness-age figure
+# in the dashboard was frozen there regardless of how recent the export was.
+# That is what made VO2 max and bio age look unmoved after 21 months of
+# training. Take the row with the latest asOfDateGmt instead.
 fitage = {}
-for _, d in load("*fitnessAgeData*"):
-    if d:
-        r = d[0]
-        fitage = {k: (round(v, 1) if isinstance(v, float) else v)
-                  for k, v in r.items()
-                  if k in ("asOfDateGmt", "chronologicalAge", "bmi", "rhr",
-                           "currentBioAge", "healthyAllBioAge", "biometricVo2Max",
-                           "vo2MaxForHealthyActive")}
+_fitrows = [r for _, d in load("*fitnessAgeData*") for r in (d or [])]
+if _fitrows:
+    r = max(_fitrows, key=lambda r: r.get("asOfDateGmt") or "")
+    fitage = {k: (round(v, 1) if isinstance(v, float) else v)
+              for k, v in r.items()
+              if k in ("asOfDateGmt", "chronologicalAge", "bmi", "rhr",
+                       "currentBioAge", "healthyAllBioAge", "biometricVo2Max",
+                       "vo2MaxForHealthyActive")}
 
 # ─── daily health status: HRV, resting HR, SpO2, respiration, skin temp
 daily = {}
