@@ -118,6 +118,26 @@ import clock
 today = clock.today()
 summit = dt.date.fromisoformat(M["summitDate"])
 DAYS = (summit - today).days
+# DAYS goes negative once the summit date is in the past, and every render site was
+# printing that raw — "-3 days out" — with no branch for "it already happened". A
+# countdown dashboard has no way to say "done" once the thing it was counting down to
+# is behind it, so this project read as broken on the one day it most needed to look
+# finished: the days after the summit. Three states, computed once and reused everywhere
+# DAYS is shown, so no render site can drift from the other two the way the raw number did.
+if DAYS > 0:
+    DAYS_HERO = f"{DAYS} days out"
+    DAYS_TODAY = f"{DAYS} days to the summit"
+    DAYS_TILE_VALUE, DAYS_TILE_LABEL = DAYS, "Days to summit"
+elif DAYS == 0:
+    DAYS_HERO = "summit day"
+    DAYS_TODAY = "summit day"
+    DAYS_TILE_VALUE, DAYS_TILE_LABEL = "Today", "Summit"
+else:
+    _since = -DAYS
+    _ago = f"{_since} day{'s' if _since != 1 else ''} ago"
+    DAYS_HERO = f"summit reached {_ago} — this log is now closed"
+    DAYS_TODAY = f"summit reached {_ago}"
+    DAYS_TILE_VALUE, DAYS_TILE_LABEL = "Reached", "Summit"
 WP = M["whitneyProfile"]
 
 BLK = [a for a in DIG if a["start"] >= "2026-04-01"]
@@ -345,7 +365,24 @@ def s_today():
     nine-week plan, carb and protein targets from bodyweight, the remainder from what has
     actually been logged today, and the suggestion from foods already in the log. Nothing
     is typed in, so it cannot go stale.
+
+    None of that holds once the thing being trained for is behind you. Every input below
+    — day type, carb target, meal-by-meal suggestions, supplements "through Whitney" — is
+    scoped to an active block with a next session to fuel for. After the Oct 2 summit
+    there is no next session, so the section stops prescribing one instead of quietly
+    going stale the way the days-out counter did. It comes back the day a new goal gives
+    it something real to compute.
     """
+    if DAYS <= 0:
+        return f"""<section id="today" style="border:2px solid {C['primary']}">
+  <h2>Today<span class="n">{DAYS_TODAY}</span></h2>
+  <div class="callout"><b>Training is complete and this log is closed.</b> The nine-week
+  block that built toward Oct 2 is done, the summit was reached, and this section — the
+  day's eating plan, training session and supplement schedule — has nothing left to
+  prescribe. This dashboard will not receive further weekly updates. The record above is
+  the final one.</div>
+</section>"""
+
     iso = today.isoformat()
     dow = today.strftime("%a")
     row = next((r for r in D["weekdayRoutine"]["template"] if r["day"] == dow), None)
@@ -530,7 +567,7 @@ def s_today():
                f'<div class="sub">{size}</div></div>')
 
     return f"""<section id="today" style="border:2px solid {C['primary']}">
-  <h2>Today<span class="n">{e(today.strftime('%A, %B'))} {today.day} · {DAYS} days to the summit</span></h2>
+  <h2>Today<span class="n">{e(today.strftime('%A, %B'))} {today.day} · {DAYS_TODAY}</span></h2>
   <div class="step" style="border-left-color:{C['accent']}">
     <div class="swin"><span style="color:{C['accent']};font-weight:700">Training</span>
      {e(dow)} · {e(dtype)}</div>
@@ -555,7 +592,7 @@ def s_status():
     if nf and max(a["elevationFt"] for a in nf) > HIGH["maxElevFt"]:
         hi_note = f'on foot · {max(a["elevationFt"] for a in nf):,} ft by gondola'
     t = "".join([
-        tile("Days to summit", DAYS, summit.strftime("%b %-d, %Y"), C["gold"]),
+        tile(DAYS_TILE_LABEL, DAYS_TILE_VALUE, summit.strftime("%b %-d, %Y"), C["gold"]),
         tile("Highest on foot", f'{HIGH["maxElevFt"]:,} ft', hi_note, C["primary"]),
         tile("Biggest ascent", f'{BIG["ascentFt"]:,} ft',
              f'Whitney Day 1 is {WP["day1AscentFt"]:,} ft', C["primary"]),
@@ -604,6 +641,31 @@ def s_levers():
 
 
 def s_week():
+    if DAYS <= 0:
+        _push = next(h for h in HK if h["id"] == "H19")
+        _out = next(h for h in HK if h["id"] == "H20")
+        # the gap has to be checked against every recorded activity (DIG), not just the
+        # hikes/rucks that clear the training-log threshold - a short walk still counts
+        # as "something on record" and would make the claim below false otherwise
+        _prior = [a for a in DIG if a["start"][:10] < _push["date"]]
+        _prev = max(_prior, key=lambda a: a["start"]) if _prior else None
+        gap_note = (f"no Garmin activity of any kind is on record between "
+                    f"{sd(_prev['start'][:10])} and {sd(_push['date'])}" if _prev else
+                    "no earlier activity is on record")
+        return f"""<section id="week">
+  <h2>Summit result<span class="n">the record, not the plan</span></h2>
+  <div class="callout good"><b>What Garmin recorded on summit day.</b> The push starting
+  {sd(_push['date'])} reached a peak GPS elevation of {_push['maxElevFt']:,} ft — the official
+  summit sits at {M['whitneyProfile']['summitElevationFt']:,} ft, within normal GPS error:
+  {_push['distanceMi']} mi, {_push['ascentFt']:,} ft ascent, {_push['totalTime']} total /
+  {_push['movingTime']} moving, {_push['stoppedPct']}% stopped. The hike out logged right
+  after: {_out['distanceMi']} mi down to {_out['minElevFt']:,} ft, {_out['totalTime']} total /
+  {_out['movingTime']} moving, {_out['stoppedPct']}% stopped.</div>
+  <div class="callout" style="background:#fff6f5;border-color:{C['bad2']}"><b>What the export
+  doesn't show.</b> {gap_note} — the planned Portal-to-Trail-Camp hike-in has no matching
+  activity. The push also landed on {sd(_push['date'])}, a day after the
+  {sd(M['summitDate'])} the shared plan called for.</div>
+</section>"""
     w = D["nutritionWeeks"][-1]
     sp, gm, cp = D["saturdayFuelPlan"], D["gelMath"], D["caffeinePlan"]
     T = sp["totals"]
@@ -721,14 +783,33 @@ def s_weeks():
     tot_ft = sum(w["ascentFt"] or 0 for w in P["weeks"])
     biggest = max(P["weeks"], key=lambda w: w["distanceMi"] or 0)
 
+    # the header above only ever stated the plan's own totals - what Garmin actually
+    # recorded across the same nine weekends belongs next to it, not left for the
+    # per-row notes to imply. Computed from the hikes in the plan's own date window,
+    # never typed in, same rule as everywhere else in this file.
+    _lo, _hi = P["weeks"][0]["date"], P["weeks"][-1]["date"]
+    _win = [h for h in HK if _lo <= h["date"] <= _hi]
+    _act_mi = sum(h["distanceMi"] for h in _win)
+    _act_ft = sum(h["ascentFt"] for h in _win)
+    # "to the summit" is a forward-looking title - fine while the summit is still ahead,
+    # wrong the moment it's behind you, same tense bug the hero and Today section had.
+    _weeks_title = "Nine weeks to the summit" if DAYS > 0 else "The nine-week build-up"
+
     return f"""<section id="weeks">
-  <h2>Nine weeks to the summit<span class="n">{tot_mi:g} mi · {tot_ft:,} ft · from the shared plan sheet</span></h2>
+  <h2>{_weeks_title}<span class="n">{tot_mi:g} mi · {tot_ft:,} ft planned ·
+  {_act_mi:.2f} mi · {_act_ft:,} ft actually hiked</span></h2>
   <table class="t" style="width:100%;min-width:0;table-layout:fixed"><thead><tr><th class="nw" style="width:74px">Weekend</th>
    <th>Target, size and estimated time</th></tr></thead><tbody>{rows}</tbody></table>
   <div class="sub" style="margin-top:8px">Estimated time uses the recorded moving-speed
    range of 1.25–1.55 mph on climbing terrain, so it is this athlete's pace rather than a
    guidebook's. Highlighted rows are 18 mi or more; the greyed row is a weekend already marked unavailable — the biggest is
    {e(sd(biggest["date"]))} at {biggest["distanceMi"]:g} mi and {biggest["ascentFt"]:,} ft.</div>
+  <div class="callout"><b>What Garmin shows actually happened, {e(sd(_lo))}–{e(sd(_hi))}.</b>
+  {len(_win)} hike{"s" if len(_win) != 1 else ""} on record totalling {_act_mi:.2f} mi and
+  {_act_ft:,} ft, against the {tot_mi:g} mi and {tot_ft:,} ft the sheet called for across
+  all nine weekends. The gap is mostly by design, not a miss — several weekends were
+  deliberately swapped for rucking or pack-carry work instead of a long mountain hike, as
+  the per-weekend notes above say.</div>
   <h3 style="margin:22px 0 8px">Unresolved against what was here before</h3>
   {conf}
   <h3 style="margin:22px 0 8px">What the plan says about readiness</h3>
@@ -1108,7 +1189,8 @@ def s_wellness():
     tile("Typical sleep", f"{sl['medianHrs']:.1f} h", f"mean {sl['meanHrs']:.1f} · {sl['under6Pct']}% of nights under 6", C["warn"]),
     tile("Last 60 nights", f"{sl['last60MeanHrs']:.1f} h", f"score {sl['last60MeanScore']} · deep {sl['meanDeepMin']} min", C["accent"]),
     tile("After a long day", f"{bd['meanNightOfHrs']:.1f} h", f"against {bd['meanNightBeforeHrs']:.1f} the night before", C["bad"]),
-    tile("HRV", f"{rc['hrvMean']:.0f}", f"range {rc['hrvRange'][0]:.0f}–{rc['hrvRange'][1]:.0f} · resting HR {rc['restingHRMean']:.0f}", C["primary"]),
+    tile("HRV", f"{rc['hrvMean']:.0f}", f"range {rc['hrvRange'][0]:.0f}–{rc['hrvRange'][1]:.0f} · resting HR {rc['restingHRMean']:.0f}"
+         + ("" if rc.get('restingHRSource', '').startswith('UDSFile') else " (no UDS export yet — reads high)"), C["primary"]),
   ])}</div>
 
   <h3>Sleep around the {len(bd['rows'])} longest days</h3>
@@ -1493,7 +1575,8 @@ ol.steps li{{padding:3px 0}}
 footer{{color:{C['ink3']};font-size:12px;text-align:center;padding:24px 12px 0;line-height:1.7}}
 """
 
-NAV = [("today", "Today"), ("status", "Status"), ("levers", "What matters"), ("week", "This week"),
+NAV = [("today", "Today"), ("status", "Status"), ("levers", "What matters"),
+       ("week", "This week" if DAYS > 0 else "Summit result"),
        ("weeks", "Nine weeks"), ("summit", "Summit day"),
        ("plan", "Plan to Oct 2"), ("energy", "Energy budget"), ("fuel", "Fuel & fluid"),
        ("altitude", "Altitude"), ("acclim", "Acclimation & load"), ("wellness", "Sleep & recovery"), ("untested", "Untested"), ("issues", "Open issues"),
@@ -1513,7 +1596,7 @@ doc = f"""<!doctype html>
 <style>{CSS}</style></head><body><div class="wrap">
 <header class="hero">
   <h1>Mt. Whitney Training Dashboard</h1>
-  <p>{BYLINE}summit {summit.strftime('%B %-d, %Y')} · <b>{DAYS} days out</b> ·
+  <p>{BYLINE}summit {summit.strftime('%B %-d, %Y')} · <b>{DAYS_HERO}</b> ·
   Whitney block {sd(M['logCoversFrom'])}–{sd(M['logCoversTo'])} 2026 ·
   {len(DIG)} activities on record since {DIG[0]['start'][:10]}</p>
 </header>
@@ -1544,7 +1627,7 @@ doc = f"""<!doctype html>
 
 OUT.write_text(doc, encoding="utf-8")
 print(f"wrote {OUT}  ({len(doc):,} bytes)")
-print(f"  {len(HK)} hikes · {len(RK)} rucks · {sum(1 for i in D['openIssues'] if i.get('status')!='closed')} open issues · {DAYS} days out")
+print(f"  {len(HK)} hikes · {len(RK)} rucks · {sum(1 for i in D['openIssues'] if i.get('status')!='closed')} open issues · {DAYS_HERO}")
 print(f"  computed: RMR {RMR} ({RMR_RANGE[0]}-{RMR_RANGE[1]}) · burn med {BURN_MED} "
       f"({BURN_LO}-{BURN_HI}) · tank {TANK_H:.2f} h · sweat {SW_MEAN} ({SW_LO}-{SW_HI}, n={SW_N})")
 print(f"  stopped bands: {[(b['band'],b['n'],b['mean']) for b in BANDS]}")

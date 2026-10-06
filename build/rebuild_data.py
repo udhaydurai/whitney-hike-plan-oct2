@@ -389,7 +389,17 @@ if _wp.exists():
     mean_be = round(sum(nbe) / len(nbe), 1) if nbe else None
 
     hrv = [x["v"] for x in W["hrvSeries"]]
-    rhr_vals = [v["HR"] for v in daily_by.values() if v.get("HR") is not None]
+    # Prefer Garmin's own UDS restingHeartRate, exactly like wellness_digest.py's own
+    # restingHR stat does. This block used to read the raw healthStatusData "HR" field
+    # unconditionally, which is a different, documented-high-reading metric (RUNBOOK: "HR
+    # in healthStatusData is not resting heart rate" — about 5-6 bpm high). wellness_digest
+    # was fixed to prefer the UDS series; this recomputation was not, so the dashboard's
+    # recovery tile kept showing the biased number even once UDS data was available. Choose
+    # the series the same way wellness_digest does — one series or the other, never mixed,
+    # so the mean isn't built from two different measurement methods.
+    _rhr_uds = [v["RESTING_HR"] for v in daily_by.values() if v.get("RESTING_HR") is not None]
+    rhr_vals = _rhr_uds if _rhr_uds else [v["HR"] for v in daily_by.values() if v.get("HR") is not None]
+    rhr_src = "UDSFile restingHeartRate" if _rhr_uds else "healthStatusData HR (reads ~5-6 bpm high)"
     h9 = [x for x in W["hrvSeries"] if x["date"] >= (dt.date.fromisoformat(nights[-1])
                                                      - dt.timedelta(days=63)).isoformat()]
     half = len(h9) // 2 or 1
@@ -433,6 +443,7 @@ if _wp.exists():
             "hrvRange": [min(hrv), max(hrv)],
             "restingHRMean": round(sum(rhr_vals) / len(rhr_vals), 1),
             "restingHRRange": [min(rhr_vals), max(rhr_vals)],
+            "restingHRSource": rhr_src,
             "trend": (f"Over the last nine weeks HRV has moved from about {hrv_then} to "
                       f"{hrv_now} ms, against a full-record mean of "
                       f"{round(sum(hrv)/len(hrv),1)} ms."),
