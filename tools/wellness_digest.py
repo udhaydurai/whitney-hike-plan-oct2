@@ -79,6 +79,22 @@ if _fitrows:
                        "currentBioAge", "healthyAllBioAge", "biometricVo2Max",
                        "vo2MaxForHealthyActive")}
 
+    # biometricVo2Max (Garmin's Fitness Age VO2max, from resting HR, BMI and
+    # activity data together) belongs in the dashboard's VO2 max trend instead
+    # of the figure each individual hike carries, which is Garmin's RUNNING
+    # VO2max algorithm applied to a hiking activity - not the sport it was
+    # built for, and it swings 10+ points between a flat road walk and a
+    # loaded climb. This series is daily already; keep the last reading of
+    # each month so it lines up with the dashboard's other monthly charts.
+    _vo2_by_month = {}
+    for row in sorted(_fitrows, key=lambda r: r.get("asOfDateGmt") or ""):
+        v = row.get("biometricVo2Max")
+        d = row.get("asOfDateGmt")
+        if v is not None and d:
+            _vo2_by_month[d[:7]] = round(v, 1)
+    fitage["biometricVo2MaxMonthly"] = [
+        {"month": m, "value": v} for m, v in _vo2_by_month.items()]
+
 # ─── daily health status: HRV, resting HR, SpO2, respiration, skin temp
 daily = {}
 for _, d in load("*healthStatusData*"):

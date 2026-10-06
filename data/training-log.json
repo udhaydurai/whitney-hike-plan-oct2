@@ -83,67 +83,95 @@
     "vo2max": [
       {
         "date": "2024-12-01",
-        "value": 38
+        "value": 43.9
       },
       {
         "date": "2025-01-01",
-        "value": 38
+        "value": 43.8
       },
       {
         "date": "2025-02-01",
-        "value": 39
+        "value": 44.3
       },
       {
         "date": "2025-03-01",
-        "value": 40
+        "value": 44.4
       },
       {
         "date": "2025-04-01",
-        "value": 41
+        "value": 46.5
       },
       {
         "date": "2025-05-01",
-        "value": 41
+        "value": 44.4
       },
       {
         "date": "2025-06-01",
-        "value": 43
+        "value": 43.8
       },
       {
         "date": "2025-07-01",
-        "value": 43
+        "value": 43.6
       },
       {
         "date": "2025-08-01",
-        "value": 43
+        "value": 42.6
       },
       {
         "date": "2025-09-01",
-        "value": 43
+        "value": 43.0
       },
       {
         "date": "2025-10-01",
-        "value": 45
+        "value": 43.3
       },
       {
         "date": "2025-11-01",
-        "value": 42
+        "value": 42.5
+      },
+      {
+        "date": "2025-12-01",
+        "value": 42.5
+      },
+      {
+        "date": "2026-01-01",
+        "value": 42.6
       },
       {
         "date": "2026-02-01",
-        "value": 39
+        "value": 42.6
+      },
+      {
+        "date": "2026-03-01",
+        "value": 42.3
+      },
+      {
+        "date": "2026-04-01",
+        "value": 42.3
       },
       {
         "date": "2026-05-01",
-        "value": 35
+        "value": 42.3
       },
       {
         "date": "2026-06-01",
-        "value": 37
+        "value": 42.8
       },
       {
         "date": "2026-07-01",
-        "value": 37
+        "value": 43.0
+      },
+      {
+        "date": "2026-08-01",
+        "value": 43.1
+      },
+      {
+        "date": "2026-09-01",
+        "value": 43.5
+      },
+      {
+        "date": "2026-10-01",
+        "value": 45.3
       }
     ],
     "vo2maxTargets": {
@@ -156,87 +184,115 @@
       "targetTier": "Trained (5000+)"
     },
     "vo2maxSeries": {
-      "source": "65 readings in the Garmin activity export, Dec 2024 – Jul 2026.",
+      "source": "Garmin's Fitness Age biometricVo2Max (resting HR, BMI and activity together), 23 months 2024-12 to 2026-10. Replaces the per-activity running-VO2max estimate, the wrong algorithm for a hiking effort.",
       "monthly": [
         {
           "month": "2024-12",
-          "value": 38
+          "value": 43.9
         },
         {
           "month": "2025-01",
-          "value": 38
+          "value": 43.8
         },
         {
           "month": "2025-02",
-          "value": 39
+          "value": 44.3
         },
         {
           "month": "2025-03",
-          "value": 40
+          "value": 44.4
         },
         {
           "month": "2025-04",
-          "value": 41
+          "value": 46.5
         },
         {
           "month": "2025-05",
-          "value": 41
+          "value": 44.4
         },
         {
           "month": "2025-06",
-          "value": 43
+          "value": 43.8
         },
         {
           "month": "2025-07",
-          "value": 43
+          "value": 43.6
         },
         {
           "month": "2025-08",
-          "value": 43
+          "value": 42.6
         },
         {
           "month": "2025-09",
-          "value": 43
+          "value": 43.0
         },
         {
           "month": "2025-10",
-          "value": 45
+          "value": 43.3
         },
         {
           "month": "2025-11",
-          "value": 42
+          "value": 42.5
+        },
+        {
+          "month": "2025-12",
+          "value": 42.5
+        },
+        {
+          "month": "2026-01",
+          "value": 42.6
         },
         {
           "month": "2026-02",
-          "value": 39
+          "value": 42.6
+        },
+        {
+          "month": "2026-03",
+          "value": 42.3
+        },
+        {
+          "month": "2026-04",
+          "value": 42.3
         },
         {
           "month": "2026-05",
-          "value": 35
+          "value": 42.3
         },
         {
           "month": "2026-06",
-          "value": 37
+          "value": 42.8
         },
         {
           "month": "2026-07",
-          "value": 37
+          "value": 43.0
+        },
+        {
+          "month": "2026-08",
+          "value": 43.1
+        },
+        {
+          "month": "2026-09",
+          "value": 43.5
+        },
+        {
+          "month": "2026-10",
+          "value": 45.3
         }
       ],
       "peak": {
-        "month": "2025-10",
-        "value": 45
+        "month": "2025-04",
+        "value": 46.5
       },
       "current": {
-        "month": "2026-07",
-        "value": 37
+        "month": "2026-10",
+        "value": 45.3
       },
       "trough": {
-        "month": "2026-05",
-        "value": 35
+        "month": "2026-03",
+        "value": 42.3
       },
-      "reading": "Peaked at 45 in 2025-10, fell to 35 by 2026-05, and has recovered to 37. The October target of 41-42 is therefore a RETURN to a level already held for months in 2025, not new territory — and it sat 3 points above that target at the peak.",
-      "gapNote": "Readings thin out between Nov 2025 and Apr 2026, which lines up with a gap in recorded activity over the winter. The decline and the gap are the same story."
+      "reading": "Peaked at 46.5 in 2025-04, lowest at 42.3 in 2026-03, and stands at 45.3 as of 2026-10.",
+      "gapNote": ""
     },
     "zoneSource": "Garmin heartRateZones.json — the watch's actual configuration.",
     "lthr": {

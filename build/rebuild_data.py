@@ -451,6 +451,36 @@ if _wp.exists():
         "spo2Gap": _spo2_block(spo2, spo2_days, _keep),
     }
 
+    # VO2 max: use Garmin's Fitness Age biometricVo2Max (resting HR, BMI and activity
+    # together) instead of the figure the physiology block used before, which was each
+    # individual hike's own vo2Max field - Garmin's RUNNING VO2max algorithm applied to
+    # a hiking activity, the wrong sport for the number, and it swung from 38 to 45 to
+    # 35 depending on whether the hike was flat or a loaded climb. That old block was
+    # also never rebuilt - out = dict(OLD) carried it forward from whatever one-off
+    # analysis first wrote it, frozen since. This one is recomputed from wellness.json
+    # every run, same rule as everything else in this file.
+    _vo2m = W.get("fitnessAge", {}).get("biometricVo2MaxMonthly", [])
+    if _vo2m:
+        _peak, _trough, _cur = (max(_vo2m, key=lambda x: x["value"]),
+                                 min(_vo2m, key=lambda x: x["value"]), _vo2m[-1])
+        out["physiology"] = dict(OLD.get("physiology", {}))
+        out["physiology"]["vo2maxSeries"] = {
+            "source": ("Garmin's Fitness Age biometricVo2Max (resting HR, BMI and "
+                       f"activity together), {len(_vo2m)} months {_vo2m[0]['month']} "
+                       f"to {_cur['month']}. Replaces the per-activity running-VO2max "
+                       "estimate, the wrong algorithm for a hiking effort."),
+            "monthly": _vo2m,
+            "peak": _peak,
+            "current": _cur,
+            "trough": _trough,
+            "reading": (f"Peaked at {_peak['value']} in {_peak['month']}, lowest at "
+                       f"{_trough['value']} in {_trough['month']}, and stands at "
+                       f"{_cur['value']} as of {_cur['month']}."),
+            "gapNote": "",
+        }
+        out["physiology"]["vo2max"] = [
+            {"date": f"{x['month']}-01", "value": x["value"]} for x in _vo2m]
+
 # drop keys that were conversation scaffolding rather than dashboard content
 for k in ("physiologyAnswers", "fitFindings", "fitExport", "watchConfig",
           "gelEvidence", "history"):
